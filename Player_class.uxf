@@ -1,0 +1,2338 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.1.1">
+  <help_text>// Uncomment the following line to change the fontsize and font:
+// fontsize=14
+// fontfamily=SansSerif //possible: SansSerif,Serif,Monospaced
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////
+// Welcome to UMLet!
+//
+// Double-click on elements to add them to the diagram, or to copy them
+// Edit elements by modifying the text in this panel
+// Hold Ctrl to select multiple elements
+// Use Ctrl+mouse to select via lasso
+//
+// Use +/- or Ctrl+mouse wheel to zoom
+// Drag a whole relation at its central square icon
+//
+// Press Ctrl+C to copy the whole diagram to the system clipboard (then just paste it to, eg, Word)
+// Edit the files in the "palettes" directory to create your own element palettes
+//
+// Select "Custom Elements &gt; New..." to create new element types
+//////////////////////////////////////////////////////////////////////////////////////////////
+
+// This text will be stored with each diagram;  use it for notes.</help_text>
+  <zoom_level>13</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1742</x>
+      <y>1079</y>
+      <w>728</w>
+      <h>1638</h>
+    </coordinates>
+    <panel_attributes>bg=light_gray
+*Player*
+--
+-knownSongsList: List&lt;Song&gt;
+-knownKomputerWorks: List&lt;Works&gt;
+
+-achievedAchievements: List&lt;GameAchievements&gt;
+
+-name: String
+-schoolPerformance: int = 1000
+-happiness: int = 1000
+-satiety: int = 1000
+-money: int = 100
+
+-schoolClass: int = 1
+
+-bicycle: BicycleState = NullBicycle
+-guitar: GuitarState = NullGuitar
+-computer: ComputerState = NullComputer
+
+-playerState: PlayerState = NormalState
+-liveObservers: List&lt;LiveObserver&gt;
+
+--
++tick()
+
++getClass(): int
+
++playSong(song: Song)
++deliver(deliverType: Delivery)
++doWebWork(webWork: WebWork)
+
++eat(food: Food)
+
++addSchoolPerfomance(val: int)
++addPercentSchoolPerfomance(val: int)
++reduceSchoolPerfomance(val: int)
+
++addHappiness(val: int)
++addPercentHappiness(val: int)
++reduceHappiness(val: int)
+
++addSatiety(val: int)
++addPercentSatiety(val: int)
++reduceSatiety(val: int)
+
++addMoney(val: int)
++reduceMoney(val: int)
+
+-changePlayerState(state: PlayerState)
+
++registerObserver(Observer o)
++removeObserver(Observer o)
++notifyObservers()
+
++isCourseAvalibale(courseName: String): boolean
+
++buyNewBicycle()
++buyNewGuitar()
++buyNewComputer()
+
++playSong(song: Song)
++deliver(deliverType: Delivery)
++doWebWork(webWork: WebWork)
+--
+*Responsibilities*
+-- Предоставить интерфейс изменения стат.
+-- Предоставить интерфейс ограничения стат.
+-- Сигнализировать о ситуациях влияющих на ход игры.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLInterface</id>
+    <coordinates>
+      <x>1014</x>
+      <y>2769</y>
+      <w>520</w>
+      <h>221</h>
+    </coordinates>
+    <panel_attributes>bg=yellow
+*Interface*
+
+/LiveObservable/
+--
+registerLiveObserver(observer: Observer)
+removeLiveObserver(observer: Observer)
+notifyLiveObservers()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>2587</x>
+      <y>2834</y>
+      <w>533</w>
+      <h>260</h>
+    </coordinates>
+    <panel_attributes>bg=orange
+/*PlayerState*/
+--
+-reduseSechoolPerformancePercent: int
+-reduseHappinessPercent: int
+-reduseSatietyPercent: int
+
+--
+
+--
+*Responsibilities*
+-- Предоставить абстракцию для системного
+изменения значений уменьшения стат.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>2262</x>
+      <y>3224</y>
+      <w>533</w>
+      <h>260</h>
+    </coordinates>
+    <panel_attributes>bg=gray
+*NormalState*
+--
+-reduseSechoolPerformancePercent: int
+-reduseHappinessPercent: int
+-reduseSatietyPercent: int
+
+--
+
+--
+*Responsibilities*
+-- Предоставить значения для уменьшения стат
+при нормальных значениях стат.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>2847</x>
+      <y>3224</y>
+      <w>533</w>
+      <h>260</h>
+    </coordinates>
+    <panel_attributes>bg=gray
+*BadState*
+--
+-reduseSechoolPerformancePercent: int
+-reduseHappinessPercent: int
+-reduseSatietyPercent: int
+
+--
+
+--
+*Responsibilities*
+-- Предоставить значения для уменьшения стат
+при значениях стат близких к 25%.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>3419</x>
+      <y>3224</y>
+      <w>533</w>
+      <h>260</h>
+    </coordinates>
+    <panel_attributes>bg=gray
+*ExtremeState*
+--
+-reduseSechoolPerformancePercent: int
+-reduseHappinessPercent: int
+-reduseSatietyPercent: int
+
+--
+
+--
+*Responsibilities*
+-- Предоставить значения для уменьшения стат
+при значениях стат близких к 5%.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>2847</x>
+      <y>3081</y>
+      <w>286</w>
+      <h>169</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;200.0;110.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>3107</x>
+      <y>3081</y>
+      <w>598</w>
+      <h>169</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;440.0;110.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>2509</x>
+      <y>3081</y>
+      <w>104</w>
+      <h>169</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>60.0;10.0;10.0;110.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>2782</x>
+      <y>2509</y>
+      <w>416</w>
+      <h>208</h>
+    </coordinates>
+    <panel_attributes>bg=light_gray
+&lt;&lt;enumeration&gt;&gt;
+*Food*
+--
+CRACKERS(25, 5, 10)
+DOSHIRAK(50, -10, 50)
+EATERY_FOOD(120, -15, 300)
+MCDONALDS(200, -20, 1000)
+PIZZA_AT_HOME(450, +5, 4000)
+RESTORANT_FOOD(800, +50, 10000)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>1690</x>
+      <y>2795</y>
+      <w>156</w>
+      <h>52</h>
+    </coordinates>
+    <panel_attributes>lt=-
+*Things*
+fg=red
+bg=yellow</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1768</x>
+      <y>2704</y>
+      <w>78</w>
+      <h>117</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>40.0;10.0;10.0;70.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1664</x>
+      <y>2821</y>
+      <w>130</w>
+      <h>143</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>10.0;90.0;80.0;15.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>2457</x>
+      <y>2405</y>
+      <w>351</w>
+      <h>286</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>250.0;200.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1794</x>
+      <y>299</y>
+      <w>598</w>
+      <h>364</h>
+    </coordinates>
+    <panel_attributes>bg=orange
+&lt;&lt;abstract class&gt;&gt;
+/*StudyCourseState*/
+--
+-price: int
+
+-
++buyNextCourse(student: Player)
++timerTickHandler()
++timerEndHandler()
+
+--
+*Responsibilities*
+-- Предоставить абстракцию для системaтического
+контроля обучающих курсов.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>2574</x>
+      <y>468</y>
+      <w>611</w>
+      <h>390</h>
+    </coordinates>
+    <panel_attributes>bg=orange
+&lt;&lt;abstract class&gt;&gt;
+/*ComputerCourseState*/
+--
+-price: int
+-avalibaleWebWork: List&lt;WebWork&gt;
+
+-
++buyNextCourse(student: Player)
++isWebWorkAvalibale(work: WebWork): bool
++timerTickHandler()
++timerEndHandler()
+
+--
+*Responsibilities*
+-- Предоставить абстракцию для системaтического
+контроля обучающих курсов по WEB.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>819</x>
+      <y>533</y>
+      <w>611</w>
+      <h>364</h>
+    </coordinates>
+    <panel_attributes>bg=orange
+&lt;&lt;abstract class&gt;&gt;
+/*GuitarCourseState*/
+--
+-price: int
+-avalibalePlayList: List&lt;Song&gt;
+
+-
++buyNextCourse(student: Player)
++canPlaySong(song: Song): bool
++timerTickHandler()
++timerEndHandler()
+
+--
+*Responsibilities*
+-- Предоставить абстракцию для системaтического
+контроля обучающих курсов по гитаре.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1417</x>
+      <y>286</y>
+      <w>403</w>
+      <h>325</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>290.0;10.0;10.0;230.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>2379</x>
+      <y>286</y>
+      <w>221</w>
+      <h>260</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;150.0;180.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>2080</x>
+      <y>169</y>
+      <w>39</w>
+      <h>156</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;100.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLInterface</id>
+    <coordinates>
+      <x>1989</x>
+      <y>0</y>
+      <w>234</w>
+      <h>195</h>
+    </coordinates>
+    <panel_attributes>bg=yellow
+*Interface*
+
+/TimerObserver/
+--
+timerTickHandler()
+timerEndHandler()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>117</x>
+      <y>546</y>
+      <w>611</w>
+      <h>234</h>
+    </coordinates>
+    <panel_attributes>bg=light_gray
+/*NullGuitarCourseState*/
+--
+-price: int = 0
+-avalibalePlayList: List&lt;Song&gt;
+
+-
++buyNextCourse(student: Player)
++canPlaySong(song: Song): bool
++timerTickHandler()
++timerEndHandler()
+
+
+
+
+
+
+
+
+
+
+
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>117</x>
+      <y>806</y>
+      <w>611</w>
+      <h>234</h>
+    </coordinates>
+    <panel_attributes>bg=light_gray
+/*FirstSongCourseState*/
+--
+-price: int = 0
+-avalibalePlayList: List&lt;Song&gt;
+
+-
++buyNextCourse(student: Player)
++canPlaySong(song: Song): bool
++timerTickHandler()
++timerEndHandler()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>117</x>
+      <y>1066</y>
+      <w>611</w>
+      <h>234</h>
+    </coordinates>
+    <panel_attributes>bg=light_gray
+/*YardSongCourseState*/
+--
+-price: int = 0
+-avalibalePlayList: List&lt;Song&gt;
+
+-
++buyNextCourse(student: Player)
++canPlaySong(song: Song): bool
++timerTickHandler()
++timerEndHandler()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>117</x>
+      <y>1326</y>
+      <w>611</w>
+      <h>234</h>
+    </coordinates>
+    <panel_attributes>bg=light_gray
+/*MusicianSchoolCourseState*/
+--
+-price: int = 0
+-avalibalePlayList: List&lt;Song&gt;
+
+-
++buyNextCourse(student: Player)
++canPlaySong(song: Song): bool
++timerTickHandler()
++timerEndHandler()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>117</x>
+      <y>1586</y>
+      <w>611</w>
+      <h>234</h>
+    </coordinates>
+    <panel_attributes>bg=light_gray
+/*MusicianObservatoryCourseState*/
+--
+-price: int = 0
+-avalibalePlayList: List&lt;Song&gt;
+
+-
++buyNextCourse(student: Player)
++canPlaySong(song: Song): bool
++timerTickHandler()
++timerEndHandler()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>3276</x>
+      <y>247</y>
+      <w>611</w>
+      <h>234</h>
+    </coordinates>
+    <panel_attributes>bg=light_gray
+/*NullComputerCourseState*/
+--
+-price: int
+-avalibaleWebWork: List&lt;WebWork&gt;
+
+-
++buyNextCourse(student: Player)
++isWebWorkAvalibale(work: WebWork): bool
++timerTickHandler()
++timerEndHandler()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>3276</x>
+      <y>507</y>
+      <w>611</w>
+      <h>234</h>
+    </coordinates>
+    <panel_attributes>bg=light_gray
+/*OnlineWorkCourseState*/
+--
+-price: int
+-avalibaleWebWork: List&lt;WebWork&gt;
+
+-
++buyNextCourse(student: Player)
++isWebWorkAvalibale(work: WebWork): bool
++timerTickHandler()
++timerEndHandler()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>3276</x>
+      <y>1027</y>
+      <w>611</w>
+      <h>234</h>
+    </coordinates>
+    <panel_attributes>bg=light_gray
+/*VidioEditingCourseState*/
+--
+-price: int
+-avalibaleWebWork: List&lt;WebWork&gt;
+
+-
++buyNextCourse(student: Player)
++isWebWorkAvalibale(work: WebWork): bool
++timerTickHandler()
++timerEndHandler()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>3276</x>
+      <y>1287</y>
+      <w>611</w>
+      <h>234</h>
+    </coordinates>
+    <panel_attributes>bg=light_gray
+/*GameDevelopmentCourseState*/
+--
+-price: int
+-avalibaleWebWork: List&lt;WebWork&gt;
+
+-
++buyNextCourse(student: Player)
++isWebWorkAvalibale(work: WebWork): bool
++timerTickHandler()
++timerEndHandler()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>3276</x>
+      <y>767</y>
+      <w>611</w>
+      <h>234</h>
+    </coordinates>
+    <panel_attributes>bg=light_gray
+/*WebDesignCourseState*/
+--
+-price: int
+-avalibaleWebWork: List&lt;WebWork&gt;
+
+-
++buyNextCourse(student: Player)
++isWebWorkAvalibale(work: WebWork): bool
++timerTickHandler()
++timerEndHandler()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>793</x>
+      <y>1001</y>
+      <w>806</w>
+      <h>585</h>
+    </coordinates>
+    <panel_attributes>*Note*
+bg=blue
+Способ реализации допустимых песен для каждого курса:
+
+avalibalePlayList - лист с названиями гитар,которые
+возможно купить после прохождения данного курса.
+
+avalibalePlayList - ПУСТОЙ лист, который заполняется при
+прохождении данного курса(внутри метода timerSignalHandler()).
+
+override fun canPlaySong(song: Song): Boolean {
+        return song in possibleSongs || super.canPlaySong(song)
+    }
+
+-
+П.С. по схожему принципу реализуются допустимые 
+работы, производимые на компьютере
+
+ВНИМАНИЕ!!! avalibalePlayList/avalibaleGutarsList и ему
+аналогичные листы несут одинаковый смысл, но разное
+временное объявление.
+К примеру: в классе GuitarState(и его наследниках)
+avalibalePlayList объявляется по дефолту, а в классе
+GuitarCourse(и его наследниках) avalibalePlayList заполняется
+внутри метода timerSignalHandler()(обработчика завершонного
+состояния timer)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>403</x>
+      <y>416</y>
+      <w>754</w>
+      <h>156</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>560.0;90.0;560.0;10.0;10.0;10.0;10.0;100.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>26</x>
+      <y>728</y>
+      <w>117</w>
+      <h>169</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>70.0;10.0;10.0;10.0;10.0;110.0;70.0;110.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>26</x>
+      <y>988</y>
+      <w>117</w>
+      <h>169</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>70.0;10.0;10.0;10.0;10.0;110.0;70.0;110.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>26</x>
+      <y>1248</y>
+      <w>117</w>
+      <h>169</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>70.0;10.0;10.0;10.0;10.0;110.0;70.0;110.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>26</x>
+      <y>1508</y>
+      <w>117</w>
+      <h>169</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>70.0;10.0;10.0;10.0;10.0;110.0;70.0;110.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>2873</x>
+      <y>351</y>
+      <w>429</w>
+      <h>143</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;90.0;50.0;10.0;310.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>3874</x>
+      <y>429</y>
+      <w>117</w>
+      <h>169</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;70.0;10.0;70.0;110.0;10.0;110.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>3874</x>
+      <y>689</y>
+      <w>117</w>
+      <h>169</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;70.0;10.0;70.0;110.0;10.0;110.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>3874</x>
+      <y>949</y>
+      <w>117</w>
+      <h>169</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;70.0;10.0;70.0;110.0;10.0;110.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>3874</x>
+      <y>1209</y>
+      <w>117</w>
+      <h>169</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;70.0;10.0;70.0;110.0;10.0;110.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1781</x>
+      <y>780</y>
+      <w>260</w>
+      <h>208</h>
+    </coordinates>
+    <panel_attributes>bg=light_gray
+&lt;&lt;enumeration&gt;&gt;
+*Song*
+--
+SINGLE_CHORD(100)
+GAZ_SECTOR(500)
+SMELLS_LIKE(1000)
+JAZZ(2500)
+BAXA(5000)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1287</x>
+      <y>2561</y>
+      <w>481</w>
+      <h>247</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;170.0;350.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>2795</x>
+      <y>2119</y>
+      <w>416</w>
+      <h>208</h>
+    </coordinates>
+    <panel_attributes>bg=light_gray
+&lt;&lt;enumeration&gt;&gt;
+* Birthday*
+--
+DAY(RandomInt(0,31))
+MONTH((RandomInt(0,12)))
+YEAR(2002)
+-
++save()
++load()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>2457</x>
+      <y>2132</y>
+      <w>364</w>
+      <h>52</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>260.0;12.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>1573</x>
+      <y>2938</y>
+      <w>156</w>
+      <h>52</h>
+    </coordinates>
+    <panel_attributes>lt=.
+enum
+*Delivery*
+fg=red
+bg=yellow</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>2171</x>
+      <y>780</y>
+      <w>247</w>
+      <h>208</h>
+    </coordinates>
+    <panel_attributes>bg=light_gray
+&lt;&lt;enumeration&gt;&gt;
+*WebWork*
+--
+ACCOUNT_BOOST(100)
+PUBLIC_PR(500)
+MAKE_FRONTEND(2000)
+VIDEO_EDITING(5000)
+MAKE_A_GAME(15000)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>2288</x>
+      <y>975</y>
+      <w>39</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;80.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1898</x>
+      <y>975</y>
+      <w>39</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;80.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1417</x>
+      <y>780</y>
+      <w>351</w>
+      <h>325</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
+state</panel_attributes>
+    <additional_attributes>250.0;230.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>2457</x>
+      <y>715</y>
+      <w>143</w>
+      <h>390</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
+state</panel_attributes>
+    <additional_attributes>10.0;280.0;90.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>2288</x>
+      <y>2704</y>
+      <w>325</w>
+      <h>156</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
+state</panel_attributes>
+    <additional_attributes>10.0;10.0;230.0;100.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>3315</x>
+      <y>2665</y>
+      <w>611</w>
+      <h>169</h>
+    </coordinates>
+    <panel_attributes>bg=light_gray
+*MacbookState*
+--
+-price: int = 200000
+-avalibaleCoursesList: List&lt;String&gt;
+-owner: Player
+-
++changeState(thingsHandler: Things)
++isCourseAvalibale(courseName: String): boolean
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>3315</x>
+      <y>2288</y>
+      <w>611</w>
+      <h>156</h>
+    </coordinates>
+    <panel_attributes>bg=light_gray
+*UsualComputerState*
+--
+-price: int = 30000
+-avalibaleCoursesList: List&lt;String&gt;
+-owner: Player
+-
++changeState(thingsHandler: Things)
++isCourseAvalibale(courseName: String): boolean
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>3315</x>
+      <y>2470</y>
+      <w>611</w>
+      <h>169</h>
+    </coordinates>
+    <panel_attributes>bg=light_gray
+*XiaomiMiNotebookState*
+--
+-price: int = 60000
+-avalibaleCoursesList: List&lt;String&gt;
+-owner: Player
+-
++changeState(thingsHandler: Things)
++isCourseAvalibale(courseName: String): boolean
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>3315</x>
+      <y>2106</y>
+      <w>611</w>
+      <h>156</h>
+    </coordinates>
+    <panel_attributes>bg=light_gray
+*OldComputerState*
+--
+-price: int = 10000
+-avalibaleCoursesList: List&lt;String&gt;
+-owner: Player
+-
++changeState(thingsHandler: Things)
++isCourseAvalibale(courseName: String): boolean
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>3315</x>
+      <y>1924</y>
+      <w>611</w>
+      <h>156</h>
+    </coordinates>
+    <panel_attributes>bg=light_gray
+*PreviouslyUsedComputerState*
+--
+-price: int = 3000
+-avalibaleCoursesList: List&lt;String&gt;
+-owner: Player
+-
++changeState(thingsHandler: Things)
++isCourseAvalibale(courseName: String): boolean
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>3315</x>
+      <y>1716</y>
+      <w>611</w>
+      <h>182</h>
+    </coordinates>
+    <panel_attributes>bg=light_gray
+/*NullComputerState*/
+--
+-price: int = 0
+-avalibaleCoursesList: List&lt;String&gt;
+-owner: Player
+-
++changeState(thingsHandler: Things)
++isCourseAvalibale(courseName: String): boolean
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>2587</x>
+      <y>1612</y>
+      <w>611</w>
+      <h>286</h>
+    </coordinates>
+    <panel_attributes>bg=orange
+&lt;&lt;abstract class&gt;&gt;
+/*ComputerState*/
+--
+-prise: int
+-avalibaleCoursesList: List&lt;String&gt;
+
+-
++changeState(thingsHandler: Things)
++isCourseAvalibale(courseName: String): boolean
+
+--
+*Responsibilities*
+-- Предоставить абстракцию для системного
+контроля компьютеров и их возможностей.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>3185</x>
+      <y>1794</y>
+      <w>156</w>
+      <h>39</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;100.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>3913</x>
+      <y>1820</y>
+      <w>130</w>
+      <h>169</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;80.0;10.0;80.0;110.0;10.0;110.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>3913</x>
+      <y>2002</y>
+      <w>130</w>
+      <h>169</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;80.0;10.0;80.0;110.0;10.0;110.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>3913</x>
+      <y>2184</y>
+      <w>130</w>
+      <h>169</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;80.0;10.0;80.0;110.0;10.0;110.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>3913</x>
+      <y>2366</y>
+      <w>130</w>
+      <h>169</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;80.0;10.0;80.0;110.0;10.0;110.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>3913</x>
+      <y>2561</y>
+      <w>130</w>
+      <h>169</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;80.0;10.0;80.0;110.0;10.0;110.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>2457</x>
+      <y>1729</y>
+      <w>156</w>
+      <h>52</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
+state</panel_attributes>
+    <additional_attributes>10.0;20.0;100.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>806</x>
+      <y>2119</y>
+      <w>780</w>
+      <h>312</h>
+    </coordinates>
+    <panel_attributes>bg=orange
+&lt;&lt;abstract class&gt;&gt;
+/*GuitarState*/
+--
+-price: int
+-avalibaleCoursesList: List&lt;String&gt;
+-owner: Player
+
+-
++changeState(thingsHandler: Things)
++isCourseAvalibale(courseName: String): boolean
+
+--
+*Responsibilities*
+-- Предоставить абстракцию для системного
+контроля гитар и их возможностей.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>130</x>
+      <y>2678</y>
+      <w>598</w>
+      <h>169</h>
+    </coordinates>
+    <panel_attributes>bg=light_gray
+*UsualUSSR_guitarState*
+--
+-price: int = 1000
+-avalibaleCoursesList: List&lt;String&gt;
+-owner: Player
+-
++changeState(thingsHandler: Things)
++isCourseAvalibale(courseName: String): boolean
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>130</x>
+      <y>1885</y>
+      <w>598</w>
+      <h>169</h>
+    </coordinates>
+    <panel_attributes>bg=light_gray
+*DualNeckGuitarState*
+--
+-price: int = 150000
+-avalibaleCoursesList: List&lt;String&gt;
+-owner: Player
+-
++changeState(thingsHandler: Things)
++isCourseAvalibale(courseName: String): boolean
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>130</x>
+      <y>2483</y>
+      <w>598</w>
+      <h>169</h>
+    </coordinates>
+    <panel_attributes>bg=light_gray
+*UralGuitarState*
+--
+-price: int = 5000
+-avalibaleCoursesList: List&lt;String&gt;
+-owner: Player
+-
++changeState(thingsHandler: Things)
++isCourseAvalibale(courseName: String): boolean
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>130</x>
+      <y>2080</y>
+      <w>598</w>
+      <h>169</h>
+    </coordinates>
+    <panel_attributes>bg=light_gray
+*FenderGuitarState*
+--
+-price: int = 40000
+-avalibaleCoursesList: List&lt;String&gt;
+-owner: Player
+-
++changeState(thingsHandler: Things)
++isCourseAvalibale(courseName: String): boolean
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>130</x>
+      <y>2288</y>
+      <w>598</w>
+      <h>169</h>
+    </coordinates>
+    <panel_attributes>bg=light_gray
+*YamahaGuitarState*
+--
+-price: int = 12000
+-avalibaleCoursesList: List&lt;String&gt;
+-owner: Player
+-
++changeState(thingsHandler: Things)
++isCourseAvalibale(courseName: String): boolean
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>715</x>
+      <y>2418</y>
+      <w>507</w>
+      <h>572</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>370.0;10.0;270.0;240.0;10.0;420.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>130</x>
+      <y>2873</y>
+      <w>598</w>
+      <h>169</h>
+    </coordinates>
+    <panel_attributes>bg=light_gray
+*NullGuitarState*
+--
+-price: int = 0
+-avalibaleCoursesList: List&lt;String&gt;
+-owner: Player
+-
++changeState(thingsHandler: Things)
++isCourseAvalibale(courseName: String): boolean
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>0</x>
+      <y>2782</y>
+      <w>156</w>
+      <h>156</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>100.0;100.0;10.0;100.0;10.0;10.0;100.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>0</x>
+      <y>2587</y>
+      <w>156</w>
+      <h>156</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>100.0;100.0;10.0;100.0;10.0;10.0;100.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>0</x>
+      <y>2392</y>
+      <w>156</w>
+      <h>156</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>100.0;100.0;10.0;100.0;10.0;10.0;100.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>0</x>
+      <y>2197</y>
+      <w>156</w>
+      <h>156</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>100.0;100.0;10.0;100.0;10.0;10.0;100.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>0</x>
+      <y>1989</y>
+      <w>156</w>
+      <h>156</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>100.0;100.0;10.0;100.0;10.0;10.0;100.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>832</x>
+      <y>1651</y>
+      <w>715</w>
+      <h>416</h>
+    </coordinates>
+    <panel_attributes>*Note*
+bg=blue
+Способ реализации допустимых песен для каждой гитары:
+
+avalibaleCoursesList - лист с названиями курсов(имен
+классов функций), которые становятся возможными к
+изучению после приобритения данного предмета (изменения
+состояния предмета guitar).
+
+avalibaleCoursesList - ОБЪЯВЛЕННЫЙ по дефолту лист.
+
+-
+П.С. по схожему принципу реализуются доставки(допустимые 
+для существующей модели велосипеда) и работы(допустимые
+для существующей модели компьютера).</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1573</x>
+      <y>2210</y>
+      <w>195</w>
+      <h>104</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
+state</panel_attributes>
+    <additional_attributes>130.0;10.0;10.0;60.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>676</x>
+      <y>3445</y>
+      <w>741</w>
+      <h>169</h>
+    </coordinates>
+    <panel_attributes>bg=light_gray
+*UsualBicycleState*
+--
+-price: int = 10000
+-avalibaleDelivery: List&lt;Delivery&gt;
+
+-
++changeState(thingsHandler: Things)
++canDoDelivery(delivery: Delivery): bool
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1222</x>
+      <y>3679</y>
+      <w>741</w>
+      <h>169</h>
+    </coordinates>
+    <panel_attributes>bg=light_gray
+*USSR_bicycleState*
+--
+-price: int = 2000
+-avalibaleDelivery: List&lt;Delivery&gt;
+
+-
++changeState(thingsHandler: Things)
++canDoDelivery(delivery: Delivery): bool
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>273</x>
+      <y>3679</y>
+      <w>741</w>
+      <h>169</h>
+    </coordinates>
+    <panel_attributes>bg=light_gray
+*MountainBicycleState*
+--
+-price: int = 40000
+-avalibaleDelivery: List&lt;Delivery&gt;
+
+-
++changeState(thingsHandler: Things)
++canDoDelivery(delivery: Delivery): bool
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1482</x>
+      <y>3445</y>
+      <w>741</w>
+      <h>169</h>
+    </coordinates>
+    <panel_attributes>bg=light_gray
+/*NullBicycleState*/
+--
+-price: int = 0
+-avalibaleDelivery: List&lt;Delivery&gt;
+
+-
++changeState(thingsHandler: Things)
++canDoDelivery(delivery: Delivery): bool
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1209</x>
+      <y>3042</y>
+      <w>780</w>
+      <h>286</h>
+    </coordinates>
+    <panel_attributes>bg=orange
+&lt;&lt;abstract class&gt;&gt;
+/*BicycleState*/
+--
+-prise: int
+-avalibaleDelivery: List&lt;Delivery&gt;
+
+-
++changeState(thingsHandler: Things)
++canDoDelivery(delivery: Delivery): bool
+
+--
+*Responsibilities*
+-- Предоставить абстракцию для системного
+контроля велосипедов и их возможностей.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>975</x>
+      <y>3185</y>
+      <w>260</w>
+      <h>104</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>180.0;10.0;10.0;60.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>416</x>
+      <y>3159</y>
+      <w>572</w>
+      <h>208</h>
+    </coordinates>
+    <panel_attributes>bg=light_gray
+&lt;&lt;enumeration&gt;&gt;
+*Delivery*
+--
+SLOW_DELIVERY(100)
+USUAL_DELIVERY(500)
+FAST_DELIVERY(5000)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1950</x>
+      <y>3601</y>
+      <w>143</w>
+      <h>182</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>90.0;10.0;90.0;120.0;10.0;120.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1092</x>
+      <y>3601</y>
+      <w>156</w>
+      <h>182</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>100.0;120.0;10.0;120.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>520</x>
+      <y>3497</y>
+      <w>182</w>
+      <h>208</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>120.0;10.0;10.0;10.0;10.0;140.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1703</x>
+      <y>3315</y>
+      <w>104</w>
+      <h>156</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>60.0;10.0;10.0;100.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1911</x>
+      <y>2704</y>
+      <w>117</w>
+      <h>364</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
+state</panel_attributes>
+    <additional_attributes>50.0;10.0;10.0;260.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>2548</x>
+      <y>1066</y>
+      <w>468</w>
+      <h>273</h>
+    </coordinates>
+    <panel_attributes>*Note*
+bg=blue
+Внутри метода buyNextItem()
+необходимо определить и 
+реализовать достижения, которые
+происходят во время покупок.
+
+
+
+-
+см. раздел "Ачивки" 
+п. "Ачивки за приобретения"</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>2184</x>
+      <y>2886</y>
+      <w>208</w>
+      <h>91</h>
+    </coordinates>
+    <panel_attributes>lt=-
+&lt;&lt;abstract class&gt;&gt;
+*Player*
+fg=red
+bg=yellow</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>2119</x>
+      <y>2704</y>
+      <w>130</w>
+      <h>221</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>80.0;150.0;10.0;10.0</additional_attributes>
+  </element>
+</diagram>

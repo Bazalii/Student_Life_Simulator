@@ -1,0 +1,508 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.1.1">
+  <zoom_level>11</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>638</x>
+      <y>891</y>
+      <w>660</w>
+      <h>550</h>
+    </coordinates>
+    <panel_attributes>bg=gray
+*Game*
+--
+-difficultState: GameDifficultState = NormalMode
+-saveHandlers: List&lt;function&gt;
+-loadHandlers: List&lt;function&gt;
+
+-player: InGameWrapper
+_-game: Game_
+_+gameDate: GameDate_
+_+gameStatus: GameStatus_
+
+--
+_+init()_
+_+tick()_
+
+_+checkLosing(schoolPerformance: int, happiness: int, satiety: int)_
+_+isActAvaliable(): boolean_
+
+_+registerSaveHandler(handler: function)_
+_+registerLoadHandler(handler: function)_
+
+_+save()_
+_+load()_
+
+--
+Responsibilities
+-- Предоставить API управления сложностью игры
+-- Предоставить API сохранения игры</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLInterface</id>
+    <coordinates>
+      <x>2123</x>
+      <y>473</y>
+      <w>660</w>
+      <h>187</h>
+    </coordinates>
+    <panel_attributes>bg=yellow
+*Interface*
+
+/TimeObservable/
+--
+setTickSignalHandler(handler: function, tickDellay: Int = 1)
+setEndSignalHandler(handler: function)
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>858</x>
+      <y>330</y>
+      <w>517</w>
+      <h>462</h>
+    </coordinates>
+    <panel_attributes>bg=light_gray
+data class
+*GameDate*
+--
+-timers: List&lt;Timer&gt;
+-alarmClocks: List&lt;AlarmClock&gt;
+-timeDependenses: List&lt;function&gt;
+
+-day: int = 1
+-month: int = 9
+-year: int = 2009
+
+--
++tick()
+
++toString(): String
++rigisterAlarmClock(clock: AlarmClock)
++rigisterTimer(timer: Timer)
++rigisterTickHandler(handler: function)
+
+--
+Responsibilities
+-- Предоставить API управления игровым временем
+-- Предоставить интерфейсы обновления времени</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>748</x>
+      <y>1551</y>
+      <w>451</w>
+      <h>176</h>
+    </coordinates>
+    <panel_attributes>bg=orange
+&lt;&lt;abstract class&gt;&gt;
+/*GameDifficultState*/
+--
+
+--
+-checkLosing()
+--
+*Responsibilities*
+-- Предоставить абстракцию для проверки
+проигрыша при заданном уровне сложности
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>484</x>
+      <y>792</y>
+      <w>176</w>
+      <h>121</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;140.0;90.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>385</x>
+      <y>1793</y>
+      <w>451</w>
+      <h>220</h>
+    </coordinates>
+    <panel_attributes>bg=gray
+*NormalMode*
+--
+
+--
+-checkLosing()
+--
+*Responsibilities*
+-- Предоставить абстракцию для проверки
+проигрыша при заданном уровне сложности
+
+
+
+
+
+
+
+
+
+
+
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1100</x>
+      <y>1793</y>
+      <w>451</w>
+      <h>220</h>
+    </coordinates>
+    <panel_attributes>bg=gray
+*HardMode*
+--
+
+--
+-checkLosing()
+--
+*Responsibilities*
+-- Предоставить абстракцию для проверки
+проигрыша при заданном уровне сложности
+
+
+
+
+
+
+
+
+
+
+
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>594</x>
+      <y>1716</y>
+      <w>176</w>
+      <h>99</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>140.0;10.0;10.0;70.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1188</x>
+      <y>1716</y>
+      <w>165</w>
+      <h>99</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;130.0;70.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>1386</x>
+      <y>1144</y>
+      <w>165</w>
+      <h>66</h>
+    </coordinates>
+    <panel_attributes>lt=.
+*InGameWrapper*
+fg=red
+bg=yellow</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1287</x>
+      <y>1166</y>
+      <w>121</w>
+      <h>33</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;90.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1496</x>
+      <y>737</y>
+      <w>671</w>
+      <h>330</h>
+    </coordinates>
+    <panel_attributes>bg=light_gray
+/*Timer*/
+--
+-days: int
+-tickSignalHandler: function
+-endSignalHandler: function
+
+-
++tick()
+
++setTickSignalHandler(handler: function, tickDellay: Int = 1)
++setEndSignalHandler(handler: function)
+-
+*Responsibilities*
+-- Предоставить интерфейс отсчета игрового времени
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1364</x>
+      <y>693</y>
+      <w>154</w>
+      <h>198</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;120.0;160.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1518</x>
+      <y>0</y>
+      <w>671</w>
+      <h>385</h>
+    </coordinates>
+    <panel_attributes>bg=light_gray
+/*AlarmClock*/
+--
+-day: int
+-month: int
+-year: int
+-tickSignalHandler: function
+-endSignalHandler: function
+-tickDellay: Int = 1
+-tickCounter: Int = 0
+-
++update(day: int, month: int, year:int)
+
++setTickSignalHandler(handler: function, tickDellay: Int = 1)
++setEndSignalHandler(handler: function)
+-
+*Responsibilities*
+-- Предоставить интерфейс отсчета игрового времени
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLInterface</id>
+    <coordinates>
+      <x>99</x>
+      <y>671</y>
+      <w>704</w>
+      <h>143</h>
+    </coordinates>
+    <panel_attributes>bg=yellow
+*Interface*
+
+/LiveObserver/
+--
+checkLosing(schoolPerformance: int, happiness: int, satiety: int)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>2178</x>
+      <y>187</y>
+      <w>209</w>
+      <h>385</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>170.0;330.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>2156</x>
+      <y>627</y>
+      <w>231</w>
+      <h>297</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>190.0;10.0;10.0;250.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1364</x>
+      <y>154</y>
+      <w>176</w>
+      <h>253</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;210.0;140.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1056</x>
+      <y>781</y>
+      <w>33</w>
+      <h>132</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;100.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>2233</x>
+      <y>880</y>
+      <w>583</w>
+      <h>176</h>
+    </coordinates>
+    <panel_attributes>*Note*
+bg=blue
+Взаимодействие с таймером:
+1)Создание таймера
+2)Конфигурация таймера 
+(а так же указание обработчиков событий таймера)
+3)"Запуск" таймера (постановка таймера на учет времени).
+Тоесть передача таймера объекту,
+который следит за всем временем в игре.
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>0</x>
+      <y>869</y>
+      <w>583</w>
+      <h>176</h>
+    </coordinates>
+    <panel_attributes>*Note*
+bg=blue
+Ограничения игры будут задаваться не програмными, а
+аппаратными средствами (с помощью блокирации
+кнопок/виджетов)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>957</x>
+      <y>1430</y>
+      <w>77</w>
+      <h>143</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
+state</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;110.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1419</x>
+      <y>1331</y>
+      <w>176</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>bg=light_gray
+&lt;&lt;enumeration&gt;&gt;
+*GameStatus*
+--
+STOPPED
+RUNNING
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1287</x>
+      <y>1320</y>
+      <w>154</w>
+      <h>99</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>120.0;62.0;10.0;10.0</additional_attributes>
+  </element>
+</diagram>
