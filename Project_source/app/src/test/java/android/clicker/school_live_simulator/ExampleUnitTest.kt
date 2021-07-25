@@ -1,4 +1,4 @@
-package com.example.school_live_simulator
+package android.clicker.school_live_simulator
 
 import org.junit.Test
 

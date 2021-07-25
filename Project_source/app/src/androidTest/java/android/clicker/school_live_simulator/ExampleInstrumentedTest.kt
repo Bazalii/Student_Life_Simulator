@@ -1,4 +1,4 @@
-package com.example.school_live_simulator
+package android.clicker.school_live_simulator
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4
@@ -19,6 +19,6 @@ class ExampleInstrumentedTest {
     fun useAppContext() {
         // Context of the app under test.
         val appContext = InstrumentationRegistry.getInstrumentation().targetContext
-        assertEquals("com.example.school_live_simulator", appContext.packageName)
+        assertEquals("android.clicker.school_live_simulator", appContext.packageName)
     }
 }
