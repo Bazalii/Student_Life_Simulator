@@ -10,5 +10,5 @@ abstract class StudyCourseState: TimerObserver {
     }
     abstract override fun timerEndHandler() {
     }
-
+	
 }
