@@ -11,19 +11,21 @@ abstract class BicycleState {
      * A list of available types of delivery.
      * These types are described in enumeration class Delivery.
      */
-    protected abstract val available_delivery : ArrayList<Delivery>
+    protected val available_delivery : ArrayList<Delivery> = arrayListOf<Delivery>()
 
     /**
      * Upgrades bicycle.
      *
      * <p> Changes state which set bicycle type.
      */
-    abstract fun changeState()
+    abstract fun changeState(bag: Player.Bag)
 
     /**
      * Allows delivery.
      * @param  delivery Element of enum Delivery which describes certain type of delivery.
      * @return true if a player can do chosen type of delivery.
      */
-    abstract fun canDoDelivery(delivery: Delivery): Boolean
+    fun isAvailable(delivery: Delivery): Boolean{
+        return delivery in available_delivery
+    }
 }
