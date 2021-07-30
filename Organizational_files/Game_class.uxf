@@ -62,7 +62,7 @@ Responsibilities
 --
 
 --
-+checkDefeat()
+#checkDefeat()
 --
 *Responsibilities*
 -- Предоставить абстракцию для проверки
@@ -87,7 +87,7 @@ Responsibilities
 --
 
 --
--checkDefeat()
+#checkDefeat()
 --
 *Responsibilities*
 -- Предоставить абстракцию для проверки
@@ -110,7 +110,7 @@ Responsibilities
 --
 
 --
--checkDefeat()
+#checkDefeat()
 --
 *Responsibilities*
 -- Предоставить абстракцию для проверки

@@ -318,7 +318,7 @@ bg=yellow</panel_attributes><additional_attributes></additional_attributes></ele
 
 -
 +buyNextCourse(courses: Player.Courses)
-+canPlay(song: Song): bool
++isAvailable(song: Song): bool
 +timerTickHandler()
 +timerEndHandler()
 
@@ -355,7 +355,7 @@ timerEndHandler()</panel_attributes><additional_attributes></additional_attribut
 
 -
 +buyNextCourse(courses: Player.Courses)
-+canPlay(song: Song): bool
++isAvailable(song: Song): bool
 +timerTickHandler()
 +timerEndHandler()
 
@@ -379,7 +379,7 @@ timerEndHandler()</panel_attributes><additional_attributes></additional_attribut
 
 -
 +buyNextCourse(courses: Player.Courses)
-+canPlay(song: Song): bool
++isAvailable(song: Song): bool
 +timerTickHandler()
 +timerEndHandler()
 
@@ -404,7 +404,7 @@ timerEndHandler()</panel_attributes><additional_attributes></additional_attribut
 
 -
 +buyNextCourse(courses: Player.Courses)
-+canPlay(song: Song): bool
++isAvailable(song: Song): bool
 +timerTickHandler()
 +timerEndHandler()
 
@@ -423,14 +423,14 @@ timerEndHandler()</panel_attributes><additional_attributes></additional_attribut
 
 
 </panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>90</x><y>1020</y><w>470</w><h>180</h></coordinates><panel_attributes>bg=light_gray
-/*MusicianSchoolCourseState*/
+/*MusicalSchoolCourseState*/
 --
 #price: int = 0
 #available_playlist: List&lt;Song&gt;
 
 -
 +buyNextCourse(courses: Player.Courses)
-+canPlay(song: Song): bool
++isAvailable(song: Song): bool
 +timerTickHandler()
 +timerEndHandler()
 
@@ -449,14 +449,14 @@ timerEndHandler()</panel_attributes><additional_attributes></additional_attribut
 
 
 </panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>90</x><y>1220</y><w>470</w><h>180</h></coordinates><panel_attributes>bg=light_gray
-/*MusicianObservatoryCourseState*/
+/*MusicalObservatoryCourseState*/
 --
 #price: int = 0
 #available_playlist: List&lt;Song&gt;
 
 -
 +buyNextCourse(courses: Player.Courses)
-+canPlay(song: Song): bool
++isAvailable(song: Song): bool
 +timerTickHandler()
 +timerEndHandler()
 
@@ -898,7 +898,7 @@ state</panel_attributes><additional_attributes>10;20;100;20</additional_attribut
 
 
 </panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>100</x><y>2060</y><w>460</w><h>130</h></coordinates><panel_attributes>bg=light_gray
-*UsualUSSR_guitarState*
+*UssrGuitarState*
 --
 #price: int = 1000
 #available_courses: List&lt;String&gt;
