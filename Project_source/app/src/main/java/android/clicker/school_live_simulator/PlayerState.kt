@@ -5,7 +5,7 @@ package android.clicker.school_live_simulator
  * @since       1.0          (the version of the package this class was first added to)
  */
 abstract class PlayerState {
-    abstract val reduce_school_performance_percent: Int
-    abstract val reduce_happines_percent: Int
-    abstract val reduce_satiety_percent: Int
+    protected abstract val reduce_school_performance_percent: Int
+    protected abstract val reduce_happines_percent: Int
+    protected abstract val reduce_satiety_percent: Int
 }
