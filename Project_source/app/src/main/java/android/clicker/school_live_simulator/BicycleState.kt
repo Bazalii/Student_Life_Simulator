@@ -6,6 +6,9 @@ package android.clicker.school_live_simulator
  * @since       1.0          (the version of the package this class was first added to)
  */
 abstract class BicycleState {
+    /**
+     * Bike price
+     */
     protected abstract val price: Int
 
     /**
@@ -16,8 +19,7 @@ abstract class BicycleState {
 
     /**
      * Upgrades bicycle.
-     *
-     * <p> Changes state which set bicycle type.
+     * @param bag player inventory.
      */
     abstract fun changeState(bag: Player.Bag)
 
