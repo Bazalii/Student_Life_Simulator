@@ -24,7 +24,7 @@ abstract class BicycleState {
     abstract fun changeState(bag: Player.Bag)
 
     /**
-     * Allows delivery.
+     * Shows that the delivery can be performed.
      * @param  delivery Element of enum Delivery which describes certain type of delivery.
      * @return true if a player can do chosen type of delivery.
      */
