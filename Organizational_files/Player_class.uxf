@@ -1257,9 +1257,9 @@ bg=yellow</panel_attributes><additional_attributes></additional_attributes></ele
 DataClass
 /*Bag*/
 --
-+bicycle: BicycleState = NullBicycle
-+guitar: GuitarState = NullGuitar
-+computer: ComputerState = NullComputer
++bicycle: BicycleState = NullBicycleState
++guitar: GuitarState = NullGuitarState
++computer: ComputerState = NullComputerState
 
 
 
