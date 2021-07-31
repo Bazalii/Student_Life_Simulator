@@ -46,7 +46,7 @@
 
 +playSong(song: Song)
 +deliver(delivery_type: Delivery)
-+doWebWork(web_task: WebWork)
++realiseWebTask(web_task: WebTask)
 
 +eat(food: Food)
 
@@ -75,9 +75,6 @@
 +buyNewGuitar()
 +buyNewComputer()
 
-+playSong(song: Song)
-+deliver(delivery_type: Delivery)
-+realiseWebTask(web_task: WebWork)
 --
 *Responsibilities*
 -- Предоставить интерфейс изменения стат.
