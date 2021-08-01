@@ -1,9 +1,10 @@
 package android.clicker.school_live_simulator
 
 /**
- * @author      Andrey Novikov andrewnovicov@gmail.com
- * @version     1.0                 (current version number of program)
- * @since       1.0          (the version of the package this class was first added to)
+ * Class defines player's bicycle.
+ * Player can do delivery with his bicycle.
+ * The better bicycle the faster delivery is available.
+ * Player can upgrade bicycle (change his bicycle state).
  */
 abstract class BicycleState {
     /**
