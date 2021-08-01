@@ -2,14 +2,14 @@ package android.clicker.school_live_simulator
 
 interface TimerObserver {
 	/**
-	 * Function which response 
-	 * for timer tick 
-	*/
+	 * Handler who will be risen  
+	 * when timer will change time on one point
+	 */
     fun timerTickHandler()
 	
 	/**
-	 * Function which end timer
-	*/
+	 * Handler which will be risen
+	 * when timer will "ring"
+	 */
     fun timerEndHandler()
-	
 }
