@@ -1,6 +1,6 @@
 package android.clicker.school_live_simulator
 
-enum class Song(val happiness: Int) {
+enum class Song(val salary: Int) {
     SINGLE_CHORD(100),
     GAZ_SECTOR(500),
     SMELLS_LIKE(1000),
