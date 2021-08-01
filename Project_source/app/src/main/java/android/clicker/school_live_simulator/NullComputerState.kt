@@ -11,18 +11,7 @@ open class NullComputerState: ComputerState {
      */
 
     override fun changeState(bag: Player.bag) {
-        bag.computer = NullComputer
-    }
-
-    /**
-     * This is a function to ckeck availability of the course
-     *
-     * @param courseName name of the course to check
-     * @return True if the course is available and False if not
-     */
-
-    override fun isAvailable(courseName: String): Boolean {
-        return courseName in available_courses
+        bag.computer = PreviouslyUsedComputerState()
     }
 
 }

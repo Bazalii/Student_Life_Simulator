@@ -9,6 +9,15 @@ abstract class ComputerState {
 
     abstract fun changeState(thingsHandler: Things)
 
-    abstract fun isAvailable(courseName: String): Boolean
+    /**
+     * This is a function to ckeck availability of the course
+     *
+     * @param courseName name of the course to check
+     * @return True if the course is available and False if not
+     */
+
+    open fun isAvailable(courseName: String): Boolean {
+        return courseName in available_courses
+    }
 
 }
