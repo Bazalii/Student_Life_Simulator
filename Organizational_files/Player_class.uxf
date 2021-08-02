@@ -26,6 +26,7 @@
 -achieved_achievements: List&lt;GameAchievements&gt;
 
 -name: String
+-birthday: Birthday
 -school_performance: int = 1000
 -happiness: int = 1000
 -satiety: int = 1000
@@ -214,7 +215,7 @@ notifyLiveObservers()</panel_attributes><additional_attributes></additional_attr
 
 
 
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>2190</x><y>2370</y><w>220</w><h>130</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;200;110</additional_attributes></element><element><id>Relation</id><coordinates><x>2390</x><y>2370</y><w>460</w><h>130</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;440;110</additional_attributes></element><element><id>Relation</id><coordinates><x>1930</x><y>2370</y><w>80</w><h>130</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>60;10;10;110</additional_attributes></element><element><id>UMLClass</id><coordinates><x>2090</x><y>1950</y><w>320</w><h>160</h></coordinates><panel_attributes>bg=light_gray
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>2190</x><y>2370</y><w>220</w><h>130</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;200;110</additional_attributes></element><element><id>Relation</id><coordinates><x>2390</x><y>2370</y><w>460</w><h>130</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;440;110</additional_attributes></element><element><id>Relation</id><coordinates><x>1930</x><y>2370</y><w>80</w><h>130</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>60;10;10;110</additional_attributes></element><element><id>UMLClass</id><coordinates><x>2020</x><y>1980</y><w>320</w><h>160</h></coordinates><panel_attributes>bg=light_gray
 &lt;&lt;enumeration&gt;&gt;
 *Food*
 --
@@ -244,7 +245,7 @@ RESTORANT_FOOD(800, +50, 10000)
 </panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLUseCase</id><coordinates><x>1300</x><y>2150</y><w>120</w><h>40</h></coordinates><panel_attributes>lt=-
 *Things*
 fg=red
-bg=yellow</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1360</x><y>2080</y><w>60</w><h>90</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>40;10;10;70</additional_attributes></element><element><id>Relation</id><coordinates><x>1280</x><y>2170</y><w>100</w><h>110</h></coordinates><panel_attributes>lt=&lt;.</panel_attributes><additional_attributes>10;90;80;15</additional_attributes></element><element><id>Relation</id><coordinates><x>1890</x><y>1850</y><w>220</w><h>190</h></coordinates><panel_attributes>lt=&lt;.</panel_attributes><additional_attributes>200;170;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>1380</x><y>230</y><w>460</w><h>280</h></coordinates><panel_attributes>bg=orange
+bg=yellow</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1360</x><y>2080</y><w>60</w><h>90</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>40;10;10;70</additional_attributes></element><element><id>Relation</id><coordinates><x>1280</x><y>2170</y><w>100</w><h>110</h></coordinates><panel_attributes>lt=&lt;.</panel_attributes><additional_attributes>10;90;80;15</additional_attributes></element><element><id>Relation</id><coordinates><x>1890</x><y>1850</y><w>150</w><h>220</h></coordinates><panel_attributes>lt=&lt;.</panel_attributes><additional_attributes>130;200;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>1380</x><y>230</y><w>460</w><h>280</h></coordinates><panel_attributes>bg=orange
 &lt;&lt;abstract class&gt;&gt;
 /*StudyCourseState*/
 --
@@ -682,15 +683,14 @@ MAKE_A_GAME(15000)
 </panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1760</x><y>750</y><w>30</w><h>100</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;80;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>1460</x><y>750</y><w>30</w><h>100</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;80;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>1090</x><y>600</y><w>270</w><h>250</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
 state</panel_attributes><additional_attributes>250;230;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>1890</x><y>550</y><w>110</w><h>300</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
 state</panel_attributes><additional_attributes>10;280;90;10</additional_attributes></element><element><id>Relation</id><coordinates><x>1760</x><y>2080</y><w>250</w><h>120</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
-state</panel_attributes><additional_attributes>10;10;230;100</additional_attributes></element><element><id>UMLClass</id><coordinates><x>2550</x><y>2050</y><w>470</w><h>130</h></coordinates><panel_attributes>bg=light_gray
+state</panel_attributes><additional_attributes>10;10;230;100</additional_attributes></element><element><id>UMLClass</id><coordinates><x>2550</x><y>2050</y><w>470</w><h>100</h></coordinates><panel_attributes>bg=light_gray
 *MacbookState*
 --
 #price: int = 200000
-#available_courses: List&lt;String&gt;
--owner: Player
+#available_courses: List&lt; Kclass&lt;*&gt; &gt;
 -
 +changeState(bag: Player.Bag)
-+isAvailable(course_name: String): boolean
++isAvailable(course: Kclass&lt;*&gt;): boolean
 
 
 
@@ -707,15 +707,14 @@ state</panel_attributes><additional_attributes>10;10;230;100</additional_attribu
 
 
 
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>2550</x><y>1760</y><w>470</w><h>120</h></coordinates><panel_attributes>bg=light_gray
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>2550</x><y>1760</y><w>470</w><h>100</h></coordinates><panel_attributes>bg=light_gray
 *UsualComputerState*
 --
 #price: int = 30000
-#available_courses: List&lt;String&gt;
--owner: Player
+#available_courses: List&lt; Kclass&lt;*&gt; &gt;
 -
 +changeState(bag: Player.Bag)
-+isAvailable(course_name: String): boolean
++isAvailable(course: Kclass&lt;*&gt;): boolean
 
 
 
@@ -732,15 +731,14 @@ state</panel_attributes><additional_attributes>10;10;230;100</additional_attribu
 
 
 
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>2550</x><y>1900</y><w>470</w><h>130</h></coordinates><panel_attributes>bg=light_gray
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>2550</x><y>1900</y><w>470</w><h>100</h></coordinates><panel_attributes>bg=light_gray
 *XiaomiMiNotebookState*
 --
 #price: int = 60000
-#available_courses: List&lt;String&gt;
--owner: Player
+#available_courses: List&lt; Kclass&lt;*&gt; &gt;
 -
 +changeState(bag: Player.Bag)
-+isAvailable(course_name: String): boolean
++isAvailable(course: Kclass&lt;*&gt;): boolean
 
 
 
@@ -757,15 +755,14 @@ state</panel_attributes><additional_attributes>10;10;230;100</additional_attribu
 
 
 
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>2550</x><y>1620</y><w>470</w><h>120</h></coordinates><panel_attributes>bg=light_gray
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>2550</x><y>1620</y><w>470</w><h>100</h></coordinates><panel_attributes>bg=light_gray
 *OldComputerState*
 --
 #price: int = 10000
-#available_courses: List&lt;String&gt;
--owner: Player
+#available_courses: List&lt; Kclass&lt;*&gt; &gt;
 -
 +changeState(bag: Player.Bag)
-+isAvailable(course_name: String): boolean
++isAvailable(course: Kclass&lt;*&gt;): boolean
 
 
 
@@ -782,15 +779,14 @@ state</panel_attributes><additional_attributes>10;10;230;100</additional_attribu
 
 
 
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>2550</x><y>1480</y><w>470</w><h>120</h></coordinates><panel_attributes>bg=light_gray
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>2550</x><y>1480</y><w>470</w><h>100</h></coordinates><panel_attributes>bg=light_gray
 *PreviouslyUsedComputerState*
 --
 #price: int = 3000
-#available_courses: List&lt;String&gt;
--owner: Player
+#available_courses: List&lt; Kclass&lt;*&gt; &gt;
 -
 +changeState(bag: Player.Bag)
-+isAvailable(course_name: String): boolean
++isAvailable(course: Kclass&lt;*&gt;): boolean
 
 
 
@@ -807,15 +803,14 @@ state</panel_attributes><additional_attributes>10;10;230;100</additional_attribu
 
 
 
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>2550</x><y>1320</y><w>470</w><h>140</h></coordinates><panel_attributes>bg=light_gray
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>2550</x><y>1320</y><w>470</w><h>100</h></coordinates><panel_attributes>bg=light_gray
 /*NullComputerState*/
 --
 #price: int = 0
-#available_courses: List&lt;String&gt;
--owner: Player
+#available_courses: List&lt; Kclass&lt;*&gt; &gt;
 -
 +changeState(bag: Player.Bag)
-+isAvailable(course_name: String): boolean
++isAvailable(course_name: Kclass&lt;*&gt;): boolean
 
 
 
@@ -837,11 +832,11 @@ state</panel_attributes><additional_attributes>10;10;230;100</additional_attribu
 /*ComputerState*/
 --
 #price: int
-#available_courses: List&lt;String&gt;
+#available_courses: List&lt; Kclass&lt;*&gt; &gt;
 
 -
 +changeState(bag: Player.Bag)
-+isAvailable(course_name: String): boolean
++isAvailable(course: Kclass&lt;*&gt;): boolean
 
 --
 *Responsibilities*
@@ -868,12 +863,11 @@ state</panel_attributes><additional_attributes>10;20;100;20</additional_attribut
 /*GuitarState*/
 --
 #price: int
-#available_courses: List&lt;String&gt;
-+owner: Player
+#available_courses: List&lt; Kclass&lt;*&gt; &gt;
 
 -
 +changeState(bag: Player.Bag)
-+isAvailable(courseName: String): boolean
++isAvailable(course: Kclass&lt;*&gt;): boolean
 
 --
 *Responsibilities*
@@ -894,15 +888,14 @@ state</panel_attributes><additional_attributes>10;20;100;20</additional_attribut
 
 
 
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>100</x><y>2060</y><w>460</w><h>130</h></coordinates><panel_attributes>bg=light_gray
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>100</x><y>2060</y><w>460</w><h>100</h></coordinates><panel_attributes>bg=light_gray
 *UssrGuitarState*
 --
 #price: int = 1000
-#available_courses: List&lt;String&gt;
--owner: Player
+#available_courses: List&lt; Kclass&lt;*&gt; &gt;
 -
 +changeState(bag: Player.Bag)
-+isAvailable(courseName: String): boolean
++isAvailable(course: Kclass&lt;*&gt;): boolean
 
 
 
@@ -917,16 +910,14 @@ state</panel_attributes><additional_attributes>10;20;100;20</additional_attribut
 
 
 
-
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>100</x><y>1450</y><w>460</w><h>130</h></coordinates><panel_attributes>bg=light_gray
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>100</x><y>1460</y><w>460</w><h>100</h></coordinates><panel_attributes>bg=light_gray
 *DualNeckGuitarState*
 --
 #price: int = 150000
-#available_courses: List&lt;String&gt;
--owner: Player
+#available_courses: List&lt; Kclass&lt;*&gt; &gt;
 -
 +changeState(bag: Player.Bag)
-+isAvailable(courseName: String): boolean
++isAvailable(course: Kclass&lt;*&gt;): boolean
 
 
 
@@ -942,16 +933,14 @@ state</panel_attributes><additional_attributes>10;20;100;20</additional_attribut
 
 
 
-
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>100</x><y>1910</y><w>460</w><h>130</h></coordinates><panel_attributes>bg=light_gray
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>100</x><y>1910</y><w>460</w><h>100</h></coordinates><panel_attributes>bg=light_gray
 *UralGuitarState*
 --
 #price: int = 5000
-#available_courses: List&lt;String&gt;
--owner: Player
+#available_courses: List&lt; Kclass&lt;*&gt; &gt;
 -
 +changeState(bag: Player.Bag)
-+isAvailable(courseName: String): boolean
++isAvailable(course: Kclass&lt;*&gt;): boolean
 
 
 
@@ -967,16 +956,14 @@ state</panel_attributes><additional_attributes>10;20;100;20</additional_attribut
 
 
 
-
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>100</x><y>1600</y><w>460</w><h>130</h></coordinates><panel_attributes>bg=light_gray
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>100</x><y>1610</y><w>460</w><h>100</h></coordinates><panel_attributes>bg=light_gray
 *FenderGuitarState*
 --
 #price: int = 40000
-#available_courses: List&lt;String&gt;
--owner: Player
+#available_courses: List&lt; Kclass&lt;*&gt; &gt;
 -
 +changeState(bag: Player.Bag)
-+isAvailable(courseName: String): boolean
++isAvailable(course: Kclass&lt;*&gt;): boolean
 
 
 
@@ -992,16 +979,14 @@ state</panel_attributes><additional_attributes>10;20;100;20</additional_attribut
 
 
 
-
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>100</x><y>1760</y><w>460</w><h>130</h></coordinates><panel_attributes>bg=light_gray
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>100</x><y>1760</y><w>460</w><h>100</h></coordinates><panel_attributes>bg=light_gray
 *YamahaGuitarState*
 --
 #price: int = 12000
-#available_courses: List&lt;String&gt;
--owner: Player
+#available_courses: List&lt; Kclass&lt;*&gt; &gt;
 -
 +changeState(bag: Player.Bag)
-+isAvailable(courseName: String): boolean
++isAvailable(course: Kclass&lt;*&gt;): boolean
 
 
 
@@ -1016,16 +1001,14 @@ state</panel_attributes><additional_attributes>10;20;100;20</additional_attribut
 
 
 
-
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>550</x><y>1860</y><w>390</w><h>440</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>370;10;270;240;10;420</additional_attributes></element><element><id>UMLClass</id><coordinates><x>100</x><y>2210</y><w>460</w><h>130</h></coordinates><panel_attributes>bg=light_gray
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>550</x><y>1860</y><w>390</w><h>440</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>370;10;270;240;10;420</additional_attributes></element><element><id>UMLClass</id><coordinates><x>100</x><y>2210</y><w>460</w><h>100</h></coordinates><panel_attributes>bg=light_gray
 *NullGuitarState*
 --
 #price: int = 0
-#available_courses: List&lt;String&gt;
--owner: Player
+#available_courses: List&lt; Kclass&lt;*&gt; &gt;
 -
 +changeState(bag: Player.Bag)
-+isAvailable(courseName: String): boolean
++isAvailable(course: Kclass&lt;*&gt;): boolean
 
 
 
@@ -1040,9 +1023,7 @@ state</panel_attributes><additional_attributes>10;20;100;20</additional_attribut
 
 
 
-
-
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>0</x><y>2140</y><w>120</w><h>120</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>100;100;10;100;10;10;100;10</additional_attributes></element><element><id>Relation</id><coordinates><x>0</x><y>1990</y><w>120</w><h>120</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>100;100;10;100;10;10;100;10</additional_attributes></element><element><id>Relation</id><coordinates><x>0</x><y>1840</y><w>120</w><h>120</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>100;100;10;100;10;10;100;10</additional_attributes></element><element><id>Relation</id><coordinates><x>0</x><y>1690</y><w>120</w><h>120</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>100;100;10;100;10;10;100;10</additional_attributes></element><element><id>Relation</id><coordinates><x>0</x><y>1530</y><w>120</w><h>120</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>100;100;10;100;10;10;100;10</additional_attributes></element><element><id>UMLNote</id><coordinates><x>640</x><y>1270</y><w>550</w><h>320</h></coordinates><panel_attributes>*Note*
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>0</x><y>2140</y><w>120</w><h>120</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>100;100;10;100;10;10;100;10</additional_attributes></element><element><id>Relation</id><coordinates><x>0</x><y>1990</y><w>120</w><h>120</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>100;100;10;100;10;10;100;10</additional_attributes></element><element><id>Relation</id><coordinates><x>0</x><y>1840</y><w>120</w><h>120</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>100;100;10;100;10;10;100;10</additional_attributes></element><element><id>Relation</id><coordinates><x>0</x><y>1690</y><w>120</w><h>120</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>100;100;10;100;10;10;100;10</additional_attributes></element><element><id>Relation</id><coordinates><x>0</x><y>1540</y><w>120</w><h>110</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>100;90;10;90;10;10;100;10</additional_attributes></element><element><id>UMLNote</id><coordinates><x>640</x><y>1270</y><w>550</w><h>320</h></coordinates><panel_attributes>*Note*
 bg=blue
 Способ реализации допустимых песен для каждой гитары:
 
@@ -1250,7 +1231,32 @@ bg=yellow</panel_attributes><additional_attributes></additional_attributes></ele
 
 
 </panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1850</x><y>1590</y><w>260</w><h>170</h></coordinates><panel_attributes>lt=[inside]&lt;-
-</panel_attributes><additional_attributes>30;10;240;150</additional_attributes></element><element><id>UMLClass</id><coordinates><x>2090</x><y>1670</y><w>390</w><h>90</h></coordinates><panel_attributes>bg=light_gray
+</panel_attributes><additional_attributes>30;10;240;150</additional_attributes></element><element><id>Relation</id><coordinates><x>1850</x><y>1500</y><w>260</w><h>140</h></coordinates><panel_attributes>lt=[inside]&lt;-
+</panel_attributes><additional_attributes>30;10;240;120</additional_attributes></element><element><id>UMLClass</id><coordinates><x>2090</x><y>1790</y><w>390</w><h>130</h></coordinates><panel_attributes>bg=light_gray
+DataClass
+/*Birthday*/
+--
++day: int = RandomInt(0,31)
++month: int = RandomInt(0,12)
++year: int = 2002
+--
++save()
++load()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>2090</x><y>1670</y><w>390</w><h>90</h></coordinates><panel_attributes>bg=light_gray
 DataClass
 /*Bag*/
 --
@@ -1273,5 +1279,4 @@ DataClass
 
 
 
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1850</x><y>1500</y><w>260</w><h>140</h></coordinates><panel_attributes>lt=[inside]&lt;-
-</panel_attributes><additional_attributes>30;10;240;120</additional_attributes></element></diagram>
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1890</x><y>1670</y><w>220</w><h>180</h></coordinates><panel_attributes>lt=&lt;.</panel_attributes><additional_attributes>200;160;10;10</additional_attributes></element></diagram>
