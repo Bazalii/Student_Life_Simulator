@@ -1,7 +1,9 @@
 package android.clicker.school_live_simulator
 
 class ExtremeState : PlayerState() {
-    override val reduce_school_performance_percent: Int = 0
-    override val reduce_happines_percent: Int = 0
-    override val reduce_satiety_percent: Int = 0
+    init {
+        reduce_school_performance_percent = 0
+        reduce_happines_percent = 0
+        reduce_satiety_percent = 0
+    }
 }
