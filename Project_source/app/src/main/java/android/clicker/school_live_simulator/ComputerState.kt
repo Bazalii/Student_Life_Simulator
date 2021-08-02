@@ -5,8 +5,6 @@ abstract class ComputerState {
 
     protected val available_courses: List<String> = listOf<String>()
 
-    protected  abstract val owner: Player
-
     abstract fun changeState(thingsHandler: Things)
 
     /**
