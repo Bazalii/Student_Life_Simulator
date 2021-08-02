@@ -2,7 +2,6 @@ package android.clicker.school_live_simulator
 
 open class NullComputerState: ComputerState {
     override val price:Int = 0
-    protected val owner:Player = Player()
 
     /**
      * This is a function to change the state of computer
