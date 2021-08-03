@@ -1,8 +1,5 @@
 package android.clicker.school_live_simulator
 
-/**
- * @author  Nikita Dimitryuk niksvob@mail.ru
- */
 abstract class GuitarState {
     protected abstract val price: Int
     protected val available_courses: ArrayList<String> = arrayListOf()
