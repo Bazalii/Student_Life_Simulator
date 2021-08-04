@@ -1,6 +1,11 @@
 package android.clicker.school_live_simulator
 
 abstract class ComputerCourseState: StudyCourseState {
+
+    /**
+     * This is a price of computer course
+     */
+
     protected abstract val price: Int
 
     /**
@@ -8,19 +13,19 @@ abstract class ComputerCourseState: StudyCourseState {
      * These types are described in enumeration class WebTask
      */
 
-    protected val available_web_task: List<WebTask> = listOf<WebTask>()
+    protected val available_web_tasks: List<WebTask> = listOf<WebTask>()
 
     /**
      * This is a function for buying courses
-     * @param student Player who buys course
+     * @param courses Courses which Player takes
      */
 
-    abstract fun buyNextCourse(student: Player)
+    abstract fun buyNextCourse(courses: Player.Courses)
 
     /**
      * This is a function to ckeck if course is available to buy
      * @param web_task Element of enum WebTask
-     * @return True if course is available to buy and False if not
+     * @return True if course is available to buy
      */
 
     fun isAvailable(web_task: WebTask): Boolean {

@@ -1,14 +1,14 @@
 package android.clicker.school_live_simulator
 
 open class WebDesignCourseState: OnlineWorkCourseState {
-    override price: Int
+    override val price: Int
 
     init {
         available_web_task.add(WebTask.MAKE_FRONTEND)
     }
 
-    override fun buyNexCourse(student: Player) {
-        Player.courses = VideoEditingCourseState()
+    override fun buyNexCourse(courses: Player.Courses) {
+        courses.computer_course = VideoEditingCourseState()
     }
 
     override fun timerTickHandler(){
