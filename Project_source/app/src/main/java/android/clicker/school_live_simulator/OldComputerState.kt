@@ -1,6 +1,6 @@
 package android.clicker.school_live_simulator
 
-open class OldComputerState: PreviouslyUsedComputerState() {
+open class OldComputerState : PreviouslyUsedComputerState() {
     override val price: Int = 10000
 
     init {

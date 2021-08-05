@@ -1,6 +1,6 @@
 package android.clicker.school_live_simulator
 
-open class MacbookState: XiaomiMiNotebookState() {
+open class MacbookState : XiaomiMiNotebookState() {
     override val price: Int = 200000
 
     init {
