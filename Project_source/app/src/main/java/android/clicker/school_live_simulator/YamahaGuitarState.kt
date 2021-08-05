@@ -4,7 +4,7 @@ open class YamahaGuitarState : UralGuitarState() {
     override val price: Int = 12000
 
     init {
-        available_courses.add("MusicalSchoolCourseState")
+        available_courses.add(MusicalSchoolCourseState::class)
     }
 
     override fun changeState(bag: Player.Bag) {

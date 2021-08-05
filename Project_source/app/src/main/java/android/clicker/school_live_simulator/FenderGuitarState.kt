@@ -4,7 +4,7 @@ open class FenderGuitarState : YamahaGuitarState() {
     override val price: Int = 40000
 
     init {
-        available_courses.add("MusicalObservatoryCourseState")
+        available_courses.add(MusicalObservatoryCourseState::class)
     }
 
     override fun changeState(bag: Player.Bag) {
