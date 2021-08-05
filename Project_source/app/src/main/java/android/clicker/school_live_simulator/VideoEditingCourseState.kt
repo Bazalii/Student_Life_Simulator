@@ -1,6 +1,6 @@
 package android.clicker.school_live_simulator
 
-open class VideoEditingCourseState: WebDesignCourseState {
+open class VideoEditingCourseState : WebDesignCourseState() {
     override val price: Int = 0
 
     init {

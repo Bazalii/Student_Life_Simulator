@@ -1,6 +1,6 @@
 package android.clicker.school_live_simulator
 
-open class OnlineWorkCourseState: NullComputerCourseState {
+open class OnlineWorkCourseState : NullComputerCourseState() {
     override val price: Int = 0
 
     init {

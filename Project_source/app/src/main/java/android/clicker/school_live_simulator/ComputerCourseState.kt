@@ -1,12 +1,12 @@
 package android.clicker.school_live_simulator
 
-abstract class ComputerCourseState: StudyCourseState {
+abstract class ComputerCourseState: StudyCourseState() {
 
     /**
      * This is a price of computer course
      */
 
-    protected abstract val price: Int
+    abstract val price: Int
 
     /**
      * This is a list of available web tasks
