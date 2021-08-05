@@ -13,7 +13,7 @@ abstract class ComputerCourseState: StudyCourseState {
      * These types are described in enumeration class WebTask
      */
 
-    protected val available_web_tasks: List<WebTask> = listOf<WebTask>()
+    protected val available_web_tasks: ArrayList<WebTask> = arrayListOf<WebTask>()
 
     /**
      * This is a function for buying courses
