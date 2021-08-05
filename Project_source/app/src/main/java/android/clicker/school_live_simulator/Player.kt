@@ -1,10 +1,21 @@
 package android.clicker.school_live_simulator
 
 class Player {
-    class Bag {
-
+    object Bag {
+        var bicycle: BicycleState = NullBicycleState()
+            set(value) {
+                TODO("Not yet implemented")
+            }
+        var guitar: GuitarState = NullGuitarState()
+            set(value) {
+                TODO("Not yet implemented")
+            }
+        var computer: ComputerState = NullComputerState()
+            set(value) {
+                TODO("Not yet implemented")
+            }
     }
-    class Courses {
+    object Courses {
         var guitar_course: GuitarCourseState = NullGuitarCourseState()
             set(value) {
                 TODO("Not yet implemented")
@@ -25,8 +36,8 @@ class Player {
 
     private var school_class: Int = 1
 
-    private var items: Bag = Bag()
-    private var current_courses: Courses = Courses()
+    private var items: Bag = Bag
+    private var current_courses: Courses = Courses
 
     private var player_state: PlayerState = NormalState()
     private var live_observers: ArrayList<LiveObserver> = arrayListOf<LiveObserver>()
