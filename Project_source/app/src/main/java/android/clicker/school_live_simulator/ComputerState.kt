@@ -28,8 +28,8 @@ abstract class ComputerState {
      * @return True if the course is available
      */
 
-    open fun isAvailable(courseName: KClass<*>): Boolean {
-        return courseName in available_courses
+    fun isAvailable(course_name: KClass<*>): Boolean {
+        return course_name in available_courses
     }
 
 }
