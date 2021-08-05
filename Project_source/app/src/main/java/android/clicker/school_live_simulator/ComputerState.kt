@@ -12,7 +12,7 @@ abstract class ComputerState {
      * This is a list of available courses for Player
      */
 
-    protected val available_courses: List<String> = listOf<String>()
+    protected val available_courses: ArrayList<KClass<*>> = arrayListOf<KClass<*>>()
 
     /**
      * This is a function to change computer
@@ -28,7 +28,7 @@ abstract class ComputerState {
      * @return True if the course is available
      */
 
-    open fun isAvailable(courseName: String): Boolean {
+    open fun isAvailable(courseName: KClass<*>): Boolean {
         return courseName in available_courses
     }
 

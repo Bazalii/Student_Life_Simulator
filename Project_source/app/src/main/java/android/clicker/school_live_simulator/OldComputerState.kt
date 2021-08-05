@@ -3,6 +3,10 @@ package android.clicker.school_live_simulator
 open class OldComputerState: PreviouslyUsedComputerState() {
     override  price: Int = 10000
 
+    init {
+        available_courses.add(OnlineWorkCourseState::class)
+    }
+
     override fun changeState(bag: Player.Bag) {
         bag.computer = UsualComputerState()
     }
