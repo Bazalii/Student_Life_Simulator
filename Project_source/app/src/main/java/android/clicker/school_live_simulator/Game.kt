@@ -2,10 +2,14 @@ package android.clicker.school_live_simulator
 
 object Game {
     private var difficulty_state: GameDifficultyState = NormalMode()
-    private var save_handlers: ArrayList<function> = ArrayListOf()
-    private var load_handlers: ArrayList<function> = ArrayListOf()
 
-    private lateinit var player: InGameWrapper
+    /**
+     * Commented because that should be realised later
+     */
+//    private var save_handlers: ArrayList<function> = ArrayListOf()
+//    private var load_handlers: ArrayList<function> = ArrayListOf()
+
+    private lateinit var player: Player
 //    game: Game
     lateinit var game_date: GameDate
     lateinit var game_status: GameStatus
@@ -25,12 +29,15 @@ object Game {
         TODO("Not yet implemented")
     }
 
-    fun registerSaveHandler(handler: function) {
-        TODO("Not yet implemented")
-    }
-    fun registerLoadHandler(handler: function) {
-        TODO("Not yet implemented")
-    }
+    /**
+     * Commented because that should be realised later
+      */
+//    fun registerSaveHandler(handler: function) {
+//        TODO("Not yet implemented")
+//    }
+//    fun registerLoadHandler(handler: function) {
+//        TODO("Not yet implemented")
+//    }
 
     fun save() {
         TODO("Not yet implemented")

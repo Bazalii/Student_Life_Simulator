@@ -105,7 +105,9 @@ class Player {
     private fun changePlayerState(state: PlayerState) {
         TODO("Not yet implemented")
     }
-
+    /**
+     * Commented because that should be realised later
+     */
 //    fun registerObserver(Observer o) {
 //        TODO("Not yet implemented")
 //    }
