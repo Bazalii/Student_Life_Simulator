@@ -6,7 +6,7 @@ abstract class ComputerState {
      * Computer price
      */
 
-    protected abstract val price: Int
+    abstract val price: Int
 
     /**
      * This is a list of available courses for Player
