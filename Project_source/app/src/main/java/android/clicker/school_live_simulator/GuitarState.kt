@@ -3,7 +3,7 @@ package android.clicker.school_live_simulator
 import kotlin.reflect.KClass
 
 abstract class GuitarState {
-    protected abstract val price: Int
+    abstract val price: Int
     protected val available_courses: ArrayList<KClass<*>> = arrayListOf()
 
     /**
