@@ -8,6 +8,6 @@ open class UralGuitarState : UssrGuitarState() {
     }
 
     override fun changeState(bag: Player.Bag) {
-        bag.setGuitar(YamahaGuitarState())
+        bag.guitar = YamahaGuitarState()
     }
 }
