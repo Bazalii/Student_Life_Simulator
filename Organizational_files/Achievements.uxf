@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <diagram program="umlet" version="14.3.0">
-  <zoom_level>6</zoom_level>
+  <zoom_level>5</zoom_level>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>450</x>
-      <y>420</y>
-      <w>204</w>
-      <h>168</h>
+      <x>565</x>
+      <y>295</y>
+      <w>170</w>
+      <h>200</h>
     </coordinates>
-    <panel_attributes>bg=light_gray
+    <panel_attributes>bg=gray
 *Player*
 --
 -achieved_achievements: List&lt;GameAchievements&gt;
@@ -26,17 +26,22 @@
 +buyNewBicycle()
 +buyNewGuitar()
 +buyNewComputer()
-...
+
+Методы, которые нужно добавить:
++doEntertainment(entertainment: Entertainments)
++doCreativity(creativity: Creativity)
++doStudy(study: Study)
+
 </panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>78</x>
-      <y>420</y>
-      <w>276</w>
-      <h>318</h>
+      <x>165</x>
+      <y>540</y>
+      <w>230</w>
+      <h>115</h>
     </coordinates>
     <panel_attributes>bg=blue
 "enumeration"
@@ -44,100 +49,56 @@
 --
 EXAMPLE(satiety, happiness, money, school_perf)
 
-LOSE_SALARY(0, -30%, 0, 0) 15% ??? почему не теряется зарплата
-DRUNK_STUDENT(0, +20%, 0, -15%) 10%; 100% if summer
-PAR_ABOUT_REPRODUCTIVE(0, +5%, 0, +15%) 8%
-BE_REPORTED_BY_CHILDREN(0, -10%, 0, 0) 2%
-BOTTLE_FLIP(0, +5%, 0, 0) 10%
+WORK_HARD(0, 0, +20%, 0) 5%
+LOSE_SALARY(0, -30%, 0, 0) 15%
 SPARTAK_WINNER(???)
 ZENIT_WINNER(???)
 JOIN_TO_WINNERS(???)
 JOIN_TO_LOSERS(???)
-FUTURE_PIMP(0, +20%, 5000, 0) 5% 
-FUTURE_GAY_PIMP(0, -40%, 0, 0) 10%
-FRIEND_IN_THEATRE(0, +40%, 0, 0) 3%
-MOMS_HACKERMAN(0, -8%, 0, 0) 8%
-EVACUATE_FROM_SHOP_CENTRE(0, -5%, 0, 0) 3%
 MOMS_BUSINESSMAN(???)
 MOMS_NOT_BUSSINESSMAN(???)
 CREATE_PUPIL_SIMULATOR(???) 3%
-DESTROYED_HOUSE(0, -50%, -20000, 0) 2%
-DRAW_ON_TOP_OF_OTHER_ART(0, +5%, 0, 0) 15%
-SEX_SCENE_IN_BOOK(0, +10%, 0, 0) 3%
-GET_TIP_FROM_YOUNGS(0, 0, +150, 0) 5%
-TOO_FAST_RUNNING(0, +5%, 0, 0) 10%
-PHOTO_WITH_VOCALIST(0, +8% (per day in week), 0, 0) 5%
-MISTER_PROPER(0, -10%, 0, 0) 20%
-POEM_IN_SPOTLIGHT(0, +20, 0, 0) 10%
-OLD_ANSWER_BOOK(0, 0, 0, -15%) 15%
-FALL_ASLEEP_AT_WEBINAR(0, 0, 0, -10%) 20%
-STORIES_ABOUT_USSR(0, 0, 0, +10%) 15%</panel_attributes>
+</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>0</x>
-      <y>222</y>
-      <w>294</w>
-      <h>84</h>
+      <x>400</x>
+      <y>210</y>
+      <w>100</w>
+      <h>40</h>
     </coordinates>
-    <panel_attributes>"enumeration"
+    <panel_attributes>&lt;&lt;enumeration&gt;&gt;
 *Song random achievements*
 --
-EXAMPLE(satiety, happiness, money, school_perf)
-
-IVANS_INTERNATIONAL(0, +15%, 0, 0) 3%
-IN_SPOTLIGHT(0, +15%, 0, 0) 5%
-WRONG_CHORDS(0, -20%, -3000, 0) 5% if GAZ_SECTOR || SMELLS_LIKE
-SONG_IN_SPOTLIGHT(0, +30, 0, 0) 7% if JAZZ || BAXA</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>54</x>
-      <y>120</y>
-      <w>270</w>
-      <h>84</h>
-    </coordinates>
-    <panel_attributes>"enumeration"
-*WebTask random achievements*
---
-EXAMPLE(satiety, happiness, money, school_perf)
-
-CAM2CAM_TRAP(0, -40%, 0, 0) 1%
-WORK_HARD(0, 0, +20%, 0) 5%
-GET_BAN(0, -10%, 0, 0) 60% IF HAPPINESS &lt; 30% &amp;&amp; PUBLIC_PR
-</panel_attributes>
+WRONG_CHORDS
+IN_SPOTLIGHT</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>318</x>
-      <y>198</y>
-      <w>114</w>
-      <h>84</h>
+      <x>590</x>
+      <y>150</y>
+      <w>15</w>
+      <h>50</h>
     </coordinates>
-    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>170.0;120.0;10.0;10.0</additional_attributes>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;80.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLNote</id>
     <coordinates>
-      <x>78</x>
-      <y>744</y>
-      <w>276</w>
-      <h>66</h>
+      <x>165</x>
+      <y>660</y>
+      <w>230</w>
+      <h>35</h>
     </coordinates>
     <panel_attributes>bg=blue
 *Note*
-В диаграмме классов Player_class я не нашел соответствующие
-достижениям методы, поэтому их пока вынес в отдельный блок.
-
-Три знака вопроса в скобках обозначают неопределенность
-параметров.
+Оставшиеся достижения относятся к работе 
+либо к нерегулярным событиям
 
 </panel_attributes>
     <additional_attributes/>
@@ -145,12 +106,12 @@ GET_BAN(0, -10%, 0, 0) 60% IF HAPPINESS &lt; 30% &amp;&amp; PUBLIC_PR
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>612</x>
-      <y>102</y>
-      <w>96</w>
-      <h>78</h>
+      <x>805</x>
+      <y>100</y>
+      <w>80</w>
+      <h>65</h>
     </coordinates>
-    <panel_attributes>"enumeration"
+    <panel_attributes>&lt;&lt;enumeration&gt;&gt;
 *Guitar achievements*
 --
 USSR_GUITAR 
@@ -165,10 +126,10 @@ DUAL_NECK_GUITAR
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>408</x>
-      <y>270</y>
-      <w>282</w>
-      <h>96</h>
+      <x>530</x>
+      <y>190</y>
+      <w>235</w>
+      <h>80</h>
     </coordinates>
     <panel_attributes>bg=orange
 */GameAchievements/*
@@ -185,10 +146,32 @@ DUAL_NECK_GUITAR
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>546</x>
-      <y>360</y>
-      <w>18</w>
-      <h>72</h>
+      <x>645</x>
+      <y>265</y>
+      <w>15</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;60.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>495</x>
+      <y>235</y>
+      <w>45</w>
+      <h>15</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>70.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>710</x>
+      <y>140</y>
+      <w>15</w>
+      <h>60</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
     <additional_attributes>10.0;100.0;10.0;10.0</additional_attributes>
@@ -196,63 +179,23 @@ DUAL_NECK_GUITAR
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>288</x>
-      <y>264</y>
-      <w>132</w>
-      <h>18</h>
+      <x>760</x>
+      <y>160</y>
+      <w>55</w>
+      <h>40</h>
     </coordinates>
-    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>200.0;10.0;10.0;10.0</additional_attributes>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;60.0;90.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>162</x>
-      <y>30</y>
-      <w>270</w>
-      <h>72</h>
+      <x>805</x>
+      <y>180</y>
+      <w>80</w>
+      <h>40</h>
     </coordinates>
-    <panel_attributes>"enumeration"
-*Food random achievements*
---
-EXAMPLE(satiety, happiness, money, school_perf)
-
-2_SPICES(0, +10, 0, 0) 3% if DOSHIRAK
-POISONING_OF_EATERY_FOOD(0, -20, 0, 0) 5% if EATERY_FOOD
-</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>426</x>
-      <y>96</y>
-      <w>18</w>
-      <h>186</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;290.0;10.0;10.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>654</x>
-      <y>174</y>
-      <w>18</w>
-      <h>108</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;160.0;10.0;10.0</additional_attributes>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>756</x>
-      <y>162</y>
-      <w>96</w>
-      <h>48</h>
-    </coordinates>
-    <panel_attributes>"enumeration"
+    <panel_attributes>&lt;&lt;enumeration&gt;&gt;
 *Bicycle achievements*
 --
 USUAL_BIKE
@@ -263,23 +206,23 @@ MOUNTAIN_BIKE
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>666</x>
-      <y>204</y>
-      <w>102</w>
-      <h>78</h>
+      <x>760</x>
+      <y>195</y>
+      <w>55</w>
+      <h>15</h>
     </coordinates>
-    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;110.0;150.0;10.0</additional_attributes>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;90.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>852</x>
-      <y>240</y>
-      <w>144</w>
-      <h>60</h>
+      <x>795</x>
+      <y>225</y>
+      <w>120</w>
+      <h>50</h>
     </coordinates>
-    <panel_attributes>"enumeration"
+    <panel_attributes>&lt;&lt;enumeration&gt;&gt;
 *Computer achievements*
 --
 PREVIOUSLY_USED_COMPUTER
@@ -291,47 +234,520 @@ MACBOOK
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>684</x>
-      <y>264</y>
-      <w>180</w>
-      <h>18</h>
+      <x>760</x>
+      <y>245</y>
+      <w>45</w>
+      <h>15</h>
     </coordinates>
-    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;280.0;10.0</additional_attributes>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;70.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLNote</id>
     <coordinates>
-      <x>48</x>
-      <y>324</y>
-      <w>330</w>
-      <h>84</h>
+      <x>960</x>
+      <y>470</y>
+      <w>170</w>
+      <h>55</h>
     </coordinates>
     <panel_attributes>bg=blue
 *Note*
-Если мы выполним из класса Player метод eat(), playSong() или realiseWebTask(),
-то в зависимости от какого-то условия и с каким-то шансом игрок получает 
-"ачивку". Если шанс случился, то внутри метода проверяются условия.
-Если они верны, то там же вызываются соответствующие методы
-повышения/понижения характеристик игрока и changeAchievementList(),
-который добавляет "ачивку", если ее не было и ничего не делает,
-если такая "ачивка" в списке есть.</panel_attributes>
+В методе класса Player, который связан с какой-то 
+"ачивкой",вызывается changeAchievementList(),
+который добавляет "ачивку", если ее не было, 
+и ничего не делает, если такая "ачивка" 
+в списке есть</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>730</x>
+      <y>325</y>
+      <w>45</w>
+      <h>15</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>70.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>765</x>
+      <y>305</y>
+      <w>145</w>
+      <h>195</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;enumeration&gt;&gt;
+*Entertainments*
+--
+EXAMPLE(money, happiness)
+
+DO_NOTHING(0, +5%)
+RIDE_BIKE(0, +10%)
+LISTEN_MUSIC(-169/month, +0.5%/day)
+GAMING_WITH_DONATION(-1000, +30%)
+SHOPPING(-10000, +50%)
+RENDEZVOUS(-20000, +80%)
+
+READ_BOOK(0, +3%)
+HELP_WITH_HOMETASK(0, +5%)
+DO_SPORT(-1500/month, +10%)
+GO_THEATRE(-4000, +30%)
+VIP_CONCERT(-10000, +70%)
+
+KICK_TRASHCAN(0, +7%)
+HIT_YOUNGS(+150, +10%)
+UPLOAD_VIRUS(0, +25%)
+CAM2CAM(-5000, +45%)
+ARRANGE_PARTY(-10000, +60%)
+STRIPCLUB(-20000, +100%)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>275</x>
+      <y>395</y>
+      <w>255</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;enumeration&gt;&gt;
+*Creativity*
+--
+EXAMPLE(money, happiness)
+
+DRAW_ON_DESKS(0, +3%)
+TAGGING(0, +5%)
+WRITE_POEM(0, +7%)
+DO_HANDMADE(-500, +15%)
+MAKE_COVER(0, +15%) if YAMAHA or better
+MAKE_SONG(+3000, +10%) if FENDER or better
+STREAMING(+5000, -10%) if XIAOMI or better
+MAKE_VIDEO(+sqrt(Player.money)/month, -5%) if USUALCOMPUTER or better</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>525</x>
+      <y>455</y>
+      <w>50</w>
+      <h>15</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;80.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>730</x>
+      <y>490</y>
+      <w>15</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>10.0;70.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>700</x>
+      <y>525</y>
+      <w>225</w>
+      <h>95</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;enumeration&gt;&gt;
+*Study*
+--
+EXAMPLE(money, school_perfomance)
+
+SCHOOL(0, +0.3%/day)
+SELF_EDUCATION(-100, +5%)
+BUY_ANSWERS(-300, +10%)
+STUDENT_TUTOR(-1000, +25%)
+ONLINE_SCHOOL(-10000/month, +1.5%/day if not summer)
+NORMAL_TUTOR(-15000, +60%)
+LECTOR_TUTOR(-25000, +100%)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>560</x>
+      <y>490</y>
+      <w>15</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>10.0;60.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
     <id>UMLNote</id>
     <coordinates>
-      <x>708</x>
-      <y>336</y>
-      <w>336</w>
-      <h>60</h>
+      <x>415</x>
+      <y>530</y>
+      <w>75</w>
+      <h>55</h>
     </coordinates>
     <panel_attributes>bg=blue
 *Note*
-Если мы выполним из класса Player метод buyNewBicycle(), buyNewGuitar() или  
-buyNewComputer(), то в зависимости от приобретения игрок получает "ачивку". 
-В методе вызывается changeAchievementList(), который добавляет "ачивку", если 
-ее не было и ничего не делает, если такая "ачивка" в списке есть.</panel_attributes>
+Белые блоки и 
+оранжевый блок- то, 
+чего не было 
+(не считая заметок)
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>555</x>
+      <y>585</y>
+      <w>15</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;60.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>455</x>
+      <y>615</y>
+      <w>210</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;enumeration&gt;&gt;
+*Food random events*
+--
+EXAMPLE(happiness)
+
+2_SPICES(+10%) 3% if DOSHIRAK
+POISONING_OF_EATERY_FOOD(-20%) 5% if EATERY_FOOD
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>500</x>
+      <y>520</y>
+      <w>130</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>bg=light_gray
+&lt;&lt;enumeration&gt;&gt;
+*Food*
+--
+CRACKERS(25, 5, 10)
+DOSHIRAK(50, -10, 50)
+EATERY_FOOD(120, -15, 300)
+MCDONALDS(200, -20, 1000)
+PIZZA_AT_HOME(450, +5, 4000)
+RESTORANT_FOOD(800, +50, 10000)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>680</x>
+      <y>105</y>
+      <w>115</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;enumeration&gt;&gt;
+*Food random achievements*
+--
+2_SPICES
+POISONING_OF_EATERY_FOOD
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>945</x>
+      <y>305</y>
+      <w>260</w>
+      <h>150</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;enumeration&gt;&gt;
+*Entertainment random events*
+--
+EXAMPLE(happiness, money)
+
+CAM2CAM_TRAP(-40%, 0) 1% if CAM2CAM
+GET_BAN(-10%, 0) 60% IF HAPPINESS &lt; 30% &amp;&amp; GAMING_WITH_DONATION
+BE_REPORTED_BY_CHILDREN(-10%, 0) 2% if HIT_YOUNGS
+BOTTLE_FLIP(+5%, 0) 10% if KICK_TRASHCAN
+FUTURE_PIMP(+20%, +5000) 5% if STRIPCLUB 
+FUTURE_GAY_PIMP(-40%, 0) 10% if STRIPCLUB
+FRIEND_IN_THEATRE(+40%, 0) 3% if GO_THEATRE
+MOMS_HACKERMAN(-8%, 0) 8% if UPLOAD_VIRUS
+EVACUATE_FROM_SHOP_CENTRE(-5%, 0) 3% if SHOPPING
+SEX_SCENE_IN_BOOK(+10%, 0) 3% if READ_BOOK
+GET_TIP_FROM_YOUNGS(0, +150) 5% if HELP_WITH_HOMETASK
+DESTROYED_HOUSE(-50%, -20000) 2% if ARRANGE_PARTY
+PHOTO_WITH_VOCALIST(+8%/day in week, 0) 5% if VIP_CONCERT
+TOO_FAST_RUNNING(+5%, 0) 10% if DO_SPORT
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>905</x>
+      <y>330</y>
+      <w>50</w>
+      <h>15</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;80.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>535</x>
+      <y>20</y>
+      <w>130</w>
+      <h>135</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;enumeration&gt;&gt;
+*Entertainment random achievements*
+--
+CAM2CAM_TRAP
+GET_BAN
+BE_REPORTED_BY_CHILDREN
+BOTTLE_FLIP
+FUTURE_PIMP
+FUTURE_GAY_PIMP
+FRIEND_IN_THEATRE
+MOMS_HACKERMAN
+EVACUATE_FROM_SHOP_CENTRE
+SEX_SCENE_IN_BOOK
+GET_TIP_FROM_YOUNGS
+DESTROYED_HOUSE
+PHOTO_WITH_VOCALIST
+TOO_FAST_RUNNING
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>435</x>
+      <y>290</y>
+      <w>100</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>bg=light_gray
+&lt;&lt;enumeration&gt;&gt;
+*Song*
+--
+SINGLE_CHORD(100)
+GAZ_SECTOR(500)
+SMELLS_LIKE(1000)
+JAZZ(2500)
+BAXA(5000)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>530</x>
+      <y>315</y>
+      <w>45</w>
+      <h>15</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;70.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>955</x>
+      <y>540</y>
+      <w>235</w>
+      <h>85</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;enumeration&gt;&gt;
+*Study random events*
+--
+EXAMPLE(happiness, school_perfomance)
+
+DRUNK_STUDENT(+20%, -15%) 10%; 100% if summer
+PAR_ABOUT_REPRODUCTIVE(+5%, +15%) 8% if SELF_EDUCATION
+OLD_ANSWER_BOOK(0, -10%) 15% if BUY_ANSWERS
+FALL_ASLEEP_AT_WEBINAR(0, -10%) 20% if ONLINE_SCHOOL
+STORIES_ABOUT_USSR(0, +10%) 15% if LECTOR_TUTOR</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>920</x>
+      <y>580</y>
+      <w>45</w>
+      <h>15</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;70.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>500</x>
+      <y>115</y>
+      <w>40</w>
+      <h>85</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>60.0;150.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>375</x>
+      <y>40</y>
+      <w>130</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;enumeration&gt;&gt;
+*Study random achievements*
+--
+DRUNK_STUDENT
+PAR_ABOUT_REPRODUCTIVE
+OLD_ANSWER_BOOK
+FALL_ASLEEP_AT_WEBINAR
+STORIES_ABOUT_USSR</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>370</x>
+      <y>130</y>
+      <w>130</w>
+      <h>65</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;enumeration&gt;&gt;
+*Creativity random achievements*
+--
+DRAW_ON_TOP_OF_OTHER_ART
+MISTER_PROPER
+IVANS_INTERNATIONAL
+POEM_IN_SPOTLIGHT
+SONG_IN_SPOTLIGHT</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>495</x>
+      <y>190</y>
+      <w>45</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>70.0;70.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>10</x>
+      <y>405</y>
+      <w>240</w>
+      <h>85</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;enumeration&gt;&gt;
+*Creativity random events*
+--
+EXAMPLE(happiness)
+
+DRAW_ON_TOP_OF_OTHER_ART(+5%) 15% if TAGGING
+MISTER_PROPER(-10%) 20% if DRAW_ON_DESK
+IVANS_INTERNATIONAL(+15%) 3% if MAKE_SONG
+POEM_IN_SPOTLIGHT(+20%) 10% if WRITE_POEM
+SONG_IN_SPOTLIGHT(+30%) 7% if MAKE_SONG &amp;&amp; FENDER or better </panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>245</x>
+      <y>455</y>
+      <w>40</w>
+      <h>15</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>60.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>395</x>
+      <y>315</y>
+      <w>50</w>
+      <h>15</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>80.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>165</x>
+      <y>295</y>
+      <w>235</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;enumeration&gt;&gt;
+*Song random events*
+--
+EXAMPLE(happiness, money)
+
+WRONG_CHORDS(-20%, -3000) 5% if GAZ_SECTOR || SMELLS_LIKE
+IN_SPOTLIGHT(+15%, 0) 5%
+</panel_attributes>
     <additional_attributes/>
   </element>
 </diagram>
