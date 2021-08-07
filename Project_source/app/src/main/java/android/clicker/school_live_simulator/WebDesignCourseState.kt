@@ -15,6 +15,6 @@ open class WebDesignCourseState : OnlineWorkCourseState() {
 
     }
     override fun timerEndHandler(){
-
+        available_web_task.add(WebTask.MAKE_FRONTEND)
     }
 }

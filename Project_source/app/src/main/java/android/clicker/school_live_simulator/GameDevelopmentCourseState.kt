@@ -15,6 +15,6 @@ open class GameDevelopmentCourseState : VideoEditingCourseState() {
 
     }
     override fun timerEndHandler(){
-
+        available_web_task.add(WebTask.MAKE_A_GAME)
     }
 }

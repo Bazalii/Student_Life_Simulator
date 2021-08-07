@@ -15,6 +15,6 @@ open class VideoEditingCourseState : WebDesignCourseState() {
 
     }
     override fun timerEndHandler(){
-
+        available_web_task.add(WebTask.VIDEO_EDITING)
     }
 }

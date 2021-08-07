@@ -15,6 +15,6 @@ open class OnlineWorkCourseState : NullComputerCourseState() {
 
     }
     override fun timerEndHandler(){
-
+        available_web_task.add(WebTask.PUBLIC_PR)
     }
 }

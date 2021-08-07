@@ -15,6 +15,6 @@ open class FriendsCourseState : NullComputerCourseState() {
 
     }
     override fun timerEndHandler(){
-
+        available_web_task.add(WebTask.ACCOUNT_BOOST)
     }
 }
