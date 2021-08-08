@@ -5,20 +5,14 @@ abstract class StudyCourseState: TimerObserver {
 	 * Price of course
 	 */
 	protected abstract val price: Int
-	
+
 	/**
 	 * For student change current course
-	 * @param student who change course
+	 * @param courses current courses state
 	 */
-    abstract fun buyNextCourse(var student: Player) {
-	
-	}
-	
-    abstract override fun timerTickHandler() {
-	
-	}
-	
-    abstract override fun timerEndHandler() {
-	
-	}
+    abstract fun buyNextCourse(courses: Player.Courses)
+
+    abstract override fun timerTickHandler()
+
+    abstract override fun timerEndHandler()
 }
