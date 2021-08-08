@@ -1,7 +1,7 @@
 package android.clicker.school_live_simulator
 
 open class WebDesignCourseState : OnlineWorkCourseState() {
-    override val price: Int = 0
+    override val price: Int = 300
 
     override fun buyNexCourse(courses: Player.Courses) {
         courses.computer_course = VideoEditingCourseState()
