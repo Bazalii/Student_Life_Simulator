@@ -1,7 +1,7 @@
 package android.clicker.school_live_simulator
 
 open class FirstSongCourseState: YardGuitarCourseState() {
-    override val price: Int = 0
+    override val price: Int = 100
 
     override fun buyNextCourse(courses: Player.Courses) {
         courses.guitar_course = YardSongCourseState()
