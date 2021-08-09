@@ -1,5 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Ivan/ITMO/Summer_project/Project_source/app/src/main/res/drawable/ic_school.xml" value="0.21458333333333332" />
+        <entry key="..\:/Ivan/ITMO/Summer_project/Project_source/app/src/main/res/drawable/ic_shop.xml" value="0.21458333333333332" />
+        <entry key="..\:/Ivan/ITMO/Summer_project/Project_source/app/src/main/res/layout/activity_game.xml" value="0.264" />
+        <entry key="..\:/Ivan/ITMO/Summer_project/Project_source/app/src/main/res/menu/bottom_navigation.xml" value="1.325" />
+      </map>
+    </option>
+  </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
