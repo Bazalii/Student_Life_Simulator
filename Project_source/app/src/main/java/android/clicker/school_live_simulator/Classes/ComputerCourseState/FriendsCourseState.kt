@@ -3,7 +3,7 @@ package android.clicker.school_live_simulator
 open class FriendsCourseState : NullComputerCourseState() {
     override val price: Int = 0
 
-    override fun buyNexCourse(courses: Player.Courses) {
+    override fun buyNextCourse(courses: Player.Courses) {
         courses.computer_course = OnlineWorkCourseState()
     }
 
@@ -11,6 +11,6 @@ open class FriendsCourseState : NullComputerCourseState() {
 
     }
     override fun timerEndHandler(){
-        available_web_task.add(WebTask.ACCOUNT_BOOST)
+        available_web_tasks.add(WebTask.ACCOUNT_BOOST)
     }
 }

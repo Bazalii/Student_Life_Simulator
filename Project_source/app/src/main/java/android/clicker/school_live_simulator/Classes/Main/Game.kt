@@ -11,8 +11,8 @@ object Game {
 
     private lateinit var player: Player
 //    game: Game
-    lateinit var game_date: GameDate
-    lateinit var game_status: GameStatus
+//    lateinit var game_date: GameDate
+//    lateinit var game_status: GameStatus
 
 
     fun init() {

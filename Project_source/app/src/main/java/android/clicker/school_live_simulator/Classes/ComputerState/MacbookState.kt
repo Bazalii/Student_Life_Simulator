@@ -6,7 +6,7 @@ open class MacbookState : XiaomiMiNotebookState() {
     init {
         available_courses.add(GameDevelopmentCourseState::class)
     }
-    override fun changeState(bag: Player.bag) {
+    override fun changeState(bag: Player.Bag) {
         Unit = throw UnsupportedOperationException("Operation not supported")
     }
 

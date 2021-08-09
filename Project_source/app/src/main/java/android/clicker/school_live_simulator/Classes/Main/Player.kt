@@ -25,10 +25,10 @@ class Player {
                 TODO("Not yet implemented")
             }
     }
-    private var achieved_achievements: ArrayList<GameAchievements> = arrayListOf<GameAchievements>()
+//    private var achieved_achievements: ArrayList<GameAchievements> = arrayListOf<GameAchievements>()
 
     private lateinit var name: String
-    private lateinit var birthday: Birthday
+//    private lateinit var birthday: Birthday
     private var school_performance: Int = 1000
     private var happiness: Int = 1000
     private var satiety: Int = 1000
@@ -40,7 +40,7 @@ class Player {
     private var current_courses: Courses = Courses
 
     private var player_state: PlayerState = NormalState()
-    private var live_observers: ArrayList<LiveObserver> = arrayListOf<LiveObserver>()
+//    private var live_observers: ArrayList<LiveObserver> = arrayListOf<LiveObserver>()
 
 
     fun tick() {
