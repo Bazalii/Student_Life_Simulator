@@ -1,4 +1,4 @@
-package android.clicker.school_live_simulator.User_interface
+package android.clicker.school_live_simulator.User_interface.ScrollingFragments
 
 import android.clicker.school_live_simulator.databinding.FragmentSchoolScrollingBinding
 import android.os.Bundle

@@ -16,7 +16,7 @@
         android:title="@string/bot_nav_work"
         android:orderInCategory="3"/>
     <item
-        android:id="@+id/fun"
+        android:id="@+id/entertainment"
         android:icon="@drawable/ic_fun"
         android:title="@string/bot_nav_fun"
         android:orderInCategory="4"/>
