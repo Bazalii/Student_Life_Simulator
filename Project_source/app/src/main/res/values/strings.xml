@@ -1,10 +1,114 @@
 <resources>
     <string name="app_name">School_live_simulator</string>
+
+
+    Bottom navigation variables:
     <string name="bot_nav_work">work</string>
     <string name="bot_nav_school">school</string>
     <string name="bot_nav_shop">shop</string>
     <string name="bot_nav_fun">fun</string>
     <string name="bot_nav_food">food</string>
+
+
+    School folder variables:
+    <string name="school_go_to_school">Go to school</string>
+    <string name="school_botat">Learn by yourself</string>
+    <string name="school_buy_cheatbook">Buy a cheatbook</string>
+    <string name="school_hire_a_tutor">Hire a tutor</string>
+    <string name="school_sign_up_in_an_online_school">Sign up in an online school</string>
+    <string name="school_hire_a_good_tutor">Hire a good tutor</string>
+    <string name="school_study_with_uni_teacher">Study with a teacher from University</string>
+
+
+    Food folder variables:
+    <string name="food_eat_crackers">Eat some crackers</string>
+    <string name="food_eat_doshirack">Eat some noodles "Doshirack"</string>
+    <string name="food_eat_at_the_canteen">Eat at the school canteen</string>
+    <string name="food_eat_at_Mcdonalds">Eat at local McDonald\'s</string>
+    <string name="food_order_delivery">Order a food delivery</string>
+    <string name="food_go_to_the_restaurant">Go to the restaurant</string>
+
+
+    Work folder variables:
+    <string name="work_collect_change">Collect change on the street</string>
+    <string name="work_watch_ads">Watch online advertisement</string>
+    <string name="work_distribute_flyers">Distribute flyers</string>
+    <string name="work_as_a_greener">Work as a greener</string>
+    <string name="work_as_a_courier">Work as a courier</string>
+    <string name="work_as_an_operator">Work as a call center operator</string>
+    <string name="work_play_guitar_v1">Play guitar: on one chord</string>
+    <string name="work_play_guitar_v2">Play guitar: Sector Gaza with three chords</string>
+    <string name="work_play_guitar_v3">Play guitar: Smells like teen spirit</string>
+    <string name="work_play_guitar_v4">Play guitar: Jazz with a friend(trumpet musician)</string>
+    <string name="work_play_guitar_v5">Play guitar: Bach Das Wohltemperierte Klavier</string>
+    <string name="work_on_the_net_v1">Boost accounts in games</string>
+    <string name="work_on_the_net_v2">Promote instagram accounts</string>
+    <string name="work_on_the_net_v3">Make sites on wix</string>
+    <string name="work_on_the_net_v4">Work as a video editor</string>
+    <string name="work_on_the_net_v5">Work as a GameDev</string>
+
+
+    Entertainment folder variables:
+    <string name="fun_draw_on_desks">Draw on desks</string>
+    <string name="fun_draw_graffities">Draw graffities in school toilets</string>
+    <string name="fun_make_something_handmade">Make something handmade</string>
+    <string name="fun_cover_a_song">Cover your favorite song</string>
+    <string name="fun_write_a_song">Write a song yourself</string>
+    <string name="fun_stream">Stream on twitch for 4 hours</string>
+    <string name="fun_make_a_youtube_video">Make a video for youtube</string>
+
+    <string name="fun_do_nothing">Do nothing</string>
+    <string name="fun_go_cycling">Go cycling</string>
+    <string name="fun_listen_to_the_music">Listen to the music</string>
+    <string name="fun_donate_and_play_computer">Donate and play computer</string>
+    <string name="fun_go_to_the_shopping_mall">Go with friends to the shopping mall</string>
+    <string name="fun_walk_with_your_girlfriend">Walk with your girlfriend</string>
+
+    <string name="fun_read_a_book">Read a book</string>
+    <string name="fun_help_youngsters_with_homework">Help youngsters with homework</string>
+    <string name="fun_do_sport">Do sport</string>
+    <string name="fun_play_guitar">Play guitar</string>
+    <string name="fun_go_to_the_theatre">Go to the theatre</string>
+    <string name="fun_go_to_the_concert">Go to the concert as a VIP</string>
+
+    <string name="fun_kick_a_trash_can">Kick a trash can</string>
+    <string name="fun_intimidate_youngsters">Intimidate elementary school students</string>
+    <string name="fun_upload_virus">Upload virus to school computer</string>
+    <string name="fun_use_chat_roulette">Cam2cam in chat roulette(???)</string>
+    <string name="fun_have_a_party">Have a party at home</string>
+    <string name="fun_go_to_the_club">Go to the club(???)</string>
+
+
+    Shop folder variables:
+    <string name="shop_guitar_course_v1">First song course</string>
+    <string name="shop_guitar_course_v2">Learn from a bum at the yard</string>
+    <string name="shop_guitar_course_v3">Learn from a neighbour at the yard</string>
+    <string name="shop_guitar_course_v4">Enroll in the music school</string>
+    <string name="shop_guitar_course_v5">Enroll in conservatory courses</string>
+
+    <string name="shop_computer_course_v1">Online webinars</string>
+    <string name="shop_computer_course_v2">Friend\'s course</string>
+    <string name="shop_computer_course_v3">Online web design courses</string>
+    <string name="shop_computer_course_v4">Video editing courses</string>
+    <string name="shop_computer_course_v5">GameDev courses</string>
+
+    <string name="shop_ussr_bicycle">USSR bicycle</string>
+    <string name="shop_usual_bicycle">Usual bicycle</string>
+    <string name="shop_mountain_bicycle">Mountain bicycle</string>
+
+    <string name="shop_ussr_guitar">USSR guitar</string>
+    <string name="shop_ural_guitar">Ural guitar</string>
+    <string name="shop_yamaha_guitar">Yamaha guitar</string>
+    <string name="shop_fender_guitar">Fender guitar</string>
+    <string name="shop_double_neck_guitar">Double Neck guitar</string>
+
+    <string name="shop_previously_used_computer">Previously used computer</string>
+    <string name="shop_old_computer">Old computer</string>
+    <string name="shop_usual_computer">Usual computer</string>
+    <string name="shop_xiaomi_computer">Xiaomi Mi Notebook</string>
+    <string name="shop_macbook_computer">Apple Macbook</string>
+
+
     <string name="large_text">
         "Material is the metaphor.\n\n"
 
