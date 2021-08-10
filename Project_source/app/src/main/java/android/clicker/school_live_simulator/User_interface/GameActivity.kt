@@ -11,6 +11,7 @@ class GameActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding_class = ActivityGameBinding.inflate(layoutInflater)
         setContentView(binding_class.root)
+        supportFragmentManager.beginTransaction().replace(R.id.fragment, SchoolScrollingFragment()).commit()
     }
 }
 

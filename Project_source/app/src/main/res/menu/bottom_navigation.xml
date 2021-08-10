@@ -3,27 +3,26 @@
     <item
         android:id="@+id/school"
         android:icon="@drawable/ic_school"
-        android:title="school"
+        android:title="@string/bot_nav_school"
         android:orderInCategory="1"/>
     <item
         android:id="@+id/food"
         android:icon="@drawable/ic_food"
-        android:title="food"
+        android:title="@string/bot_nav_food"
         android:orderInCategory="2"/>
     <item
         android:id="@+id/work"
         android:icon="@drawable/ic_work"
-        android:title="work"
+        android:title="@string/bot_nav_work"
         android:orderInCategory="3"/>
     <item
         android:id="@+id/fun"
         android:icon="@drawable/ic_fun"
-        android:title="fun"
+        android:title="@string/bot_nav_fun"
         android:orderInCategory="4"/>
     <item
         android:id="@+id/shop"
         android:icon="@drawable/ic_shop"
-        android:title="shop"
-        android:color="@color/defaultColor"
+        android:title="@string/bot_nav_shop"
         android:orderInCategory="5"/>
 </menu>
