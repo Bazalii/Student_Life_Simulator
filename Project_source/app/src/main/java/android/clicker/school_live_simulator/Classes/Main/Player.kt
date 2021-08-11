@@ -134,7 +134,7 @@ class Player {
     }
 
     private fun changePlayerState(state: PlayerState) {
-
+        this.player_state = state
     }
     /**
      * Commented because that should be realised later
@@ -156,13 +156,13 @@ class Player {
         this.items.guitar.changeState(Player.Bag)
     }
     fun buyNextGuitarCourse() {
-        this.current_courses.guitar_course.changeState(Player.Courses)
+        this.current_courses.guitar_course.buyNextCourse(Player.Courses)
     }
     fun buyNewComputer() {
         this.items.computer.changeState(Player.Bag)
     }
     fun buyNextComputerCourse() {
-        this.current_courses.computer_course.changeState(Player.Courses)
+        this.current_courses.computer_course.buyNextCourse(Player.Courses)
     }
 
 }
