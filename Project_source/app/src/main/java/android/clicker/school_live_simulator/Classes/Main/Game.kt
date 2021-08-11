@@ -1,5 +1,7 @@
 package android.clicker.school_live_simulator
 
+import android.clicker.school_live_simulator.User_interface.GameActivity
+
 object Game {
     private var difficulty_state: GameDifficultyState = NormalMode()
 
@@ -9,7 +11,7 @@ object Game {
 //    private var save_handlers: ArrayList<function> = ArrayListOf()
 //    private var load_handlers: ArrayList<function> = ArrayListOf()
 
-    private lateinit var player: Player
+    var player: Player = Player()
 //    game: Game
 //    lateinit var game_date: GameDate
 //    lateinit var game_status: GameStatus
@@ -38,6 +40,16 @@ object Game {
 //    fun registerLoadHandler(handler: function) {
 //        TODO("Not yet implemented")
 //    }
+
+    fun setStats(satiety: Int = 0, happiness: Int = 0, school_performance: Int = 0, money: Int = 0) {
+        this.player.addPercentSatiety(satiety)
+        this.player.addPercentHappiness(happiness)
+        this.player.addPercentSchoolPerformance(school_performance)
+        this.player.addMoney(money)
+    }
+    fun updateStats() {
+        GameActivity.
+    }
 
     fun save() {
         TODO("Not yet implemented")
