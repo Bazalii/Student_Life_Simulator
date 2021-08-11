@@ -1,43 +1,38 @@
 package android.clicker.school_live_simulator
 
 class Player {
-    object Bag {
+    inner class Bag {
         var bicycle: BicycleState = NullBicycleState()
             set(value) {
-                if(money >= value.price){
-                    reduceMoney(value.price)
-                    field = value
-                }
+                reduceMoney(value.price)
+                field = value
+
             }
         var guitar: GuitarState = NullGuitarState()
             set(value) {
-                if(money >= value.price){
-                    reduceMoney(value.price)
-                    field = value
-                }
+                reduceMoney(value.price)
+                field = value
+
             }
         var computer: ComputerState = NullComputerState()
             set(value) {
-                if(money >= value.price){
-                    reduceMoney(value.price)
-                    field = value
-                }
+                reduceMoney(value.price)
+                field = value
+
             }
     }
-    object Courses {
+    inner class Courses {
         var guitar_course: GuitarCourseState = NullGuitarCourseState()
             set(value) {
-                if(money >= value.price){
-                    reduceMoney(value.price)
-                    field = value
-                }
+                reduceMoney(value.price)
+                field = value
+
             }
         var computer_course: ComputerCourseState = NullComputerCourseState()
             set(value) {
-                if(money >= value.price){
-                    reduceMoney(value.price)
-                    field = value
-                }
+                reduceMoney(value.price)
+                field = value
+
             }
     }
     private var achieved_achievements: ArrayList<GameAchievements> = arrayListOf<GameAchievements>()
@@ -57,9 +52,21 @@ class Player {
     private var player_state: PlayerState = NormalState()
     private var live_observers: ArrayList<LiveObserver> = arrayListOf<LiveObserver>()
 
+    /**
+     * Function correct value to check if we can reduce player_stats
+     * @param value Value to reduce
+     * @param player_stat One of the stats: money, satiety, school_perfomance, happinnes
+     */
+    fun correctValue(player_stat: Int, value: Int) {
+        if(player_stat < value) {
+            Unit = throw TooHighValueException("Redution of the stat is not allowed")
+        }
+    }
 
     fun tick() {
-        TODO("Not yet implemented")
+        reduceSchoolPerformance(this.player_state.reduce_school_performance_percent)
+        reduceHappiness(this.player_state.reduce_happines_percent)
+        reduceSatiety(this.player_state.reduce_satiety_percent)
     }
 
     fun getClass(): Int {
@@ -67,25 +74,35 @@ class Player {
     }
 
     fun playSong(song: Song) {
-        if(this.current_courses.guitar_course.isAvailable(song)){
-            addMoney(song)
+        if(this.current_courses.guitar_course.isAvailable(song)) {
+            addMoney(song.value)
+        }
+        else {
+            Unit = throw UnavailableWorkException("Work is not available")
         }
     }
     fun deliver(delivery_type: Delivery){
-        this.money += addMoney(delivery_type)
+        if(this.items.bicycle.isAvailable(delivery_type)) {
+            addMoney(delivery_type.value)
+        }
+        else {
+            Unit = throw UnavailableWorkException("Work is not available")
+        }
     }
     fun realiseWebTask(web_task: WebTask) {
-        if(this.current_courses.computer_course.isAvailable(web_task)){
-            addMoney(web_task)
+        if(this.current_courses.computer_course.isAvailable(web_task)) {
+            addMoney(web_task.value)
+        }
+        else {
+            Unit = throw UnavailableWorkException("Work is not available")
         }
     }
 
     fun eat(food: Food) {
-        if(this.money >= food.cost) {
-            addSatiety(food.satiety)
-            addHappiness(food.happiness)
-            reduceMoney(food.cost)
-        }
+        correctValue(this.money, food.cost)
+        addSatiety(food.satiety)
+        addHappiness(food.happiness)
+        reduceMoney(food.cost)
     }
 
     fun addSchoolPerformance(value: Int) {
@@ -95,9 +112,9 @@ class Player {
         this.school_performance *= (1 + value/100)
     }
     fun reduceSchoolPerformance(value: Int) {
-        if(this.school_performance >= value){
-            this.school_performance -= value
-        }
+        correctValue(this.school_performance, value)
+        this.school_performance -= value
+
     }
 
     fun addHappiness(value: Int) {
@@ -107,9 +124,9 @@ class Player {
         this.happiness *= (1 + value/100)
     }
     fun reduceHappiness(value: Int) {
-        if (this.happiness >= value){
-            this.happiness -= value
-        }
+        correctValue(this.happiness, value)
+        this.happiness -= value
+
     }
 
     fun addSatiety(value: Int) {
@@ -119,18 +136,17 @@ class Player {
         this.satiety *= (1 + value/100)
     }
     fun reduceSatiety(value: Int) {
-        if(this.satiety >= value){
-            this.satiety -= value
-        }
+        correctValue(this.satiety, value)
+        this.satiety -= value
     }
 
     fun addMoney(value: Int) {
         this.money += value
     }
     fun reduceMoney(value: Int) {
-        if(this.money >= value){
-            this.money -= value
-        }
+        correctValue(this.money, value)
+        this.money -= value
+
     }
 
     private fun changePlayerState(state: PlayerState) {
@@ -150,20 +166,22 @@ class Player {
 //    }
 
     fun buyNewBicycle() {
-        this.items.bicycle.changeState(Player.Bag)
+        this.items.bicycle.changeState(this.items)
     }
     fun buyNewGuitar() {
-        this.items.guitar.changeState(Player.Bag)
+        this.items.guitar.changeState(this.items)
     }
     fun buyNextGuitarCourse() {
-        this.current_courses.guitar_course.buyNextCourse(Player.Courses)
+        this.current_courses.guitar_course.buyNextCourse(this.current_courses)
     }
     fun buyNewComputer() {
-        this.items.computer.changeState(Player.Bag)
+        this.items.computer.changeState(this.items)
     }
     fun buyNextComputerCourse() {
-        this.current_courses.computer_course.buyNextCourse(Player.Courses)
+        this.current_courses.computer_course.buyNextCourse(this.current_courses)
     }
+
+
 
 }
 
