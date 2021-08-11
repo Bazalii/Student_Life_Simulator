@@ -55,11 +55,11 @@ class Player {
     /**
      * Function correct value to check if we can reduce player_stats
      * @param value Value to reduce
-     * @param player_stat One of the stats: money, satiety, school_perfomance, happinnes
+     * @param player_stat One of the stats: money, satiety, school_performance, happiness
      */
     fun correctValue(player_stat: Int, value: Int) {
         if(player_stat < value) {
-            Unit = throw TooHighValueException("Redution of the stat is not allowed")
+            Unit = throw Exception("Reduction of the stat is not allowed")
         }
     }
 
@@ -75,26 +75,26 @@ class Player {
 
     fun playSong(song: Song) {
         if(this.current_courses.guitar_course.isAvailable(song)) {
-            addMoney(song.value)
+            addMoney(song.salary)
         }
         else {
-            Unit = throw UnavailableWorkException("Work is not available")
+            Unit = throw Exception("Work is not available")
         }
     }
     fun deliver(delivery_type: Delivery){
         if(this.items.bicycle.isAvailable(delivery_type)) {
-            addMoney(delivery_type.value)
+            addMoney(delivery_type.salary)
         }
         else {
-            Unit = throw UnavailableWorkException("Work is not available")
+            Unit = throw Exception("Work is not available")
         }
     }
     fun realiseWebTask(web_task: WebTask) {
         if(this.current_courses.computer_course.isAvailable(web_task)) {
-            addMoney(web_task.value)
+            addMoney(web_task.salary)
         }
         else {
-            Unit = throw UnavailableWorkException("Work is not available")
+            Unit = throw Exception("Work is not available")
         }
     }
 
