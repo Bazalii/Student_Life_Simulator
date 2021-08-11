@@ -4,25 +4,40 @@ class Player {
     object Bag {
         var bicycle: BicycleState = NullBicycleState()
             set(value) {
-                TODO("Not yet implemented")
+                if(money >= value.price){
+                    reduceMoney(value.price)
+                    field = value
+                }
             }
         var guitar: GuitarState = NullGuitarState()
             set(value) {
-                TODO("Not yet implemented")
+                if(money >= value.price){
+                    reduceMoney(value.price)
+                    field = value
+                }
             }
         var computer: ComputerState = NullComputerState()
             set(value) {
-                TODO("Not yet implemented")
+                if(money >= value.price){
+                    reduceMoney(value.price)
+                    field = value
+                }
             }
     }
     object Courses {
         var guitar_course: GuitarCourseState = NullGuitarCourseState()
             set(value) {
-                TODO("Not yet implemented")
+                if(money >= value.price){
+                    reduceMoney(value.price)
+                    field = value
+                }
             }
         var computer_course: ComputerCourseState = NullComputerCourseState()
             set(value) {
-                TODO("Not yet implemented")
+                if(money >= value.price){
+                    reduceMoney(value.price)
+                    field = value
+                }
             }
     }
     private var achieved_achievements: ArrayList<GameAchievements> = arrayListOf<GameAchievements>()
@@ -52,58 +67,74 @@ class Player {
     }
 
     fun playSong(song: Song) {
-        TODO("Not yet implemented")
+        if(this.current_courses.guitar_course.isAvailable(song)){
+            addMoney(song)
+        }
     }
-    fun deliver(delivery_type: Delivery) {
-        TODO("Not yet implemented")
+    fun deliver(delivery_type: Delivery){
+        this.money += addMoney(delivery_type)
     }
     fun realiseWebTask(web_task: WebTask) {
-        TODO("Not yet implemented")
+        if(this.current_courses.computer_course.isAvailable(web_task)){
+            addMoney(web_task)
+        }
     }
 
     fun eat(food: Food) {
-        TODO("Not yet implemented")
+        if(this.money >= food.cost) {
+            addSatiety(food.satiety)
+            addHappiness(food.happiness)
+            reduceMoney(food.cost)
+        }
     }
 
     fun addSchoolPerformance(value: Int) {
-        TODO("Not yet implemented")
+        this.school_performance += value
     }
     fun addPercentSchoolPerformance(value: Int) {
-        TODO("Not yet implemented")
+        this.school_performance *= (1 + value/100)
     }
     fun reduceSchoolPerformance(value: Int) {
-        TODO("Not yet implemented")
+        if(this.school_performance >= value){
+            this.school_performance -= value
+        }
     }
 
     fun addHappiness(value: Int) {
-        TODO("Not yet implemented")
+        this.happiness += value
     }
     fun addPercentHappiness(value: Int) {
-        TODO("Not yet implemented")
+        this.happiness *= (1 + value/100)
     }
     fun reduceHappiness(value: Int) {
-        TODO("Not yet implemented")
+        if (this.happiness >= value){
+            this.happiness -= value
+        }
     }
 
     fun addSatiety(value: Int) {
-        TODO("Not yet implemented")
+        this.satiety += value
     }
     fun addPercentSatiety(value: Int) {
-        TODO("Not yet implemented")
+        this.satiety *= (1 + value/100)
     }
     fun reduceSatiety(value: Int) {
-        TODO("Not yet implemented")
+        if(this.satiety >= value){
+            this.satiety -= value
+        }
     }
 
     fun addMoney(value: Int) {
-        TODO("Not yet implemented")
+        this.money += value
     }
     fun reduceMoney(value: Int) {
-        TODO("Not yet implemented")
+        if(this.money >= value){
+            this.money -= value
+        }
     }
 
     private fun changePlayerState(state: PlayerState) {
-        TODO("Not yet implemented")
+
     }
     /**
      * Commented because that should be realised later
@@ -119,19 +150,19 @@ class Player {
 //    }
 
     fun buyNewBicycle() {
-        TODO("Not yet implemented")
+        this.items.bicycle.changeState(Player.Bag)
     }
     fun buyNewGuitar() {
-        TODO("Not yet implemented")
+        this.items.guitar.changeState(Player.Bag)
     }
     fun buyNextGuitarCourse() {
-        TODO("Not yet implemented")
+        this.current_courses.guitar_course.changeState(Player.Courses)
     }
     fun buyNewComputer() {
-        TODO("Not yet implemented")
+        this.items.computer.changeState(Player.Bag)
     }
     fun buyNextComputerCourse() {
-        TODO("Not yet implemented")
+        this.current_courses.computer_course.changeState(Player.Courses)
     }
 
 }
