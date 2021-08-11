@@ -3,8 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/scroll_view"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".User_interface.ScrollingFragments.SchoolScrollingFragment" >
+    android:layout_height="wrap_content"
+    tools:context=".User_interface.ScrollingFragments.SchoolScrollingFragment">
 
     <LinearLayout
         android:id="@+id/linear_layout"
@@ -13,75 +13,45 @@
         android:orientation="vertical">
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/school_go_to_school"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Button" />
+            android:layout_height="match_parent"
+            android:text="@string/school_go_to_school" />
 
         <Button
-            android:id="@+id/button2"
+            android:id="@+id/school_botat"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Button" />
+            android:text="@string/school_botat" />
 
         <Button
-            android:id="@+id/button3"
+            android:id="@+id/school_buy_cheatbook"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Button" />
+            android:text="@string/school_buy_cheatbook" />
 
         <Button
-            android:id="@+id/button4"
+            android:id="@+id/school_hire_a_tutor"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Button" />
+            android:text="@string/school_hire_a_tutor" />
 
         <Button
-            android:id="@+id/button5"
+            android:id="@+id/school_sign_up_in_an_online_school"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Button" />
+            android:text="@string/school_sign_up_in_an_online_school" />
 
         <Button
-            android:id="@+id/button6"
+            android:id="@+id/school_hire_a_good_tutor"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Button" />
+            android:text="@string/school_hire_a_good_tutor" />
 
         <Button
-            android:id="@+id/button7"
+            android:id="@+id/school_study_with_uni_teacher"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Button" />
-
-        <Button
-            android:id="@+id/button8"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Button" />
-
-        <Button
-            android:id="@+id/button9"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Button" />
-
-        <Button
-            android:id="@+id/button10"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Button" />
-
-        <Button
-            android:id="@+id/button11"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Button" />
-
-        <Button
-            android:id="@+id/button12"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Button" />
+            android:text="@string/school_study_with_uni_teacher" />
     </LinearLayout>
 </androidx.core.widget.NestedScrollView>

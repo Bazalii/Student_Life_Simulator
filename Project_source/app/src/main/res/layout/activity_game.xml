@@ -19,7 +19,7 @@
         android:scaleY="6"
         app:layout_constraintEnd_toStartOf="@+id/verticalGuideline"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/happinessProgressBar5" />
+        app:layout_constraintTop_toBottomOf="@+id/happinessProgressBar" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNavigation"
@@ -76,7 +76,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ProgressBar
-        android:id="@+id/happinessProgressBar5"
+        android:id="@+id/happinessProgressBar"
         style="?android:attr/progressBarStyleHorizontal"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -95,7 +95,7 @@
         android:id="@+id/satietyTextView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Satiety"
+        android:text="@string/satietyProgressBar"
         android:textColor="@color/black"
         android:textSize="16sp"
         android:textStyle="bold"
@@ -108,19 +108,19 @@
         android:id="@+id/happinessTextView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Happiness"
+        android:text="@string/happinessProgressBar"
         android:textColor="@color/black"
         android:textSize="16sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/happinessProgressBar5"
-        app:layout_constraintEnd_toEndOf="@+id/happinessProgressBar5"
-        app:layout_constraintStart_toStartOf="@+id/happinessProgressBar5" />
+        app:layout_constraintBottom_toBottomOf="@+id/happinessProgressBar"
+        app:layout_constraintEnd_toEndOf="@+id/happinessProgressBar"
+        app:layout_constraintStart_toStartOf="@+id/happinessProgressBar" />
 
     <TextView
         android:id="@+id/schoolPerformanceTextView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Shcool performance"
+        android:text="@string/schoolPerformanceProgressBar"
         android:textColor="@color/black"
         android:textSize="16sp"
         android:textStyle="bold"

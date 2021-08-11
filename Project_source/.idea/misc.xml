@@ -3,14 +3,15 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Ivan/ITMO/Summer_project/Project_source/app/src/main/res/drawable/ic_food.xml" value="0.234375" />
         <entry key="..\:/Ivan/ITMO/Summer_project/Project_source/app/src/main/res/drawable/ic_school.xml" value="0.21458333333333332" />
         <entry key="..\:/Ivan/ITMO/Summer_project/Project_source/app/src/main/res/drawable/ic_shop.xml" value="0.21458333333333332" />
         <entry key="..\:/Ivan/ITMO/Summer_project/Project_source/app/src/main/res/layout/activity_game.xml" value="0.264" />
-        <entry key="..\:/Ivan/ITMO/Summer_project/Project_source/app/src/main/res/layout/fragment_food_scrolling.xml" value="0.18659420289855072" />
-        <entry key="..\:/Ivan/ITMO/Summer_project/Project_source/app/src/main/res/layout/fragment_fun_scrolling.xml" value="0.1480978260869565" />
-        <entry key="..\:/Ivan/ITMO/Summer_project/Project_source/app/src/main/res/layout/fragment_school_scrolling.xml" value="0.16168478260869565" />
+        <entry key="..\:/Ivan/ITMO/Summer_project/Project_source/app/src/main/res/layout/fragment_food_scrolling.xml" value="0.264" />
+        <entry key="..\:/Ivan/ITMO/Summer_project/Project_source/app/src/main/res/layout/fragment_fun_scrolling.xml" value="0.264" />
+        <entry key="..\:/Ivan/ITMO/Summer_project/Project_source/app/src/main/res/layout/fragment_school_scrolling.xml" value="0.4" />
         <entry key="..\:/Ivan/ITMO/Summer_project/Project_source/app/src/main/res/layout/fragment_shop_scrolling.xml" value="0.19427083333333334" />
-        <entry key="..\:/Ivan/ITMO/Summer_project/Project_source/app/src/main/res/layout/fragment_work_scrolling.xml" value="0.1480978260869565" />
+        <entry key="..\:/Ivan/ITMO/Summer_project/Project_source/app/src/main/res/layout/fragment_work_scrolling.xml" value="0.264" />
         <entry key="..\:/Ivan/ITMO/Summer_project/Project_source/app/src/main/res/menu/bottom_navigation.xml" value="1.325" />
       </map>
     </option>

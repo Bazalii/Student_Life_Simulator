@@ -5,9 +5,161 @@
     android:layout_height="match_parent"
     tools:context=".User_interface.ScrollingFragments.FunScrollingFragment">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:id="@+id/linear_layout"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/text_margin"
-        android:text="@string/large_text" />
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/fun_draw_on_desks"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/fun_draw_on_desks" />
+
+        <Button
+            android:id="@+id/fun_draw_graffities"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/fun_draw_graffities" />
+
+        <Button
+            android:id="@+id/fun_make_something_handmade"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/fun_make_something_handmade" />
+
+        <Button
+            android:id="@+id/fun_cover_a_song"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/fun_cover_a_song" />
+
+        <Button
+            android:id="@+id/fun_write_a_song"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/fun_write_a_song" />
+
+        <Button
+            android:id="@+id/fun_stream"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/fun_stream" />
+
+        <Button
+            android:id="@+id/fun_make_a_youtube_video"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/fun_make_a_youtube_video" />
+
+        <Button
+            android:id="@+id/fun_do_nothing"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/fun_do_nothing" />
+
+        <Button
+            android:id="@+id/fun_go_cycling"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/fun_go_cycling" />
+
+        <Button
+            android:id="@+id/fun_listen_to_the_music"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/fun_listen_to_the_music" />
+
+        <Button
+            android:id="@+id/fun_donate_and_play_computer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/fun_donate_and_play_computer" />
+
+        <Button
+            android:id="@+id/fun_go_to_the_shopping_mall"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/fun_go_to_the_shopping_mall" />
+
+        <Button
+            android:id="@+id/fun_walk_with_your_girlfriend"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/fun_walk_with_your_girlfriend" />
+
+        <Button
+            android:id="@+id/fun_read_a_book"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/fun_read_a_book" />
+
+        <Button
+            android:id="@+id/fun_help_youngsters_with_homework"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/fun_help_youngsters_with_homework" />
+
+        <Button
+            android:id="@+id/fun_do_sport"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/fun_do_sport" />
+
+        <Button
+            android:id="@+id/fun_play_guitar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/fun_play_guitar" />
+
+        <Button
+            android:id="@+id/fun_go_to_the_theatre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/fun_go_to_the_theatre" />
+
+        <Button
+            android:id="@+id/fun_go_to_the_concert"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/fun_go_to_the_concert" />
+
+        <Button
+            android:id="@+id/fun_kick_a_trash_can"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/fun_kick_a_trash_can" />
+
+        <Button
+            android:id="@+id/fun_intimidate_youngsters"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/fun_intimidate_youngsters" />
+
+        <Button
+            android:id="@+id/fun_upload_virus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/fun_upload_virus" />
+
+        <Button
+            android:id="@+id/fun_use_chat_roulette"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/fun_use_chat_roulette" />
+
+        <Button
+            android:id="@+id/fun_have_a_party"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/fun_have_a_party" />
+
+        <Button
+            android:id="@+id/fun_go_to_the_club"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/fun_go_to_the_club" />
+
+    </LinearLayout>
 </androidx.core.widget.NestedScrollView>

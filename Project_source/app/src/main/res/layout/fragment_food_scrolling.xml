@@ -5,9 +5,47 @@
     android:layout_height="match_parent"
     tools:context=".User_interface.ScrollingFragments.FoodScrollingFragment">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:id="@+id/linear_layout"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/text_margin"
-        android:text="@string/large_text" />
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/food_eat_crackers"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/food_eat_crackers" />
+
+        <Button
+            android:id="@+id/food_eat_doshirack"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/food_eat_doshirack" />
+
+        <Button
+            android:id="@+id/food_eat_at_the_canteen"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/food_eat_at_the_canteen" />
+
+        <Button
+            android:id="@+id/food_eat_at_Mcdonalds"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/food_eat_at_Mcdonalds" />
+
+        <Button
+            android:id="@+id/food_order_delivery"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/food_order_delivery" />
+
+        <Button
+            android:id="@+id/food_go_to_the_restaurant"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/food_go_to_the_restaurant" />
+
+    </LinearLayout>
 </androidx.core.widget.NestedScrollView>
