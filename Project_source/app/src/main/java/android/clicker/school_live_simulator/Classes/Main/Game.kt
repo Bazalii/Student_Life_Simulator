@@ -47,9 +47,6 @@ object Game {
         this.player.addPercentSchoolPerformance(school_performance)
         this.player.addMoney(money)
     }
-    fun updateStats() {
-        GameActivity.
-    }
 
     fun save() {
         TODO("Not yet implemented")
