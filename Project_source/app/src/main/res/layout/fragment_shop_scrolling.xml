@@ -16,7 +16,8 @@
             android:id="@+id/shop_guitar_courses"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/shop_guitar_course" />
+            android:text="@string/shop_guitar_course"
+            android:drawableRight="@drawable/ic_drop_down"/>
 
         <Button
             android:id="@+id/shop_guitar_course_v1"
