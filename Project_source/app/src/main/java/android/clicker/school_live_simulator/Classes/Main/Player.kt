@@ -1,24 +1,25 @@
 package android.clicker.school_live_simulator
 
+import android.clicker.school_live_simulator.Classes.Enum_classes.Entertainment
+import android.clicker.school_live_simulator.Classes.IncorrectValueException
+import android.clicker.school_live_simulator.Classes.NotAvailableException
+
 class Player {
     inner class Bag {
         var bicycle: BicycleState = NullBicycleState()
             set(value) {
                 reduceMoney(value.price)
                 field = value
-
             }
         var guitar: GuitarState = NullGuitarState()
             set(value) {
                 reduceMoney(value.price)
                 field = value
-
             }
         var computer: ComputerState = NullComputerState()
             set(value) {
                 reduceMoney(value.price)
                 field = value
-
             }
     }
     inner class Courses {
@@ -39,11 +40,11 @@ class Player {
 
     private lateinit var name: String
 //    private lateinit var birthday: Birthday
-    var school_performance: Int = 100
+    var school_performance: Int = 1000
         private set
-    var happiness: Int = 100
+    var happiness: Int = 1000
         private set
-    var satiety: Int = 100
+    var satiety: Int = 1000
         private set
     var money: Int = 100
         private set
@@ -61,10 +62,8 @@ class Player {
      * @param value Value to reduce
      * @param player_stat One of the stats: money, satiety, school_performance, happiness
      */
-    fun correctValue(player_stat: Int, value: Int) {
-        if(player_stat < value) {
-            //Unit = throw Exception("Reduction of the stat is not allowed")
-        }
+    private fun correctValue(player_stat: Int, value: Int): Boolean {
+        return player_stat >= value
     }
 
     fun tick() {
@@ -78,35 +77,35 @@ class Player {
     }
 
     fun playSong(song: Song) {
-        if(this.current_courses.guitar_course.isAvailable(song)) {
+        if(this.current_courses.guitar_course.isAvailable(song))
             addMoney(song.salary)
-        }
-        else {
-            //Unit = throw Exception("Work is not available")
-        }
+        else
+            throw NotAvailableException("Work is not available")
     }
     fun deliver(delivery_type: Delivery){
-        if(this.items.bicycle.isAvailable(delivery_type)) {
+        if(this.items.bicycle.isAvailable(delivery_type))
             addMoney(delivery_type.salary)
-        }
-        else {
-           // Unit = throw Exception("Work is not available")
-        }
+        else
+            throw NotAvailableException("Work is not available")
     }
     fun realiseWebTask(web_task: WebTask) {
-        if(this.current_courses.computer_course.isAvailable(web_task)) {
+        if(this.current_courses.computer_course.isAvailable(web_task))
             addMoney(web_task.salary)
-        }
-        else {
-           // Unit = throw Exception("Work is not available")
-        }
+        else
+            throw NotAvailableException("Work is not available")
     }
 
     fun eat(food: Food) {
-        correctValue(this.money, food.cost)
-        addSatiety(food.satiety)
-        addHappiness(food.happiness)
-        reduceMoney(food.cost)
+        if (correctValue(this.money, food.cost)) {
+            addSatiety(food.satiety)
+            addHappiness(food.happiness)
+            reduceMoney(food.cost)
+        }
+        else
+            throw IncorrectValueException("You don't have enough money!")
+    }
+    fun entertain(entertainment: Entertainment) {
+
     }
 
     fun addSchoolPerformance(value: Int) {
