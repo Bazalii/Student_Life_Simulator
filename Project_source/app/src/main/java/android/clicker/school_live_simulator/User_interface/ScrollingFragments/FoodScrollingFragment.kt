@@ -27,5 +27,30 @@ class FoodScrollingFragment : Fragment() {
             (activity as GameActivity).updateStats()
         }
 
+        binding.foodEatDoshirack.setOnClickListener{
+            Game.player.eat(Food.DOSHIRAK)
+            (activity as GameActivity).updateStats()
+        }
+
+        binding.foodEatAtTheCanteen.setOnClickListener{
+            Game.player.eat(Food.EATERY_FOOD)
+            (activity as GameActivity).updateStats()
+        }
+
+        binding.foodEatAtMcdonalds.setOnClickListener{
+            Game.player.eat(Food.MCDONALDS)
+            (activity as GameActivity).updateStats()
+        }
+
+        binding.foodOrderDelivery.setOnClickListener{
+            Game.player.eat(Food.PIZZA_AT_HOME)
+            (activity as GameActivity).updateStats()
+        }
+
+        binding.foodGoToTheRestaurant.setOnClickListener{
+            Game.player.eat(Food.RESTORANT_FOOD)
+            (activity as GameActivity).updateStats()
+        }
+
     }
 }
