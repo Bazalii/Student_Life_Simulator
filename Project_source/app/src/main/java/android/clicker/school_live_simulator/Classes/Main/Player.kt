@@ -8,32 +8,30 @@ class Player {
     inner class Bag {
         var bicycle: BicycleState = NullBicycleState()
             set(value) {
-                reduceMoney(value.price)
+                changeMoney(value.price)
                 field = value
             }
         var guitar: GuitarState = NullGuitarState()
             set(value) {
-                reduceMoney(value.price)
+                changeMoney(value.price)
                 field = value
             }
         var computer: ComputerState = NullComputerState()
             set(value) {
-                reduceMoney(value.price)
+                changeMoney(value.price)
                 field = value
             }
     }
     inner class Courses {
         var guitar_course: GuitarCourseState = NullGuitarCourseState()
             set(value) {
-                reduceMoney(value.price)
+                changeMoney(value.price)
                 field = value
-
             }
         var computer_course: ComputerCourseState = NullComputerCourseState()
             set(value) {
-                reduceMoney(value.price)
+                changeMoney(value.price)
                 field = value
-
             }
     }
 //    private var achieved_achievements: ArrayList<GameAchievements> = arrayListOf<GameAchievements>()
@@ -62,14 +60,17 @@ class Player {
      * @param value Value to reduce
      * @param player_stat One of the stats: money, satiety, school_performance, happiness
      */
-    private fun correctValue(player_stat: Int, value: Int): Boolean {
-        return player_stat >= value
+    private fun checkMin(player_stat: Int, value: Int): Boolean {
+        return player_stat >= -value
+    }
+    private fun checkMax(player_stat: Int, value: Int): Boolean {
+        return player_stat + value <= 1000
     }
 
     fun tick() {
-        reduceSchoolPerformance(this.player_state.reduce_school_performance_percent)
-        reduceHappiness(this.player_state.reduce_happines_percent)
-        reduceSatiety(this.player_state.reduce_satiety_percent)
+        changeSchoolPerformance(this.player_state.reduce_school_performance_percent)
+        changeHappiness(this.player_state.reduce_happines_percent)
+        changeSatiety(this.player_state.reduce_satiety_percent)
     }
 
     fun getClass(): Int {
@@ -78,79 +79,61 @@ class Player {
 
     fun playSong(song: Song) {
         if(this.current_courses.guitar_course.isAvailable(song))
-            addMoney(song.salary)
+            changeMoney(song.money_diff)
         else
             throw NotAvailableException("Work is not available")
     }
     fun deliver(delivery_type: Delivery){
         if(this.items.bicycle.isAvailable(delivery_type))
-            addMoney(delivery_type.salary)
+            changeMoney(delivery_type.money_diff)
         else
             throw NotAvailableException("Work is not available")
     }
     fun realiseWebTask(web_task: WebTask) {
         if(this.current_courses.computer_course.isAvailable(web_task))
-            addMoney(web_task.salary)
+            changeMoney(web_task.money_diff)
         else
             throw NotAvailableException("Work is not available")
     }
 
     fun eat(food: Food) {
-        if (correctValue(this.money, food.cost)) {
-            addSatiety(food.satiety)
-            addHappiness(food.happiness)
-            reduceMoney(food.cost)
+        if (checkMin(this.money, food.money_diff)) {
+            changeSatiety(food.satiety)
+            changeHappiness(food.happiness)
+            changeMoney(food.money_diff)
         }
         else
             throw IncorrectValueException("You don't have enough money!")
     }
     fun entertain(entertainment: Entertainment) {
-
+        //TODO everyday happiness and monthly payment
+        if (checkMin(this.money, entertainment.money_diff)) {
+            changeHappiness(entertainment.happiness)
+            changeMoney(entertainment.money_diff)
+        }
+        else
+            throw IncorrectValueException("You don't have enough money!")
     }
 
-    fun addSchoolPerformance(value: Int) {
-        this.school_performance += value
-    }
-    fun addPercentSchoolPerformance(value: Int) {
-        this.school_performance *= (1 + value/100)
-    }
-    fun reduceSchoolPerformance(value: Int) {
-        correctValue(this.school_performance, value)
-        this.school_performance -= value
-
+    fun changeSchoolPerformance(value: Int) {
+        if (checkMax(this.school_performance, value))
+            this.school_performance += value * 10
     }
 
-    fun addHappiness(value: Int) {
-        this.happiness += value
-    }
-    fun addPercentHappiness(value: Int) {
-        this.happiness *= (1 + value/100)
-    }
-    fun reduceHappiness(value: Int) {
-        correctValue(this.happiness, value)
-        this.happiness -= value
-
+    fun changeHappiness(value: Int) {
+        if (checkMax(this.happiness, value))
+            this.happiness += value * 10
     }
 
-    fun addSatiety(value: Int) {
-        this.satiety += value
-    }
-    fun addPercentSatiety(value: Int) {
-        this.satiety *= (1 + value/100)
-    }
-    fun reduceSatiety(value: Int) {
-        correctValue(this.satiety, value)
-        this.satiety -= value
+    fun changeSatiety(value: Int) {
+        if (checkMax(this.satiety, value))
+            this.satiety += value * 10
     }
 
-    fun addMoney(value: Int) {
+    fun changeMoney(value: Int) {
         this.money += value
     }
-    fun reduceMoney(value: Int) {
-        correctValue(this.money, value)
-        this.money -= value
 
-    }
 
     private fun changePlayerState(state: PlayerState) {
         this.player_state = state
@@ -183,9 +166,6 @@ class Player {
     fun buyNextComputerCourse() {
         this.current_courses.computer_course.buyNextCourse(this.current_courses)
     }
-
-
-
 }
 
 

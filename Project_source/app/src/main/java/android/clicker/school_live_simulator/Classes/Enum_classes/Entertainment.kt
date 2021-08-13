@@ -1,6 +1,6 @@
 package android.clicker.school_live_simulator.Classes.Enum_classes
 
-enum class Entertainment(val happiness: Int, val money: Int) {
+enum class Entertainment(val happiness: Int, val money_diff: Int) {
     DRAW_ON_DESK(3, 0),
     DRAW_GRAFFITIES(5, 0),
     WRITE_A_POEM(7, 0),
