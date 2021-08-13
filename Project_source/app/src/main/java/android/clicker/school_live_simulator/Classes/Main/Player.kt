@@ -39,15 +39,19 @@ class Player {
 
     private lateinit var name: String
 //    private lateinit var birthday: Birthday
-    private var school_performance: Int = 1000
-    private var happiness: Int = 1000
-    private var satiety: Int = 1000
-    private var money: Int = 100
+    var school_performance: Int = 100
+        private set
+    var happiness: Int = 100
+        private set
+    var satiety: Int = 100
+        private set
+    var money: Int = 100
+        private set
 
     private var school_class: Int = 1
 
-    private var items: Bag = Bag
-    private var current_courses: Courses = Courses
+    private var items: Bag = Bag()
+    private var current_courses: Courses = Courses()
 
     private var player_state: PlayerState = NormalState()
 //    private var live_observers: ArrayList<LiveObserver> = arrayListOf<LiveObserver>()

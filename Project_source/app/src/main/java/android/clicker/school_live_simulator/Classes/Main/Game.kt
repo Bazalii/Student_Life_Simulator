@@ -41,12 +41,7 @@ object Game {
 //        TODO("Not yet implemented")
 //    }
 
-    fun setStats(satiety: Int = 0, happiness: Int = 0, school_performance: Int = 0, money: Int = 0) {
-        this.player.addPercentSatiety(satiety)
-        this.player.addPercentHappiness(happiness)
-        this.player.addPercentSchoolPerformance(school_performance)
-        this.player.addMoney(money)
-    }
+   
 
     fun save() {
         TODO("Not yet implemented")

@@ -10,7 +10,7 @@ abstract class BicycleState {
     /**
      * Bike price
      */
-    protected abstract val price: Int
+    abstract val price: Int
 
     /**
      * A list of available types of delivery.
