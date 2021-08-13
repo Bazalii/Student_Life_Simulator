@@ -21,7 +21,8 @@ object Game {
         TODO("Not yet implemented")
     }
     fun tick() {
-        TODO("Not yet implemented")
+        //TODO("Not yet implemented")
+        player.tick()
     }
 
     fun checkDefeat(school_performance: Int, happiness: Int, satiety: Int) {
@@ -41,7 +42,7 @@ object Game {
 //        TODO("Not yet implemented")
 //    }
 
-   
+
 
     fun save() {
         TODO("Not yet implemented")

@@ -1,5 +1,6 @@
 package android.clicker.school_live_simulator.User_interface.ScrollingFragments
 
+import android.clicker.school_live_simulator.Food
 import android.clicker.school_live_simulator.Game
 import android.clicker.school_live_simulator.User_interface.GameActivity
 import android.clicker.school_live_simulator.databinding.FragmentFoodScrollingBinding
@@ -22,10 +23,7 @@ class FoodScrollingFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
 
         binding.foodEatCrackers.setOnClickListener{
-            Game.player.addPercentSatiety(5)
-            Game.player.addPercentHappiness(3)
-            Game.player.reduceMoney(10)
-
+            Game.player.eat(Food.CRACKERS)
             (activity as GameActivity).updateStats()
         }
 

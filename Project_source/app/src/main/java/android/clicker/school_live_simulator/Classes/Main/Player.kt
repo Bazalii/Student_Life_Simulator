@@ -63,7 +63,7 @@ class Player {
      */
     fun correctValue(player_stat: Int, value: Int) {
         if(player_stat < value) {
-            Unit = throw Exception("Reduction of the stat is not allowed")
+            //Unit = throw Exception("Reduction of the stat is not allowed")
         }
     }
 
@@ -82,7 +82,7 @@ class Player {
             addMoney(song.salary)
         }
         else {
-            Unit = throw Exception("Work is not available")
+            //Unit = throw Exception("Work is not available")
         }
     }
     fun deliver(delivery_type: Delivery){
@@ -90,7 +90,7 @@ class Player {
             addMoney(delivery_type.salary)
         }
         else {
-            Unit = throw Exception("Work is not available")
+           // Unit = throw Exception("Work is not available")
         }
     }
     fun realiseWebTask(web_task: WebTask) {
@@ -98,7 +98,7 @@ class Player {
             addMoney(web_task.salary)
         }
         else {
-            Unit = throw Exception("Work is not available")
+           // Unit = throw Exception("Work is not available")
         }
     }
 

@@ -25,6 +25,10 @@ class GameActivity : AppCompatActivity() {
         binding = ActivityGameBinding.inflate(layoutInflater)
         setContentView(binding.root)
         /**
+         * Set initial player characteristics
+         */
+        updateStats()
+        /**
          * Initially opens school fragment
          */
         supportFragmentManager.beginTransaction().replace(R.id.fragment, SchoolScrollingFragment())
@@ -39,8 +43,8 @@ class GameActivity : AppCompatActivity() {
             /**
              * Code which is constantly called with delay
              */
+            Game.tick()
             updateStats()
-
             handler.postDelayed(runnable, delay)
         }
         handler.postDelayed(runnable, delay)
@@ -58,7 +62,7 @@ class GameActivity : AppCompatActivity() {
         /**
          * Think, how to write these in TextView
          */
-        //binding.moneyTextView.text = Game.player.money.toString()
+        binding.moneyTextView.text = Game.player.money.toString()
         //binding.dateTextView
     }
 
