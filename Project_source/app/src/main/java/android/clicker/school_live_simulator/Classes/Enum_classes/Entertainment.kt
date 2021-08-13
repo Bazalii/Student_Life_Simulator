@@ -28,6 +28,6 @@ enum class Entertainment(val happiness: Int, val money_diff: Int) {
     INTIMIDATE_YOUNGSTERS(10, 150),
     UPLOAD_VIRUS(25, 0),
     USE_CHAT_ROULETTE(45, -5000),
-    HAVE_A_PARTY(60, 10000),
+    HAVE_A_PARTY(60, -10000),
     GO_TO_THE_CLUB(100, -20000)
 }

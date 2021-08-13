@@ -1,11 +1,16 @@
 package android.clicker.school_live_simulator.User_interface.ScrollingFragments
 
+import android.clicker.school_live_simulator.Classes.Enum_classes.Entertainment
+import android.clicker.school_live_simulator.Classes.IncorrectValueException
+import android.clicker.school_live_simulator.Game
+import android.clicker.school_live_simulator.R
 import android.clicker.school_live_simulator.User_interface.GameActivity
 import android.clicker.school_live_simulator.databinding.FragmentFunScrollingBinding
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.animation.AnimationUtils
 import androidx.fragment.app.Fragment
 
 class FunScrollingFragment : Fragment() {
@@ -21,128 +26,238 @@ class FunScrollingFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         binding.funDrawOnDesks.setOnClickListener{
-            //Some logic to write
-            (activity as GameActivity).updateStats()
+            try {
+                Game.player.entertain(Entertainment.DRAW_ON_DESK)
+                (activity as GameActivity).updateStats()
+            } catch (exception: IncorrectValueException){
+                binding.funDrawOnDesks.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
+            }
+
         }
 
         binding.funDrawGraffities.setOnClickListener{
-            //Some logic to write
-            (activity as GameActivity).updateStats()
+            try {
+                Game.player.entertain(Entertainment.DRAW_GRAFFITIES)
+                (activity as GameActivity).updateStats()
+            } catch (exception: IncorrectValueException){
+                binding.funDrawGraffities.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
+            }
+        }
+
+        binding.funWritePoem.setOnClickListener{
+            try {
+                Game.player.entertain(Entertainment.WRITE_A_POEM)
+                (activity as GameActivity).updateStats()
+            } catch (exception: IncorrectValueException){
+                binding.funWritePoem.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
+            }
         }
 
         binding.funMakeSomethingHandmade.setOnClickListener{
-            //Some logic to write
-            (activity as GameActivity).updateStats()
+            try {
+                Game.player.entertain(Entertainment.MAKE_SOMETHING_HANDMADE)
+                (activity as GameActivity).updateStats()
+            } catch (exception: IncorrectValueException){
+                binding.funMakeSomethingHandmade.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
+            }
         }
 
         binding.funCoverASong.setOnClickListener{
-            //Some logic to write
-            (activity as GameActivity).updateStats()
+            try {
+                Game.player.entertain(Entertainment.COVER_A_SONG)
+                (activity as GameActivity).updateStats()
+            } catch (exception: IncorrectValueException){
+                binding.funCoverASong.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
+            }
         }
 
         binding.funWriteASong.setOnClickListener{
-            //Some logic to write
-            (activity as GameActivity).updateStats()
+            try {
+                Game.player.entertain(Entertainment.WRITE_A_SONG)
+                (activity as GameActivity).updateStats()
+            } catch (exception: IncorrectValueException){
+                binding.funWriteASong.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
+            }
         }
 
         binding.funStream.setOnClickListener{
-            //Some logic to write
-            (activity as GameActivity).updateStats()
+            try {
+                Game.player.entertain(Entertainment.STREAM)
+                (activity as GameActivity).updateStats()
+            } catch (exception: IncorrectValueException){
+                binding.funStream.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
+            }
         }
 
         binding.funMakeAYoutubeVideo.setOnClickListener{
-            //Some logic to write
-            (activity as GameActivity).updateStats()
+            try {
+                Game.player.entertain(Entertainment.MAKE_A_YOUTUBE_VIDEO)
+                (activity as GameActivity).updateStats()
+            } catch (exception: IncorrectValueException){
+                binding.funMakeAYoutubeVideo.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
+            }
         }
 
         binding.funDoNothing.setOnClickListener{
-            //Some logic to write
-            (activity as GameActivity).updateStats()
+            try {
+                Game.player.entertain(Entertainment.DO_NOTHING)
+                (activity as GameActivity).updateStats()
+            } catch (exception: IncorrectValueException){
+                binding.funDoNothing.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
+            }
         }
 
         binding.funGoCycling.setOnClickListener{
-            //Some logic to write
-            (activity as GameActivity).updateStats()
+            try {
+                Game.player.entertain(Entertainment.GO_CYCLING)
+                (activity as GameActivity).updateStats()
+            } catch (exception: IncorrectValueException){
+                binding.funGoCycling.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
+            }
         }
 
         binding.funListenToTheMusic.setOnClickListener{
-            //Some logic to write
-            (activity as GameActivity).updateStats()
+            try {
+                Game.player.entertain(Entertainment.LISTEN_TO_THE_MUSIC)
+                (activity as GameActivity).updateStats()
+            } catch (exception: IncorrectValueException){
+                binding.funListenToTheMusic.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
+            }
         }
 
         binding.funDonateAndPlayComputer.setOnClickListener{
-            //Some logic to write
-            (activity as GameActivity).updateStats()
+            try {
+                Game.player.entertain(Entertainment.DONATE_AND_PLAY_COMPUTER)
+                (activity as GameActivity).updateStats()
+            } catch (exception: IncorrectValueException){
+                binding.funDonateAndPlayComputer.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
+            }
         }
 
         binding.funGoToTheShoppingMall.setOnClickListener{
-            //Some logic to write
-            (activity as GameActivity).updateStats()
+            try {
+                Game.player.entertain(Entertainment.GO_TO_THE_SHOPPING_MALL)
+                (activity as GameActivity).updateStats()
+            } catch (exception: IncorrectValueException){
+                binding.funGoToTheShoppingMall.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
+            }
         }
 
         binding.funWalkWithYourGirlfriend.setOnClickListener{
-            //Some logic to write
-            (activity as GameActivity).updateStats()
+            try {
+                Game.player.entertain(Entertainment.WALK_WITH_YOUR_GIRLFRIEND)
+                (activity as GameActivity).updateStats()
+            } catch (exception: IncorrectValueException){
+                binding.funWalkWithYourGirlfriend.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
+            }
         }
 
         binding.funReadABook.setOnClickListener{
-            //Some logic to write
-            (activity as GameActivity).updateStats()
+            try {
+                Game.player.entertain(Entertainment.READ_A_BOOK)
+                (activity as GameActivity).updateStats()
+            } catch (exception: IncorrectValueException){
+                binding.funReadABook.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
+            }
         }
 
         binding.funHelpYoungstersWithHomework.setOnClickListener{
-            //Some logic to write
-            (activity as GameActivity).updateStats()
+            try {
+                Game.player.entertain(Entertainment.HELP_YOUNGSTERS_WITH_HOMEWORK)
+                (activity as GameActivity).updateStats()
+            } catch (exception: IncorrectValueException){
+                binding.funHelpYoungstersWithHomework.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
+            }
         }
 
         binding.funDoSport.setOnClickListener{
-            //Some logic to write
-            (activity as GameActivity).updateStats()
+            try {
+                Game.player.entertain(Entertainment.DO_SPORT)
+                (activity as GameActivity).updateStats()
+            } catch (exception: IncorrectValueException){
+                binding.funDoSport.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
+            }
         }
 
         binding.funPlayGuitar.setOnClickListener{
-            //Some logic to write
-            (activity as GameActivity).updateStats()
+            try {
+                Game.player.entertain(Entertainment.PLAY_GUITAR)
+                (activity as GameActivity).updateStats()
+            } catch (exception: IncorrectValueException){
+                binding.funPlayGuitar.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
+            }
         }
 
         binding.funGoToTheTheatre.setOnClickListener{
-            //Some logic to write
-            (activity as GameActivity).updateStats()
+            try {
+                Game.player.entertain(Entertainment.GO_TO_THE_THEATRE)
+                (activity as GameActivity).updateStats()
+            } catch (exception: IncorrectValueException){
+                binding.funGoToTheTheatre.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
+            }
         }
 
         binding.funGoToTheConcert.setOnClickListener{
-            //Some logic to write
-            (activity as GameActivity).updateStats()
+            try {
+                Game.player.entertain(Entertainment.GO_TO_THE_CONCERT)
+                (activity as GameActivity).updateStats()
+            } catch (exception: IncorrectValueException){
+                binding.funGoToTheConcert.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
+            }
         }
 
         binding.funKickATrashCan.setOnClickListener{
-            //Some logic to write
-            (activity as GameActivity).updateStats()
+            try {
+                Game.player.entertain(Entertainment.KICK_A_TRASH_CAN)
+                (activity as GameActivity).updateStats()
+            } catch (exception: IncorrectValueException){
+                binding.funKickATrashCan.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
+            }
         }
 
         binding.funIntimidateYoungsters.setOnClickListener{
-            //Some logic to write
-            (activity as GameActivity).updateStats()
+            try {
+                Game.player.entertain(Entertainment.INTIMIDATE_YOUNGSTERS)
+                (activity as GameActivity).updateStats()
+            } catch (exception: IncorrectValueException){
+                binding.funIntimidateYoungsters.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
+            }
         }
 
         binding.funUploadVirus.setOnClickListener{
-            //Some logic to write
-            (activity as GameActivity).updateStats()
+            try {
+                Game.player.entertain(Entertainment.UPLOAD_VIRUS)
+                (activity as GameActivity).updateStats()
+            } catch (exception: IncorrectValueException){
+                binding.funUploadVirus.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
+            }
         }
 
         binding.funUseChatRoulette.setOnClickListener{
-            //Some logic to write
-            (activity as GameActivity).updateStats()
+            try {
+                Game.player.entertain(Entertainment.USE_CHAT_ROULETTE)
+                (activity as GameActivity).updateStats()
+            } catch (exception: IncorrectValueException){
+                binding.funUseChatRoulette.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
+            }
         }
 
         binding.funHaveAParty.setOnClickListener{
-            //Some logic to write
-            (activity as GameActivity).updateStats()
+            try {
+                Game.player.entertain(Entertainment.HAVE_A_PARTY)
+                (activity as GameActivity).updateStats()
+            } catch (exception: IncorrectValueException){
+                binding.funHaveAParty.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
+            }
         }
 
         binding.funGoToTheClub.setOnClickListener{
-            //Some logic to write
-            (activity as GameActivity).updateStats()
+            try {
+                Game.player.entertain(Entertainment.GO_TO_THE_CLUB)
+                (activity as GameActivity).updateStats()
+            } catch (exception: IncorrectValueException){
+                binding.funGoToTheClub.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
+            }
         }
 
     }

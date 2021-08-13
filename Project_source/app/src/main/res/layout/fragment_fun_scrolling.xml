@@ -24,6 +24,12 @@
             android:text="@string/fun_draw_graffities" />
 
         <Button
+            android:id="@+id/fun_write_poem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/fun_write_a_poem" />
+
+        <Button
             android:id="@+id/fun_make_something_handmade"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
