@@ -57,6 +57,7 @@
     Entertainment folder:
     <string name="fun_draw_on_desks">Draw on desks</string>
     <string name="fun_draw_graffities">Draw graffities in school toilets</string>
+    <string name="fun_write_a_poem">Write a poem</string>
     <string name="fun_make_something_handmade">Make something handmade</string>
     <string name="fun_cover_a_song">Cover your favorite song</string>
     <string name="fun_write_a_song">Write a song yourself</string>
@@ -86,28 +87,33 @@
 
 
     Shop folder:
+    <string name="shop_guitar_course">Guitar courses</string>
     <string name="shop_guitar_course_v1">First song course</string>
     <string name="shop_guitar_course_v2">Learn from a bum at the yard</string>
     <string name="shop_guitar_course_v3">Learn from a neighbour at the yard</string>
     <string name="shop_guitar_course_v4">Enroll in the music school</string>
     <string name="shop_guitar_course_v5">Enroll in conservatory courses</string>
 
+    <string name="shop_computer_course">Computer courses</string>
     <string name="shop_computer_course_v1">Online webinars</string>
     <string name="shop_computer_course_v2">Friend\'s course</string>
     <string name="shop_computer_course_v3">Online web design courses</string>
     <string name="shop_computer_course_v4">Video editing courses</string>
     <string name="shop_computer_course_v5">GameDev courses</string>
 
+    <string name="shop_bicycle">Bicycles</string>
     <string name="shop_ussr_bicycle">USSR bicycle</string>
     <string name="shop_usual_bicycle">Usual bicycle</string>
     <string name="shop_mountain_bicycle">Mountain bicycle</string>
 
+    <string name="shop_guitar">Guitars</string>
     <string name="shop_ussr_guitar">USSR guitar</string>
     <string name="shop_ural_guitar">Ural guitar</string>
     <string name="shop_yamaha_guitar">Yamaha guitar</string>
     <string name="shop_fender_guitar">Fender guitar</string>
     <string name="shop_double_neck_guitar">Double Neck guitar</string>
 
+    <string name="shop_computer">Computers</string>
     <string name="shop_previously_used_computer">Previously used computer</string>
     <string name="shop_old_computer">Old computer</string>
     <string name="shop_usual_computer">Usual computer</string>
