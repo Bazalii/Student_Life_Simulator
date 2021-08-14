@@ -13,14 +13,14 @@
         android:orientation="vertical">
 
         <Button
-            android:id="@+id/shop_guitar_courses"
+            android:id="@+id/shopGuitarCourses"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/shop_guitar_course"
             android:drawableRight="@drawable/ic_drop_down"/>
 
         <Button
-            android:id="@+id/shop_guitar_course_v1"
+            android:id="@+id/shopGuitarCourseV1"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:insetLeft="30dp"
@@ -28,7 +28,7 @@
             android:visibility="gone" />
 
         <Button
-            android:id="@+id/shop_guitar_course_v2"
+            android:id="@+id/shopGuitarCourseV2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:insetLeft="30dp"
@@ -36,7 +36,7 @@
             android:visibility="gone" />
 
         <Button
-            android:id="@+id/shop_guitar_course_v3"
+            android:id="@+id/shopGuitarCourseV3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:insetLeft="30dp"
@@ -44,7 +44,7 @@
             android:visibility="gone" />
 
         <Button
-            android:id="@+id/shop_guitar_course_v4"
+            android:id="@+id/shopGuitarCourseV4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:insetLeft="30dp"
@@ -52,7 +52,7 @@
             android:visibility="gone" />
 
         <Button
-            android:id="@+id/shop_guitar_course_v5"
+            android:id="@+id/shopGuitarCourseV5"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:insetLeft="30dp"
@@ -60,13 +60,13 @@
             android:visibility="gone" />
 
         <Button
-            android:id="@+id/shop_computer_courses"
+            android:id="@+id/shopComputerCourses"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/shop_computer_course" />
 
         <Button
-            android:id="@+id/shop_computer_course_v1"
+            android:id="@+id/shopComputerCourseV1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:insetLeft="30dp"
@@ -74,7 +74,7 @@
             android:visibility="gone" />
 
         <Button
-            android:id="@+id/shop_computer_course_v2"
+            android:id="@+id/shopComputerCourseV2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:insetLeft="30dp"
@@ -82,7 +82,7 @@
             android:visibility="gone" />
 
         <Button
-            android:id="@+id/shop_computer_course_v3"
+            android:id="@+id/shopComputerCourseV3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:insetLeft="30dp"
@@ -90,7 +90,7 @@
             android:visibility="gone" />
 
         <Button
-            android:id="@+id/shop_computer_course_v4"
+            android:id="@+id/shopComputerCourseV4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:insetLeft="30dp"
@@ -98,7 +98,7 @@
             android:visibility="gone" />
 
         <Button
-            android:id="@+id/shop_computer_course_v5"
+            android:id="@+id/shopComputerCourseV5"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:insetLeft="30dp"
@@ -106,13 +106,13 @@
             android:visibility="gone" />
 
         <Button
-            android:id="@+id/shop_bicycles"
+            android:id="@+id/shopBicycles"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/shop_bicycle" />
 
         <Button
-            android:id="@+id/shop_ussr_bicycle"
+            android:id="@+id/shopUssrBicycle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:insetLeft="30dp"
@@ -120,7 +120,7 @@
             android:visibility="gone" />
 
         <Button
-            android:id="@+id/shop_usual_bicycle"
+            android:id="@+id/shopUsualBicycle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:insetLeft="30dp"
@@ -128,7 +128,7 @@
             android:visibility="gone" />
 
         <Button
-            android:id="@+id/shop_mountain_bicycle"
+            android:id="@+id/shopMountainBicycle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:insetLeft="30dp"
@@ -136,13 +136,13 @@
             android:visibility="gone" />
 
         <Button
-            android:id="@+id/shop_guitars"
+            android:id="@+id/shopGuitars"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/shop_guitar" />
 
         <Button
-            android:id="@+id/shop_ussr_guitar"
+            android:id="@+id/shopUssrGuitar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:insetLeft="30dp"
@@ -150,7 +150,7 @@
             android:visibility="gone" />
 
         <Button
-            android:id="@+id/shop_ural_guitar"
+            android:id="@+id/shopUralGuitar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:insetLeft="30dp"
@@ -158,7 +158,7 @@
             android:visibility="gone" />
 
         <Button
-            android:id="@+id/shop_yamaha_guitar"
+            android:id="@+id/shopYamahaGuitar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:insetLeft="30dp"
@@ -166,7 +166,7 @@
             android:visibility="gone" />
 
         <Button
-            android:id="@+id/shop_fender_guitar"
+            android:id="@+id/shopFenderGuitar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:insetLeft="30dp"
@@ -174,7 +174,7 @@
             android:visibility="gone" />
 
         <Button
-            android:id="@+id/shop_double_neck_guitar"
+            android:id="@+id/shopDoubleNeckGuitar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:insetLeft="30dp"
@@ -182,13 +182,13 @@
             android:visibility="gone" />
 
         <Button
-            android:id="@+id/shop_computers"
+            android:id="@+id/shopComputers"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/shop_computer" />
 
         <Button
-            android:id="@+id/shop_previously_used_computer"
+            android:id="@+id/shopPreviouslyUsedComputer"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:insetLeft="30dp"
@@ -196,7 +196,7 @@
             android:visibility="gone" />
 
         <Button
-            android:id="@+id/shop_old_computer"
+            android:id="@+id/shopOldComputer"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:insetLeft="30dp"
@@ -204,7 +204,7 @@
             android:visibility="gone" />
 
         <Button
-            android:id="@+id/shop_usual_computer"
+            android:id="@+id/shopUsualComputer"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:insetLeft="30dp"
@@ -212,7 +212,7 @@
             android:visibility="gone" />
 
         <Button
-            android:id="@+id/shop_xiaomi_computer"
+            android:id="@+id/shopXiaomiComputer"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:insetLeft="30dp"
@@ -220,7 +220,7 @@
             android:visibility="gone" />
 
         <Button
-            android:id="@+id/shop_macbook_computer"
+            android:id="@+id/shopMacbookComputer"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:insetLeft="30dp"

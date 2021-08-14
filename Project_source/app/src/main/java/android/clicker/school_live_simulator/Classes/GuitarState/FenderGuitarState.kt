@@ -8,6 +8,6 @@ open class FenderGuitarState : YamahaGuitarState() {
     }
 
     override fun changeState(bag: Player.Bag) {
-        bag.guitar = DualNeckGuitarState()
+        bag.guitar = DoubleNeckGuitarState()
     }
 }

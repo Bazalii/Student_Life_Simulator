@@ -1,6 +1,6 @@
 package android.clicker.school_live_simulator.User_interface.ScrollingFragments
 
-import android.clicker.school_live_simulator.Classes.IncorrectValueException
+import android.clicker.school_live_simulator.Classes.NotEnoughMoneyException
 import android.clicker.school_live_simulator.Food
 import android.clicker.school_live_simulator.Game
 import android.clicker.school_live_simulator.R
@@ -12,7 +12,6 @@ import android.view.View
 import android.view.ViewGroup
 import android.view.animation.AnimationUtils
 import androidx.fragment.app.Fragment
-import java.lang.Exception
 
 class FoodScrollingFragment : Fragment() {
     lateinit var binding: FragmentFoodScrollingBinding
@@ -30,7 +29,7 @@ class FoodScrollingFragment : Fragment() {
             try {
                 Game.player.eat(Food.CRACKERS)
                 (activity as GameActivity).updateStats()
-            } catch (exception: IncorrectValueException){
+            } catch (exception: NotEnoughMoneyException){
                 binding.foodEatCrackers.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
             }
         }
@@ -39,7 +38,7 @@ class FoodScrollingFragment : Fragment() {
             try {
                 Game.player.eat(Food.DOSHIRAK)
                 (activity as GameActivity).updateStats()
-            } catch (exception: IncorrectValueException){
+            } catch (exception: NotEnoughMoneyException){
                 binding.foodEatDoshirack.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
             }
 
@@ -49,7 +48,7 @@ class FoodScrollingFragment : Fragment() {
             try {
                 Game.player.eat(Food.EATERY_FOOD)
                 (activity as GameActivity).updateStats()
-            } catch (exception: IncorrectValueException){
+            } catch (exception: NotEnoughMoneyException){
                 binding.foodEatAtTheCanteen.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
             }
         }
@@ -58,7 +57,7 @@ class FoodScrollingFragment : Fragment() {
             try {
                 Game.player.eat(Food.MCDONALDS)
                 (activity as GameActivity).updateStats()
-            } catch (exception: IncorrectValueException){
+            } catch (exception: NotEnoughMoneyException){
                 binding.foodEatAtMcdonalds.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
             }
         }
@@ -67,7 +66,7 @@ class FoodScrollingFragment : Fragment() {
             try {
                 Game.player.eat(Food.PIZZA_AT_HOME)
                 (activity as GameActivity).updateStats()
-            } catch (exception: IncorrectValueException){
+            } catch (exception: NotEnoughMoneyException){
                 binding.foodOrderDelivery.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
             }
         }
@@ -76,7 +75,7 @@ class FoodScrollingFragment : Fragment() {
             try {
                 Game.player.eat(Food.RESTORANT_FOOD)
                 (activity as GameActivity).updateStats()
-            } catch (exception: IncorrectValueException){
+            } catch (exception: NotEnoughMoneyException){
                 binding.foodGoToTheRestaurant.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
             }
         }

@@ -16,7 +16,7 @@ abstract class BicycleState {
      * A list of available types of delivery.
      * These types are described in enumeration class Delivery.
      */
-    protected open val available_delivery: ArrayList<Delivery> = arrayListOf<Delivery>()
+    protected val available_delivery: ArrayList<Delivery> = arrayListOf<Delivery>()
 
     /**
      * Upgrades bicycle.

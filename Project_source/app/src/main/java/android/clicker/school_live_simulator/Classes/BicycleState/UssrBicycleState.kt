@@ -10,7 +10,9 @@ open class UssrBicycleState : BicycleState() {
      * overriding the whole list in every subclass.
      */
 
-    override val available_delivery  = arrayListOf<Delivery>(Delivery.SLOW_DELIVERY)
+    init {
+        available_delivery.add(Delivery.SLOW_DELIVERY)
+    }
 
 
     override fun changeState(bag: Player.Bag) {

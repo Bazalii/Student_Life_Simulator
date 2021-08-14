@@ -2,8 +2,9 @@ package android.clicker.school_live_simulator
 
 import android.clicker.school_live_simulator.Classes.Enum_classes.Entertainment
 import android.clicker.school_live_simulator.Classes.Enum_classes.Studies
-import android.clicker.school_live_simulator.Classes.IncorrectValueException
-import android.clicker.school_live_simulator.Classes.NotAvailableException
+import android.clicker.school_live_simulator.Classes.NotEnoughMoneyException
+import android.clicker.school_live_simulator.Classes.IsNotAvailableException
+import kotlin.reflect.KClass
 
 class Player {
     inner class Bag {
@@ -125,19 +126,19 @@ class Player {
         if(this.current_courses.guitar_course.isAvailable(song))
             changeMoney(song.money_diff)
         else
-            throw NotAvailableException("Work is not available")
+            throw IsNotAvailableException("Work is not available")
     }
     fun deliver(delivery_type: Delivery){
         if(this.items.bicycle.isAvailable(delivery_type))
             changeMoney(delivery_type.money_diff)
         else
-            throw NotAvailableException("Work is not available")
+            throw IsNotAvailableException("Work is not available")
     }
     fun realiseWebTask(web_task: WebTask) {
         if(this.current_courses.computer_course.isAvailable(web_task))
             changeMoney(web_task.money_diff)
         else
-            throw NotAvailableException("Work is not available")
+            throw IsNotAvailableException("Work is not available")
     }
     fun eat(food: Food) {
         changeMoney(food.money_diff)
@@ -181,7 +182,7 @@ class Player {
         if (checkMin(this.money, value))
             this.money += value
         else
-            throw IncorrectValueException("You don't have enough money!")
+            throw NotEnoughMoneyException("You don't have enough money!")
     }
 
     /**
@@ -216,14 +217,20 @@ class Player {
     fun buyNewGuitar() {
         this.items.guitar.changeState(this.items)
     }
-    fun buyNextGuitarCourse() {
-        this.current_courses.guitar_course.buyNextCourse(this.current_courses)
+    fun buyNextGuitarCourse(course: KClass<*>) {
+        if (this.items.guitar.isAvailable(course))
+            this.current_courses.guitar_course.buyNextCourse(this.current_courses)
+        else
+            throw IsNotAvailableException("Course is not available!")
     }
     fun buyNewComputer() {
         this.items.computer.changeState(this.items)
     }
-    fun buyNextComputerCourse() {
-        this.current_courses.computer_course.buyNextCourse(this.current_courses)
+    fun buyNextComputerCourse(course: KClass<*>) {
+        if (this.items.computer.isAvailable(course))
+            this.current_courses.computer_course.buyNextCourse(this.current_courses)
+        else
+            throw IsNotAvailableException("Course is not available!")
     }
 }
 

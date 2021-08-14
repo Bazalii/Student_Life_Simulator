@@ -1,17 +1,13 @@
 package android.clicker.school_live_simulator.User_interface.ScrollingFragments
 
-import android.app.Dialog
 import android.clicker.school_live_simulator.*
-import android.clicker.school_live_simulator.Classes.IncorrectValueException
+import android.clicker.school_live_simulator.Classes.IsNotAvailableException
+import android.clicker.school_live_simulator.Classes.NotEnoughMoneyException
 import android.clicker.school_live_simulator.User_interface.GameActivity
 import android.clicker.school_live_simulator.databinding.FragmentShopScrollingBinding
-import android.graphics.Color
 import android.graphics.Color.*
-import android.graphics.drawable.Drawable
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
-import android.view.MotionEvent
 import android.view.View
 import android.view.View.GONE
 import android.view.View.VISIBLE
@@ -19,7 +15,6 @@ import android.view.ViewGroup
 import android.view.animation.AnimationUtils
 import android.widget.Button
 import android.widget.Toast
-import androidx.appcompat.widget.AppCompatButton
 import androidx.fragment.app.Fragment
 
 class ShopScrollingFragment : Fragment() {
@@ -119,14 +114,192 @@ class ShopScrollingFragment : Fragment() {
             }
         }
 
+
         /**
-         * Buttons for items
+         * Actions for guitar courses buttons
+         */
+        binding.shopGuitarCourseV1.setOnClickListener {
+            try {
+                Game.player.buyNextGuitarCourse(YardGuitarCourseState::class)
+                updateUI()
+            } catch(exception: NotEnoughMoneyException){
+                binding.shopGuitarCourseV1.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
+            } catch(exception: IsNotAvailableException){
+                Toast.makeText(activity, "USSR guitar or better is required", Toast.LENGTH_SHORT).show()
+                binding.shopComputerCourseV1.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
+            }
+        }
+
+        binding.shopGuitarCourseV2.setOnClickListener {
+            if(Game.player.current_courses.guitar_course is YardGuitarCourseState){
+                try {
+                    Game.player.buyNextGuitarCourse(FirstSongCourseState::class)
+                    updateUI()
+                } catch(exception: NotEnoughMoneyException){
+                    binding.shopGuitarCourseV2.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
+                } catch(exception: IsNotAvailableException){
+                    Toast.makeText(activity, "Ural guitar or better is required", Toast.LENGTH_SHORT).show()
+                    binding.shopComputerCourseV1.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
+                }
+            }
+            else{
+                Toast.makeText(activity, "buy previous", Toast.LENGTH_SHORT).show()
+                binding.shopGuitarCourseV2.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
+            }
+        }
+
+        binding.shopGuitarCourseV3.setOnClickListener {
+            if(Game.player.current_courses.guitar_course is FirstSongCourseState){
+                try {
+                    Game.player.buyNextGuitarCourse(YardSongCourseState::class)
+                    updateUI()
+                } catch(exception: NotEnoughMoneyException){
+                    binding.shopGuitarCourseV3.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
+                } catch(exception: IsNotAvailableException){
+                    Toast.makeText(activity, "Yamaha guitar or better is required", Toast.LENGTH_SHORT).show()
+                    binding.shopComputerCourseV1.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
+                }
+            }
+            else{
+                Toast.makeText(activity, "buy previous", Toast.LENGTH_SHORT).show()
+                binding.shopGuitarCourseV3.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
+            }
+        }
+
+        binding.shopGuitarCourseV4.setOnClickListener {
+            if(Game.player.current_courses.guitar_course is YardSongCourseState){
+                try {
+                    Game.player.buyNextGuitarCourse(MusicalSchoolCourseState::class)
+                    updateUI()
+                } catch(exception: NotEnoughMoneyException){
+                    binding.shopGuitarCourseV4.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
+                } catch(exception: IsNotAvailableException){
+                    Toast.makeText(activity, "Fender guitar or better is required", Toast.LENGTH_SHORT).show()
+                    binding.shopComputerCourseV1.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
+                }
+            }
+            else{
+                Toast.makeText(activity, "buy previous", Toast.LENGTH_SHORT).show()
+                binding.shopGuitarCourseV4.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
+            }
+        }
+
+        binding.shopGuitarCourseV5.setOnClickListener {
+            if(Game.player.current_courses.guitar_course is MusicalSchoolCourseState){
+                try {
+                    Game.player.buyNextGuitarCourse(MusicalObservatoryCourseState::class)
+                    updateUI()
+                } catch(exception: NotEnoughMoneyException){
+                    binding.shopGuitarCourseV5.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
+                } catch(exception: IsNotAvailableException){
+                    Toast.makeText(activity, "Double neck guitar is required", Toast.LENGTH_SHORT).show()
+                    binding.shopComputerCourseV1.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
+                }
+            }
+            else{
+                Toast.makeText(activity, "buy previous", Toast.LENGTH_SHORT).show()
+                binding.shopGuitarCourseV5.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
+            }
+        }
+
+
+
+        /**
+         * Actions for computer courses buttons
+         */
+        binding.shopComputerCourseV1.setOnClickListener {
+            try {
+                Game.player.buyNextComputerCourse(FriendsCourseState::class)
+                updateUI()
+            } catch(exception: NotEnoughMoneyException){
+                binding.shopComputerCourseV1.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
+            } catch(exception: IsNotAvailableException){
+                Toast.makeText(activity, "buy new computer", Toast.LENGTH_SHORT).show()
+                binding.shopComputerCourseV1.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
+            }
+        }
+
+        binding.shopComputerCourseV2.setOnClickListener {
+            if(Game.player.current_courses.computer_course is FriendsCourseState){
+                try {
+                    Game.player.buyNextComputerCourse(OnlineWorkCourseState::class)
+                    updateUI()
+                } catch(exception: NotEnoughMoneyException){
+                    binding.shopComputerCourseV2.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
+                } catch(exception: IsNotAvailableException){
+                    Toast.makeText(activity, "buy new computer", Toast.LENGTH_SHORT).show()
+                    binding.shopComputerCourseV1.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
+                }
+            }
+            else{
+                Toast.makeText(activity, "buy previous", Toast.LENGTH_SHORT).show()
+                binding.shopComputerCourseV2.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
+            }
+        }
+
+        binding.shopComputerCourseV3.setOnClickListener {
+            if(Game.player.current_courses.computer_course is OnlineWorkCourseState){
+                try {
+                    Game.player.buyNextComputerCourse(WebDesignCourseState::class)
+                    updateUI()
+                } catch(exception: NotEnoughMoneyException){
+                    binding.shopComputerCourseV3.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
+                } catch(exception: IsNotAvailableException){
+                    Toast.makeText(activity, "buy new computer", Toast.LENGTH_SHORT).show()
+                    binding.shopComputerCourseV1.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
+                }
+            }
+            else{
+                Toast.makeText(activity, "buy previous", Toast.LENGTH_SHORT).show()
+                binding.shopComputerCourseV3.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
+            }
+        }
+
+        binding.shopComputerCourseV4.setOnClickListener {
+            if(Game.player.current_courses.computer_course is WebDesignCourseState){
+                try {
+                    Game.player.buyNextComputerCourse(VideoEditingCourseState::class)
+                    updateUI()
+                } catch(exception: NotEnoughMoneyException){
+                    binding.shopComputerCourseV4.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
+                } catch(exception: IsNotAvailableException){
+                    Toast.makeText(activity, "buy new computer", Toast.LENGTH_SHORT).show()
+                    binding.shopComputerCourseV1.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
+                }
+            }
+            else{
+                Toast.makeText(activity, "buy previous", Toast.LENGTH_SHORT).show()
+                binding.shopComputerCourseV4.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
+            }
+        }
+
+        binding.shopComputerCourseV5.setOnClickListener {
+            if(Game.player.current_courses.computer_course is VideoEditingCourseState){
+                try {
+                    Game.player.buyNextComputerCourse(GameDevelopmentCourseState::class)
+                    updateUI()
+                } catch(exception: NotEnoughMoneyException){
+                    binding.shopComputerCourseV5.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
+                } catch(exception: IsNotAvailableException){
+                    Toast.makeText(activity, "buy new computer", Toast.LENGTH_SHORT).show()
+                    binding.shopComputerCourseV1.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
+                }
+            }
+            else{
+                Toast.makeText(activity, "buy previous", Toast.LENGTH_SHORT).show()
+                binding.shopComputerCourseV5.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
+            }
+        }
+
+
+        /**
+         * Actions for bicycles buttons
          */
         binding.shopUssrBicycle.setOnClickListener {
                 try {
                     Game.player.buyNewBicycle()
                     updateUI()
-                } catch(exception: IncorrectValueException){
+                } catch(exception: NotEnoughMoneyException){
                     binding.shopUssrBicycle.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
                 }
         }
@@ -136,7 +309,7 @@ class ShopScrollingFragment : Fragment() {
                 try {
                     Game.player.buyNewBicycle()
                     updateUI()
-                } catch(exception: IncorrectValueException){
+                } catch(exception: NotEnoughMoneyException){
                     binding.shopUsualBicycle.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
                 }
             }
@@ -146,6 +319,181 @@ class ShopScrollingFragment : Fragment() {
             }
         }
 
+        binding.shopMountainBicycle.setOnClickListener {
+            if(Game.player.items.bicycle is UsualBicycleState){
+                try {
+                    Game.player.buyNewBicycle()
+                    updateUI()
+                } catch(exception: NotEnoughMoneyException){
+                    binding.shopMountainBicycle.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
+                }
+            }
+            else{
+                Toast.makeText(activity, "buy previous", Toast.LENGTH_SHORT).show()
+                binding.shopMountainBicycle.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
+            }
+        }
+
+
+        /**
+         * Actions for guitars buttons
+         */
+        binding.shopUssrGuitar.setOnClickListener {
+            try {
+                Game.player.buyNewGuitar()
+                updateUI()
+            } catch(exception: NotEnoughMoneyException){
+                binding.shopUssrGuitar.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
+            }
+        }
+
+        binding.shopUralGuitar.setOnClickListener {
+            if(Game.player.items.guitar is UssrGuitarState){
+                try {
+                    Game.player.buyNewGuitar()
+                    updateUI()
+                } catch(exception: NotEnoughMoneyException){
+                    binding.shopUralGuitar.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
+                }
+            }
+            else{
+                Toast.makeText(activity, "buy previous", Toast.LENGTH_SHORT).show()
+                binding.shopUralGuitar.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
+            }
+        }
+
+        binding.shopUralGuitar.setOnClickListener {
+            if(Game.player.items.guitar is UssrGuitarState){
+                try {
+                    Game.player.buyNewGuitar()
+                    updateUI()
+                } catch(exception: NotEnoughMoneyException){
+                    binding.shopUralGuitar.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
+                }
+            }
+            else{
+                Toast.makeText(activity, "buy previous", Toast.LENGTH_SHORT).show()
+                binding.shopUralGuitar.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
+            }
+        }
+
+        binding.shopYamahaGuitar.setOnClickListener {
+            if(Game.player.items.guitar is UralGuitarState){
+                try {
+                    Game.player.buyNewGuitar()
+                    updateUI()
+                } catch(exception: NotEnoughMoneyException){
+                    binding.shopYamahaGuitar.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
+                }
+            }
+            else{
+                Toast.makeText(activity, "buy previous", Toast.LENGTH_SHORT).show()
+                binding.shopYamahaGuitar.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
+            }
+        }
+
+        binding.shopFenderGuitar.setOnClickListener {
+            if(Game.player.items.guitar is YamahaGuitarState){
+                try {
+                    Game.player.buyNewGuitar()
+                    updateUI()
+                } catch(exception: NotEnoughMoneyException){
+                    binding.shopFenderGuitar.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
+                }
+            }
+            else{
+                Toast.makeText(activity, "buy previous", Toast.LENGTH_SHORT).show()
+                binding.shopFenderGuitar.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
+            }
+        }
+
+        binding.shopDoubleNeckGuitar.setOnClickListener {
+            if(Game.player.items.guitar is FenderGuitarState){
+                try {
+                    Game.player.buyNewGuitar()
+                    updateUI()
+                } catch(exception: NotEnoughMoneyException){
+                    binding.shopDoubleNeckGuitar.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
+                }
+            }
+            else{
+                Toast.makeText(activity, "buy previous", Toast.LENGTH_SHORT).show()
+                binding.shopDoubleNeckGuitar.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
+            }
+        }
+
+
+        /**
+         * Actions for computer buttons
+         */
+        binding.shopPreviouslyUsedComputer.setOnClickListener {
+            try {
+                Game.player.buyNewComputer()
+                updateUI()
+            } catch(exception: NotEnoughMoneyException){
+                binding.shopUssrGuitar.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
+            }
+        }
+
+        binding.shopOldComputer.setOnClickListener {
+            if(Game.player.items.computer is PreviouslyUsedComputerState){
+                try {
+                    Game.player.buyNewComputer()
+                    updateUI()
+                } catch(exception: NotEnoughMoneyException){
+                    binding.shopOldComputer.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
+                }
+            }
+            else{
+                Toast.makeText(activity, "buy previous", Toast.LENGTH_SHORT).show()
+                binding.shopOldComputer.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
+            }
+        }
+
+        binding.shopUsualComputer.setOnClickListener {
+            if(Game.player.items.computer is OldComputerState){
+                try {
+                    Game.player.buyNewComputer()
+                    updateUI()
+                } catch(exception: NotEnoughMoneyException){
+                    binding.shopUsualComputer.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
+                }
+            }
+            else{
+                Toast.makeText(activity, "buy previous", Toast.LENGTH_SHORT).show()
+                binding.shopUsualComputer.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
+            }
+        }
+
+        binding.shopXiaomiComputer.setOnClickListener {
+            if(Game.player.items.computer is UsualComputerState){
+                try {
+                    Game.player.buyNewComputer()
+                    updateUI()
+                } catch(exception: NotEnoughMoneyException){
+                    binding.shopXiaomiComputer.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
+                }
+            }
+            else{
+                Toast.makeText(activity, "buy previous", Toast.LENGTH_SHORT).show()
+                binding.shopXiaomiComputer.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
+            }
+        }
+
+        binding.shopMacbookComputer.setOnClickListener {
+            if(Game.player.items.computer is XiaomiMiNotebookState){
+                try {
+                    Game.player.buyNewComputer()
+                    updateUI()
+                } catch(exception: NotEnoughMoneyException){
+                    binding.shopMacbookComputer.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
+                }
+            }
+            else{
+                Toast.makeText(activity, "buy previous", Toast.LENGTH_SHORT).show()
+                binding.shopMacbookComputer.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
+            }
+        }
 
     }
 
