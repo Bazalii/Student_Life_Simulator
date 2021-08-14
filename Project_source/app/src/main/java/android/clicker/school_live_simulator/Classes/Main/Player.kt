@@ -36,22 +36,44 @@ class Player {
             }
     }
 //    private var achieved_achievements: ArrayList<GameAchievements> = arrayListOf<GameAchievements>()
-
+    /**
+     * Player's name
+     */
     private lateinit var name: String
 //    private lateinit var birthday: Birthday
+    /**
+     * Points of Player school studies
+     */
     var school_performance: Int = 1000
         private set
+    /**
+     * Points of Player happiness
+     */
     var happiness: Int = 1000
         private set
+    /**
+     * Points of player satiety
+     */
     var satiety: Int = 1000
         private set
+    /**
+     * Amount of player's money
+     */
     var money: Int = 100
         private set
-
+    /**
+     * Player's class at school
+     */
     private var school_class: Int = 1
 
+    /**
+     * All the items that player has last bought: bicycle, guitar and computer
+     */
     var items: Bag = Bag()
         private set
+    /**
+     * All the courses that player has last bought: guitar and computer course
+     */
     var current_courses: Courses = Courses()
         private set
 
@@ -59,7 +81,7 @@ class Player {
 //    private var live_observers: ArrayList<LiveObserver> = arrayListOf<LiveObserver>()
 
     /**
-     * Function correct value to check if we can reduce player_stats
+     * Block of functions to check if the value is correct
      * @param value Value to reduce
      * @param player_stat One of the stats: money, satiety, school_performance, happiness
      */
@@ -70,16 +92,35 @@ class Player {
         return player_stat + value <= 1000
     }
 
+
+    /**
+     * Changes each 3 seconds Player stats
+     * It is used in {@link Game.tick()}
+     */
     fun tick() {
-        changeSchoolPerformance(this.player_state.reduce_school_performance_percent)
-        changeHappiness(this.player_state.reduce_happines_percent)
-        changeSatiety(this.player_state.reduce_satiety_percent)
+        changeSchoolPerformance(this.player_state.reduce_school_performance_value)
+        changeHappiness(this.player_state.reduce_happiness_value)
+        changeSatiety(this.player_state.reduce_satiety_value)
     }
 
+
+    /**
+     * Maybe that should be deprecated
+     */
     fun getClass(): Int {
         TODO("Not yet implemented")
     }
 
+
+    /**
+     * Block of functions that reproduce Player's actions
+     * @param song Field of corresponding Enum class that is used to change stats
+     * @param delivery_type Field of corresponding Enum class that is used to change stats
+     * @param web_task Field of corresponding Enum class that is used to change stats
+     * @param food Field of corresponding Enum class that is used to change stats
+     * @param entertainment Field of corresponding Enum class that is used to change stats
+     * @param study Field of corresponding Enum class that is used to change stats
+     */
     fun playSong(song: Song) {
         if(this.current_courses.guitar_course.isAvailable(song))
             changeMoney(song.money_diff)
@@ -98,70 +139,60 @@ class Player {
         else
             throw NotAvailableException("Work is not available")
     }
-
     fun eat(food: Food) {
-        if (checkMin(this.money, food.money_diff)) {
-            changeMoney(food.money_diff)
-            if (checkMax(this.satiety, food.satiety))
-                changeSchoolPerformance(food.satiety)
-            else
-                this.satiety = 1000
-            if (checkMax(this.happiness, food.happiness))
-                changeSchoolPerformance(food.happiness)
-            else
-                this.happiness = 1000
-        }
-        else
-            throw IncorrectValueException("You don't have enough money!")
+        changeMoney(food.money_diff)
+        changeSatiety(food.satiety)
+        changeHappiness(food.happiness)
     }
     fun entertain(entertainment: Entertainment) {
         //TODO everyday happiness and monthly payment
-        if (checkMin(this.money, entertainment.money_diff)) {
-            changeMoney(entertainment.money_diff)
-            if (checkMax(this.happiness, entertainment.happiness))
-                changeSchoolPerformance(entertainment.happiness)
-            else
-                this.happiness = 1000
-        }
-        else
-            throw IncorrectValueException("You don't have enough money!")
+        changeMoney(entertainment.money_diff)
+        changeHappiness(entertainment.happiness)
     }
     fun study(studies: Studies) {
-        if (checkMin(this.money, studies.money_diff)) {
-            changeMoney(studies.money_diff)
-            if (checkMax(this.school_performance, studies.school_performance))
-                changeSchoolPerformance(studies.school_performance)
-            else
-                this.school_performance = 1000
-        }
-        else
-            throw IncorrectValueException("You don't have enough money!")
+        changeMoney(studies.money_diff)
+        changeSchoolPerformance(studies.school_performance)
     }
 
 
+    /**
+     * Block of functions that change Player stats
+     * @param value Value which will be used to change corresponding field
+     */
     fun changeSchoolPerformance(value: Int) {
         if (checkMax(this.school_performance, value))
             this.school_performance += value
+        else
+            this.school_performance = 1000
     }
-
     fun changeHappiness(value: Int) {
         if (checkMax(this.happiness, value))
             this.happiness += value
+        else
+            this.happiness = 1000
     }
-
     fun changeSatiety(value: Int) {
         if (checkMax(this.satiety, value))
             this.satiety += value
+        else
+            this.satiety = 1000
     }
-
     fun changeMoney(value: Int) {
-        this.money += value
+        if (checkMin(this.money, value))
+            this.money += value
+        else
+            throw IncorrectValueException("You don't have enough money!")
     }
 
-
+    /**
+     * Functions for changing State of the player
+     * @param state Is responsible for reducing stats each tick
+     */
     private fun changePlayerState(state: PlayerState) {
         this.player_state = state
     }
+
+
     /**
      * Commented because that should be realised later
      */
@@ -175,6 +206,10 @@ class Player {
 //        TODO("Not yet implemented")
 //    }
 
+
+    /**
+     * Block of functions for buying new items and courses
+     */
     fun buyNewBicycle() {
         this.items.bicycle.changeState(this.items)
     }

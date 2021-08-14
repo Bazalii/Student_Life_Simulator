@@ -6,7 +6,7 @@ package android.clicker.school_live_simulator
  * These constants define player characteristics reduce.
  */
 abstract class PlayerState {
-    abstract val reduce_school_performance_percent: Int
-    abstract val reduce_happines_percent: Int
-    abstract val reduce_satiety_percent: Int
+    abstract val reduce_school_performance_value: Int
+    abstract val reduce_happiness_value: Int
+    abstract val reduce_satiety_value: Int
 }
