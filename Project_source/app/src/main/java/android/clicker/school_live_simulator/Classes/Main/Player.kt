@@ -9,17 +9,17 @@ class Player {
     inner class Bag {
         var bicycle: BicycleState = NullBicycleState()
             set(value) {
-                changeMoney(value.price)
+                changeMoney(-value.price)
                 field = value
             }
         var guitar: GuitarState = NullGuitarState()
             set(value) {
-                changeMoney(value.price)
+                changeMoney(-value.price)
                 field = value
             }
         var computer: ComputerState = NullComputerState()
             set(value) {
-                changeMoney(value.price)
+                changeMoney(-value.price)
                 field = value
             }
     }
@@ -59,7 +59,7 @@ class Player {
     /**
      * Amount of player's money
      */
-    var money: Int = 100
+    var money: Int = 100000
         private set
     /**
      * Player's class at school

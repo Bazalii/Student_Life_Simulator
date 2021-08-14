@@ -1,6 +1,6 @@
 package android.clicker.school_live_simulator
 
-open class UssrBicycleState : NullBicycleState() {
+open class UssrBicycleState : BicycleState() {
     override val price = 2000
 
     /**
@@ -9,9 +9,9 @@ open class UssrBicycleState : NullBicycleState() {
      * subclasses just add new properties in order of bicycles improvement without
      * overriding the whole list in every subclass.
      */
-    init {
-        available_delivery.add(Delivery.SLOW_DELIVERY)
-    }
+
+    override val available_delivery  = arrayListOf<Delivery>(Delivery.SLOW_DELIVERY)
+
 
     override fun changeState(bag: Player.Bag) {
         bag.bicycle = UsualBicycleState()
