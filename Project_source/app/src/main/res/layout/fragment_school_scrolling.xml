@@ -22,7 +22,7 @@
             android:id="@+id/school_botat"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/school_botat" />
+            android:text="@string/school_learn_yourself" />
 
         <Button
             android:id="@+id/school_buy_cheatbook"
@@ -31,10 +31,10 @@
             android:text="@string/school_buy_cheatbook" />
 
         <Button
-            android:id="@+id/school_hire_a_tutor"
+            android:id="@+id/school_learn_from_student"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/school_hire_a_tutor" />
+            android:text="@string/school_learn_from_a_student" />
 
         <Button
             android:id="@+id/school_sign_up_in_an_online_school"
