@@ -18,9 +18,9 @@
 
     School folder:
     <string name="school_go_to_school">Go to school</string>
-    <string name="school_botat">Learn by yourself</string>
+    <string name="school_learn_yourself">Learn by yourself</string>
     <string name="school_buy_cheatbook">Buy a cheatbook</string>
-    <string name="school_hire_a_tutor">Hire a tutor</string>
+    <string name="school_learn_from_a_student">Learn from a student</string>
     <string name="school_sign_up_in_an_online_school">Sign up in an online school</string>
     <string name="school_hire_a_good_tutor">Hire a good tutor</string>
     <string name="school_study_with_uni_teacher">Study with a teacher from University</string>

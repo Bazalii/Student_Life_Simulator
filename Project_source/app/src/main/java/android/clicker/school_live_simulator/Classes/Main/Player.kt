@@ -1,6 +1,7 @@
 package android.clicker.school_live_simulator
 
 import android.clicker.school_live_simulator.Classes.Enum_classes.Entertainment
+import android.clicker.school_live_simulator.Classes.Enum_classes.Studies
 import android.clicker.school_live_simulator.Classes.IncorrectValueException
 import android.clicker.school_live_simulator.Classes.NotAvailableException
 
@@ -49,8 +50,10 @@ class Player {
 
     private var school_class: Int = 1
 
-    private var items: Bag = Bag()
-    private var current_courses: Courses = Courses()
+    var items: Bag = Bag()
+        private set
+    var current_courses: Courses = Courses()
+        private set
 
     private var player_state: PlayerState = NormalState()
 //    private var live_observers: ArrayList<LiveObserver> = arrayListOf<LiveObserver>()
@@ -98,9 +101,15 @@ class Player {
 
     fun eat(food: Food) {
         if (checkMin(this.money, food.money_diff)) {
-            changeSatiety(food.satiety)
-            changeHappiness(food.happiness)
             changeMoney(food.money_diff)
+            if (checkMax(this.satiety, food.satiety))
+                changeSchoolPerformance(food.satiety)
+            else
+                this.satiety = 1000
+            if (checkMax(this.happiness, food.happiness))
+                changeSchoolPerformance(food.happiness)
+            else
+                this.happiness = 1000
         }
         else
             throw IncorrectValueException("You don't have enough money!")
@@ -108,26 +117,41 @@ class Player {
     fun entertain(entertainment: Entertainment) {
         //TODO everyday happiness and monthly payment
         if (checkMin(this.money, entertainment.money_diff)) {
-            changeHappiness(entertainment.happiness)
             changeMoney(entertainment.money_diff)
+            if (checkMax(this.happiness, entertainment.happiness))
+                changeSchoolPerformance(entertainment.happiness)
+            else
+                this.happiness = 1000
+        }
+        else
+            throw IncorrectValueException("You don't have enough money!")
+    }
+    fun study(studies: Studies) {
+        if (checkMin(this.money, studies.money_diff)) {
+            changeMoney(studies.money_diff)
+            if (checkMax(this.school_performance, studies.school_performance))
+                changeSchoolPerformance(studies.school_performance)
+            else
+                this.school_performance = 1000
         }
         else
             throw IncorrectValueException("You don't have enough money!")
     }
 
+
     fun changeSchoolPerformance(value: Int) {
         if (checkMax(this.school_performance, value))
-            this.school_performance += value * 10
+            this.school_performance += value
     }
 
     fun changeHappiness(value: Int) {
         if (checkMax(this.happiness, value))
-            this.happiness += value * 10
+            this.happiness += value
     }
 
     fun changeSatiety(value: Int) {
         if (checkMax(this.satiety, value))
-            this.satiety += value * 10
+            this.satiety += value
     }
 
     fun changeMoney(value: Int) {
