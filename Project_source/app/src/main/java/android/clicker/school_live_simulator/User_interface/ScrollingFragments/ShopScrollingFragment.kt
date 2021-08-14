@@ -1,13 +1,25 @@
 package android.clicker.school_live_simulator.User_interface.ScrollingFragments
 
+import android.app.Dialog
+import android.clicker.school_live_simulator.*
+import android.clicker.school_live_simulator.Classes.IncorrectValueException
 import android.clicker.school_live_simulator.User_interface.GameActivity
 import android.clicker.school_live_simulator.databinding.FragmentShopScrollingBinding
+import android.graphics.Color
+import android.graphics.Color.*
+import android.graphics.drawable.Drawable
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
+import android.view.MotionEvent
 import android.view.View
 import android.view.View.GONE
 import android.view.View.VISIBLE
 import android.view.ViewGroup
+import android.view.animation.AnimationUtils
+import android.widget.Button
+import android.widget.Toast
+import androidx.appcompat.widget.AppCompatButton
 import androidx.fragment.app.Fragment
 
 class ShopScrollingFragment : Fragment() {
@@ -22,7 +34,9 @@ class ShopScrollingFragment : Fragment() {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-
+        /**
+         * Buttons for categories
+         */
         binding.shopGuitarCourses.setOnClickListener {
             if(binding.shopGuitarCourseV1.visibility == GONE){
                 binding.shopGuitarCourseV1.visibility = VISIBLE
@@ -101,8 +115,70 @@ class ShopScrollingFragment : Fragment() {
                 binding.shopUsualComputer.visibility = GONE
                 binding.shopXiaomiComputer.visibility = GONE
                 binding.shopMacbookComputer.visibility = GONE
+                binding.shopBicycles
             }
         }
 
+        /**
+         * Buttons for items
+         */
+        binding.shopUssrBicycle.setOnClickListener {
+                try {
+                    Game.player.buyNewBicycle()
+                    updateUI()
+                } catch(exception: IncorrectValueException){
+                    binding.shopUssrBicycle.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
+                }
+        }
+
+        binding.shopUsualBicycle.setOnClickListener {
+            if(Game.player.items.bicycle is UssrBicycleState){
+                try {
+                    Game.player.buyNewBicycle()
+                    updateUI()
+                } catch(exception: IncorrectValueException){
+                    binding.shopUsualBicycle.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
+                }
+            }
+            else{
+                Toast.makeText(activity, "buy previous", Toast.LENGTH_SHORT).show()
+                binding.shopUsualBicycle.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
+            }
+        }
+
+
     }
+
+    override fun onResume() {
+        super.onResume()
+        updateUI()
+    }
+
+    fun updateUI(){
+        when(Game.player.items.bicycle){
+            is NullBicycleState->{
+                canBuy(binding.shopUssrBicycle)
+            }
+            is UssrBicycleState->{
+                isBought(binding.shopUssrBicycle)
+                canBuy(binding.shopUsualBicycle)
+            }
+            is UsualBicycleState->{
+                isBought(binding.shopUssrBicycle)
+                isBought(binding.shopUsualBicycle)
+                canBuy(binding.shopMountainBicycle)
+            }
+        }
+        (activity as GameActivity).updateStats()
+    }
+    fun isBought(button: Button){
+        button.setBackgroundColor(GREEN)
+        button.isClickable = false
+    }
+    fun canBuy(button: Button){
+
+    }
+/*    fun isLocked(button: Button){
+        button.setBackgroundColor(RED)
+    }*/
 }
