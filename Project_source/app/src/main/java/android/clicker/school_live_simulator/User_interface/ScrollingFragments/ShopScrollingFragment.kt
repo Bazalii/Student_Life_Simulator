@@ -228,7 +228,7 @@ class ShopScrollingFragment : Fragment() {
                     binding.shopComputerCourseV2.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
                 } catch(exception: IsNotAvailableException){
                     Toast.makeText(activity, "buy new computer", Toast.LENGTH_SHORT).show()
-                    binding.shopComputerCourseV1.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
+                    binding.shopComputerCourseV2.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
                 }
             }
             else{
@@ -246,7 +246,7 @@ class ShopScrollingFragment : Fragment() {
                     binding.shopComputerCourseV3.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
                 } catch(exception: IsNotAvailableException){
                     Toast.makeText(activity, "buy new computer", Toast.LENGTH_SHORT).show()
-                    binding.shopComputerCourseV1.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
+                    binding.shopComputerCourseV3.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
                 }
             }
             else{
@@ -264,7 +264,7 @@ class ShopScrollingFragment : Fragment() {
                     binding.shopComputerCourseV4.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
                 } catch(exception: IsNotAvailableException){
                     Toast.makeText(activity, "buy new computer", Toast.LENGTH_SHORT).show()
-                    binding.shopComputerCourseV1.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
+                    binding.shopComputerCourseV4.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
                 }
             }
             else{
@@ -282,7 +282,7 @@ class ShopScrollingFragment : Fragment() {
                     binding.shopComputerCourseV5.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
                 } catch(exception: IsNotAvailableException){
                     Toast.makeText(activity, "buy new computer", Toast.LENGTH_SHORT).show()
-                    binding.shopComputerCourseV1.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
+                    binding.shopComputerCourseV5.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
                 }
             }
             else{
@@ -503,18 +503,175 @@ class ShopScrollingFragment : Fragment() {
     }
 
     fun updateUI(){
-        when(Game.player.items.bicycle){
-            is NullBicycleState->{
-                canBuy(binding.shopUssrBicycle)
+        /**
+         * Buttons for Computer coursers
+         */
+        when(Game.player.current_courses.computer_course){
+            is GameDevelopmentCourseState ->{
+                isBought(binding.shopComputerCourseV1)
+                isBought(binding.shopComputerCourseV2)
+                isBought(binding.shopComputerCourseV3)
+                isBought(binding.shopComputerCourseV4)
+                isBought(binding.shopComputerCourseV5)
             }
-            is UssrBicycleState->{
+            is VideoEditingCourseState ->{
+                isBought(binding.shopComputerCourseV1)
+                isBought(binding.shopComputerCourseV2)
+                isBought(binding.shopComputerCourseV3)
+                isBought(binding.shopComputerCourseV4)
+                canBuy(binding.shopComputerCourseV5)
+            }
+            is WebDesignCourseState ->{
+                isBought(binding.shopComputerCourseV1)
+                isBought(binding.shopComputerCourseV2)
+                isBought(binding.shopComputerCourseV3)
+                canBuy(binding.shopComputerCourseV4)
+            }
+            is OnlineWorkCourseState ->{
+                isBought(binding.shopComputerCourseV1)
+                isBought(binding.shopComputerCourseV2)
+                canBuy(binding.shopComputerCourseV3)
+            }
+            is FriendsCourseState ->{
+                isBought(binding.shopComputerCourseV1)
+                canBuy(binding.shopComputerCourseV2)
+            }
+            is NullComputerCourseState ->{
+                canBuy(binding.shopComputerCourseV1)
+            }
+        }
+        /**
+         * Buttons for Computers
+         */
+        when(Game.player.items.computer){
+            is MacbookState ->{
+                isBought(binding.shopPreviouslyUsedComputer)
+                isBought(binding.shopOldComputer)
+                isBought(binding.shopUsualComputer)
+                isBought(binding.shopXiaomiComputer)
+                isBought(binding.shopMacbookComputer)
+            }
+            is XiaomiMiNotebookState ->{
+                isBought(binding.shopPreviouslyUsedComputer)
+                isBought(binding.shopOldComputer)
+                isBought(binding.shopUsualComputer)
+                isBought(binding.shopXiaomiComputer)
+                canBuy(binding.shopMacbookComputer)
+            }
+            is UsualComputerState ->{
+                isBought(binding.shopPreviouslyUsedComputer)
+                isBought(binding.shopOldComputer)
+                isBought(binding.shopUsualComputer)
+                canBuy(binding.shopXiaomiComputer)
+            }
+            is OldComputerState ->{
+                isBought(binding.shopPreviouslyUsedComputer)
+                isBought(binding.shopOldComputer)
+                canBuy(binding.shopUsualComputer)
+            }
+            is PreviouslyUsedComputerState ->{
+                isBought(binding.shopPreviouslyUsedComputer)
+                canBuy(binding.shopOldComputer)
+            }
+            is NullComputerState ->{
+                canBuy(binding.shopPreviouslyUsedComputer)
+            }
+        }
+        /**
+         * Buttons for Guitar courses
+         */
+        when(Game.player.current_courses.guitar_course){
+            is MusicalObservatoryCourseState ->{
+                isBought(binding.shopGuitarCourseV1)
+                isBought(binding.shopGuitarCourseV2)
+                isBought(binding.shopGuitarCourseV3)
+                isBought(binding.shopGuitarCourseV4)
+                isBought(binding.shopGuitarCourseV5)
+            }
+            is MusicalSchoolCourseState ->{
+                isBought(binding.shopGuitarCourseV1)
+                isBought(binding.shopGuitarCourseV2)
+                isBought(binding.shopGuitarCourseV3)
+                isBought(binding.shopGuitarCourseV4)
+                canBuy(binding.shopGuitarCourseV5)
+            }
+            is YardSongCourseState ->{
+                isBought(binding.shopGuitarCourseV1)
+                isBought(binding.shopGuitarCourseV2)
+                isBought(binding.shopGuitarCourseV3)
+                canBuy(binding.shopGuitarCourseV4)
+            }
+            is FirstSongCourseState ->{
+                isBought(binding.shopGuitarCourseV1)
+                isBought(binding.shopGuitarCourseV2)
+                canBuy(binding.shopGuitarCourseV3)
+            }
+            is YardGuitarCourseState ->{
+                isBought(binding.shopGuitarCourseV1)
+                 canBuy(binding.shopGuitarCourseV2)
+            }
+            is NullGuitarCourseState ->{
+                canBuy(binding.shopGuitarCourseV1)
+            }
+        }
+        /**
+         * Buttons for Guitars
+         */
+        when(Game.player.items.guitar){
+            is DoubleNeckGuitarState->{
+                isBought(binding.shopUssrGuitar)
+                isBought(binding.shopUralGuitar)
+                isBought(binding.shopYamahaGuitar)
+                isBought(binding.shopFenderGuitar)
+                isBought(binding.shopDoubleNeckGuitar)
+            }
+            is FenderGuitarState->{
+                isBought(binding.shopUssrGuitar)
+                isBought(binding.shopUralGuitar)
+                isBought(binding.shopYamahaGuitar)
+                isBought(binding.shopFenderGuitar)
+                canBuy(binding.shopDoubleNeckGuitar)
+            }
+            is YamahaGuitarState->{
+                isBought(binding.shopUssrGuitar)
+                isBought(binding.shopUralGuitar)
+                isBought(binding.shopYamahaGuitar)
+                canBuy(binding.shopFenderGuitar)
+            }
+            is UralGuitarState->{
+                isBought(binding.shopUssrGuitar)
+                isBought(binding.shopUralGuitar)
+                canBuy(binding.shopYamahaGuitar)
+            }
+            is UssrGuitarState->{
+                isBought(binding.shopUssrGuitar)
+                canBuy(binding.shopUralGuitar)
+            }
+            is NullGuitarState->{
+                canBuy(binding.shopUssrGuitar)
+            }
+
+        }
+        /**
+         * Buttons for Bicycles
+         */
+        when(Game.player.items.bicycle){
+            is MountainBicycleState ->{
                 isBought(binding.shopUssrBicycle)
-                canBuy(binding.shopUsualBicycle)
+                isBought(binding.shopUsualBicycle)
+                isBought(binding.shopMountainBicycle)
             }
             is UsualBicycleState->{
                 isBought(binding.shopUssrBicycle)
                 isBought(binding.shopUsualBicycle)
                 canBuy(binding.shopMountainBicycle)
+            }
+            is UssrBicycleState->{
+                isBought(binding.shopUssrBicycle)
+                canBuy(binding.shopUsualBicycle)
+            }
+            else->{
+                canBuy(binding.shopUssrBicycle)
             }
         }
         (activity as GameActivity).updateStats()
