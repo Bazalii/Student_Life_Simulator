@@ -1,115 +1,32 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <diagram program="umlet" version="14.3.0">
-  <zoom_level>5</zoom_level>
+  <zoom_level>8</zoom_level>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>565</x>
-      <y>295</y>
-      <w>170</w>
-      <h>200</h>
+      <x>16</x>
+      <y>304</y>
+      <w>352</w>
+      <h>120</h>
     </coordinates>
-    <panel_attributes>bg=gray
-*Player*
+    <panel_attributes>bg=light_gray
+*Achievement Request Handler*
 --
--achieved_achievements: List&lt;GameAchievements&gt;
--school_performance: int = 1000
--happiness: int = 1000
--satiety: int = 1000
--money: int = 100
-...
---
-+eat(food: Food)
-+playSong(song: Song)
-+realiseWebTask(web_task: WebTask)
-
-+buyNewBicycle()
-+buyNewGuitar()
-+buyNewComputer()
-
-Методы, которые нужно добавить:
-+doEntertainment(entertainment: Entertainments)
-+doCreativity(creativity: Creativity)
-+doStudy(study: Study)
-
-</panel_attributes>
++handleRequest()
+-purchaseAchievementHandler()
+-randomAchievementHandler()
+-specialAchievementHandler()
+-showMessage(achievement: GameAchievements)
+-addAchievement(achievement: GameAchievements)</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>165</x>
-      <y>540</y>
-      <w>230</w>
-      <h>115</h>
-    </coordinates>
-    <panel_attributes>bg=blue
-"enumeration"
-*Other random achievements*
---
-EXAMPLE(satiety, happiness, money, school_perf)
-
-WORK_HARD(0, 0, +20%, 0) 5%
-LOSE_SALARY(0, -30%, 0, 0) 15%
-SPARTAK_WINNER(???)
-ZENIT_WINNER(???)
-JOIN_TO_WINNERS(???)
-JOIN_TO_LOSERS(???)
-MOMS_BUSINESSMAN(???)
-MOMS_NOT_BUSSINESSMAN(???)
-CREATE_PUPIL_SIMULATOR(???) 3%
-</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>400</x>
-      <y>210</y>
-      <w>100</w>
-      <h>40</h>
-    </coordinates>
-    <panel_attributes>&lt;&lt;enumeration&gt;&gt;
-*Song random achievements*
---
-WRONG_CHORDS
-IN_SPOTLIGHT</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>590</x>
-      <y>150</y>
-      <w>15</w>
-      <h>50</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;80.0;10.0;10.0</additional_attributes>
-  </element>
-  <element>
-    <id>UMLNote</id>
-    <coordinates>
-      <x>165</x>
-      <y>660</y>
-      <w>230</w>
-      <h>35</h>
-    </coordinates>
-    <panel_attributes>bg=blue
-*Note*
-Оставшиеся достижения относятся к работе 
-либо к нерегулярным событиям
-
-</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>805</x>
-      <y>100</y>
-      <w>80</w>
-      <h>65</h>
+      <x>608</x>
+      <y>96</y>
+      <w>128</w>
+      <h>104</h>
     </coordinates>
     <panel_attributes>&lt;&lt;enumeration&gt;&gt;
 *Guitar achievements*
@@ -126,74 +43,10 @@ DUAL_NECK_GUITAR
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>530</x>
-      <y>190</y>
-      <w>235</w>
-      <h>80</h>
-    </coordinates>
-    <panel_attributes>bg=orange
-*/GameAchievements/*
---
-#achievement: GameAchievements
---
-+changeAchievementsList(achievements: Player.achieved_achievements)
---
-*Responsibilities*
--- Предоставить абстракцию для систематического 
-контроля достижений</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>645</x>
-      <y>265</y>
-      <w>15</w>
-      <h>40</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;60.0;10.0;10.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>495</x>
-      <y>235</y>
-      <w>45</w>
-      <h>15</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
-    <additional_attributes>70.0;10.0;10.0;10.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>710</x>
-      <y>140</y>
-      <w>15</w>
-      <h>60</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;100.0;10.0;10.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>760</x>
-      <y>160</y>
-      <w>55</w>
-      <h>40</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;60.0;90.0;10.0</additional_attributes>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>805</x>
-      <y>180</y>
-      <w>80</w>
-      <h>40</h>
+      <x>448</x>
+      <y>136</y>
+      <w>128</w>
+      <h>64</h>
     </coordinates>
     <panel_attributes>&lt;&lt;enumeration&gt;&gt;
 *Bicycle achievements*
@@ -204,23 +57,12 @@ MOUNTAIN_BIKE
     <additional_attributes/>
   </element>
   <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>760</x>
-      <y>195</y>
-      <w>55</w>
-      <h>15</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;90.0;10.0</additional_attributes>
-  </element>
-  <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>795</x>
-      <y>225</y>
-      <w>120</w>
-      <h>50</h>
+      <x>240</x>
+      <y>120</y>
+      <w>192</w>
+      <h>80</h>
     </coordinates>
     <panel_attributes>&lt;&lt;enumeration&gt;&gt;
 *Computer achievements*
@@ -232,247 +74,39 @@ MACBOOK
     <additional_attributes/>
   </element>
   <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>760</x>
-      <y>245</y>
-      <w>45</w>
-      <h>15</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;70.0;10.0</additional_attributes>
-  </element>
-  <element>
-    <id>UMLNote</id>
-    <coordinates>
-      <x>960</x>
-      <y>470</y>
-      <w>170</w>
-      <h>55</h>
-    </coordinates>
-    <panel_attributes>bg=blue
-*Note*
-В методе класса Player, который связан с какой-то 
-"ачивкой",вызывается changeAchievementList(),
-который добавляет "ачивку", если ее не было, 
-и ничего не делает, если такая "ачивка" 
-в списке есть</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>730</x>
-      <y>325</y>
-      <w>45</w>
-      <h>15</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;.</panel_attributes>
-    <additional_attributes>70.0;10.0;10.0;10.0</additional_attributes>
-  </element>
-  <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>765</x>
-      <y>305</y>
-      <w>145</w>
-      <h>195</h>
+      <x>424</x>
+      <y>336</y>
+      <w>176</w>
+      <h>64</h>
     </coordinates>
-    <panel_attributes>&lt;&lt;enumeration&gt;&gt;
-*Entertainments*
+    <panel_attributes>bg=orange
+*/Game Achievements/*
 --
-EXAMPLE(money, happiness)
-
-DO_NOTHING(0, +5%)
-RIDE_BIKE(0, +10%)
-LISTEN_MUSIC(-169/month, +0.5%/day)
-GAMING_WITH_DONATION(-1000, +30%)
-SHOPPING(-10000, +50%)
-RENDEZVOUS(-20000, +80%)
-
-READ_BOOK(0, +3%)
-HELP_WITH_HOMETASK(0, +5%)
-DO_SPORT(-1500/month, +10%)
-GO_THEATRE(-4000, +30%)
-VIP_CONCERT(-10000, +70%)
-
-KICK_TRASHCAN(0, +7%)
-HIT_YOUNGS(+150, +10%)
-UPLOAD_VIRUS(0, +25%)
-CAM2CAM(-5000, +45%)
-ARRANGE_PARTY(-10000, +60%)
-STRIPCLUB(-20000, +100%)</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>275</x>
-      <y>395</y>
-      <w>255</w>
-      <h>110</h>
-    </coordinates>
-    <panel_attributes>&lt;&lt;enumeration&gt;&gt;
-*Creativity*
---
-EXAMPLE(money, happiness)
-
-DRAW_ON_DESKS(0, +3%)
-TAGGING(0, +5%)
-WRITE_POEM(0, +7%)
-DO_HANDMADE(-500, +15%)
-MAKE_COVER(0, +15%) if YAMAHA or better
-MAKE_SONG(+3000, +10%) if FENDER or better
-STREAMING(+5000, -10%) if XIAOMI or better
-MAKE_VIDEO(+sqrt(Player.money)/month, -5%) if USUALCOMPUTER or better</panel_attributes>
+#name: String
+#messageBox: String
+</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>525</x>
-      <y>455</y>
-      <w>50</w>
-      <h>15</h>
+      <x>360</x>
+      <y>360</y>
+      <w>80</w>
+      <h>24</h>
     </coordinates>
-    <panel_attributes>lt=&lt;.</panel_attributes>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes>
     <additional_attributes>10.0;10.0;80.0;10.0</additional_attributes>
   </element>
   <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>730</x>
-      <y>490</y>
-      <w>15</w>
-      <h>45</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;.</panel_attributes>
-    <additional_attributes>10.0;70.0;10.0;10.0</additional_attributes>
-  </element>
-  <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>700</x>
-      <y>525</y>
-      <w>225</w>
-      <h>95</h>
-    </coordinates>
-    <panel_attributes>&lt;&lt;enumeration&gt;&gt;
-*Study*
---
-EXAMPLE(money, school_perfomance)
-
-SCHOOL(0, +0.3%/day)
-SELF_EDUCATION(-100, +5%)
-BUY_ANSWERS(-300, +10%)
-STUDENT_TUTOR(-1000, +25%)
-ONLINE_SCHOOL(-10000/month, +1.5%/day if not summer)
-NORMAL_TUTOR(-15000, +60%)
-LECTOR_TUTOR(-25000, +100%)</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>560</x>
-      <y>490</y>
-      <w>15</w>
-      <h>40</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;.</panel_attributes>
-    <additional_attributes>10.0;60.0;10.0;10.0</additional_attributes>
-  </element>
-  <element>
-    <id>UMLNote</id>
-    <coordinates>
-      <x>415</x>
-      <y>530</y>
-      <w>75</w>
-      <h>55</h>
-    </coordinates>
-    <panel_attributes>bg=blue
-*Note*
-Белые блоки и 
-оранжевый блок- то, 
-чего не было 
-(не считая заметок)
-</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>555</x>
-      <y>585</y>
-      <w>15</w>
-      <h>40</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;60.0</additional_attributes>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>455</x>
-      <y>615</y>
-      <w>210</w>
-      <h>60</h>
-    </coordinates>
-    <panel_attributes>&lt;&lt;enumeration&gt;&gt;
-*Food random events*
---
-EXAMPLE(happiness)
-
-2_SPICES(+10%) 3% if DOSHIRAK
-POISONING_OF_EATERY_FOOD(-20%) 5% if EATERY_FOOD
-</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>500</x>
-      <y>520</y>
-      <w>130</w>
-      <h>70</h>
-    </coordinates>
-    <panel_attributes>bg=light_gray
-&lt;&lt;enumeration&gt;&gt;
-*Food*
---
-CRACKERS(25, 5, 10)
-DOSHIRAK(50, -10, 50)
-EATERY_FOOD(120, -15, 300)
-MCDONALDS(200, -20, 1000)
-PIZZA_AT_HOME(450, +5, 4000)
-RESTORANT_FOOD(800, +50, 10000)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>680</x>
-      <y>105</y>
-      <w>115</w>
-      <h>40</h>
+      <x>664</x>
+      <y>248</y>
+      <w>184</w>
+      <h>64</h>
     </coordinates>
     <panel_attributes>&lt;&lt;enumeration&gt;&gt;
 *Food random achievements*
@@ -485,53 +119,10 @@ POISONING_OF_EATERY_FOOD
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>945</x>
-      <y>305</y>
-      <w>260</w>
-      <h>150</h>
-    </coordinates>
-    <panel_attributes>&lt;&lt;enumeration&gt;&gt;
-*Entertainment random events*
---
-EXAMPLE(happiness, money)
-
-CAM2CAM_TRAP(-40%, 0) 1% if CAM2CAM
-GET_BAN(-10%, 0) 60% IF HAPPINESS &lt; 30% &amp;&amp; GAMING_WITH_DONATION
-BE_REPORTED_BY_CHILDREN(-10%, 0) 2% if HIT_YOUNGS
-BOTTLE_FLIP(+5%, 0) 10% if KICK_TRASHCAN
-FUTURE_PIMP(+20%, +5000) 5% if STRIPCLUB 
-FUTURE_GAY_PIMP(-40%, 0) 10% if STRIPCLUB
-FRIEND_IN_THEATRE(+40%, 0) 3% if GO_THEATRE
-MOMS_HACKERMAN(-8%, 0) 8% if UPLOAD_VIRUS
-EVACUATE_FROM_SHOP_CENTRE(-5%, 0) 3% if SHOPPING
-SEX_SCENE_IN_BOOK(+10%, 0) 3% if READ_BOOK
-GET_TIP_FROM_YOUNGS(0, +150) 5% if HELP_WITH_HOMETASK
-DESTROYED_HOUSE(-50%, -20000) 2% if ARRANGE_PARTY
-PHOTO_WITH_VOCALIST(+8%/day in week, 0) 5% if VIP_CONCERT
-TOO_FAST_RUNNING(+5%, 0) 10% if DO_SPORT
-
-
-</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>905</x>
-      <y>330</y>
-      <w>50</w>
-      <h>15</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;80.0;10.0</additional_attributes>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>535</x>
-      <y>20</y>
-      <w>130</w>
-      <h>135</h>
+      <x>872</x>
+      <y>456</y>
+      <w>208</w>
+      <h>216</h>
     </coordinates>
     <panel_attributes>&lt;&lt;enumeration&gt;&gt;
 *Entertainment random achievements*
@@ -557,99 +148,72 @@ TOO_FAST_RUNNING
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>435</x>
-      <y>290</y>
-      <w>100</w>
-      <h>80</h>
+      <x>424</x>
+      <y>528</y>
+      <w>176</w>
+      <h>120</h>
     </coordinates>
-    <panel_attributes>bg=light_gray
-&lt;&lt;enumeration&gt;&gt;
-*Song*
+    <panel_attributes>"enumeration"
+*Special achievements*
 --
-SINGLE_CHORD(100)
-GAZ_SECTOR(500)
-SMELLS_LIKE(1000)
-JAZZ(2500)
-BAXA(5000)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+SPARTAK_WINNER
+ZENIT_WINNER
+JOIN_TO_WINNERS
+JOIN_TO_LOSERS
+MOMS_BUSINESSMAN
+MOMS_NOT_BUSSINESSMAN
 </panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>530</x>
-      <y>315</y>
-      <w>45</w>
-      <h>15</h>
+      <x>504</x>
+      <y>280</y>
+      <w>24</w>
+      <h>72</h>
     </coordinates>
-    <panel_attributes>lt=&lt;.</panel_attributes>
-    <additional_attributes>10.0;10.0;70.0;10.0</additional_attributes>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;70.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>955</x>
-      <y>540</y>
-      <w>235</w>
-      <h>85</h>
+      <x>432</x>
+      <y>232</y>
+      <w>176</w>
+      <h>56</h>
     </coordinates>
-    <panel_attributes>&lt;&lt;enumeration&gt;&gt;
-*Study random events*
+    <panel_attributes>bg=light_gray
+*Purchase Achievements*
 --
-EXAMPLE(happiness, school_perfomance)
-
-DRUNK_STUDENT(+20%, -15%) 10%; 100% if summer
-PAR_ABOUT_REPRODUCTIVE(+5%, +15%) 8% if SELF_EDUCATION
-OLD_ANSWER_BOOK(0, -10%) 15% if BUY_ANSWERS
-FALL_ASLEEP_AT_WEBINAR(0, -10%) 20% if ONLINE_SCHOOL
-STORIES_ABOUT_USSR(0, +10%) 15% if LECTOR_TUTOR</panel_attributes>
+#name: String
+#messageBox: String
+</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
-    <id>Relation</id>
+    <id>UMLClass</id>
     <coordinates>
-      <x>920</x>
-      <y>580</y>
-      <w>45</w>
-      <h>15</h>
+      <x>672</x>
+      <y>448</y>
+      <w>160</w>
+      <h>64</h>
     </coordinates>
-    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;70.0;10.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>500</x>
-      <y>115</y>
-      <w>40</w>
-      <h>85</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
-    <additional_attributes>60.0;150.0;10.0;10.0</additional_attributes>
+    <panel_attributes>&lt;&lt;enumeration&gt;&gt;
+*Song random achievements*
+--
+WRONG_CHORDS
+IN_SPOTLIGHT</panel_attributes>
+    <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>375</x>
-      <y>40</y>
-      <w>130</w>
-      <h>80</h>
+      <x>872</x>
+      <y>200</y>
+      <w>208</w>
+      <h>104</h>
     </coordinates>
     <panel_attributes>&lt;&lt;enumeration&gt;&gt;
 *Study random achievements*
@@ -664,10 +228,10 @@ STORIES_ABOUT_USSR</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>370</x>
-      <y>130</y>
-      <w>130</w>
-      <h>65</h>
+      <x>872</x>
+      <y>328</y>
+      <w>208</w>
+      <h>104</h>
     </coordinates>
     <panel_attributes>&lt;&lt;enumeration&gt;&gt;
 *Creativity random achievements*
@@ -680,74 +244,156 @@ SONG_IN_SPOTLIGHT</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>495</x>
-      <y>190</y>
-      <w>45</w>
-      <h>45</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
-    <additional_attributes>70.0;70.0;10.0;10.0</additional_attributes>
-  </element>
-  <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>10</x>
-      <y>405</y>
-      <w>240</w>
-      <h>85</h>
+      <x>664</x>
+      <y>344</y>
+      <w>176</w>
+      <h>56</h>
     </coordinates>
-    <panel_attributes>&lt;&lt;enumeration&gt;&gt;
-*Creativity random events*
+    <panel_attributes>bg=light_gray
+*Random Achievements*
 --
-EXAMPLE(happiness)
-
-DRAW_ON_TOP_OF_OTHER_ART(+5%) 15% if TAGGING
-MISTER_PROPER(-10%) 20% if DRAW_ON_DESK
-IVANS_INTERNATIONAL(+15%) 3% if MAKE_SONG
-POEM_IN_SPOTLIGHT(+20%) 10% if WRITE_POEM
-SONG_IN_SPOTLIGHT(+30%) 7% if MAKE_SONG &amp;&amp; FENDER or better </panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>245</x>
-      <y>455</y>
-      <w>40</w>
-      <h>15</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes>
-    <additional_attributes>60.0;10.0;10.0;10.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>395</x>
-      <y>315</y>
-      <w>50</w>
-      <h>15</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes>
-    <additional_attributes>80.0;10.0;10.0;10.0</additional_attributes>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>165</x>
-      <y>295</y>
-      <w>235</w>
-      <h>60</h>
-    </coordinates>
-    <panel_attributes>&lt;&lt;enumeration&gt;&gt;
-*Song random events*
---
-EXAMPLE(happiness, money)
-
-WRONG_CHORDS(-20%, -3000) 5% if GAZ_SECTOR || SMELLS_LIKE
-IN_SPOTLIGHT(+15%, 0) 5%
+#name: String
+#messageBox: String
 </panel_attributes>
     <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>592</x>
+      <y>360</y>
+      <w>88</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;90.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>424</x>
+      <y>432</y>
+      <w>176</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>bg=light_gray
+*Special Achievements*
+--
+#name: String
+#messageBox: String
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>504</x>
+      <y>392</y>
+      <w>24</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;50.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>424</x>
+      <y>192</y>
+      <w>24</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;50.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>496</x>
+      <y>192</y>
+      <w>24</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;50.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>600</x>
+      <y>192</y>
+      <w>24</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;50.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>744</x>
+      <y>304</y>
+      <w>24</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;50.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>832</x>
+      <y>296</y>
+      <w>56</w>
+      <h>64</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;60.0;50.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>744</x>
+      <y>392</y>
+      <w>24</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;70.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>832</x>
+      <y>392</y>
+      <w>56</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;50.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>832</x>
+      <y>368</y>
+      <w>56</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;50.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>504</x>
+      <y>480</y>
+      <w>24</w>
+      <h>64</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;60.0</additional_attributes>
   </element>
 </diagram>
