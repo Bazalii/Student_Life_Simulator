@@ -1,6 +1,6 @@
 package android.clicker.school_live_simulator
 
-open class UsualBicycleState : BicycleState() {
+open class UsualBicycleState : UssrBicycleState() {
     override val price = 10000
 
     init {
