@@ -12,49 +12,49 @@
         android:orientation="vertical">
 
         <Button
-            android:id="@+id/work_collect_change"
+            android:id="@+id/workCollectChange"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:text="@string/work_collect_change" />
 
         <Button
-            android:id="@+id/work_watch_ads"
+            android:id="@+id/workWatchAds"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/work_watch_ads" />
 
         <Button
-            android:id="@+id/work_distribute_flyers"
+            android:id="@+id/workDistributeFlyers"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/work_distribute_flyers" />
 
         <Button
-            android:id="@+id/work_as_a_greener"
+            android:id="@+id/workAsAGreener"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/work_as_a_greener" />
 
         <Button
-            android:id="@+id/work_as_a_courier"
+            android:id="@+id/workAsACourier"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/work_as_a_courier" />
+            android:text="@string/work_as_a_courier_v0" />
 
         <Button
-            android:id="@+id/work_as_an_operator"
+            android:id="@+id/workAsAnOperator"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/work_as_an_operator" />
 
         <Button
-            android:id="@+id/work_play_guitar_v1"
+            android:id="@+id/workPlayGuitar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/work_play_guitar_v1" />
+            android:text="@string/work_play_guitar_v0" />
 
         <Button
-            android:id="@+id/work_on_the_net_v1"
+            android:id="@+id/workOnTheNet"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/work_on_the_net_v1" />

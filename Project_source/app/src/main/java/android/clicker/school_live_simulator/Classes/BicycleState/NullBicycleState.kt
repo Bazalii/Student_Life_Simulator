@@ -1,5 +1,7 @@
 package android.clicker.school_live_simulator
 
+import android.clicker.school_live_simulator.Classes.IsNotAvailableException
+
 open class NullBicycleState : BicycleState() {
     override val price: Int = 0
 

@@ -1,6 +1,7 @@
 package android.clicker.school_live_simulator
 
 import android.clicker.school_live_simulator.Classes.Enum_classes.Entertainment
+import android.clicker.school_live_simulator.Classes.Enum_classes.OtherWork
 import android.clicker.school_live_simulator.Classes.Enum_classes.Studies
 import android.clicker.school_live_simulator.Classes.NotEnoughMoneyException
 import android.clicker.school_live_simulator.Classes.IsNotAvailableException
@@ -122,23 +123,18 @@ class Player {
      * @param entertainment Field of corresponding Enum class that is used to change stats
      * @param study Field of corresponding Enum class that is used to change stats
      */
-    fun playSong(song: Song) {
-        if(this.current_courses.guitar_course.isAvailable(song))
-            changeMoney(song.money_diff)
-        else
-            throw IsNotAvailableException("Work is not available")
+    fun playSong() {
+        changeMoney(this.current_courses.guitar_course.BestSong().money_diff)
     }
-    fun deliver(delivery_type: Delivery){
-        if(this.items.bicycle.isAvailable(delivery_type))
-            changeMoney(delivery_type.money_diff)
-        else
-            throw IsNotAvailableException("Work is not available")
+    fun deliver(){
+        changeMoney(this.items.bicycle.BestDelivery().money_diff)
     }
-    fun realiseWebTask(web_task: WebTask) {
-        if(this.current_courses.computer_course.isAvailable(web_task))
-            changeMoney(web_task.money_diff)
-        else
-            throw IsNotAvailableException("Work is not available")
+    fun realiseWebTask() {
+        changeMoney(this.current_courses.computer_course.BestNetWork().money_diff)
+    }
+    fun work(work: OtherWork) {
+        changeMoney(work.money_diff)
+        changeHappiness(work.happiness)
     }
     fun eat(food: Food) {
         changeMoney(food.money_diff)

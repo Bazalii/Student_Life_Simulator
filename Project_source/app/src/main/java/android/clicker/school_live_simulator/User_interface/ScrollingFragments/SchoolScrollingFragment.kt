@@ -29,7 +29,7 @@ class SchoolScrollingFragment : Fragment() {
             try {
                 Game.player.study(Studies.GO_TO_SCHOOL)
                 (activity as GameActivity).updateStats()
-            }catch (exception: NotEnoughMoneyException){
+            } catch (exception: NotEnoughMoneyException){
                 binding.schoolGoToSchool.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
             }
 
@@ -39,7 +39,7 @@ class SchoolScrollingFragment : Fragment() {
             try {
                 Game.player.study(Studies.LEARN_YOURSELF)
                 (activity as GameActivity).updateStats()
-            }catch (exception: NotEnoughMoneyException){
+            } catch (exception: NotEnoughMoneyException){
                 binding.schoolBotat.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
             }
         }
@@ -48,7 +48,7 @@ class SchoolScrollingFragment : Fragment() {
             try {
                 Game.player.study(Studies.BUY_CHEATBOOK)
                 (activity as GameActivity).updateStats()
-            }catch (exception: NotEnoughMoneyException){
+            } catch (exception: NotEnoughMoneyException){
                 binding.schoolBuyCheatbook.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
             }
         }
@@ -57,7 +57,7 @@ class SchoolScrollingFragment : Fragment() {
             try {
                 Game.player.study(Studies.LEARN_FROM_A_STUDENT)
                 (activity as GameActivity).updateStats()
-            }catch (exception: NotEnoughMoneyException){
+            } catch (exception: NotEnoughMoneyException){
                 binding.schoolLearnFromStudent.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
             }
         }
@@ -65,7 +65,7 @@ class SchoolScrollingFragment : Fragment() {
             try {
                 Game.player.study(Studies.HIRE_A_GOOD_TUTOR)
                 (activity as GameActivity).updateStats()
-            }catch (exception: NotEnoughMoneyException){
+            } catch (exception: NotEnoughMoneyException){
                 binding.schoolHireAGoodTutor.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
             }
         }
@@ -74,7 +74,7 @@ class SchoolScrollingFragment : Fragment() {
             try {
                 Game.player.study(Studies.SIGN_UP_IN_AN_ONLINE_SCHOOL)
                 (activity as GameActivity).updateStats()
-            }catch (exception: NotEnoughMoneyException){
+            } catch (exception: NotEnoughMoneyException){
                 binding.schoolSignUpInAnOnlineSchool.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
             }
         }
@@ -83,7 +83,7 @@ class SchoolScrollingFragment : Fragment() {
             try {
                 Game.player.study(Studies.STUDY_WITH_UNI_TEACHER)
                 (activity as GameActivity).updateStats()
-            }catch (exception: NotEnoughMoneyException){
+            } catch (exception: NotEnoughMoneyException){
                 binding.schoolStudyWithUniTeacher.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
             }
         }

@@ -3,6 +3,8 @@ package android.clicker.school_live_simulator
 open class GameDevelopmentCourseState : VideoEditingCourseState() {
     override val price: Int = 2700
 
+    override var best_web_task: WebTask? = null
+
     override fun buyNextCourse(courses: Player.Courses) {
 //        Unit = throw UnsupportedOperationException("Operation not supported")
     }
@@ -11,6 +13,6 @@ open class GameDevelopmentCourseState : VideoEditingCourseState() {
 
     }
     override fun timerEndHandler(){
-        available_web_tasks.add(WebTask.MAKE_A_GAME)
+        this.best_web_task = WebTask.MAKE_A_GAME
     }
 }

@@ -1,5 +1,6 @@
 package android.clicker.school_live_simulator
 
+import android.clicker.school_live_simulator.Classes.IsNotAvailableException
 import kotlin.reflect.KClass
 
 abstract class ComputerState {
@@ -33,5 +34,4 @@ abstract class ComputerState {
     fun isAvailable(course_name: KClass<*>): Boolean {
         return course_name in available_courses
     }
-
 }
