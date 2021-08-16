@@ -1,36 +1,34 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <diagram program="umlet" version="14.3.0">
-  <zoom_level>8</zoom_level>
+  <zoom_level>7</zoom_level>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>16</x>
-      <y>304</y>
-      <w>352</w>
-      <h>120</h>
+      <x>686</x>
+      <y>378</y>
+      <w>210</w>
+      <h>70</h>
     </coordinates>
     <panel_attributes>bg=light_gray
-*Achievement Request Handler*
+inner class
+*Player.AchievementRequestHandler*
 --
-+handleRequest()
--purchaseAchievementHandler()
--randomAchievementHandler()
--specialAchievementHandler()
--showMessage(achievement: GameAchievements)
--addAchievement(achievement: GameAchievements)</panel_attributes>
++handleRequest(achievement: Achievements)</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>608</x>
-      <y>96</y>
-      <w>128</w>
-      <h>104</h>
+      <x>63</x>
+      <y>504</y>
+      <w>175</w>
+      <h>112</h>
     </coordinates>
     <panel_attributes>&lt;&lt;enumeration&gt;&gt;
 *Guitar achievements*
 --
+ENUM(name: String, message: String)
+
 USSR_GUITAR 
 URAL_GUITAR
 YAMAHA_GUITAR
@@ -43,14 +41,16 @@ DUAL_NECK_GUITAR
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>448</x>
-      <y>136</y>
-      <w>128</w>
-      <h>64</h>
+      <x>63</x>
+      <y>399</y>
+      <w>175</w>
+      <h>77</h>
     </coordinates>
     <panel_attributes>&lt;&lt;enumeration&gt;&gt;
 *Bicycle achievements*
 --
+ENUM(name: String, message: String)
+
 USUAL_BIKE
 MOUNTAIN_BIKE
 </panel_attributes>
@@ -59,14 +59,16 @@ MOUNTAIN_BIKE
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>240</x>
-      <y>120</y>
-      <w>192</w>
-      <h>80</h>
+      <x>63</x>
+      <y>273</y>
+      <w>175</w>
+      <h>91</h>
     </coordinates>
     <panel_attributes>&lt;&lt;enumeration&gt;&gt;
 *Computer achievements*
 --
+ENUM(name: String, message: String)
+
 PREVIOUSLY_USED_COMPUTER
 XIAOMI_MI_NOTEBOOK
 MACBOOK
@@ -76,41 +78,16 @@ MACBOOK
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>424</x>
-      <y>336</y>
-      <w>176</w>
-      <h>64</h>
-    </coordinates>
-    <panel_attributes>bg=orange
-*/Game Achievements/*
---
-#name: String
-#messageBox: String
-</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>360</x>
-      <y>360</y>
-      <w>80</w>
-      <h>24</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;80.0;10.0</additional_attributes>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>664</x>
-      <y>248</y>
-      <w>184</w>
-      <h>64</h>
+      <x>854</x>
+      <y>119</y>
+      <w>182</w>
+      <h>77</h>
     </coordinates>
     <panel_attributes>&lt;&lt;enumeration&gt;&gt;
 *Food random achievements*
 --
+ENUM(name: String, message: String)
+
 2_SPICES
 POISONING_OF_EATERY_FOOD
 </panel_attributes>
@@ -119,14 +96,16 @@ POISONING_OF_EATERY_FOOD
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>872</x>
-      <y>456</y>
-      <w>208</w>
-      <h>216</h>
+      <x>462</x>
+      <y>28</y>
+      <w>182</w>
+      <h>210</h>
     </coordinates>
     <panel_attributes>&lt;&lt;enumeration&gt;&gt;
 *Entertainment random achievements*
 --
+ENUM(name: String, message: String)
+
 CAM2CAM_TRAP
 GET_BAN
 BE_REPORTED_BY_CHILDREN
@@ -148,14 +127,16 @@ TOO_FAST_RUNNING
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>424</x>
-      <y>528</y>
-      <w>176</w>
-      <h>120</h>
+      <x>476</x>
+      <y>588</y>
+      <w>175</w>
+      <h>126</h>
     </coordinates>
     <panel_attributes>"enumeration"
 *Special achievements*
 --
+ENUM(name: String, message: String)
+
 SPARTAK_WINNER
 ZENIT_WINNER
 JOIN_TO_WINNERS
@@ -166,43 +147,18 @@ MOMS_NOT_BUSSINESSMAN
     <additional_attributes/>
   </element>
   <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>504</x>
-      <y>280</y>
-      <w>24</w>
-      <h>72</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;70.0;10.0;10.0</additional_attributes>
-  </element>
-  <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>432</x>
-      <y>232</y>
-      <w>176</w>
-      <h>56</h>
-    </coordinates>
-    <panel_attributes>bg=light_gray
-*Purchase Achievements*
---
-#name: String
-#messageBox: String
-</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>672</x>
-      <y>448</y>
-      <w>160</w>
-      <h>64</h>
+      <x>77</x>
+      <y>119</y>
+      <w>182</w>
+      <h>77</h>
     </coordinates>
     <panel_attributes>&lt;&lt;enumeration&gt;&gt;
 *Song random achievements*
 --
+ENUM(name: String, message: String)
+
 WRONG_CHORDS
 IN_SPOTLIGHT</panel_attributes>
     <additional_attributes/>
@@ -210,14 +166,16 @@ IN_SPOTLIGHT</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>872</x>
-      <y>200</y>
-      <w>208</w>
-      <h>104</h>
+      <x>658</x>
+      <y>84</y>
+      <w>182</w>
+      <h>112</h>
     </coordinates>
     <panel_attributes>&lt;&lt;enumeration&gt;&gt;
 *Study random achievements*
 --
+ENUM(name: String, message: String)
+
 DRUNK_STUDENT
 PAR_ABOUT_REPRODUCTIVE
 OLD_ANSWER_BOOK
@@ -228,14 +186,16 @@ STORIES_ABOUT_USSR</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>872</x>
-      <y>328</y>
-      <w>208</w>
-      <h>104</h>
+      <x>273</x>
+      <y>84</y>
+      <w>182</w>
+      <h>112</h>
     </coordinates>
     <panel_attributes>&lt;&lt;enumeration&gt;&gt;
 *Creativity random achievements*
 --
+ENUM(name: String, message: String)
+
 DRAW_ON_TOP_OF_OTHER_ART
 MISTER_PROPER
 IVANS_INTERNATIONAL
@@ -244,156 +204,207 @@ SONG_IN_SPOTLIGHT</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
-    <id>UMLClass</id>
+    <id>UMLInterface</id>
     <coordinates>
-      <x>664</x>
-      <y>344</y>
-      <w>176</w>
-      <h>56</h>
+      <x>329</x>
+      <y>420</y>
+      <w>112</w>
+      <h>49</h>
     </coordinates>
-    <panel_attributes>bg=light_gray
-*Random Achievements*
---
-#name: String
-#messageBox: String
-</panel_attributes>
+    <panel_attributes>bg=white
+PurchaseAchievements
+--</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>592</x>
-      <y>360</y>
-      <w>88</w>
-      <h>24</h>
+      <x>231</x>
+      <y>469</y>
+      <w>119</w>
+      <h>77</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;90.0;10.0</additional_attributes>
+    <additional_attributes>150.0;10.0;10.0;90.0</additional_attributes>
   </element>
   <element>
-    <id>UMLClass</id>
+    <id>Relation</id>
     <coordinates>
-      <x>424</x>
-      <y>432</y>
-      <w>176</w>
-      <h>56</h>
+      <x>231</x>
+      <y>434</y>
+      <w>112</w>
+      <h>21</h>
     </coordinates>
-    <panel_attributes>bg=light_gray
-*Special Achievements*
---
-#name: String
-#messageBox: String
-</panel_attributes>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>140.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>231</x>
+      <y>315</y>
+      <w>140</w>
+      <h>119</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>180.0;150.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLInterface</id>
+    <coordinates>
+      <x>504</x>
+      <y>518</y>
+      <w>105</w>
+      <h>49</h>
+    </coordinates>
+    <panel_attributes>bg=white
+SpecialAchievements
+--</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>504</x>
-      <y>392</y>
-      <w>24</w>
-      <h>56</h>
+      <x>546</x>
+      <y>553</y>
+      <w>21</w>
+      <h>49</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;50.0</additional_attributes>
   </element>
   <element>
-    <id>Relation</id>
+    <id>UMLInterface</id>
     <coordinates>
-      <x>424</x>
-      <y>192</y>
-      <w>24</w>
-      <h>56</h>
+      <x>490</x>
+      <y>315</y>
+      <w>119</w>
+      <h>49</h>
     </coordinates>
-    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;50.0;10.0;10.0</additional_attributes>
+    <panel_attributes>bg=white
+RandomAchievements
+--</panel_attributes>
+    <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>496</x>
-      <y>192</y>
-      <w>24</w>
-      <h>56</h>
+      <x>623</x>
+      <y>189</y>
+      <w>245</w>
+      <h>154</h>
     </coordinates>
-    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;50.0;10.0;10.0</additional_attributes>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;200.0;330.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>600</x>
-      <y>192</y>
-      <w>24</w>
-      <h>56</h>
+      <x>588</x>
+      <y>189</y>
+      <w>126</w>
+      <h>140</h>
     </coordinates>
-    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;50.0;10.0;10.0</additional_attributes>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;180.0;160.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>744</x>
-      <y>304</y>
-      <w>24</w>
-      <h>56</h>
+      <x>385</x>
+      <y>189</y>
+      <w>140</w>
+      <h>133</h>
     </coordinates>
-    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;50.0;10.0;10.0</additional_attributes>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>180.0;170.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>832</x>
-      <y>296</y>
-      <w>56</w>
-      <h>64</h>
+      <x>546</x>
+      <y>231</y>
+      <w>21</w>
+      <h>91</h>
     </coordinates>
-    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;60.0;50.0;10.0</additional_attributes>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;110.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>744</x>
-      <y>392</y>
-      <w>24</w>
-      <h>72</h>
+      <x>252</x>
+      <y>189</y>
+      <w>252</w>
+      <h>154</h>
     </coordinates>
-    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;70.0</additional_attributes>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>340.0;200.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLInterface</id>
+    <coordinates>
+      <x>511</x>
+      <y>420</y>
+      <w>77</w>
+      <h>49</h>
+    </coordinates>
+    <panel_attributes>bg=white
+Achievements
+--</panel_attributes>
+    <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>832</x>
-      <y>392</y>
-      <w>56</w>
-      <h>80</h>
+      <x>546</x>
+      <y>357</y>
+      <w>21</w>
+      <h>77</h>
     </coordinates>
-    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;50.0;80.0</additional_attributes>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;90.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>832</x>
-      <y>368</y>
-      <w>56</w>
-      <h>24</h>
+      <x>434</x>
+      <y>434</y>
+      <w>91</w>
+      <h>21</h>
     </coordinates>
-    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;50.0;10.0</additional_attributes>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>110.0;10.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>504</x>
-      <y>480</y>
-      <w>24</w>
-      <h>64</h>
+      <x>546</x>
+      <y>462</y>
+      <w>21</w>
+      <h>70</h>
     </coordinates>
-    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;60.0</additional_attributes>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>686</x>
+      <y>476</y>
+      <w>315</w>
+      <h>112</h>
+    </coordinates>
+    <panel_attributes>bg=blue
+*Note*
+handleRequest() вызывается:
+- если PurchaseAchievements, то в методе changeState()
+- если SpecialAchievements или RandomAchievements то из метода
+класса SpecialEvents или RandomEvents соответственно
+
+Внутри метода происходит добавление достижения в список
+(или множество) полученных игроком достижений, вывод 
+окна </panel_attributes>
+    <additional_attributes/>
   </element>
 </diagram>

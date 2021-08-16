@@ -1,4 +1,6 @@
-<diagram program="umletino" version="14.3.0"><zoom_level>10</zoom_level><help_text>// Uncomment the following line to change the fontsize and font:
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <help_text>// Uncomment the following line to change the fontsize and font:
 // fontsize=14
 // fontfamily=SansSerif //possible: SansSerif,Serif,Monospaced
 
@@ -20,7 +22,17 @@
 // Select "Custom Elements &gt; New..." to create new element types
 //////////////////////////////////////////////////////////////////////////////////////////////
 
-// This text will be stored with each diagram;  use it for notes.</help_text><element><id>UMLClass</id><coordinates><x>1340</x><y>830</y><w>560</w><h>1260</h></coordinates><panel_attributes>bg=light_gray
+// This text will be stored with each diagram;  use it for notes.</help_text>
+  <zoom_level>8</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1072</x>
+      <y>664</y>
+      <w>448</w>
+      <h>1008</h>
+    </coordinates>
+    <panel_attributes>bg=light_gray
 *Player*
 --
 -achieved_achievements: List&lt;GameAchievements&gt;
@@ -98,14 +110,36 @@
 
 
 
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLInterface</id><coordinates><x>820</x><y>1970</y><w>240</w><h>150</h></coordinates><panel_attributes>bg=yellow
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLInterface</id>
+    <coordinates>
+      <x>640</x>
+      <y>1576</y>
+      <w>224</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>bg=yellow
 *Interface*
 
 /LiveObservable/
 --
 registerLiveObserver(observer: Observer)
 removeLiveObserver(observer: Observer)
-notifyLiveObservers()</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1880</x><y>2220</y><w>410</w><h>220</h></coordinates><panel_attributes>bg=orange
+notifyLiveObservers()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1504</x>
+      <y>1776</y>
+      <w>328</w>
+      <h>176</h>
+    </coordinates>
+    <panel_attributes>bg=orange
 /*PlayerState*/
 --
 #reduce_school_performance_percent: int
@@ -136,7 +170,18 @@ notifyLiveObservers()</panel_attributes><additional_attributes></additional_attr
 
 
 
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1730</x><y>2510</y><w>410</w><h>230</h></coordinates><panel_attributes>bg=gray
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1384</x>
+      <y>2008</y>
+      <w>328</w>
+      <h>184</h>
+    </coordinates>
+    <panel_attributes>bg=gray
 *NormalState*
 --
 #reduce_school_performance_percent: int
@@ -167,7 +212,18 @@ notifyLiveObservers()</panel_attributes><additional_attributes></additional_attr
 
 
 
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>2170</x><y>2510</y><w>410</w><h>230</h></coordinates><panel_attributes>bg=gray
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1736</x>
+      <y>2008</y>
+      <w>328</w>
+      <h>184</h>
+    </coordinates>
+    <panel_attributes>bg=gray
 *BadState*
 --
 #reduce_school_performance_percent: int
@@ -198,7 +254,18 @@ notifyLiveObservers()</panel_attributes><additional_attributes></additional_attr
 
 
 
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>2610</x><y>2510</y><w>410</w><h>230</h></coordinates><panel_attributes>bg=gray
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>2088</x>
+      <y>2008</y>
+      <w>328</w>
+      <h>184</h>
+    </coordinates>
+    <panel_attributes>bg=gray
 *ExtremeState*
 --
 #reduce_school_performance_percent: int
@@ -229,7 +296,51 @@ notifyLiveObservers()</panel_attributes><additional_attributes></additional_attr
 
 
 
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>2190</x><y>2430</y><w>200</w><h>100</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;180;80</additional_attributes></element><element><id>Relation</id><coordinates><x>2280</x><y>2430</y><w>550</w><h>100</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;530;80</additional_attributes></element><element><id>Relation</id><coordinates><x>1920</x><y>2430</y><w>30</w><h>100</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;80</additional_attributes></element><element><id>UMLClass</id><coordinates><x>990</x><y>2140</y><w>320</w><h>160</h></coordinates><panel_attributes>bg=light_gray
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1752</x>
+      <y>1944</y>
+      <w>160</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;180.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1824</x>
+      <y>1944</y>
+      <w>440</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;530.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1536</x>
+      <y>1944</y>
+      <w>24</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>792</x>
+      <y>1712</y>
+      <w>256</w>
+      <h>128</h>
+    </coordinates>
+    <panel_attributes>bg=light_gray
 &lt;&lt;enumeration&gt;&gt;
 *Food*
 --
@@ -256,7 +367,29 @@ RESTORANT_FOOD(800, +50, 10000)
 
 
 
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1130</x><y>2080</y><w>230</w><h>80</h></coordinates><panel_attributes>lt=&lt;.</panel_attributes><additional_attributes>10;60;210;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>1380</x><y>230</y><w>460</w><h>280</h></coordinates><panel_attributes>bg=orange
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>904</x>
+      <y>1664</y>
+      <w>184</w>
+      <h>64</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>10.0;60.0;210.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1104</x>
+      <y>184</y>
+      <w>368</w>
+      <h>224</h>
+    </coordinates>
+    <panel_attributes>bg=orange
 &lt;&lt;abstract class&gt;&gt;
 /*StudyCourseState*/
 --
@@ -288,7 +421,18 @@ RESTORANT_FOOD(800, +50, 10000)
 
 
 
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1980</x><y>360</y><w>470</w><h>300</h></coordinates><panel_attributes>bg=orange
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1584</x>
+      <y>288</y>
+      <w>376</w>
+      <h>240</h>
+    </coordinates>
+    <panel_attributes>bg=orange
 &lt;&lt;abstract class&gt;&gt;
 /*ComputerCourseState*/
 --
@@ -322,7 +466,18 @@ RESTORANT_FOOD(800, +50, 10000)
 
 
 
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>630</x><y>410</y><w>470</w><h>280</h></coordinates><panel_attributes>bg=orange
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>504</x>
+      <y>328</y>
+      <w>376</w>
+      <h>224</h>
+    </coordinates>
+    <panel_attributes>bg=orange
 &lt;&lt;abstract class&gt;&gt;
 /*GuitarCourseState*/
 --
@@ -356,13 +511,68 @@ RESTORANT_FOOD(800, +50, 10000)
 
 
 
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1090</x><y>220</y><w>310</w><h>250</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>290;10;10;230</additional_attributes></element><element><id>Relation</id><coordinates><x>1830</x><y>220</y><w>170</w><h>200</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;150;180</additional_attributes></element><element><id>Relation</id><coordinates><x>1600</x><y>130</y><w>30</w><h>120</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;100</additional_attributes></element><element><id>UMLInterface</id><coordinates><x>1560</x><y>0</y><w>120</w><h>130</h></coordinates><panel_attributes>bg=yellow
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>872</x>
+      <y>176</y>
+      <w>248</w>
+      <h>200</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>290.0;10.0;10.0;230.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1464</x>
+      <y>176</y>
+      <w>136</w>
+      <h>160</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;150.0;180.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1280</x>
+      <y>104</y>
+      <w>24</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;100.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLInterface</id>
+    <coordinates>
+      <x>1240</x>
+      <y>0</y>
+      <w>112</w>
+      <h>112</h>
+    </coordinates>
+    <panel_attributes>bg=yellow
 *Interface*
 
 /TimerObserver/
 --
 timerTickHandler()
-timerEndHandler()</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>90</x><y>420</y><w>470</w><h>180</h></coordinates><panel_attributes>bg=light_gray
+timerEndHandler()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>72</x>
+      <y>224</y>
+      <w>376</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>bg=light_gray
 /*NullGuitarCourseState*/
 --
 #price: int = 0
@@ -388,7 +598,18 @@ timerEndHandler()</panel_attributes><additional_attributes></additional_attribut
 
 
 
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>90</x><y>620</y><w>470</w><h>180</h></coordinates><panel_attributes>bg=light_gray
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>72</x>
+      <y>384</y>
+      <w>376</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>bg=light_gray
 /*FirstSongCourseState*/
 --
 #price: int = 0
@@ -415,7 +636,18 @@ timerEndHandler()</panel_attributes><additional_attributes></additional_attribut
 
 
 
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>90</x><y>820</y><w>470</w><h>180</h></coordinates><panel_attributes>bg=light_gray
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>72</x>
+      <y>544</y>
+      <w>376</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>bg=light_gray
 /*YardSongCourseState*/
 --
 #price: int = 0
@@ -443,7 +675,18 @@ timerEndHandler()</panel_attributes><additional_attributes></additional_attribut
 
 
 
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>90</x><y>1020</y><w>470</w><h>180</h></coordinates><panel_attributes>bg=light_gray
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>72</x>
+      <y>704</y>
+      <w>376</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>bg=light_gray
 /*MusicalSchoolCourseState*/
 --
 #price: int = 0
@@ -471,7 +714,18 @@ timerEndHandler()</panel_attributes><additional_attributes></additional_attribut
 
 
 
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>90</x><y>1220</y><w>470</w><h>180</h></coordinates><panel_attributes>bg=light_gray
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>72</x>
+      <y>864</y>
+      <w>376</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>bg=light_gray
 /*MusicalObservatoryCourseState*/
 --
 #price: int = 0
@@ -499,7 +753,18 @@ timerEndHandler()</panel_attributes><additional_attributes></additional_attribut
 
 
 
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1990</x><y>1760</y><w>510</w><h>180</h></coordinates><panel_attributes>bg=light_gray
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1592</x>
+      <y>1408</y>
+      <w>408</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>bg=light_gray
 /*Courses*/
 --
 -guitar_course: GuitarCourseState= NullGuitarCourseState
@@ -525,7 +790,18 @@ timerEndHandler()</panel_attributes><additional_attributes></additional_attribut
 
 
 
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>2520</x><y>390</y><w>470</w><h>180</h></coordinates><panel_attributes>bg=light_gray
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>2016</x>
+      <y>312</y>
+      <w>376</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>bg=light_gray
 /*OnlineWorkCourseState*/
 --
 #price: int
@@ -554,7 +830,18 @@ timerEndHandler()</panel_attributes><additional_attributes></additional_attribut
 
 
 
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>2520</x><y>790</y><w>470</w><h>180</h></coordinates><panel_attributes>bg=light_gray
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>2016</x>
+      <y>632</y>
+      <w>376</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>bg=light_gray
 /*VidioEditingCourseState*/
 --
 #price: int
@@ -583,7 +870,18 @@ timerEndHandler()</panel_attributes><additional_attributes></additional_attribut
 
 
 
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>2520</x><y>990</y><w>470</w><h>180</h></coordinates><panel_attributes>bg=light_gray
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>2016</x>
+      <y>792</y>
+      <w>376</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>bg=light_gray
 /*GameDevelopmentCourseState*/
 --
 #price: int
@@ -611,7 +909,18 @@ timerEndHandler()</panel_attributes><additional_attributes></additional_attribut
 
 
 
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>2520</x><y>590</y><w>470</w><h>180</h></coordinates><panel_attributes>bg=light_gray
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>2016</x>
+      <y>472</y>
+      <w>376</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>bg=light_gray
 /*WebDesignCourseState*/
 --
 #price: int
@@ -640,7 +949,18 @@ timerEndHandler()</panel_attributes><additional_attributes></additional_attribut
 
 
 
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLNote</id><coordinates><x>610</x><y>770</y><w>620</w><h>450</h></coordinates><panel_attributes>*Note*
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>488</x>
+      <y>616</y>
+      <w>496</w>
+      <h>360</h>
+    </coordinates>
+    <panel_attributes>*Note*
 bg=blue
 Способ реализации допустимых песен для каждого курса:
 
@@ -665,7 +985,128 @@ override fun canPlaySong(song: Song): Boolean {
 available_courses объявляется по дефолту, а в классе
 GuitarCourse(и его наследниках) available_playlist заполняется
 внутри метода timerSignalHandler()(обработчика завершённого
-состояния timer)</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>310</x><y>320</y><w>580</w><h>120</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>560;90;560;10;10;10;10;100</additional_attributes></element><element><id>Relation</id><coordinates><x>20</x><y>560</y><w>90</w><h>130</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>70;10;10;10;10;110;70;110</additional_attributes></element><element><id>Relation</id><coordinates><x>20</x><y>760</y><w>90</w><h>130</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>70;10;10;10;10;110;70;110</additional_attributes></element><element><id>Relation</id><coordinates><x>20</x><y>960</y><w>90</w><h>130</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>70;10;10;10;10;110;70;110</additional_attributes></element><element><id>Relation</id><coordinates><x>20</x><y>1160</y><w>90</w><h>130</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>70;10;10;10;10;110;70;110</additional_attributes></element><element><id>Relation</id><coordinates><x>2210</x><y>270</y><w>330</w><h>110</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;90;50;10;310;10</additional_attributes></element><element><id>Relation</id><coordinates><x>2980</x><y>330</y><w>90</w><h>130</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;70;10;70;110;10;110</additional_attributes></element><element><id>Relation</id><coordinates><x>2980</x><y>530</y><w>90</w><h>130</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;70;10;70;110;10;110</additional_attributes></element><element><id>Relation</id><coordinates><x>2980</x><y>730</y><w>90</w><h>130</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;70;10;70;110;10;110</additional_attributes></element><element><id>Relation</id><coordinates><x>2980</x><y>930</y><w>90</w><h>130</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;70;10;70;110;10;110</additional_attributes></element><element><id>UMLClass</id><coordinates><x>1370</x><y>600</y><w>200</w><h>160</h></coordinates><panel_attributes>bg=light_gray
+состояния timer)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>440</x>
+      <y>256</y>
+      <w>272</w>
+      <h>88</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>320.0;90.0;320.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>16</x>
+      <y>336</y>
+      <w>72</w>
+      <h>104</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>70.0;10.0;10.0;10.0;10.0;110.0;70.0;110.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>16</x>
+      <y>496</y>
+      <w>72</w>
+      <h>104</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>70.0;10.0;10.0;10.0;10.0;110.0;70.0;110.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>16</x>
+      <y>656</y>
+      <w>72</w>
+      <h>104</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>70.0;10.0;10.0;10.0;10.0;110.0;70.0;110.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>16</x>
+      <y>816</y>
+      <w>72</w>
+      <h>104</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>70.0;10.0;10.0;10.0;10.0;110.0;70.0;110.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1768</x>
+      <y>216</y>
+      <w>264</w>
+      <h>88</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;90.0;50.0;10.0;310.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>2384</x>
+      <y>264</y>
+      <w>72</w>
+      <h>104</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;70.0;10.0;70.0;110.0;10.0;110.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>2384</x>
+      <y>424</y>
+      <w>72</w>
+      <h>104</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;70.0;10.0;70.0;110.0;10.0;110.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>2384</x>
+      <y>584</y>
+      <w>72</w>
+      <h>104</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;70.0;10.0;70.0;110.0;10.0;110.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>2384</x>
+      <y>744</y>
+      <w>72</w>
+      <h>104</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;70.0;10.0;70.0;110.0;10.0;110.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1096</x>
+      <y>480</y>
+      <w>160</w>
+      <h>128</h>
+    </coordinates>
+    <panel_attributes>bg=light_gray
 &lt;&lt;enumeration&gt;&gt;
 *Song*
 --
@@ -690,7 +1131,29 @@ BAXA(5000)
 
 
 
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>940</x><y>1970</y><w>420</w><h>40</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;20;400;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>1670</x><y>600</y><w>190</w><h>160</h></coordinates><panel_attributes>bg=light_gray
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>752</x>
+      <y>1576</y>
+      <w>336</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;20.0;400.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1336</x>
+      <y>480</y>
+      <w>152</w>
+      <h>128</h>
+    </coordinates>
+    <panel_attributes>bg=light_gray
 &lt;&lt;enumeration&gt;&gt;
 *WebTask*
 --
@@ -715,16 +1178,85 @@ MAKE_A_GAME(15000)
 
 
 
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1760</x><y>750</y><w>30</w><h>100</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;80;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>1460</x><y>750</y><w>30</w><h>100</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;80;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>1090</x><y>600</y><w>270</w><h>250</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
-state</panel_attributes><additional_attributes>250;230;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>1890</x><y>550</y><w>110</w><h>300</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
-state</panel_attributes><additional_attributes>10;280;90;10</additional_attributes></element><element><id>Relation</id><coordinates><x>1760</x><y>2080</y><w>140</w><h>160</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
-state</panel_attributes><additional_attributes>10;10;120;140</additional_attributes></element><element><id>UMLClass</id><coordinates><x>2550</x><y>2050</y><w>470</w><h>130</h></coordinates><panel_attributes>bg=light_gray
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1408</x>
+      <y>600</y>
+      <w>24</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;80.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1168</x>
+      <y>600</y>
+      <w>24</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;80.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>872</x>
+      <y>480</y>
+      <w>216</w>
+      <h>200</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
+state</panel_attributes>
+    <additional_attributes>250.0;230.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1512</x>
+      <y>440</y>
+      <w>88</w>
+      <h>240</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
+state</panel_attributes>
+    <additional_attributes>10.0;280.0;90.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1408</x>
+      <y>1664</y>
+      <w>112</w>
+      <h>128</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
+state</panel_attributes>
+    <additional_attributes>10.0;10.0;120.0;140.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>2040</x>
+      <y>1744</y>
+      <w>376</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>bg=light_gray
 *MacbookState*
 --
 #price: int = 200000
 #available_courses: List&lt; Kclass&lt;*&gt; &gt;
+#possible_achievement: PurchaseAchievements
+
 -
 +getPrice(): int
++getAchievement(): PurchaseAchievements
 
 +changeState(bag: Player.Bag)
 +isAvailable(course: Kclass&lt;*&gt;): boolean
@@ -744,13 +1276,27 @@ state</panel_attributes><additional_attributes>10;10;120;140</additional_attribu
 
 
 
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>2550</x><y>1760</y><w>470</w><h>130</h></coordinates><panel_attributes>bg=light_gray
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>2040</x>
+      <y>1440</y>
+      <w>376</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>bg=light_gray
 *UsualComputerState*
 --
 #price: int = 30000
 #available_courses: List&lt; Kclass&lt;*&gt; &gt;
+#possible_achievement: PurchaseAchievements
+
 -
 +getPrice(): int
++getAchievement(): PurchaseAchievements
 
 +changeState(bag: Player.Bag)
 +isAvailable(course: Kclass&lt;*&gt;): boolean
@@ -770,13 +1316,28 @@ state</panel_attributes><additional_attributes>10;10;120;140</additional_attribu
 
 
 
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>2550</x><y>1900</y><w>470</w><h>130</h></coordinates><panel_attributes>bg=light_gray
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>2040</x>
+      <y>1592</y>
+      <w>376</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>bg=light_gray
 *XiaomiMiNotebookState*
 --
 #price: int = 60000
 #available_courses: List&lt; Kclass&lt;*&gt; &gt;
+#possible_achievement: PurchaseAchievements
+
 -
 +getPrice(): int
++getAchievement(): PurchaseAchievements
 
 +changeState(bag: Player.Bag)
 +isAvailable(course: Kclass&lt;*&gt;): boolean
@@ -795,14 +1356,27 @@ state</panel_attributes><additional_attributes>10;10;120;140</additional_attribu
 
 
 
-
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>2550</x><y>1620</y><w>470</w><h>130</h></coordinates><panel_attributes>bg=light_gray
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>2040</x>
+      <y>1288</y>
+      <w>376</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>bg=light_gray
 *OldComputerState*
 --
 #price: int = 10000
 #available_courses: List&lt; Kclass&lt;*&gt; &gt;
+#possible_achievement: PurchaseAchievements
+
 -
 +getPrice(): int
++getAchievement(): PurchaseAchievements
 
 +changeState(bag: Player.Bag)
 +isAvailable(course: Kclass&lt;*&gt;): boolean
@@ -821,14 +1395,27 @@ state</panel_attributes><additional_attributes>10;10;120;140</additional_attribu
 
 
 
-
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>2550</x><y>1480</y><w>470</w><h>130</h></coordinates><panel_attributes>bg=light_gray
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>2040</x>
+      <y>1136</y>
+      <w>376</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>bg=light_gray
 *PreviouslyUsedComputerState*
 --
 #price: int = 3000
 #available_courses: List&lt; Kclass&lt;*&gt; &gt;
+#possible_achievement: PurchaseAchievements
+
 -
 +getPrice(): int
++getAchievement(): PurchaseAchievements
 
 +changeState(bag: Player.Bag)
 +isAvailable(course: Kclass&lt;*&gt;): boolean
@@ -848,16 +1435,31 @@ state</panel_attributes><additional_attributes>10;10;120;140</additional_attribu
 
 
 
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>2550</x><y>1320</y><w>470</w><h>130</h></coordinates><panel_attributes>bg=light_gray
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>2040</x>
+      <y>984</y>
+      <w>376</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>bg=light_gray
 /*NullComputerState*/
 --
 #price: int = 0
 #available_courses: List&lt; Kclass&lt;*&gt; &gt;
+#possible_achievement: PurchaseAchievements
+
 -
 +getPrice(): int
++getAchievement(): PurchaseAchievements
 
 +changeState(bag: Player.Bag)
-+isAvailable(course_name: Kclass&lt;*&gt;): boolean
++isAvailable(course: Kclass&lt;*&gt;): boolean
 
 
 
@@ -874,15 +1476,28 @@ state</panel_attributes><additional_attributes>10;10;120;140</additional_attribu
 
 
 
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1990</x><y>1240</y><w>470</w><h>240</h></coordinates><panel_attributes>bg=orange
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1592</x>
+      <y>976</y>
+      <w>376</w>
+      <h>216</h>
+    </coordinates>
+    <panel_attributes>bg=orange
 &lt;&lt;abstract class&gt;&gt;
 /*ComputerState*/
 --
 #price: int
 #available_courses: List&lt; Kclass&lt;*&gt; &gt;
+#possible_achievement: PurchaseAchievements
 
 -
 +getPrice(): int
++getAchievement(): PurchaseAchievements
 
 +changeState(bag: Player.Bag)
 +isAvailable(course: Kclass&lt;*&gt;): boolean
@@ -906,15 +1521,107 @@ state</panel_attributes><additional_attributes>10;10;120;140</additional_attribu
 
 
 
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>2450</x><y>1380</y><w>120</w><h>30</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;100;10</additional_attributes></element><element><id>Relation</id><coordinates><x>3010</x><y>1400</y><w>100</w><h>130</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;80;10;80;110;10;110</additional_attributes></element><element><id>Relation</id><coordinates><x>3010</x><y>1540</y><w>100</w><h>130</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;80;10;80;110;10;110</additional_attributes></element><element><id>Relation</id><coordinates><x>3010</x><y>1680</y><w>100</w><h>130</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;80;10;80;110;10;110</additional_attributes></element><element><id>Relation</id><coordinates><x>3010</x><y>1820</y><w>100</w><h>130</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;80;10;80;110;10;110</additional_attributes></element><element><id>Relation</id><coordinates><x>3010</x><y>1970</y><w>100</w><h>130</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;80;10;80;110;10;110</additional_attributes></element><element><id>Relation</id><coordinates><x>1890</x><y>1330</y><w>120</w><h>40</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
-state</panel_attributes><additional_attributes>10;20;100;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>620</x><y>1630</y><w>600</w><h>240</h></coordinates><panel_attributes>bg=orange
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1960</x>
+      <y>1072</y>
+      <w>96</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;100.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>2408</x>
+      <y>1088</y>
+      <w>80</w>
+      <h>104</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;80.0;10.0;80.0;110.0;10.0;110.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>2408</x>
+      <y>1200</y>
+      <w>80</w>
+      <h>128</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;80.0;10.0;80.0;140.0;10.0;140.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>2408</x>
+      <y>1336</y>
+      <w>80</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;80.0;10.0;80.0;160.0;10.0;160.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>2408</x>
+      <y>1488</y>
+      <w>80</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;80.0;10.0;80.0;160.0;10.0;160.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>2408</x>
+      <y>1648</y>
+      <w>80</w>
+      <h>136</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;80.0;10.0;80.0;150.0;10.0;150.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1512</x>
+      <y>1064</y>
+      <w>96</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
+state</panel_attributes>
+    <additional_attributes>10.0;20.0;100.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>496</x>
+      <y>1304</y>
+      <w>480</w>
+      <h>216</h>
+    </coordinates>
+    <panel_attributes>bg=orange
 &lt;&lt;abstract class&gt;&gt;
 /*GuitarState*/
 --
 #price: int
 #available_courses: List&lt; Kclass&lt;*&gt; &gt;
+#possible_achievement: PurchaseAchievements
 
 -
++getPrice(): int
++getAchievement(): PurchaseAchievements
+
 +changeState(bag: Player.Bag)
 +isAvailable(course: Kclass&lt;*&gt;): boolean
 
@@ -937,13 +1644,27 @@ state</panel_attributes><additional_attributes>10;20;100;20</additional_attribut
 
 
 
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>100</x><y>2060</y><w>460</w><h>140</h></coordinates><panel_attributes>bg=light_gray
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>80</x>
+      <y>1672</y>
+      <w>368</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>bg=light_gray
 *UssrGuitarState*
 --
 #price: int = 1000
 #available_courses: List&lt; Kclass&lt;*&gt; &gt;
+#possible_achievement: PurchaseAchievements
+
 -
 +getPrice(): int
++getAchievement(): PurchaseAchievements
 
 +changeState(bag: Player.Bag)
 +isAvailable(course: Kclass&lt;*&gt;): boolean
@@ -961,13 +1682,27 @@ state</panel_attributes><additional_attributes>10;20;100;20</additional_attribut
 
 
 
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>100</x><y>1460</y><w>460</w><h>140</h></coordinates><panel_attributes>bg=light_gray
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>80</x>
+      <y>1064</y>
+      <w>368</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>bg=light_gray
 *DualNeckGuitarState*
 --
 #price: int = 150000
 #available_courses: List&lt; Kclass&lt;*&gt; &gt;
+#possible_achievement: PurchaseAchievements
+
 -
 +getPrice(): int
++getAchievement(): PurchaseAchievements
 
 +changeState(bag: Player.Bag)
 +isAvailable(course: Kclass&lt;*&gt;): boolean
@@ -984,15 +1719,27 @@ state</panel_attributes><additional_attributes>10;20;100;20</additional_attribut
 
 
 
-
-
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>100</x><y>1910</y><w>460</w><h>140</h></coordinates><panel_attributes>bg=light_gray
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>80</x>
+      <y>1520</y>
+      <w>368</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>bg=light_gray
 *UralGuitarState*
 --
 #price: int = 5000
 #available_courses: List&lt; Kclass&lt;*&gt; &gt;
+#possible_achievement: PurchaseAchievements
+
 -
 +getPrice(): int
++getAchievement(): PurchaseAchievements
 
 +changeState(bag: Player.Bag)
 +isAvailable(course: Kclass&lt;*&gt;): boolean
@@ -1009,15 +1756,27 @@ state</panel_attributes><additional_attributes>10;20;100;20</additional_attribut
 
 
 
-
-
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>100</x><y>1610</y><w>460</w><h>140</h></coordinates><panel_attributes>bg=light_gray
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>80</x>
+      <y>1216</y>
+      <w>368</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>bg=light_gray
 *FenderGuitarState*
 --
 #price: int = 40000
 #available_courses: List&lt; Kclass&lt;*&gt; &gt;
+#possible_achievement: PurchaseAchievements
+
 -
 +getPrice(): int
++getAchievement(): PurchaseAchievements
 
 +changeState(bag: Player.Bag)
 +isAvailable(course: Kclass&lt;*&gt;): boolean
@@ -1035,14 +1794,27 @@ state</panel_attributes><additional_attributes>10;20;100;20</additional_attribut
 
 
 
-
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>100</x><y>1760</y><w>460</w><h>140</h></coordinates><panel_attributes>bg=light_gray
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>80</x>
+      <y>1368</y>
+      <w>368</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>bg=light_gray
 *YamahaGuitarState*
 --
 #price: int = 12000
 #available_courses: List&lt; Kclass&lt;*&gt; &gt;
+#possible_achievement: PurchaseAchievements
+
 -
 +getPrice(): int
++getAchievement(): PurchaseAchievements
 
 +changeState(bag: Player.Bag)
 +isAvailable(course: Kclass&lt;*&gt;): boolean
@@ -1057,16 +1829,38 @@ state</panel_attributes><additional_attributes>10;20;100;20</additional_attribut
 
 
 
-
-
-
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>550</x><y>1860</y><w>390</w><h>440</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>370;10;170;120;10;420</additional_attributes></element><element><id>UMLClass</id><coordinates><x>100</x><y>2210</y><w>460</w><h>140</h></coordinates><panel_attributes>bg=light_gray
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>440</x>
+      <y>1512</y>
+      <w>312</w>
+      <h>384</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>370.0;10.0;180.0;120.0;10.0;460.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>80</x>
+      <y>1824</y>
+      <w>368</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>bg=light_gray
 *NullGuitarState*
 --
 #price: int = 0
 #available_courses: List&lt; Kclass&lt;*&gt; &gt;
+#possible_achievement: PurchaseAchievements
+
 -
 +getPrice(): int
++getAchievement(): PurchaseAchievements
 
 +changeState(bag: Player.Bag)
 +isAvailable(course: Kclass&lt;*&gt;): boolean
@@ -1082,9 +1876,73 @@ state</panel_attributes><additional_attributes>10;20;100;20</additional_attribut
 
 
 
-
-
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>0</x><y>2140</y><w>120</w><h>120</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>100;100;10;100;10;10;100;10</additional_attributes></element><element><id>Relation</id><coordinates><x>0</x><y>1990</y><w>120</w><h>120</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>100;100;10;100;10;10;100;10</additional_attributes></element><element><id>Relation</id><coordinates><x>0</x><y>1840</y><w>120</w><h>120</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>100;100;10;100;10;10;100;10</additional_attributes></element><element><id>Relation</id><coordinates><x>0</x><y>1690</y><w>120</w><h>120</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>100;100;10;100;10;10;100;10</additional_attributes></element><element><id>Relation</id><coordinates><x>0</x><y>1540</y><w>120</w><h>110</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>100;90;10;90;10;10;100;10</additional_attributes></element><element><id>UMLNote</id><coordinates><x>640</x><y>1270</y><w>550</w><h>320</h></coordinates><panel_attributes>*Note*
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>0</x>
+      <y>1736</y>
+      <w>96</w>
+      <h>128</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>100.0;140.0;10.0;140.0;10.0;10.0;100.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>0</x>
+      <y>1584</y>
+      <w>96</w>
+      <h>128</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>100.0;140.0;10.0;140.0;10.0;10.0;100.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>0</x>
+      <y>1432</y>
+      <w>96</w>
+      <h>128</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>100.0;140.0;10.0;140.0;10.0;10.0;100.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>0</x>
+      <y>1280</y>
+      <w>96</w>
+      <h>128</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>100.0;140.0;10.0;140.0;10.0;10.0;100.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>0</x>
+      <y>1128</y>
+      <w>96</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>100.0;130.0;10.0;130.0;10.0;10.0;100.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>512</x>
+      <y>1016</y>
+      <w>440</w>
+      <h>256</h>
+    </coordinates>
+    <panel_attributes>*Note*
 bg=blue
 Способ реализации допустимых курсов для каждой гитары:
 
@@ -1098,15 +1956,39 @@ available_courses - ОБЪЯВЛЕННЫЙ по дефолту лист.
 -
 П.С. по схожему принципу реализуются доставки(допустимые 
 для существующей модели велосипеда) и работы(допустимые
-для существующей модели компьютера).</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1210</x><y>1700</y><w>150</w><h>80</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
-state</panel_attributes><additional_attributes>130;10;10;60</additional_attributes></element><element><id>UMLClass</id><coordinates><x>520</x><y>2650</y><w>570</w><h>150</h></coordinates><panel_attributes>bg=light_gray
+для существующей модели компьютера).</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>968</x>
+      <y>1360</y>
+      <w>120</w>
+      <h>64</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
+state</panel_attributes>
+    <additional_attributes>130.0;10.0;10.0;60.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>416</x>
+      <y>2120</y>
+      <w>456</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>bg=light_gray
 *UsualBicycleState*
 --
 #price: int = 10000
 #available_delivery: List&lt;Delivery&gt;
+#possible_achievement: PurchaseAchievements
 
 -
 +getPrice(): int
++getAchievement(): PurchaseAchievements
 
 +changeState(bag: Player.Bag)
 +isAvailable(delivery: Delivery): bool
@@ -1123,17 +2005,27 @@ state</panel_attributes><additional_attributes>130;10;10;60</additional_attribut
 
 
 
-
-
-
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>940</x><y>2830</y><w>570</w><h>160</h></coordinates><panel_attributes>bg=light_gray
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>752</x>
+      <y>2288</y>
+      <w>456</w>
+      <h>128</h>
+    </coordinates>
+    <panel_attributes>bg=light_gray
 *UssrBicycleState*
 --
 #price: int = 2000
 #available_delivery: List&lt;Delivery&gt;
+#possible_achievement: PurchaseAchievements
 
 -
 +getPrice(): int
++getAchievement(): PurchaseAchievements
 
 +changeState(bag: Player.Bag)
 +isAvailable(delivery: Delivery): bool
@@ -1150,16 +2042,27 @@ state</panel_attributes><additional_attributes>130;10;10;60</additional_attribut
 
 
 
-
-
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>210</x><y>2830</y><w>570</w><h>160</h></coordinates><panel_attributes>bg=light_gray
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>168</x>
+      <y>2288</y>
+      <w>456</w>
+      <h>128</h>
+    </coordinates>
+    <panel_attributes>bg=light_gray
 *MountainBicycleState*
 --
 #price: int = 40000
 #available_delivery: List&lt;Delivery&gt;
+#possible_achievement: PurchaseAchievements
 
 -
 +getPrice(): int
++getAchievement(): PurchaseAchievements
 
 +changeState(bag: Player.Bag)
 +isAvailable(delivery: Delivery): bool
@@ -1178,15 +2081,27 @@ state</panel_attributes><additional_attributes>130;10;10;60</additional_attribut
 
 
 
-
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1140</x><y>2650</y><w>570</w><h>150</h></coordinates><panel_attributes>bg=light_gray
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>912</x>
+      <y>2120</y>
+      <w>456</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>bg=light_gray
 /*NullBicycleState*/
 --
 #price: int = 0
 #available_delivery: List&lt;Delivery&gt;
+#possible_achievement: PurchaseAchievements
 
 -
 +getPrice(): int
++getAchievement(): PurchaseAchievements
 
 +changeState(bag: Player.Bag)
 +isAvailable(delivery: Delivery): bool
@@ -1202,18 +2117,28 @@ state</panel_attributes><additional_attributes>130;10;10;60</additional_attribut
 
 
 
-
-
-
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>850</x><y>2370</y><w>600</w><h>250</h></coordinates><panel_attributes>bg=orange
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>680</x>
+      <y>1880</y>
+      <w>480</w>
+      <h>216</h>
+    </coordinates>
+    <panel_attributes>bg=orange
 &lt;&lt;abstract class&gt;&gt;
 /*BicycleState*/
 --
 #price: int
 #available_delivery: List&lt;Delivery&gt;
+#possible_achievement: PurchaseAchievements
 
 -
 +getPrice(): int
++getAchievement(): PurchaseAchievements
 
 +changeState(bag: Player.Bag)
 +isAvailable(delivery: Delivery): bool
@@ -1237,7 +2162,29 @@ state</panel_attributes><additional_attributes>130;10;10;60</additional_attribut
 
 
 
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>750</x><y>2480</y><w>120</w><h>50</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>100;10;10;30</additional_attributes></element><element><id>UMLClass</id><coordinates><x>320</x><y>2430</y><w>440</w><h>160</h></coordinates><panel_attributes>bg=light_gray
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>624</x>
+      <y>1984</y>
+      <w>72</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>70.0;10.0;10.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>280</x>
+      <y>1984</y>
+      <w>352</w>
+      <h>128</h>
+    </coordinates>
+    <panel_attributes>bg=light_gray
 &lt;&lt;enumeration&gt;&gt;
 *Delivery*
 --
@@ -1260,19 +2207,95 @@ FAST_DELIVERY(5000)
 
 
 
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1500</x><y>2790</y><w>110</w><h>120</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>90;10;90;100;10;100</additional_attributes></element><element><id>Relation</id><coordinates><x>840</x><y>2790</y><w>120</w><h>120</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>100;100;10;100;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>400</x><y>2690</y><w>140</w><h>160</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>120;10;10;10;10;140</additional_attributes></element><element><id>Relation</id><coordinates><x>1310</x><y>2610</y><w>30</w><h>60</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;40</additional_attributes></element><element><id>Relation</id><coordinates><x>1390</x><y>2080</y><w>150</w><h>310</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
-state</panel_attributes><additional_attributes>130;10;10;290</additional_attributes></element><element><id>UMLNote</id><coordinates><x>2020</x><y>730</y><w>360</w><h>210</h></coordinates><panel_attributes>*Note*
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1200</x>
+      <y>2256</y>
+      <w>88</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>90.0;10.0;90.0;100.0;10.0;100.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>672</x>
+      <y>2256</y>
+      <w>96</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>100.0;100.0;10.0;100.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>320</x>
+      <y>2152</y>
+      <w>112</w>
+      <h>152</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>120.0;10.0;10.0;10.0;10.0;170.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1048</x>
+      <y>2088</y>
+      <w>24</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;40.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1112</x>
+      <y>1664</y>
+      <w>120</w>
+      <h>232</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
+state</panel_attributes>
+    <additional_attributes>130.0;10.0;10.0;270.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>1584</x>
+      <y>608</y>
+      <w>392</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>*Note*
 bg=blue
-Внутри метода buyNextItem()
-необходимо определить и 
-реализовать достижения, которые
-происходят во время покупок.
+Внутри метода buyNextItem() необходимо определить и 
+реализовать достижения, которые происходят во время покупок.
 
-
+Внутри метода changeState() класса предметов вызывается
+handleRequest() из класса Player.AchievementRequestHandler
 
 -
 см. раздел "Ачивки" 
-п. "Ачивки за приобретения"</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>2520</x><y>190</y><w>470</w><h>180</h></coordinates><panel_attributes>bg=light_gray
+п. "Ачивки за приобретения"</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>2016</x>
+      <y>152</y>
+      <w>376</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>bg=light_gray
 /*NullComputerCourseState*/
 --
 #price: int
@@ -1299,9 +2322,42 @@ bg=blue
 
 
 
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1840</x><y>2000</y><w>170</w><h>40</h></coordinates><panel_attributes>lt=[inside]&lt;-
-</panel_attributes><additional_attributes>30;20;150;20</additional_attributes></element><element><id>Relation</id><coordinates><x>1840</x><y>1810</y><w>170</w><h>40</h></coordinates><panel_attributes>lt=[inside]&lt;-
-</panel_attributes><additional_attributes>30;20;150;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>1550</x><y>2230</y><w>240</w><h>170</h></coordinates><panel_attributes>bg=light_gray
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1472</x>
+      <y>1600</y>
+      <w>136</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>lt=[inside]&lt;-
+</panel_attributes>
+    <additional_attributes>30.0;20.0;150.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1472</x>
+      <y>1448</y>
+      <w>136</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>lt=[inside]&lt;-
+</panel_attributes>
+    <additional_attributes>30.0;20.0;150.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1240</x>
+      <y>1784</y>
+      <w>192</w>
+      <h>136</h>
+    </coordinates>
+    <panel_attributes>bg=light_gray
 DataClass
 /*Birthday*/
 --
@@ -1327,7 +2383,18 @@ DataClass
 
 
 
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1990</x><y>1950</y><w>510</w><h>230</h></coordinates><panel_attributes>bg=light_gray
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1592</x>
+      <y>1560</y>
+      <w>408</w>
+      <h>184</h>
+    </coordinates>
+    <panel_attributes>bg=light_gray
 /*Bag*/
 --
 -bicycle: BicycleState = NullBicycleState
@@ -1356,7 +2423,29 @@ DataClass
 
 
 
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1650</x><y>2080</y><w>30</w><h>170</h></coordinates><panel_attributes>lt=&lt;.</panel_attributes><additional_attributes>10;150;10;10</additional_attributes></element><element><id>UMLNote</id><coordinates><x>1990</x><y>1520</y><w>490</w><h>180</h></coordinates><panel_attributes>*Note*
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1320</x>
+      <y>1664</y>
+      <w>24</w>
+      <h>136</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>10.0;150.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>1592</x>
+      <y>1216</y>
+      <w>392</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>*Note*
 bg=blue
 Комбинация методов и полей вида:
 
@@ -1365,7 +2454,18 @@ bg=blue
 /+setField(new_value: FieldType)/
 
 В ЯП Kotlin рекомендуется реализовывать с помощью публичного
-поля с определённым set методом</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLNote</id><coordinates><x>1980</x><y>990</y><w>490</w><h>180</h></coordinates><panel_attributes>*Note*
+поля с определённым set методом</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>1584</x>
+      <y>792</y>
+      <w>392</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>*Note*
 bg=blue
 Комбинация методов и полей вида:
 
@@ -1373,4 +2473,7 @@ bg=blue
 /+getField(): FieldType/
 
 В ЯП Kotlin рекомендуется реализовывать с помощью публичного
-поля с prviate set методом</panel_attributes><additional_attributes></additional_attributes></element></diagram>
+поля с prviate set методом</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
