@@ -167,7 +167,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/satietyProgressBar"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_food" />
+        app:srcCompat="@drawable/ic_botnav_food" />
 
     <LinearLayout
         android:id="@+id/AchievSettingslinearLayout"
@@ -184,14 +184,14 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            app:srcCompat="@drawable/ic_fun" />
+            app:srcCompat="@drawable/ic_botnav_fun" />
 
         <ImageButton
             android:id="@+id/settingsButton"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            app:srcCompat="@drawable/ic_fun" />
+            app:srcCompat="@drawable/ic_botnav_fun" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
