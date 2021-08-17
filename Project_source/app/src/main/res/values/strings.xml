@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">School_live_simulator</string>
 
-
+    <string name="test_number">10</string>
     Bottom navigation:
     <string name="bot_nav_work">work</string>
     <string name="bot_nav_school">school</string>

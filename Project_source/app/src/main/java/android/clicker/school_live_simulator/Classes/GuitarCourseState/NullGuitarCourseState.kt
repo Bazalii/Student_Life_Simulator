@@ -12,6 +12,6 @@ open class NullGuitarCourseState: GuitarCourseState() {
     }
 
     override fun timerEndHandler() {
-        available_playlist.add(Song.SINGLE_CHORD)
+
     }
 }

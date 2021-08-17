@@ -38,7 +38,7 @@ class GameActivity : AppCompatActivity() {
 
     override fun onResume() {
         super.onResume()
-
+        Game.context_bundle.context = this.applicationContext
         runnable = Runnable {
             /**
              * Code which is constantly called with delay

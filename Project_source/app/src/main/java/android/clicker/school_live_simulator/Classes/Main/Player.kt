@@ -5,6 +5,8 @@ import android.clicker.school_live_simulator.Classes.Enum_classes.OtherWork
 import android.clicker.school_live_simulator.Classes.Enum_classes.Studies
 import android.clicker.school_live_simulator.Classes.NotEnoughMoneyException
 import android.clicker.school_live_simulator.Classes.IsNotAvailableException
+import android.clicker.school_live_simulator.Classes.Main.ContextBundle
+import android.content.Context
 import kotlin.reflect.KClass
 
 class Player {
@@ -46,6 +48,7 @@ class Player {
     /**
      * Points of Player school studies
      */
+
     var school_performance: Int = 1000
         private set
     /**

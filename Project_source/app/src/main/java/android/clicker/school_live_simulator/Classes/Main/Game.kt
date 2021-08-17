@@ -1,6 +1,8 @@
 package android.clicker.school_live_simulator
 
+import android.clicker.school_live_simulator.Classes.Main.ContextBundle
 import android.clicker.school_live_simulator.User_interface.GameActivity
+import android.content.Context
 
 object Game {
     private var difficulty_state: GameDifficultyState = NormalMode()
@@ -15,7 +17,7 @@ object Game {
 //    game: Game
 //    lateinit var game_date: GameDate
 //    lateinit var game_status: GameStatus
-
+    var context_bundle: ContextBundle = ContextBundle()
 
     fun init() {
         TODO("Not yet implemented")

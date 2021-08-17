@@ -1,8 +1,11 @@
 package android.clicker.school_live_simulator.Classes.Enum_classes
 
+import android.clicker.school_live_simulator.Game
+import android.clicker.school_live_simulator.R
+
 enum class Entertainment(val happiness: Int, val money_diff: Int) {
     DRAW_ON_DESK(30, 0),
-    DRAW_GRAFFITIES(50, 0),
+    DRAW_GRAFFITIES(50, money_diff = Game.context_bundle.getTitle("test_number")),
     WRITE_A_POEM(70, 0),
     MAKE_SOMETHING_HANDMADE(150, -500),
     COVER_A_SONG(150, 0),
