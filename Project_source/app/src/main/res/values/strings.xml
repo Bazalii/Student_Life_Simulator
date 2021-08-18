@@ -34,6 +34,26 @@
     <string name="food_order_delivery">Order a food delivery</string>
     <string name="food_go_to_the_restaurant">Go to the restaurant</string>
 
+    Food stats:
+    <string name="crackers_satiety">+25</string>
+    <string name="crackers_happiness">+50</string>
+    <string name="crackers_money">-10</string>
+    <string name="doshirack_satiety">+50</string>
+    <string name="doshirack_happiness">-100</string>
+    <string name="doshirack_money">-50</string>
+    <string name="eatery_food_satiety">+120</string>
+    <string name="eatery_food_happiness">-150</string>
+    <string name="deatery_food_money">-300</string>
+    <string name="mcdonalds_satiety">+200</string>
+    <string name="mcdonalds_happiness">-200</string>
+    <string name="mcdonalds_money">-1000</string>
+    <string name="pizza_at_home_satiety">+450</string>
+    <string name="pizza_at_home_happiness">+50</string>
+    <string name="pizza_at_home_money">-4000</string>
+    <string name="restaurant_food_satiety">+800</string>
+    <string name="restaurant_food_happiness">+500</string>
+    <string name="restaurant_food_money">-10000</string>
+
 
     Work folder:
     <string name="work_collect_change">Collect change on the street</string>
