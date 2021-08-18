@@ -3,10 +3,13 @@ package android.clicker.school_live_simulator.User_interface.ScrollingFragments
 import android.clicker.school_live_simulator.*
 import android.clicker.school_live_simulator.Classes.IsNotAvailableException
 import android.clicker.school_live_simulator.Classes.NotEnoughMoneyException
+import android.clicker.school_live_simulator.R.attr.selectableItemBackground
 import android.clicker.school_live_simulator.User_interface.GameActivity
 import android.clicker.school_live_simulator.databinding.FragmentShopScrollingBinding
 import android.graphics.Color.*
+import android.graphics.drawable.Drawable
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.View.GONE
@@ -14,7 +17,10 @@ import android.view.View.VISIBLE
 import android.view.ViewGroup
 import android.view.animation.AnimationUtils
 import android.widget.Button
+import android.widget.ImageView
+import android.widget.TextView
 import android.widget.Toast
+import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.fragment.app.Fragment
 
 class ShopScrollingFragment : Fragment() {
@@ -33,84 +39,83 @@ class ShopScrollingFragment : Fragment() {
          * Buttons for categories
          */
         binding.shopGuitarCourses.setOnClickListener {
-            if(binding.shopGuitarCourseV1.visibility == GONE){
-                binding.shopGuitarCourseV1.visibility = VISIBLE
-                binding.shopGuitarCourseV2.visibility = VISIBLE
-                binding.shopGuitarCourseV3.visibility = VISIBLE
-                binding.shopGuitarCourseV4.visibility = VISIBLE
-                binding.shopGuitarCourseV5.visibility = VISIBLE
+            if(binding.layoutShopGuitarCourseV1.visibility == GONE){
+                binding.layoutShopGuitarCourseV1.visibility = VISIBLE
+                binding.layoutShopGuitarCourseV2.visibility = VISIBLE
+                binding.layoutShopGuitarCourseV3.visibility = VISIBLE
+                binding.layoutShopGuitarCourseV4.visibility = VISIBLE
+                binding.layoutShopGuitarCourseV5.visibility = VISIBLE
             }
             else{
-                binding.shopGuitarCourseV1.visibility = GONE
-                binding.shopGuitarCourseV2.visibility = GONE
-                binding.shopGuitarCourseV3.visibility = GONE
-                binding.shopGuitarCourseV4.visibility = GONE
-                binding.shopGuitarCourseV5.visibility = GONE
+                binding.layoutShopGuitarCourseV1.visibility = GONE
+                binding.layoutShopGuitarCourseV2.visibility = GONE
+                binding.layoutShopGuitarCourseV3.visibility = GONE
+                binding.layoutShopGuitarCourseV4.visibility = GONE
+                binding.layoutShopGuitarCourseV5.visibility = GONE
             }
         }
 
         binding.shopComputerCourses.setOnClickListener {
-            if(binding.shopComputerCourseV1.visibility == GONE){
-                binding.shopComputerCourseV1.visibility = VISIBLE
-                binding.shopComputerCourseV2.visibility = VISIBLE
-                binding.shopComputerCourseV3.visibility = VISIBLE
-                binding.shopComputerCourseV4.visibility = VISIBLE
-                binding.shopComputerCourseV5.visibility = VISIBLE
+            if(binding.layoutShopComputerCourseV1.visibility == GONE){
+                binding.layoutShopComputerCourseV1.visibility = VISIBLE
+                binding.layoutShopComputerCourseV2.visibility = VISIBLE
+                binding.layoutShopComputerCourseV3.visibility = VISIBLE
+                binding.layoutShopComputerCourseV4.visibility = VISIBLE
+                binding.layoutShopComputerCourseV5.visibility = VISIBLE
             }
             else{
-                binding.shopComputerCourseV1.visibility = GONE
-                binding.shopComputerCourseV2.visibility = GONE
-                binding.shopComputerCourseV3.visibility = GONE
-                binding.shopComputerCourseV4.visibility = GONE
-                binding.shopComputerCourseV5.visibility = GONE
+                binding.layoutShopComputerCourseV1.visibility = GONE
+                binding.layoutShopComputerCourseV2.visibility = GONE
+                binding.layoutShopComputerCourseV3.visibility = GONE
+                binding.layoutShopComputerCourseV4.visibility = GONE
+                binding.layoutShopComputerCourseV5.visibility = GONE
             }
         }
 
         binding.shopBicycles.setOnClickListener {
-            if(binding.shopUssrBicycle.visibility == GONE){
-                binding.shopUssrBicycle.visibility = VISIBLE
-                binding.shopUsualBicycle.visibility = VISIBLE
-                binding.shopMountainBicycle.visibility = VISIBLE
+            if(binding.layoutShopUssrBicycle.visibility == GONE){
+                binding.layoutShopUssrBicycle.visibility = VISIBLE
+                binding.layoutShopUsualBicycle.visibility = VISIBLE
+                binding.layoutShopMountainBicycle.visibility = VISIBLE
             }
             else{
-                binding.shopUssrBicycle.visibility = GONE
-                binding.shopUsualBicycle.visibility = GONE
-                binding.shopMountainBicycle.visibility = GONE
+                binding.layoutShopUssrBicycle.visibility = GONE
+                binding.layoutShopUsualBicycle.visibility = GONE
+                binding.layoutShopMountainBicycle.visibility = GONE
             }
         }
 
         binding.shopGuitars.setOnClickListener {
-            if(binding.shopUssrGuitar.visibility == GONE){
-                binding.shopUssrGuitar.visibility = VISIBLE
-                binding.shopUralGuitar.visibility = VISIBLE
-                binding.shopYamahaGuitar.visibility = VISIBLE
-                binding.shopFenderGuitar.visibility = VISIBLE
-                binding.shopDoubleNeckGuitar.visibility = VISIBLE
+            if(binding.layoutShopUssrGuitar.visibility == GONE){
+                binding.layoutShopUssrGuitar.visibility = VISIBLE
+                binding.layoutShopUralGuitar.visibility = VISIBLE
+                binding.layoutShopYamahaGuitar.visibility = VISIBLE
+                binding.layoutShopFenderGuitar.visibility = VISIBLE
+                binding.layoutShopDoubleNeckGuitar.visibility = VISIBLE
             }
             else{
-                binding.shopUssrGuitar.visibility = GONE
-                binding.shopUralGuitar.visibility = GONE
-                binding.shopYamahaGuitar.visibility = GONE
-                binding.shopFenderGuitar.visibility = GONE
-                binding.shopDoubleNeckGuitar.visibility = GONE
+                binding.layoutShopUssrGuitar.visibility = GONE
+                binding.layoutShopUralGuitar.visibility = GONE
+                binding.layoutShopYamahaGuitar.visibility = GONE
+                binding.layoutShopFenderGuitar.visibility = GONE
+                binding.layoutShopDoubleNeckGuitar.visibility = GONE
             }
         }
 
         binding.shopComputers.setOnClickListener {
-            if(binding.shopPreviouslyUsedComputer.visibility == GONE){
-                binding.shopPreviouslyUsedComputer.visibility = VISIBLE
-                binding.shopOldComputer.visibility = VISIBLE
-                binding.shopUsualComputer.visibility = VISIBLE
-                binding.shopXiaomiComputer.visibility = VISIBLE
-                binding.shopMacbookComputer.visibility = VISIBLE
+            if(binding.layoutShopPreviouslyUsedComputer.visibility == GONE){
+                binding.layoutShopPreviouslyUsedComputer.visibility = VISIBLE
+                binding.layoutShopOldComputer.visibility = VISIBLE
+                binding.layoutShopUsualComputer.visibility = VISIBLE
+                binding.layoutShopXiaomiComputer.visibility = VISIBLE
+                binding.layoutShopMacbookComputer.visibility = VISIBLE
             }
             else{
-                binding.shopPreviouslyUsedComputer.visibility = GONE
-                binding.shopOldComputer.visibility = GONE
-                binding.shopUsualComputer.visibility = GONE
-                binding.shopXiaomiComputer.visibility = GONE
-                binding.shopMacbookComputer.visibility = GONE
-                binding.shopBicycles
+                binding.layoutShopPreviouslyUsedComputer.visibility = GONE
+                binding.layoutShopOldComputer.visibility = GONE
+                binding.layoutShopUsualComputer.visibility = GONE
+                binding.layoutShopXiaomiComputer.visibility = GONE
+                binding.layoutShopMacbookComputer.visibility = GONE
             }
         }
 
@@ -123,10 +128,10 @@ class ShopScrollingFragment : Fragment() {
                 Game.player.buyNextGuitarCourse(YardGuitarCourseState::class)
                 updateUI()
             } catch(exception: NotEnoughMoneyException){
-                binding.shopGuitarCourseV1.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
+                binding.layoutShopGuitarCourseV1.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
             } catch(exception: IsNotAvailableException){
                 Toast.makeText(activity, "USSR guitar or better is required", Toast.LENGTH_SHORT).show()
-                binding.shopComputerCourseV1.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
+                binding.layoutShopGuitarCourseV1.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
             }
         }
 
@@ -136,15 +141,15 @@ class ShopScrollingFragment : Fragment() {
                     Game.player.buyNextGuitarCourse(FirstSongCourseState::class)
                     updateUI()
                 } catch(exception: NotEnoughMoneyException){
-                    binding.shopGuitarCourseV2.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
+                    binding.layoutShopGuitarCourseV2.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
                 } catch(exception: IsNotAvailableException){
                     Toast.makeText(activity, "Ural guitar or better is required", Toast.LENGTH_SHORT).show()
-                    binding.shopComputerCourseV1.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
+                    binding.layoutShopGuitarCourseV2.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
                 }
             }
             else{
                 Toast.makeText(activity, "buy previous", Toast.LENGTH_SHORT).show()
-                binding.shopGuitarCourseV2.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
+                binding.layoutShopGuitarCourseV2.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
             }
         }
 
@@ -154,15 +159,15 @@ class ShopScrollingFragment : Fragment() {
                     Game.player.buyNextGuitarCourse(YardSongCourseState::class)
                     updateUI()
                 } catch(exception: NotEnoughMoneyException){
-                    binding.shopGuitarCourseV3.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
+                    binding.layoutShopGuitarCourseV3.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
                 } catch(exception: IsNotAvailableException){
                     Toast.makeText(activity, "Yamaha guitar or better is required", Toast.LENGTH_SHORT).show()
-                    binding.shopComputerCourseV1.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
+                    binding.layoutShopGuitarCourseV3.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
                 }
             }
             else{
                 Toast.makeText(activity, "buy previous", Toast.LENGTH_SHORT).show()
-                binding.shopGuitarCourseV3.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
+                binding.layoutShopGuitarCourseV3.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
             }
         }
 
@@ -172,15 +177,15 @@ class ShopScrollingFragment : Fragment() {
                     Game.player.buyNextGuitarCourse(MusicalSchoolCourseState::class)
                     updateUI()
                 } catch(exception: NotEnoughMoneyException){
-                    binding.shopGuitarCourseV4.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
+                    binding.layoutShopGuitarCourseV4.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
                 } catch(exception: IsNotAvailableException){
                     Toast.makeText(activity, "Fender guitar or better is required", Toast.LENGTH_SHORT).show()
-                    binding.shopComputerCourseV1.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
+                    binding.layoutShopGuitarCourseV4.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
                 }
             }
             else{
                 Toast.makeText(activity, "buy previous", Toast.LENGTH_SHORT).show()
-                binding.shopGuitarCourseV4.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
+                binding.layoutShopGuitarCourseV4.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
             }
         }
 
@@ -190,15 +195,15 @@ class ShopScrollingFragment : Fragment() {
                     Game.player.buyNextGuitarCourse(MusicalObservatoryCourseState::class)
                     updateUI()
                 } catch(exception: NotEnoughMoneyException){
-                    binding.shopGuitarCourseV5.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
+                    binding.layoutShopGuitarCourseV5.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
                 } catch(exception: IsNotAvailableException){
                     Toast.makeText(activity, "Double neck guitar is required", Toast.LENGTH_SHORT).show()
-                    binding.shopComputerCourseV1.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
+                    binding.layoutShopGuitarCourseV5.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
                 }
             }
             else{
                 Toast.makeText(activity, "buy previous", Toast.LENGTH_SHORT).show()
-                binding.shopGuitarCourseV5.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
+                binding.layoutShopGuitarCourseV5.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
             }
         }
 
@@ -212,10 +217,10 @@ class ShopScrollingFragment : Fragment() {
                 Game.player.buyNextComputerCourse(FriendsCourseState::class)
                 updateUI()
             } catch(exception: NotEnoughMoneyException){
-                binding.shopComputerCourseV1.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
+                binding.layoutShopComputerCourseV1.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
             } catch(exception: IsNotAvailableException){
                 Toast.makeText(activity, "buy new computer", Toast.LENGTH_SHORT).show()
-                binding.shopComputerCourseV1.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
+                binding.layoutShopComputerCourseV1.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
             }
         }
 
@@ -225,15 +230,15 @@ class ShopScrollingFragment : Fragment() {
                     Game.player.buyNextComputerCourse(OnlineWorkCourseState::class)
                     updateUI()
                 } catch(exception: NotEnoughMoneyException){
-                    binding.shopComputerCourseV2.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
+                    binding.layoutShopComputerCourseV2.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
                 } catch(exception: IsNotAvailableException){
                     Toast.makeText(activity, "buy new computer", Toast.LENGTH_SHORT).show()
-                    binding.shopComputerCourseV2.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
+                    binding.layoutShopComputerCourseV2.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
                 }
             }
             else{
                 Toast.makeText(activity, "buy previous", Toast.LENGTH_SHORT).show()
-                binding.shopComputerCourseV2.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
+                binding.layoutShopComputerCourseV2.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
             }
         }
 
@@ -243,15 +248,15 @@ class ShopScrollingFragment : Fragment() {
                     Game.player.buyNextComputerCourse(WebDesignCourseState::class)
                     updateUI()
                 } catch(exception: NotEnoughMoneyException){
-                    binding.shopComputerCourseV3.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
+                    binding.layoutShopComputerCourseV3.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
                 } catch(exception: IsNotAvailableException){
                     Toast.makeText(activity, "buy new computer", Toast.LENGTH_SHORT).show()
-                    binding.shopComputerCourseV3.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
+                    binding.layoutShopComputerCourseV3.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
                 }
             }
             else{
                 Toast.makeText(activity, "buy previous", Toast.LENGTH_SHORT).show()
-                binding.shopComputerCourseV3.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
+                binding.layoutShopComputerCourseV3.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
             }
         }
 
@@ -261,15 +266,15 @@ class ShopScrollingFragment : Fragment() {
                     Game.player.buyNextComputerCourse(VideoEditingCourseState::class)
                     updateUI()
                 } catch(exception: NotEnoughMoneyException){
-                    binding.shopComputerCourseV4.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
+                    binding.layoutShopComputerCourseV4.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
                 } catch(exception: IsNotAvailableException){
                     Toast.makeText(activity, "buy new computer", Toast.LENGTH_SHORT).show()
-                    binding.shopComputerCourseV4.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
+                    binding.layoutShopComputerCourseV4.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
                 }
             }
             else{
                 Toast.makeText(activity, "buy previous", Toast.LENGTH_SHORT).show()
-                binding.shopComputerCourseV4.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
+                binding.layoutShopComputerCourseV4.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
             }
         }
 
@@ -279,15 +284,15 @@ class ShopScrollingFragment : Fragment() {
                     Game.player.buyNextComputerCourse(GameDevelopmentCourseState::class)
                     updateUI()
                 } catch(exception: NotEnoughMoneyException){
-                    binding.shopComputerCourseV5.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
+                    binding.layoutShopComputerCourseV5.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
                 } catch(exception: IsNotAvailableException){
                     Toast.makeText(activity, "buy new computer", Toast.LENGTH_SHORT).show()
-                    binding.shopComputerCourseV5.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
+                    binding.layoutShopComputerCourseV5.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
                 }
             }
             else{
                 Toast.makeText(activity, "buy previous", Toast.LENGTH_SHORT).show()
-                binding.shopComputerCourseV5.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
+                binding.layoutShopComputerCourseV5.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
             }
         }
 
@@ -300,7 +305,7 @@ class ShopScrollingFragment : Fragment() {
                     Game.player.buyNewBicycle()
                     updateUI()
                 } catch(exception: NotEnoughMoneyException){
-                    binding.shopUssrBicycle.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
+                    binding.layoutShopUssrBicycle.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
                 }
         }
 
@@ -310,12 +315,12 @@ class ShopScrollingFragment : Fragment() {
                     Game.player.buyNewBicycle()
                     updateUI()
                 } catch(exception: NotEnoughMoneyException){
-                    binding.shopUsualBicycle.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
+                    binding.layoutShopUsualBicycle.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
                 }
             }
             else{
                 Toast.makeText(activity, "buy previous", Toast.LENGTH_SHORT).show()
-                binding.shopUsualBicycle.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
+                binding.layoutShopUsualBicycle.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
             }
         }
 
@@ -325,12 +330,12 @@ class ShopScrollingFragment : Fragment() {
                     Game.player.buyNewBicycle()
                     updateUI()
                 } catch(exception: NotEnoughMoneyException){
-                    binding.shopMountainBicycle.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
+                    binding.layoutShopMountainBicycle.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
                 }
             }
             else{
                 Toast.makeText(activity, "buy previous", Toast.LENGTH_SHORT).show()
-                binding.shopMountainBicycle.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
+                binding.layoutShopMountainBicycle.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
             }
         }
 
@@ -353,12 +358,12 @@ class ShopScrollingFragment : Fragment() {
                     Game.player.buyNewGuitar()
                     updateUI()
                 } catch(exception: NotEnoughMoneyException){
-                    binding.shopUralGuitar.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
+                    binding.layoutShopUralGuitar.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
                 }
             }
             else{
                 Toast.makeText(activity, "buy previous", Toast.LENGTH_SHORT).show()
-                binding.shopUralGuitar.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
+                binding.layoutShopUralGuitar.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
             }
         }
 
@@ -368,12 +373,12 @@ class ShopScrollingFragment : Fragment() {
                     Game.player.buyNewGuitar()
                     updateUI()
                 } catch(exception: NotEnoughMoneyException){
-                    binding.shopUralGuitar.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
+                    binding.layoutShopUralGuitar.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
                 }
             }
             else{
                 Toast.makeText(activity, "buy previous", Toast.LENGTH_SHORT).show()
-                binding.shopUralGuitar.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
+                binding.layoutShopUralGuitar.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
             }
         }
 
@@ -383,12 +388,12 @@ class ShopScrollingFragment : Fragment() {
                     Game.player.buyNewGuitar()
                     updateUI()
                 } catch(exception: NotEnoughMoneyException){
-                    binding.shopYamahaGuitar.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
+                    binding.layoutShopYamahaGuitar.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
                 }
             }
             else{
                 Toast.makeText(activity, "buy previous", Toast.LENGTH_SHORT).show()
-                binding.shopYamahaGuitar.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
+                binding.layoutShopYamahaGuitar.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
             }
         }
 
@@ -398,12 +403,12 @@ class ShopScrollingFragment : Fragment() {
                     Game.player.buyNewGuitar()
                     updateUI()
                 } catch(exception: NotEnoughMoneyException){
-                    binding.shopFenderGuitar.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
+                    binding.layoutShopFenderGuitar.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
                 }
             }
             else{
                 Toast.makeText(activity, "buy previous", Toast.LENGTH_SHORT).show()
-                binding.shopFenderGuitar.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
+                binding.layoutShopFenderGuitar.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
             }
         }
 
@@ -413,12 +418,12 @@ class ShopScrollingFragment : Fragment() {
                     Game.player.buyNewGuitar()
                     updateUI()
                 } catch(exception: NotEnoughMoneyException){
-                    binding.shopDoubleNeckGuitar.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
+                    binding.layoutShopDoubleNeckGuitar.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
                 }
             }
             else{
                 Toast.makeText(activity, "buy previous", Toast.LENGTH_SHORT).show()
-                binding.shopDoubleNeckGuitar.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
+                binding.layoutShopDoubleNeckGuitar.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
             }
         }
 
@@ -431,7 +436,7 @@ class ShopScrollingFragment : Fragment() {
                 Game.player.buyNewComputer()
                 updateUI()
             } catch(exception: NotEnoughMoneyException){
-                binding.shopUssrGuitar.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
+                binding.layoutShopPreviouslyUsedComputer.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
             }
         }
 
@@ -441,12 +446,12 @@ class ShopScrollingFragment : Fragment() {
                     Game.player.buyNewComputer()
                     updateUI()
                 } catch(exception: NotEnoughMoneyException){
-                    binding.shopOldComputer.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
+                    binding.layoutShopOldComputer.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
                 }
             }
             else{
                 Toast.makeText(activity, "buy previous", Toast.LENGTH_SHORT).show()
-                binding.shopOldComputer.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
+                binding.layoutShopOldComputer.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
             }
         }
 
@@ -456,12 +461,12 @@ class ShopScrollingFragment : Fragment() {
                     Game.player.buyNewComputer()
                     updateUI()
                 } catch(exception: NotEnoughMoneyException){
-                    binding.shopUsualComputer.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
+                    binding.layoutShopUsualComputer.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
                 }
             }
             else{
                 Toast.makeText(activity, "buy previous", Toast.LENGTH_SHORT).show()
-                binding.shopUsualComputer.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
+                binding.layoutShopUsualComputer.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
             }
         }
 
@@ -471,12 +476,12 @@ class ShopScrollingFragment : Fragment() {
                     Game.player.buyNewComputer()
                     updateUI()
                 } catch(exception: NotEnoughMoneyException){
-                    binding.shopXiaomiComputer.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
+                    binding.layoutShopXiaomiComputer.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
                 }
             }
             else{
                 Toast.makeText(activity, "buy previous", Toast.LENGTH_SHORT).show()
-                binding.shopXiaomiComputer.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
+                binding.layoutShopXiaomiComputer.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
             }
         }
 
@@ -486,12 +491,12 @@ class ShopScrollingFragment : Fragment() {
                     Game.player.buyNewComputer()
                     updateUI()
                 } catch(exception: NotEnoughMoneyException){
-                    binding.shopMacbookComputer.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
+                    binding.layoutShopMacbookComputer.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
                 }
             }
             else{
                 Toast.makeText(activity, "buy previous", Toast.LENGTH_SHORT).show()
-                binding.shopMacbookComputer.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
+                binding.layoutShopMacbookComputer.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
             }
         }
 
@@ -508,36 +513,36 @@ class ShopScrollingFragment : Fragment() {
          */
         when(Game.player.current_courses.computer_course){
             is GameDevelopmentCourseState ->{
-                isBought(binding.shopComputerCourseV1)
-                isBought(binding.shopComputerCourseV2)
-                isBought(binding.shopComputerCourseV3)
-                isBought(binding.shopComputerCourseV4)
-                isBought(binding.shopComputerCourseV5)
+                isBought(binding.shopComputerCourseV1, binding.layoutShopComputerCourseV1, binding.imageViewComputerCourseV1Money, binding.textViewComputerCourseV1price)
+                isBought(binding.shopComputerCourseV2, binding.layoutShopComputerCourseV2, binding.imageViewComputerCourseV2Money, binding.textViewComputerCourseV2price)
+                isBought(binding.shopComputerCourseV3, binding.layoutShopComputerCourseV3, binding.imageViewComputerCourseV3Money, binding.textViewComputerCourseV3price)
+                isBought(binding.shopComputerCourseV4, binding.layoutShopComputerCourseV4, binding.imageViewComputerCourseV4Money, binding.textViewComputerCourseV4price)
+                isBought(binding.shopComputerCourseV5, binding.layoutShopComputerCourseV5, binding.imageViewComputerCourseV5Money, binding.textViewComputerCourseV5price)
             }
             is VideoEditingCourseState ->{
-                isBought(binding.shopComputerCourseV1)
-                isBought(binding.shopComputerCourseV2)
-                isBought(binding.shopComputerCourseV3)
-                isBought(binding.shopComputerCourseV4)
-                canBuy(binding.shopComputerCourseV5)
+                isBought(binding.shopComputerCourseV1, binding.layoutShopComputerCourseV1, binding.imageViewComputerCourseV1Money, binding.textViewComputerCourseV1price)
+                isBought(binding.shopComputerCourseV2, binding.layoutShopComputerCourseV2, binding.imageViewComputerCourseV2Money, binding.textViewComputerCourseV2price)
+                isBought(binding.shopComputerCourseV3, binding.layoutShopComputerCourseV3, binding.imageViewComputerCourseV3Money, binding.textViewComputerCourseV3price)
+                isBought(binding.shopComputerCourseV4, binding.layoutShopComputerCourseV4, binding.imageViewComputerCourseV4Money, binding.textViewComputerCourseV4price)
+                canBuy(binding.shopComputerCourseV5, binding.layoutShopComputerCourseV5, binding.imageViewComputerCourseV5Money, binding.textViewComputerCourseV5price)
             }
             is WebDesignCourseState ->{
-                isBought(binding.shopComputerCourseV1)
-                isBought(binding.shopComputerCourseV2)
-                isBought(binding.shopComputerCourseV3)
-                canBuy(binding.shopComputerCourseV4)
+                isBought(binding.shopComputerCourseV1, binding.layoutShopComputerCourseV1, binding.imageViewComputerCourseV1Money, binding.textViewComputerCourseV1price)
+                isBought(binding.shopComputerCourseV2, binding.layoutShopComputerCourseV2, binding.imageViewComputerCourseV2Money, binding.textViewComputerCourseV2price)
+                isBought(binding.shopComputerCourseV3, binding.layoutShopComputerCourseV3, binding.imageViewComputerCourseV3Money, binding.textViewComputerCourseV3price)
+                canBuy(binding.shopComputerCourseV4, binding.layoutShopComputerCourseV4, binding.imageViewComputerCourseV4Money, binding.textViewComputerCourseV4price)
             }
             is OnlineWorkCourseState ->{
-                isBought(binding.shopComputerCourseV1)
-                isBought(binding.shopComputerCourseV2)
-                canBuy(binding.shopComputerCourseV3)
+                isBought(binding.shopComputerCourseV1, binding.layoutShopComputerCourseV1, binding.imageViewComputerCourseV1Money, binding.textViewComputerCourseV1price)
+                isBought(binding.shopComputerCourseV2, binding.layoutShopComputerCourseV2, binding.imageViewComputerCourseV2Money, binding.textViewComputerCourseV2price)
+                canBuy(binding.shopComputerCourseV3, binding.layoutShopComputerCourseV3, binding.imageViewComputerCourseV3Money, binding.textViewComputerCourseV3price)
             }
             is FriendsCourseState ->{
-                isBought(binding.shopComputerCourseV1)
-                canBuy(binding.shopComputerCourseV2)
+                isBought(binding.shopComputerCourseV1, binding.layoutShopComputerCourseV1, binding.imageViewComputerCourseV1Money, binding.textViewComputerCourseV1price)
+                canBuy(binding.shopComputerCourseV2, binding.layoutShopComputerCourseV2, binding.imageViewComputerCourseV2Money, binding.textViewComputerCourseV2price)
             }
             is NullComputerCourseState ->{
-                canBuy(binding.shopComputerCourseV1)
+                canBuy(binding.shopComputerCourseV1, binding.layoutShopComputerCourseV1, binding.imageViewComputerCourseV1Money, binding.textViewComputerCourseV1price)
             }
         }
         /**
@@ -545,36 +550,36 @@ class ShopScrollingFragment : Fragment() {
          */
         when(Game.player.items.computer){
             is MacbookState ->{
-                isBought(binding.shopPreviouslyUsedComputer)
-                isBought(binding.shopOldComputer)
-                isBought(binding.shopUsualComputer)
-                isBought(binding.shopXiaomiComputer)
-                isBought(binding.shopMacbookComputer)
+                isBought(binding.shopPreviouslyUsedComputer, binding.layoutShopPreviouslyUsedComputer, binding.imageViewPreviouslyUsedComputerMoney, binding.textViewPreviouslyUsedComputerPrice)
+                isBought(binding.shopOldComputer, binding.layoutShopOldComputer, binding.imageViewOldComputerMoney, binding.textViewOldComputerPrice)
+                isBought(binding.shopUsualComputer, binding.layoutShopUsualComputer, binding.imageViewUsualComputerMoney, binding.textViewUsualComputerPrice)
+                isBought(binding.shopXiaomiComputer, binding.layoutShopXiaomiComputer, binding.imageViewXiaomiComputerMoney, binding.textViewXiaomiComputerPrice)
+                isBought(binding.shopMacbookComputer, binding.layoutShopMacbookComputer, binding.imageViewMacbookComputerMoney, binding.textViewMacbookComputerPrice)
             }
             is XiaomiMiNotebookState ->{
-                isBought(binding.shopPreviouslyUsedComputer)
-                isBought(binding.shopOldComputer)
-                isBought(binding.shopUsualComputer)
-                isBought(binding.shopXiaomiComputer)
-                canBuy(binding.shopMacbookComputer)
+                isBought(binding.shopPreviouslyUsedComputer, binding.layoutShopPreviouslyUsedComputer, binding.imageViewPreviouslyUsedComputerMoney, binding.textViewPreviouslyUsedComputerPrice)
+                isBought(binding.shopOldComputer, binding.layoutShopOldComputer, binding.imageViewOldComputerMoney, binding.textViewOldComputerPrice)
+                isBought(binding.shopUsualComputer, binding.layoutShopUsualComputer, binding.imageViewUsualComputerMoney, binding.textViewUsualComputerPrice)
+                isBought(binding.shopXiaomiComputer, binding.layoutShopXiaomiComputer, binding.imageViewXiaomiComputerMoney, binding.textViewXiaomiComputerPrice)
+                canBuy(binding.shopMacbookComputer, binding.layoutShopMacbookComputer, binding.imageViewMacbookComputerMoney, binding.textViewMacbookComputerPrice)
             }
             is UsualComputerState ->{
-                isBought(binding.shopPreviouslyUsedComputer)
-                isBought(binding.shopOldComputer)
-                isBought(binding.shopUsualComputer)
-                canBuy(binding.shopXiaomiComputer)
+                isBought(binding.shopPreviouslyUsedComputer, binding.layoutShopPreviouslyUsedComputer, binding.imageViewPreviouslyUsedComputerMoney, binding.textViewPreviouslyUsedComputerPrice)
+                isBought(binding.shopOldComputer, binding.layoutShopOldComputer, binding.imageViewOldComputerMoney, binding.textViewOldComputerPrice)
+                isBought(binding.shopUsualComputer, binding.layoutShopUsualComputer, binding.imageViewUsualComputerMoney, binding.textViewUsualComputerPrice)
+                canBuy(binding.shopXiaomiComputer, binding.layoutShopXiaomiComputer, binding.imageViewXiaomiComputerMoney, binding.textViewXiaomiComputerPrice)
             }
             is OldComputerState ->{
-                isBought(binding.shopPreviouslyUsedComputer)
-                isBought(binding.shopOldComputer)
-                canBuy(binding.shopUsualComputer)
+                isBought(binding.shopPreviouslyUsedComputer, binding.layoutShopPreviouslyUsedComputer, binding.imageViewPreviouslyUsedComputerMoney, binding.textViewPreviouslyUsedComputerPrice)
+                isBought(binding.shopOldComputer, binding.layoutShopOldComputer, binding.imageViewOldComputerMoney, binding.textViewOldComputerPrice)
+                canBuy(binding.shopUsualComputer, binding.layoutShopUsualComputer, binding.imageViewUsualComputerMoney, binding.textViewUsualComputerPrice)
             }
             is PreviouslyUsedComputerState ->{
-                isBought(binding.shopPreviouslyUsedComputer)
-                canBuy(binding.shopOldComputer)
+                isBought(binding.shopPreviouslyUsedComputer, binding.layoutShopPreviouslyUsedComputer, binding.imageViewPreviouslyUsedComputerMoney, binding.textViewPreviouslyUsedComputerPrice)
+                canBuy(binding.shopOldComputer, binding.layoutShopOldComputer, binding.imageViewOldComputerMoney, binding.textViewOldComputerPrice)
             }
             is NullComputerState ->{
-                canBuy(binding.shopPreviouslyUsedComputer)
+                canBuy(binding.shopPreviouslyUsedComputer, binding.layoutShopPreviouslyUsedComputer, binding.imageViewPreviouslyUsedComputerMoney, binding.textViewPreviouslyUsedComputerPrice)
             }
         }
         /**
@@ -582,36 +587,36 @@ class ShopScrollingFragment : Fragment() {
          */
         when(Game.player.current_courses.guitar_course){
             is MusicalObservatoryCourseState ->{
-                isBought(binding.shopGuitarCourseV1)
-                isBought(binding.shopGuitarCourseV2)
-                isBought(binding.shopGuitarCourseV3)
-                isBought(binding.shopGuitarCourseV4)
-                isBought(binding.shopGuitarCourseV5)
+                isBought(binding.shopGuitarCourseV1, binding.layoutShopGuitarCourseV1, binding.imageViewGuitarCourseV1Money, binding.textViewGuitarCourseV1price)
+                isBought(binding.shopGuitarCourseV2, binding.layoutShopGuitarCourseV2, binding.imageViewGuitarCourseV2Money, binding.textViewGuitarCourseV2price)
+                isBought(binding.shopGuitarCourseV3, binding.layoutShopGuitarCourseV3, binding.imageViewGuitarCourseV3Money, binding.textViewGuitarCourseV3price)
+                isBought(binding.shopGuitarCourseV4, binding.layoutShopGuitarCourseV4, binding.imageViewGuitarCourseV4Money, binding.textViewGuitarCourseV4price)
+                isBought(binding.shopGuitarCourseV5, binding.layoutShopGuitarCourseV5, binding.imageViewGuitarCourseV5Money, binding.textViewGuitarCourseV5price)
             }
             is MusicalSchoolCourseState ->{
-                isBought(binding.shopGuitarCourseV1)
-                isBought(binding.shopGuitarCourseV2)
-                isBought(binding.shopGuitarCourseV3)
-                isBought(binding.shopGuitarCourseV4)
-                canBuy(binding.shopGuitarCourseV5)
+                isBought(binding.shopGuitarCourseV1, binding.layoutShopGuitarCourseV1, binding.imageViewGuitarCourseV1Money, binding.textViewGuitarCourseV1price)
+                isBought(binding.shopGuitarCourseV2, binding.layoutShopGuitarCourseV2, binding.imageViewGuitarCourseV2Money, binding.textViewGuitarCourseV2price)
+                isBought(binding.shopGuitarCourseV3, binding.layoutShopGuitarCourseV3, binding.imageViewGuitarCourseV3Money, binding.textViewGuitarCourseV3price)
+                isBought(binding.shopGuitarCourseV4, binding.layoutShopGuitarCourseV4, binding.imageViewGuitarCourseV4Money, binding.textViewGuitarCourseV4price)
+                canBuy(binding.shopGuitarCourseV5, binding.layoutShopGuitarCourseV5, binding.imageViewGuitarCourseV5Money, binding.textViewGuitarCourseV5price)
             }
             is YardSongCourseState ->{
-                isBought(binding.shopGuitarCourseV1)
-                isBought(binding.shopGuitarCourseV2)
-                isBought(binding.shopGuitarCourseV3)
-                canBuy(binding.shopGuitarCourseV4)
+                isBought(binding.shopGuitarCourseV1, binding.layoutShopGuitarCourseV1, binding.imageViewGuitarCourseV1Money, binding.textViewGuitarCourseV1price)
+                isBought(binding.shopGuitarCourseV2, binding.layoutShopGuitarCourseV2, binding.imageViewGuitarCourseV2Money, binding.textViewGuitarCourseV2price)
+                isBought(binding.shopGuitarCourseV3, binding.layoutShopGuitarCourseV3, binding.imageViewGuitarCourseV3Money, binding.textViewGuitarCourseV3price)
+                canBuy(binding.shopGuitarCourseV4, binding.layoutShopGuitarCourseV4, binding.imageViewGuitarCourseV4Money, binding.textViewGuitarCourseV4price)
             }
             is FirstSongCourseState ->{
-                isBought(binding.shopGuitarCourseV1)
-                isBought(binding.shopGuitarCourseV2)
-                canBuy(binding.shopGuitarCourseV3)
+                isBought(binding.shopGuitarCourseV1, binding.layoutShopGuitarCourseV1, binding.imageViewGuitarCourseV1Money, binding.textViewGuitarCourseV1price)
+                isBought(binding.shopGuitarCourseV2, binding.layoutShopGuitarCourseV2, binding.imageViewGuitarCourseV2Money, binding.textViewGuitarCourseV2price)
+                canBuy(binding.shopGuitarCourseV3, binding.layoutShopGuitarCourseV3, binding.imageViewGuitarCourseV3Money, binding.textViewGuitarCourseV3price)
             }
             is YardGuitarCourseState ->{
-                isBought(binding.shopGuitarCourseV1)
-                 canBuy(binding.shopGuitarCourseV2)
+                isBought(binding.shopGuitarCourseV1, binding.layoutShopGuitarCourseV1, binding.imageViewGuitarCourseV1Money, binding.textViewGuitarCourseV1price)
+                 canBuy(binding.shopGuitarCourseV2, binding.layoutShopGuitarCourseV2, binding.imageViewGuitarCourseV2Money, binding.textViewGuitarCourseV2price)
             }
             is NullGuitarCourseState ->{
-                canBuy(binding.shopGuitarCourseV1)
+                canBuy(binding.shopGuitarCourseV1, binding.layoutShopGuitarCourseV1, binding.imageViewGuitarCourseV1Money, binding.textViewGuitarCourseV1price)
             }
         }
         /**
@@ -619,36 +624,36 @@ class ShopScrollingFragment : Fragment() {
          */
         when(Game.player.items.guitar){
             is DoubleNeckGuitarState->{
-                isBought(binding.shopUssrGuitar)
-                isBought(binding.shopUralGuitar)
-                isBought(binding.shopYamahaGuitar)
-                isBought(binding.shopFenderGuitar)
-                isBought(binding.shopDoubleNeckGuitar)
+                isBought(binding.shopUssrGuitar, binding.layoutShopUssrGuitar, binding.imageViewUssrGuitarMoney, binding.textViewUssrGuitarPrice)
+                isBought(binding.shopUralGuitar, binding.layoutShopUralGuitar, binding.imageViewUralGuitarMoney, binding.textViewUralGuitarPrice)
+                isBought(binding.shopYamahaGuitar, binding.layoutShopYamahaGuitar, binding.imageViewYamahaGuitarMoney, binding.textViewYamahaGuitarPrice)
+                isBought(binding.shopFenderGuitar, binding.layoutShopFenderGuitar, binding.imageViewFenderGuitarMoney, binding.textViewFenderGuitarPrice)
+                isBought(binding.shopDoubleNeckGuitar, binding.layoutShopDoubleNeckGuitar, binding.imageViewDoubleNeckGuitarMoney, binding.textViewDoubleNeckGuitarPrice)
             }
             is FenderGuitarState->{
-                isBought(binding.shopUssrGuitar)
-                isBought(binding.shopUralGuitar)
-                isBought(binding.shopYamahaGuitar)
-                isBought(binding.shopFenderGuitar)
-                canBuy(binding.shopDoubleNeckGuitar)
+                isBought(binding.shopUssrGuitar, binding.layoutShopUssrGuitar, binding.imageViewUssrGuitarMoney, binding.textViewUssrGuitarPrice)
+                isBought(binding.shopUralGuitar, binding.layoutShopUralGuitar, binding.imageViewUralGuitarMoney, binding.textViewUralGuitarPrice)
+                isBought(binding.shopYamahaGuitar, binding.layoutShopYamahaGuitar, binding.imageViewYamahaGuitarMoney, binding.textViewYamahaGuitarPrice)
+                isBought(binding.shopFenderGuitar, binding.layoutShopFenderGuitar, binding.imageViewFenderGuitarMoney, binding.textViewFenderGuitarPrice)
+                canBuy(binding.shopDoubleNeckGuitar, binding.layoutShopDoubleNeckGuitar, binding.imageViewDoubleNeckGuitarMoney, binding.textViewDoubleNeckGuitarPrice)
             }
             is YamahaGuitarState->{
-                isBought(binding.shopUssrGuitar)
-                isBought(binding.shopUralGuitar)
-                isBought(binding.shopYamahaGuitar)
-                canBuy(binding.shopFenderGuitar)
+                isBought(binding.shopUssrGuitar, binding.layoutShopUssrGuitar, binding.imageViewUssrGuitarMoney, binding.textViewUssrGuitarPrice)
+                isBought(binding.shopUralGuitar, binding.layoutShopUralGuitar, binding.imageViewUralGuitarMoney, binding.textViewUralGuitarPrice)
+                isBought(binding.shopYamahaGuitar, binding.layoutShopYamahaGuitar, binding.imageViewYamahaGuitarMoney, binding.textViewYamahaGuitarPrice)
+                canBuy(binding.shopFenderGuitar, binding.layoutShopFenderGuitar, binding.imageViewFenderGuitarMoney, binding.textViewFenderGuitarPrice)
             }
             is UralGuitarState->{
-                isBought(binding.shopUssrGuitar)
-                isBought(binding.shopUralGuitar)
-                canBuy(binding.shopYamahaGuitar)
+                isBought(binding.shopUssrGuitar, binding.layoutShopUssrGuitar, binding.imageViewUssrGuitarMoney, binding.textViewUssrGuitarPrice)
+                isBought(binding.shopUralGuitar, binding.layoutShopUralGuitar, binding.imageViewUralGuitarMoney, binding.textViewUralGuitarPrice)
+                canBuy(binding.shopYamahaGuitar, binding.layoutShopYamahaGuitar, binding.imageViewYamahaGuitarMoney, binding.textViewYamahaGuitarPrice)
             }
             is UssrGuitarState->{
-                isBought(binding.shopUssrGuitar)
-                canBuy(binding.shopUralGuitar)
+                isBought(binding.shopUssrGuitar, binding.layoutShopUssrGuitar, binding.imageViewUssrGuitarMoney, binding.textViewUssrGuitarPrice)
+                canBuy(binding.shopUralGuitar, binding.layoutShopUralGuitar, binding.imageViewUralGuitarMoney, binding.textViewUralGuitarPrice)
             }
             is NullGuitarState->{
-                canBuy(binding.shopUssrGuitar)
+                canBuy(binding.shopUssrGuitar, binding.layoutShopUssrGuitar, binding.imageViewUssrGuitarMoney, binding.textViewUssrGuitarPrice)
             }
 
         }
@@ -657,31 +662,36 @@ class ShopScrollingFragment : Fragment() {
          */
         when(Game.player.items.bicycle){
             is MountainBicycleState ->{
-                isBought(binding.shopUssrBicycle)
-                isBought(binding.shopUsualBicycle)
-                isBought(binding.shopMountainBicycle)
+                isBought(binding.shopUssrBicycle, binding.layoutShopUssrBicycle, binding.imageViewUssrBicycleMoney, binding.textViewUssrBicyclePrice)
+                isBought(binding.shopUsualBicycle,binding.layoutShopUsualBicycle, binding.imageViewUsualBicycleMoney, binding.textViewUsualBicyclePrice)
+                isBought(binding.shopMountainBicycle, binding.layoutShopMountainBicycle, binding.imageViewMountainBicycleMoney, binding.textViewMountainBicyclePrice)
             }
             is UsualBicycleState->{
-                isBought(binding.shopUssrBicycle)
-                isBought(binding.shopUsualBicycle)
-                canBuy(binding.shopMountainBicycle)
+                isBought(binding.shopUssrBicycle, binding.layoutShopUssrBicycle, binding.imageViewUssrBicycleMoney, binding.textViewUssrBicyclePrice)
+                isBought(binding.shopUsualBicycle,binding.layoutShopUsualBicycle, binding.imageViewUsualBicycleMoney, binding.textViewUsualBicyclePrice)
+                canBuy(binding.shopMountainBicycle, binding.layoutShopMountainBicycle, binding.imageViewMountainBicycleMoney, binding.textViewMountainBicyclePrice)
             }
             is UssrBicycleState->{
-                isBought(binding.shopUssrBicycle)
-                canBuy(binding.shopUsualBicycle)
+                isBought(binding.shopUssrBicycle, binding.layoutShopUssrBicycle, binding.imageViewUssrBicycleMoney, binding.textViewUssrBicyclePrice)
+                canBuy(binding.shopUsualBicycle,binding.layoutShopUsualBicycle, binding.imageViewUsualBicycleMoney, binding.textViewUsualBicyclePrice)
             }
             else->{
-                canBuy(binding.shopUssrBicycle)
+                canBuy(binding.shopUssrBicycle, binding.layoutShopUssrBicycle, binding.imageViewUssrBicycleMoney, binding.textViewUssrBicyclePrice)
             }
         }
         (activity as GameActivity).updateStats()
     }
-    fun isBought(button: Button){
-        button.setBackgroundColor(GREEN)
+    fun isBought(button: Button, layout: ConstraintLayout, image_view: ImageView, text_view: TextView){
+        layout.setBackgroundColor(GREEN)
         button.isClickable = false
-    }
-    fun canBuy(button: Button){
+        image_view.setImageResource(R.drawable.ic_money)
+        text_view.visibility = VISIBLE
 
+    }
+    fun canBuy(button: Button, layout: ConstraintLayout, image_view: ImageView, text_view: TextView){
+        layout.setBackgroundColor(selectableItemBackground)
+        image_view.setImageResource(R.drawable.ic_money)
+        text_view.visibility = VISIBLE
     }
 /*    fun isLocked(button: Button){
         button.setBackgroundColor(RED)
