@@ -1,5 +1,6 @@
 package android.clicker.school_live_simulator
 
+import android.clicker.school_live_simulator.Classes.GameDate.GameDate
 import android.clicker.school_live_simulator.Classes.Main.ContextBundle
 import android.clicker.school_live_simulator.User_interface.GameActivity
 import android.content.Context
@@ -15,7 +16,7 @@ object Game {
 
     var player: Player = Player()
 //    game: Game
-//    lateinit var game_date: GameDate
+    lateinit var game_date: GameDate
 //    lateinit var game_status: GameStatus
     var context_bundle: ContextBundle = ContextBundle()
 
