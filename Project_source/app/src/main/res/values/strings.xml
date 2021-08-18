@@ -25,6 +25,23 @@
     <string name="school_hire_a_good_tutor">Hire a good tutor</string>
     <string name="school_study_with_uni_teacher">Study with a teacher from University</string>
 
+    School stats:
+    <string name="go_to_school_school_performance">+3</string>
+    <string name="go_to_school_money">0</string>
+    <string name="learn_yourself_school_performance">+50</string>
+    <string name="learn_yourself_money">-100</string>
+    <string name="buy_cheatbook_school_performance">+100</string>
+    <string name="buy_cheatbook_money">-300</string>
+    <string name="learn_from_student_school_performance">+250</string>
+    <string name="learn_from_student_money">-1000</string>
+    <string name="sign_up_in_an_online_school_school_performance">+15</string>
+    <string name="sign_up_in_an_online_schoold_money">-10000</string>
+    <string name="hire_a_good_tutor_school_performance">+600</string>
+    <string name="hire_a_good_tutor_money">-150000</string>
+    <string name="study_with_uni_teacher_school_performance">+1000</string>
+    <string name="study_with_uni_teacher_money">-25000</string>
+
+
 
     Food folder:
     <string name="food_eat_crackers">Eat some crackers</string>
