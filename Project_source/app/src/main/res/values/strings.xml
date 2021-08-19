@@ -37,7 +37,7 @@
     <string name="sign_up_in_an_online_school_school_performance">+15</string>
     <string name="sign_up_in_an_online_schoold_money">-10000</string>
     <string name="hire_a_good_tutor_school_performance">+600</string>
-    <string name="hire_a_good_tutor_money">-150000</string>
+    <string name="hire_a_good_tutor_money">-15000</string>
     <string name="study_with_uni_teacher_school_performance">+1000</string>
     <string name="study_with_uni_teacher_money">-25000</string>
 
@@ -72,6 +72,7 @@
     <string name="restaurant_food_money">-10000</string>
 
 
+
     Work folder:
     <string name="work_collect_change">Collect change on the street</string>
     <string name="work_watch_ads">Watch online advertisement</string>
@@ -95,7 +96,6 @@
     <string name="work_on_the_net_v4">Work as a video editor</string>
     <string name="work_on_the_net_v5">Work as a GameDev</string>
 
-
     Work stats:
     <string name="work_collect_change_income">+10</string>
     <string name="work_watch_ads_income">+100</string>
@@ -115,6 +115,8 @@
     <string name="work_on_the_net_v3_income">+2000</string>
     <string name="work_on_the_net_v4_income">+5000</string>
     <string name="work_on_the_net_v5_income">+15000</string>
+
+
 
     Entertainment folder:
     <string name="fun_draw_on_desks">Draw on desks</string>
@@ -146,6 +148,66 @@
     <string name="fun_use_chat_roulette">Cam2cam in chat roulette(???)</string>
     <string name="fun_have_a_party">Have a party at home</string>
     <string name="fun_go_to_the_club">Go to the club(???)</string>
+
+    Entertainment stats:
+    <string name="fun_draw_on_desks_price">0</string>
+    <string name="fun_draw_on_desks_happiness">+30</string>
+    <string name="fun_draw_graffities_price">+10</string>
+    <string name="fun_draw_graffities_happiness">+10</string>
+    <string name="fun_write_a_poem_price">0</string>
+    <string name="fun_write_a_poem_happiness">+70</string>
+    <string name="fun_make_something_handmade_price">-500</string>
+    <string name="fun_make_something_happiness">+150</string>
+    <string name="fun_cover_a_song_price">0</string>
+    <string name="fun_cover_a_song_happiness">+150</string>
+    <string name="fun_write_a_song_price">+3000</string>
+    <string name="fun_write_a_song_happiness">+100</string>
+    <string name="fun_stream_price">+5000</string>
+    <string name="fun_stream_happiness">-100</string>
+    <string name="fun_make_a_youtube_video_price">+10000</string>
+    <string name="fun_make_a_youtube_video_happiness">+10000</string>
+
+    <string name="fun_do_nothing_price">0</string>
+    <string name="fun_do_nothing_happiness">+50</string>
+    <string name="fun_go_cycling_price">0</string>
+    <string name="fun_go_cycling_happiness">+100</string>
+    <string name="fun_listen_to_the_music_price">-169</string>
+    <string name="fun_listen_to_the_music_happiness">+10</string>
+    <string name="fun_donate_and_play_computer_price">-1000</string>
+    <string name="fun_donate_and_play_computer_happiness">+300</string>
+    <string name="fun_go_to_the_shopping_mall_price">-10000</string>
+    <string name="fun_go_to_the_shopping_mall_happiness">+500</string>
+    <string name="fun_walk_with_your_girlfriend_price">-20000</string>
+    <string name="fun_walk_with_your_girlfriend_happiness">+800</string>
+
+    <string name="fun_read_a_book_price">0</string>
+    <string name="fun_read_a_book_happiness">+30</string>
+    <string name="fun_help_youngsters_with_homework_price">0</string>
+    <string name="fun_help_youngsters_with_homework_happiness">+50</string>
+    <string name="fun_do_sport_price">-1500</string>
+    <string name="fun_do_sport_happiness">+100</string>
+    <string name="fun_play_guitar_price">-5000</string>
+    <string name="fun_play_guitar_happiness">+150</string>
+    <string name="fun_go_to_the_theatre_price">-4000</string>
+    <string name="fun_go_to_the_theatre_happiness">+300</string>
+    <string name="fun_go_to_the_concert_price">-10000</string>
+    <string name="fun_go_to_the_concert_happiness">+700</string>
+
+    <string name="fun_kick_a_trash_can_price">0</string>
+    <string name="fun_kick_a_trash_can_happiness">+70</string>
+    <string name="fun_intimidate_youngsters_price">+150</string>
+    <string name="fun_intimidate_youngsters_happiness">+100</string>
+    <string name="fun_upload_virus_price">0</string>
+    <string name="fun_upload_virus_happiness">+250</string>
+    <string name="fun_use_chat_roulette_price">-5000</string>
+    <string name="fun_use_chat_roulette_happiness">+450</string>
+    <string name="fun_have_a_party_price">-10000</string>
+    <string name="fun_have_a_party_happiness">+600</string>
+    <string name="fun_go_to_the_club_price">-20000</string>
+    <string name="fun_go_to_the_club_happiness">+1000</string>
+
+
+
 
 
     Shop folder:
@@ -182,7 +244,6 @@
     <string name="shop_xiaomi_computer">Xiaomi Mi Notebook</string>
     <string name="shop_macbook_computer">Apple Macbook</string>
 
-
     Shop stats:
     <string name="shop_ussr_bicycle_price">-2000</string>
     <string name="shop_usual_bicycle_price">-10000</string>
@@ -200,13 +261,13 @@
     <string name="shop_xiaomi_computer_price">-60000</string>
     <string name="shop_macbook_computer_price">-200000</string>
 
-    <string name="shop_computer_course_v1_price">-0</string>
+    <string name="shop_computer_course_v1_price">free</string>
     <string name="shop_computer_course_v2_price">-100</string>
     <string name="shop_computer_course_v3_price">-300</string>
     <string name="shop_computer_course_v4_price">-900</string>
     <string name="shop_computer_course_v5_price">-2700</string>
 
-    <string name="shop_guitar_course_v1_price">-0</string>
+    <string name="shop_guitar_course_v1_price">0</string>
     <string name="shop_guitar_course_v2_price">-100</string>
     <string name="shop_guitar_course_v3_price">-300</string>
     <string name="shop_guitar_course_v4_price">-900</string>
