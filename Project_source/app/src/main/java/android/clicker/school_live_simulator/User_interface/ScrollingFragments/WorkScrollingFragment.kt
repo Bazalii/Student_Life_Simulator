@@ -50,7 +50,7 @@ class WorkScrollingFragment : Fragment() {
             try {
                 Game.player.deliver()
             } catch(exception: IsNotAvailableException) {
-                binding.workAsACourier.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
+                binding.layoutWorkAsACourier.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
             }
             (activity as GameActivity).updateStats()
         }
@@ -64,7 +64,7 @@ class WorkScrollingFragment : Fragment() {
             try {
                 Game.player.playSong()
             } catch(exception: IsNotAvailableException) {
-                binding.workAsACourier.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
+                binding.layoutWorkAsACourier.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
             }
             (activity as GameActivity).updateStats()
         }
@@ -73,7 +73,7 @@ class WorkScrollingFragment : Fragment() {
             try {
                 Game.player.realiseWebTask()
             } catch(exception: IsNotAvailableException) {
-                binding.workAsACourier.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
+                binding.layoutWorkAsACourier.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
             }
             (activity as GameActivity).updateStats()
         }
@@ -83,42 +83,42 @@ class WorkScrollingFragment : Fragment() {
         super.onResume()
         when(Game.player.items.bicycle){
             is MountainBicycleState ->
-                binding.workAsACourier.text = getString(R.string.work_as_a_courier_v3)
+                binding.textViewWorkAsACourier.text = getString(R.string.work_as_a_courier_v3)
             is UsualBicycleState->
-                binding.workAsACourier.text = getString(R.string.work_as_a_courier_v2)
+                binding.textViewWorkAsACourier.text = getString(R.string.work_as_a_courier_v2)
             is UssrBicycleState->
-                binding.workAsACourier.text = getString(R.string.work_as_a_courier_v1)
+                binding.textViewWorkAsACourier.text = getString(R.string.work_as_a_courier_v1)
             else->
-                binding.workAsACourier.text = getString(R.string.work_as_a_courier_v0)
+                binding.textViewWorkAsACourier.text = getString(R.string.work_as_a_courier_v0)
         }
 
         when(Game.player.current_courses.guitar_course){
             is MusicalObservatoryCourseState ->
-               binding.workPlayGuitar.text = getString(R.string.work_play_guitar_v5)
+               binding.textViewWorkPlayGuitar.text = getString(R.string.work_play_guitar_v5)
             is MusicalSchoolCourseState ->
-                binding.workPlayGuitar.text = getString(R.string.work_play_guitar_v4)
+                binding.textViewWorkPlayGuitar.text = getString(R.string.work_play_guitar_v4)
             is YardSongCourseState ->
-                binding.workPlayGuitar.text = getString(R.string.work_play_guitar_v3)
+                binding.textViewWorkPlayGuitar.text = getString(R.string.work_play_guitar_v3)
             is FirstSongCourseState ->
-                binding.workPlayGuitar.text = getString(R.string.work_play_guitar_v2)
+                binding.textViewWorkPlayGuitar.text = getString(R.string.work_play_guitar_v2)
             is YardGuitarCourseState ->
-                binding.workPlayGuitar.text = getString(R.string.work_play_guitar_v1)
+                binding.textViewWorkPlayGuitar.text = getString(R.string.work_play_guitar_v1)
             else ->
-                binding.workPlayGuitar.text = getString(R.string.work_play_guitar_v0)
+                binding.textViewWorkPlayGuitar.text = getString(R.string.work_play_guitar_v0)
         }
         when(Game.player.current_courses.computer_course){
             is GameDevelopmentCourseState ->
-                binding.workOnTheNet.text = getString(R.string.work_on_the_net_v5)
+                binding.textViewWorkOnTheNet.text = getString(R.string.work_on_the_net_v5)
             is VideoEditingCourseState ->
-                binding.workOnTheNet.text = getString(R.string.work_on_the_net_v4)
+                binding.textViewWorkOnTheNet.text = getString(R.string.work_on_the_net_v4)
             is WebDesignCourseState ->
-                binding.workOnTheNet.text = getString(R.string.work_on_the_net_v3)
+                binding.textViewWorkOnTheNet.text = getString(R.string.work_on_the_net_v3)
             is OnlineWorkCourseState ->
-                binding.workOnTheNet.text = getString(R.string.work_on_the_net_v2)
+                binding.textViewWorkOnTheNet.text = getString(R.string.work_on_the_net_v2)
             is FriendsCourseState ->
-                binding.workOnTheNet.text = getString(R.string.work_on_the_net_v1)
+                binding.textViewWorkOnTheNet.text = getString(R.string.work_on_the_net_v1)
             else ->
-                binding.workOnTheNet.text = getString(R.string.work_on_the_net_v0)
+                binding.textViewWorkOnTheNet.text = getString(R.string.work_on_the_net_v0)
         }
     }
 }

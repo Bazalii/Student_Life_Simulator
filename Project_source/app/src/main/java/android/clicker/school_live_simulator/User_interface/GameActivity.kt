@@ -50,6 +50,12 @@ class GameActivity : AppCompatActivity() {
         handler.postDelayed(runnable, delay)
     }
 
+    override fun onPause() {
+        super.onPause()
+        handler.removeCallbacks(runnable)
+    }
+
+
     /**
      * Andrey:
      * I think, this function is useful, but you can suggest another implementation

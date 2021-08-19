@@ -30,7 +30,7 @@ class FoodScrollingFragment : Fragment() {
                 Game.player.eat(Food.CRACKERS)
                 (activity as GameActivity).updateStats()
             } catch (exception: NotEnoughMoneyException){
-                binding.foodEatCrackers.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
+                binding.layoutFoodEatCrackers.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
             }
         }
 
@@ -39,7 +39,7 @@ class FoodScrollingFragment : Fragment() {
                 Game.player.eat(Food.DOSHIRAK)
                 (activity as GameActivity).updateStats()
             } catch (exception: NotEnoughMoneyException){
-                binding.foodEatDoshirack.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
+                binding.layoutFoodEatDoshirack.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
             }
 
         }
@@ -49,7 +49,7 @@ class FoodScrollingFragment : Fragment() {
                 Game.player.eat(Food.EATERY_FOOD)
                 (activity as GameActivity).updateStats()
             } catch (exception: NotEnoughMoneyException){
-                binding.foodEatAtTheCanteen.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
+                binding.layoutFoodEatAtTheCanteen.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
             }
         }
 
@@ -58,7 +58,7 @@ class FoodScrollingFragment : Fragment() {
                 Game.player.eat(Food.MCDONALDS)
                 (activity as GameActivity).updateStats()
             } catch (exception: NotEnoughMoneyException){
-                binding.foodEatAtMcdonalds.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
+                binding.layoutFoodEatAtMcdonalds.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
             }
         }
 
@@ -67,7 +67,7 @@ class FoodScrollingFragment : Fragment() {
                 Game.player.eat(Food.PIZZA_AT_HOME)
                 (activity as GameActivity).updateStats()
             } catch (exception: NotEnoughMoneyException){
-                binding.foodOrderDelivery.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
+                binding.layoutFoodOrderDelivery.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
             }
         }
 
@@ -76,7 +76,7 @@ class FoodScrollingFragment : Fragment() {
                 Game.player.eat(Food.RESTORANT_FOOD)
                 (activity as GameActivity).updateStats()
             } catch (exception: NotEnoughMoneyException){
-                binding.foodGoToTheRestaurant.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
+                binding.layoutFoodGoToTheRestaurant.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
             }
         }
 
