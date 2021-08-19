@@ -16,7 +16,7 @@ object Game {
 
     var player: Player = Player()
 //    game: Game
-    lateinit var game_date: GameDate
+    var game_date: GameDate = GameDate()
 //    lateinit var game_status: GameStatus
     var context_bundle: ContextBundle = ContextBundle()
 
@@ -25,6 +25,7 @@ object Game {
     }
     fun tick() {
         this.player.tick()
+        this.game_date.tick()
     }
 
     fun checkDefeat(school_performance: Int, happiness: Int, satiety: Int) {

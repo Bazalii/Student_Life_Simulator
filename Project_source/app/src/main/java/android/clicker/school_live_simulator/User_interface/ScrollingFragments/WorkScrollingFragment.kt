@@ -11,6 +11,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.view.animation.AnimationUtils
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 
 class WorkScrollingFragment : Fragment() {
@@ -64,7 +65,8 @@ class WorkScrollingFragment : Fragment() {
             try {
                 Game.player.playSong()
             } catch(exception: IsNotAvailableException) {
-                binding.layoutWorkAsACourier.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
+                Toast.makeText(activity, "Course is not passed yet", Toast.LENGTH_SHORT).show()
+                binding.layoutWorkPlayGuitar.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
             }
             (activity as GameActivity).updateStats()
         }
@@ -73,7 +75,8 @@ class WorkScrollingFragment : Fragment() {
             try {
                 Game.player.realiseWebTask()
             } catch(exception: IsNotAvailableException) {
-                binding.layoutWorkAsACourier.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
+                Toast.makeText(activity, "Course is not passed yet", Toast.LENGTH_SHORT).show()
+                binding.layoutWorkOnTheNet.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
             }
             (activity as GameActivity).updateStats()
         }

@@ -1,9 +1,11 @@
 package android.clicker.school_live_simulator
 
+import android.util.Log
+
 open class YardGuitarCourseState: NullGuitarCourseState() {
     override val price: Int = 0
 
-    override var best_song: Song? = null
+    override val course_length: Int = 30
 
     override fun buyNextCourse(courses: Player.Courses) {
         courses.guitar_course = FirstSongCourseState()
@@ -15,5 +17,6 @@ open class YardGuitarCourseState: NullGuitarCourseState() {
 
     override fun timerEndHandler() {
         this.best_song = Song.SINGLE_CHORD
+        Log.d("MyLog", Game.player.current_courses.guitar_course.BestSong().toString())
     }
 }

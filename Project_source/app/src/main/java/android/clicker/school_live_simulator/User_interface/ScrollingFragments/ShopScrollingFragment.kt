@@ -1,6 +1,7 @@
 package android.clicker.school_live_simulator.User_interface.ScrollingFragments
 
 import android.clicker.school_live_simulator.*
+import android.clicker.school_live_simulator.Classes.GameDate.Timer
 import android.clicker.school_live_simulator.Classes.IsNotAvailableException
 import android.clicker.school_live_simulator.Classes.NotEnoughMoneyException
 import android.clicker.school_live_simulator.R.attr.selectableItemBackground
@@ -127,6 +128,7 @@ class ShopScrollingFragment : Fragment() {
             try {
                 Game.player.buyNextGuitarCourse(YardGuitarCourseState::class)
                 updateUI()
+                Timer(Game.player.current_courses.guitar_course.course_length).setEndSignalHandler(Game.player.current_courses.guitar_course::timerEndHandler)
             } catch(exception: NotEnoughMoneyException){
                 binding.layoutShopGuitarCourseV1.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
             } catch(exception: IsNotAvailableException){
@@ -140,6 +142,7 @@ class ShopScrollingFragment : Fragment() {
                 try {
                     Game.player.buyNextGuitarCourse(FirstSongCourseState::class)
                     updateUI()
+                    Timer(Game.player.current_courses.guitar_course.course_length).setEndSignalHandler(Game.player.current_courses.guitar_course::timerEndHandler)
                 } catch(exception: NotEnoughMoneyException){
                     binding.layoutShopGuitarCourseV2.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
                 } catch(exception: IsNotAvailableException){
@@ -158,6 +161,7 @@ class ShopScrollingFragment : Fragment() {
                 try {
                     Game.player.buyNextGuitarCourse(YardSongCourseState::class)
                     updateUI()
+                    Timer(Game.player.current_courses.guitar_course.course_length).setEndSignalHandler(Game.player.current_courses.guitar_course::timerEndHandler)
                 } catch(exception: NotEnoughMoneyException){
                     binding.layoutShopGuitarCourseV3.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
                 } catch(exception: IsNotAvailableException){
@@ -176,6 +180,7 @@ class ShopScrollingFragment : Fragment() {
                 try {
                     Game.player.buyNextGuitarCourse(MusicalSchoolCourseState::class)
                     updateUI()
+                    Timer(Game.player.current_courses.guitar_course.course_length).setEndSignalHandler(Game.player.current_courses.guitar_course::timerEndHandler)
                 } catch(exception: NotEnoughMoneyException){
                     binding.layoutShopGuitarCourseV4.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
                 } catch(exception: IsNotAvailableException){
@@ -194,6 +199,7 @@ class ShopScrollingFragment : Fragment() {
                 try {
                     Game.player.buyNextGuitarCourse(MusicalObservatoryCourseState::class)
                     updateUI()
+                    Timer(Game.player.current_courses.guitar_course.course_length).setEndSignalHandler(Game.player.current_courses.guitar_course::timerEndHandler)
                 } catch(exception: NotEnoughMoneyException){
                     binding.layoutShopGuitarCourseV5.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
                 } catch(exception: IsNotAvailableException){
@@ -216,6 +222,7 @@ class ShopScrollingFragment : Fragment() {
             try {
                 Game.player.buyNextComputerCourse(FriendsCourseState::class)
                 updateUI()
+                Timer(Game.player.current_courses.computer_course.course_length).setEndSignalHandler(Game.player.current_courses.computer_course::timerEndHandler)
             } catch(exception: NotEnoughMoneyException){
                 binding.layoutShopComputerCourseV1.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
             } catch(exception: IsNotAvailableException){
@@ -229,6 +236,7 @@ class ShopScrollingFragment : Fragment() {
                 try {
                     Game.player.buyNextComputerCourse(OnlineWorkCourseState::class)
                     updateUI()
+                    Timer(Game.player.current_courses.computer_course.course_length).setEndSignalHandler(Game.player.current_courses.computer_course::timerEndHandler)
                 } catch(exception: NotEnoughMoneyException){
                     binding.layoutShopComputerCourseV2.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
                 } catch(exception: IsNotAvailableException){
@@ -247,6 +255,7 @@ class ShopScrollingFragment : Fragment() {
                 try {
                     Game.player.buyNextComputerCourse(WebDesignCourseState::class)
                     updateUI()
+                    Timer(Game.player.current_courses.computer_course.course_length).setEndSignalHandler(Game.player.current_courses.computer_course::timerEndHandler)
                 } catch(exception: NotEnoughMoneyException){
                     binding.layoutShopComputerCourseV3.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
                 } catch(exception: IsNotAvailableException){
@@ -265,6 +274,7 @@ class ShopScrollingFragment : Fragment() {
                 try {
                     Game.player.buyNextComputerCourse(VideoEditingCourseState::class)
                     updateUI()
+                    Timer(Game.player.current_courses.computer_course.course_length).setEndSignalHandler(Game.player.current_courses.computer_course::timerEndHandler)
                 } catch(exception: NotEnoughMoneyException){
                     binding.layoutShopComputerCourseV4.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
                 } catch(exception: IsNotAvailableException){
@@ -283,6 +293,7 @@ class ShopScrollingFragment : Fragment() {
                 try {
                     Game.player.buyNextComputerCourse(GameDevelopmentCourseState::class)
                     updateUI()
+                    Timer(Game.player.current_courses.computer_course.course_length).setEndSignalHandler(Game.player.current_courses.computer_course::timerEndHandler)
                 } catch(exception: NotEnoughMoneyException){
                     binding.layoutShopComputerCourseV5.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
                 } catch(exception: IsNotAvailableException){

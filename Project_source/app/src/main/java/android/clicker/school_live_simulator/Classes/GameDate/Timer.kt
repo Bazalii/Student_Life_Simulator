@@ -18,13 +18,14 @@ class Timer(private var days: Int): TimeObservable {
      */
     private lateinit var end_signal_handler: KFunction<Any>
 
+
     /**
      *
      */
     fun tick() {
         this.days -= 1
         if (this.days == 0) {
-            this.end_signal_handler
+            this.end_signal_handler.call()
             Game.game_date.removeTimer(this)
         }
     }

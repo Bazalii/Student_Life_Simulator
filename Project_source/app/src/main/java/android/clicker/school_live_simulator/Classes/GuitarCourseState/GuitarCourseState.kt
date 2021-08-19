@@ -6,7 +6,7 @@ abstract class GuitarCourseState: StudyCourseState() {
     /**
      * List of all available songs to play
      */
-    protected open val best_song: Song? = null
+    protected open var best_song: Song? = null
 
     /**
      * Function checks if the song is available to play

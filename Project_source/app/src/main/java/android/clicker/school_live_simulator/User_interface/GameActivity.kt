@@ -18,7 +18,7 @@ class GameActivity : AppCompatActivity() {
      */
     private lateinit var runnable: Runnable
     private var handler = Handler(Looper.getMainLooper())
-    private val delay: Long = 3000
+    private val delay: Long = 500
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -69,7 +69,7 @@ class GameActivity : AppCompatActivity() {
          * Think, how to write these in TextView
          */
         binding.moneyTextView.text = Game.player.money.toString()
-        //binding.dateTextView
+        binding.dateTextView.text = Game.game_date.toString()
     }
 
     fun bottomNavigationClick() {

@@ -24,11 +24,12 @@ data class GameDate(private var day: Int = 1, private var month: Months = Months
     fun tick() {
         if (this.day + 1 > this.month.days) {
             this.day = 1
-            this.month = enumValues<Months>()[(enumValues<Months>().indexOf(this.month) + 1) % 12]
-            if (this.month == Months.December) {
+            if (this.month == Months.December)
                 this.year += 1
-            }
+            this.month = enumValues<Months>()[(enumValues<Months>().indexOf(this.month) + 1) % 12]
         }
+        else
+            this.day += 1
         for (timer: Timer in timers)
             timer.tick()
         for (alarm_clock: AlarmClock in alarm_clocks)
@@ -41,7 +42,7 @@ data class GameDate(private var day: Int = 1, private var month: Months = Months
      * @return      date string
      */
     override fun toString(): String {
-        return "$day $month $year"
+        return "${this.day} ${this.month} ${this.year}"
     }
 
     /**

@@ -5,7 +5,7 @@ import android.clicker.school_live_simulator.Game
 import android.text.TextUtils.indexOf
 import kotlin.reflect.KFunction
 
-class AlarmClock(private var day: Int, private var month: Months, private var year: Int): TimeObservable {
+class AlarmClock(private var day: Int, private var month: Months, private var year: Int, private var end_signal_handler: KFunction<Any>): TimeObservable {
     init {
         Game.game_date.registerAlarmClock(this)
     }
@@ -17,7 +17,7 @@ class AlarmClock(private var day: Int, private var month: Months, private var ye
     /**
      * Handler function of end timer signal
      */
-    private lateinit var end_signal_handler: KFunction<Any>
+
 
     /**
      * Delay before ticks
@@ -45,7 +45,7 @@ class AlarmClock(private var day: Int, private var month: Months, private var ye
 
     fun tick() {
         if (this.toString() == Game.game_date.toString()) {
-            this.end_signal_handler
+            this.end_signal_handler.call()
             Game.game_date.removeAlarmClock(this)
         }
     }
