@@ -1,6 +1,7 @@
 package android.clicker.school_live_simulator.User_interface.ScrollingFragments
 
 import android.clicker.school_live_simulator.Classes.Enum_classes.Studies
+import android.clicker.school_live_simulator.Classes.GameDate.Timer
 import android.clicker.school_live_simulator.Classes.NotEnoughMoneyException
 import android.clicker.school_live_simulator.Game
 import android.clicker.school_live_simulator.R
@@ -27,8 +28,8 @@ class SchoolScrollingFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         binding.schoolGoToSchool.setOnClickListener{
             try {
-                Game.player.study(Studies.GO_TO_SCHOOL)
                 (activity as GameActivity).updateStats()
+                Timer(Game.game_date.subscription_length).setEndSignalHandler(Studies.GO_TO_SCHOOL::goToSchool)
             } catch (exception: NotEnoughMoneyException){
                 binding.layoutSchoolGoToSchool.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
             }
@@ -72,8 +73,8 @@ class SchoolScrollingFragment : Fragment() {
 
         binding.schoolSignUpInAnOnlineSchool.setOnClickListener{
             try {
-                Game.player.study(Studies.SIGN_UP_IN_AN_ONLINE_SCHOOL)
                 (activity as GameActivity).updateStats()
+                Timer(Game.game_date.subscription_length).setEndSignalHandler(Studies.SIGN_UP_IN_AN_ONLINE_SCHOOL::signUpInOnlineSchool)
             } catch (exception: NotEnoughMoneyException){
                 binding.layoutSchoolSignUpInAnOnlineSchool.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
             }

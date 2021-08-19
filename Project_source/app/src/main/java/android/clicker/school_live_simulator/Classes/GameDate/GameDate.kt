@@ -3,6 +3,8 @@ package android.clicker.school_live_simulator.Classes.GameDate
 import android.clicker.school_live_simulator.Classes.Enum_classes.Months
 
 data class GameDate(private var day: Int = 1, private var month: Months = Months.September, private var year: Int = 2009) {
+    public val subscription_length: Int = 30
+
     /**
      * List of all current game timers
      */

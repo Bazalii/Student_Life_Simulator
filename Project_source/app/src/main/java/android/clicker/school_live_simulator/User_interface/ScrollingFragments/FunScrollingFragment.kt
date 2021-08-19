@@ -1,6 +1,7 @@
 package android.clicker.school_live_simulator.User_interface.ScrollingFragments
 
 import android.clicker.school_live_simulator.Classes.Enum_classes.Entertainment
+import android.clicker.school_live_simulator.Classes.GameDate.Timer
 import android.clicker.school_live_simulator.Classes.NotEnoughMoneyException
 import android.clicker.school_live_simulator.Game
 import android.clicker.school_live_simulator.R
@@ -173,8 +174,8 @@ class FunScrollingFragment : Fragment() {
 
         binding.funMakeAYoutubeVideo.setOnClickListener{
             try {
-                Game.player.entertain(Entertainment.MAKE_A_YOUTUBE_VIDEO)
                 (activity as GameActivity).updateStats()
+                Timer(Game.game_date.subscription_length).setEndSignalHandler(Entertainment.MAKE_A_YOUTUBE_VIDEO::makeYouTubeVideo)
             } catch (exception: NotEnoughMoneyException){
                 binding.funMakeAYoutubeVideo.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
             }
@@ -200,8 +201,8 @@ class FunScrollingFragment : Fragment() {
 
         binding.funListenToTheMusic.setOnClickListener{
             try {
-                Game.player.entertain(Entertainment.LISTEN_TO_THE_MUSIC)
                 (activity as GameActivity).updateStats()
+                Timer(Game.game_date.subscription_length).setEndSignalHandler(Entertainment.LISTEN_TO_THE_MUSIC::listenToTheMusic)
             } catch (exception: NotEnoughMoneyException){
                 binding.layoutFunListenToTheMusic.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
             }
@@ -254,8 +255,8 @@ class FunScrollingFragment : Fragment() {
 
         binding.funDoSport.setOnClickListener{
             try {
-                Game.player.entertain(Entertainment.DO_SPORT)
                 (activity as GameActivity).updateStats()
+                Timer(Game.game_date.subscription_length).setEndSignalHandler(Entertainment.DO_SPORT::doSport)
             } catch (exception: NotEnoughMoneyException){
                 binding.layoutFunDoSport.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
             }
