@@ -9,6 +9,8 @@ import android.clicker.school_live_simulator.databinding.FragmentFunScrollingBin
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
+import android.view.View.GONE
+import android.view.View.VISIBLE
 import android.view.ViewGroup
 import android.view.animation.AnimationUtils
 import androidx.fragment.app.Fragment
@@ -25,6 +27,64 @@ class FunScrollingFragment : Fragment() {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+
+        binding.funNeutralActions.setOnClickListener {
+            if(binding.layoutFunDoNothing.visibility == GONE){
+                binding.layoutFunDoNothing.visibility = VISIBLE
+                binding.layoutFunGoCycling.visibility = VISIBLE
+                binding.layoutFunListenToTheMusic.visibility = VISIBLE
+                binding.layoutFunDonateAndPlayComputer.visibility = VISIBLE
+                binding.layoutFunGoToTheShoppingMall.visibility = VISIBLE
+                binding.layoutFunWalkWithYourGirlfriend.visibility = VISIBLE
+            }
+            else{
+                binding.layoutFunDoNothing.visibility = GONE
+                binding.layoutFunGoCycling.visibility = GONE
+                binding.layoutFunListenToTheMusic.visibility = GONE
+                binding.layoutFunDonateAndPlayComputer.visibility = GONE
+                binding.layoutFunGoToTheShoppingMall.visibility = GONE
+                binding.layoutFunWalkWithYourGirlfriend.visibility = GONE
+            }
+        }
+
+        binding.funGoodActions.setOnClickListener {
+            if(binding.layoutFunReadABook.visibility == GONE){
+                binding.layoutFunReadABook.visibility = VISIBLE
+                binding.layoutFunHelpYoungstersWithHomework.visibility = VISIBLE
+                binding.layoutFunDoSport.visibility = VISIBLE
+                binding.layoutFunPlayGuitar.visibility = VISIBLE
+                binding.layoutFunGoToTheTheatre.visibility = VISIBLE
+                binding.layoutFunGoToTheConcert.visibility = VISIBLE
+            }
+            else{
+                binding.layoutFunReadABook.visibility = GONE
+                binding.layoutFunHelpYoungstersWithHomework.visibility = GONE
+                binding.layoutFunDoSport.visibility = GONE
+                binding.layoutFunPlayGuitar.visibility = GONE
+                binding.layoutFunGoToTheTheatre.visibility = GONE
+                binding.layoutFunGoToTheConcert.visibility = GONE
+            }
+        }
+
+        binding.funBadActions.setOnClickListener {
+            if(binding.layoutFunKickATrashCan.visibility == GONE){
+                binding.layoutFunKickATrashCan.visibility = VISIBLE
+                binding.layoutFunIntimidateYoungsters.visibility = VISIBLE
+                binding.layoutFunUploadVirus.visibility = VISIBLE
+                binding.layoutFunUseChatRoulette.visibility = VISIBLE
+                binding.layoutFunHaveAParty.visibility = VISIBLE
+                binding.layoutFunGoToTheClub.visibility = VISIBLE
+            }
+            else{
+                binding.layoutFunKickATrashCan.visibility = GONE
+                binding.layoutFunIntimidateYoungsters.visibility = GONE
+                binding.layoutFunUploadVirus.visibility = GONE
+                binding.layoutFunUseChatRoulette.visibility = GONE
+                binding.layoutFunHaveAParty.visibility = GONE
+                binding.layoutFunGoToTheClub.visibility = GONE
+            }
+        }
+
         binding.funDrawOnDesks.setOnClickListener{
             try {
                 Game.player.entertain(Entertainment.DRAW_ON_DESK)
@@ -103,7 +163,7 @@ class FunScrollingFragment : Fragment() {
                 Game.player.entertain(Entertainment.DO_NOTHING)
                 (activity as GameActivity).updateStats()
             } catch (exception: NotEnoughMoneyException){
-                binding.funDoNothing.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
+                binding.layoutFunDoNothing.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
             }
         }
 
@@ -112,7 +172,7 @@ class FunScrollingFragment : Fragment() {
                 Game.player.entertain(Entertainment.GO_CYCLING)
                 (activity as GameActivity).updateStats()
             } catch (exception: NotEnoughMoneyException){
-                binding.funGoCycling.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
+                binding.layoutFunGoCycling.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
             }
         }
 
@@ -121,7 +181,7 @@ class FunScrollingFragment : Fragment() {
                 Game.player.entertain(Entertainment.LISTEN_TO_THE_MUSIC)
                 (activity as GameActivity).updateStats()
             } catch (exception: NotEnoughMoneyException){
-                binding.funListenToTheMusic.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
+                binding.layoutFunListenToTheMusic.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
             }
         }
 
@@ -130,7 +190,7 @@ class FunScrollingFragment : Fragment() {
                 Game.player.entertain(Entertainment.DONATE_AND_PLAY_COMPUTER)
                 (activity as GameActivity).updateStats()
             } catch (exception: NotEnoughMoneyException){
-                binding.funDonateAndPlayComputer.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
+                binding.layoutFunDonateAndPlayComputer.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
             }
         }
 
@@ -139,7 +199,7 @@ class FunScrollingFragment : Fragment() {
                 Game.player.entertain(Entertainment.GO_TO_THE_SHOPPING_MALL)
                 (activity as GameActivity).updateStats()
             } catch (exception: NotEnoughMoneyException){
-                binding.funGoToTheShoppingMall.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
+                binding.layoutFunGoToTheShoppingMall.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
             }
         }
 
@@ -148,7 +208,7 @@ class FunScrollingFragment : Fragment() {
                 Game.player.entertain(Entertainment.WALK_WITH_YOUR_GIRLFRIEND)
                 (activity as GameActivity).updateStats()
             } catch (exception: NotEnoughMoneyException){
-                binding.funWalkWithYourGirlfriend.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
+                binding.layoutFunWalkWithYourGirlfriend.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
             }
         }
 
@@ -157,7 +217,7 @@ class FunScrollingFragment : Fragment() {
                 Game.player.entertain(Entertainment.READ_A_BOOK)
                 (activity as GameActivity).updateStats()
             } catch (exception: NotEnoughMoneyException){
-                binding.funReadABook.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
+                binding.layoutFunReadABook.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
             }
         }
 
@@ -166,7 +226,7 @@ class FunScrollingFragment : Fragment() {
                 Game.player.entertain(Entertainment.HELP_YOUNGSTERS_WITH_HOMEWORK)
                 (activity as GameActivity).updateStats()
             } catch (exception: NotEnoughMoneyException){
-                binding.funHelpYoungstersWithHomework.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
+                binding.layoutFunHelpYoungstersWithHomework.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
             }
         }
 
@@ -175,7 +235,7 @@ class FunScrollingFragment : Fragment() {
                 Game.player.entertain(Entertainment.DO_SPORT)
                 (activity as GameActivity).updateStats()
             } catch (exception: NotEnoughMoneyException){
-                binding.funDoSport.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
+                binding.layoutFunDoSport.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
             }
         }
 
@@ -184,7 +244,7 @@ class FunScrollingFragment : Fragment() {
                 Game.player.entertain(Entertainment.PLAY_GUITAR)
                 (activity as GameActivity).updateStats()
             } catch (exception: NotEnoughMoneyException){
-                binding.funPlayGuitar.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
+                binding.layoutFunPlayGuitar.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
             }
         }
 
@@ -193,7 +253,7 @@ class FunScrollingFragment : Fragment() {
                 Game.player.entertain(Entertainment.GO_TO_THE_THEATRE)
                 (activity as GameActivity).updateStats()
             } catch (exception: NotEnoughMoneyException){
-                binding.funGoToTheTheatre.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
+                binding.layoutFunGoToTheTheatre.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
             }
         }
 
@@ -202,7 +262,7 @@ class FunScrollingFragment : Fragment() {
                 Game.player.entertain(Entertainment.GO_TO_THE_CONCERT)
                 (activity as GameActivity).updateStats()
             } catch (exception: NotEnoughMoneyException){
-                binding.funGoToTheConcert.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
+                binding.layoutFunGoToTheConcert.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
             }
         }
 
@@ -211,7 +271,7 @@ class FunScrollingFragment : Fragment() {
                 Game.player.entertain(Entertainment.KICK_A_TRASH_CAN)
                 (activity as GameActivity).updateStats()
             } catch (exception: NotEnoughMoneyException){
-                binding.funKickATrashCan.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
+                binding.layoutFunKickATrashCan.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
             }
         }
 
@@ -220,7 +280,7 @@ class FunScrollingFragment : Fragment() {
                 Game.player.entertain(Entertainment.INTIMIDATE_YOUNGSTERS)
                 (activity as GameActivity).updateStats()
             } catch (exception: NotEnoughMoneyException){
-                binding.funIntimidateYoungsters.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
+                binding.layoutFunIntimidateYoungsters.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
             }
         }
 
@@ -229,7 +289,7 @@ class FunScrollingFragment : Fragment() {
                 Game.player.entertain(Entertainment.UPLOAD_VIRUS)
                 (activity as GameActivity).updateStats()
             } catch (exception: NotEnoughMoneyException){
-                binding.funUploadVirus.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
+                binding.layoutFunUploadVirus.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
             }
         }
 
@@ -238,7 +298,7 @@ class FunScrollingFragment : Fragment() {
                 Game.player.entertain(Entertainment.USE_CHAT_ROULETTE)
                 (activity as GameActivity).updateStats()
             } catch (exception: NotEnoughMoneyException){
-                binding.funUseChatRoulette.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
+                binding.layoutFunUseChatRoulette.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
             }
         }
 
@@ -247,7 +307,7 @@ class FunScrollingFragment : Fragment() {
                 Game.player.entertain(Entertainment.HAVE_A_PARTY)
                 (activity as GameActivity).updateStats()
             } catch (exception: NotEnoughMoneyException){
-                binding.funHaveAParty.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
+                binding.layoutFunHaveAParty.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
             }
         }
 
@@ -256,7 +316,7 @@ class FunScrollingFragment : Fragment() {
                 Game.player.entertain(Entertainment.GO_TO_THE_CLUB)
                 (activity as GameActivity).updateStats()
             } catch (exception: NotEnoughMoneyException){
-                binding.funGoToTheClub.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
+                binding.layoutFunGoToTheClub.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
             }
         }
 
