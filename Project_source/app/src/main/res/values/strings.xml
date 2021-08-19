@@ -96,6 +96,26 @@
     <string name="work_on_the_net_v5">Work as a GameDev</string>
 
 
+    Work stats:
+    <string name="work_collect_change_income">+10</string>
+    <string name="work_watch_ads_income">+100</string>
+    <string name="work_distribute_flyers_income">+200</string>
+    <string name="work_as_a_greener_income">+500</string>
+    <string name="work_as_a_courier_v1_income">+100</string>
+    <string name="work_as_a_courier_v2_income">+500</string>
+    <string name="work_as_a_courier_v3_income">+5000</string>
+    <string name="work_as_an_operator_income">+1000</string>
+    <string name="work_play_guitar_v1_income">+100</string>
+    <string name="work_play_guitar_v2_income">+500</string>
+    <string name="work_play_guitar_v3_income">+1000</string>
+    <string name="work_play_guitar_v4_income">+2500</string>
+    <string name="work_play_guitar_v5_income">+5000</string>
+    <string name="work_on_the_net_v1_income">+100</string>
+    <string name="work_on_the_net_v2_income">+500</string>
+    <string name="work_on_the_net_v3_income">+2000</string>
+    <string name="work_on_the_net_v4_income">+5000</string>
+    <string name="work_on_the_net_v5_income">+15000</string>
+
     Entertainment folder:
     <string name="fun_draw_on_desks">Draw on desks</string>
     <string name="fun_draw_graffities">Draw graffities in school toilets</string>
@@ -161,6 +181,37 @@
     <string name="shop_usual_computer">Usual computer</string>
     <string name="shop_xiaomi_computer">Xiaomi Mi Notebook</string>
     <string name="shop_macbook_computer">Apple Macbook</string>
+
+
+    Shop stats:
+    <string name="shop_ussr_bicycle_price">-2000</string>
+    <string name="shop_usual_bicycle_price">-10000</string>
+    <string name="shop_mountain_bicycle_price">-40000</string>
+
+    <string name="shop_ussr_guitar_price">-1000</string>
+    <string name="shop_ural_guitar_price">-5000</string>
+    <string name="shop_yamaha_guitar_price">-12000</string>
+    <string name="shop_fender_guitar_price">-40000</string>
+    <string name="shop_double_neck_guitar_price">-150000</string>
+
+    <string name="shop_previously_used_computer_price">-3000</string>
+    <string name="shop_old_computer_price">-10000</string>
+    <string name="shop_usual_computer_price">-30000</string>
+    <string name="shop_xiaomi_computer_price">-60000</string>
+    <string name="shop_macbook_computer_price">-200000</string>
+
+    <string name="shop_computer_course_v1_price">-0</string>
+    <string name="shop_computer_course_v2_price">-100</string>
+    <string name="shop_computer_course_v3_price">-300</string>
+    <string name="shop_computer_course_v4_price">-900</string>
+    <string name="shop_computer_course_v5_price">-2700</string>
+
+    <string name="shop_guitar_course_v1_price">-0</string>
+    <string name="shop_guitar_course_v2_price">-100</string>
+    <string name="shop_guitar_course_v3_price">-300</string>
+    <string name="shop_guitar_course_v4_price">-900</string>
+    <string name="shop_guitar_course_v5_price">-2700</string>
+
 
 
 </resources>

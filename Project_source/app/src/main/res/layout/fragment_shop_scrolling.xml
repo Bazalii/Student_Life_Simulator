@@ -17,6 +17,7 @@
             android:id="@+id/shopGuitarCourses"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:drawableEnd="@drawable/ic_drop_down_up"
             android:text="@string/shop_guitar_course" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -26,6 +27,14 @@
             android:layout_marginStart="30dp"
             android:background="@color/design_default_color_error"
             android:visibility="gone">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline28"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.67"
+                app:layout_constraintStart_toStartOf="parent" />
 
             <Button
                 android:id="@+id/shopGuitarCourseV1"
@@ -53,13 +62,12 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="4dp"
-                android:layout_marginEnd="4dp"
                 android:text="@string/shop_guitar_course_v1"
                 android:textColor="@color/black"
                 android:textSize="16sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/imageViewGuitarCourseV1Money"
+                app:layout_constraintEnd_toStartOf="@+id/guideline28"
                 app:layout_constraintStart_toEndOf="@+id/imageViewGuitarCourseV1Icon"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -67,9 +75,9 @@
                 android:id="@+id/imageViewGuitarCourseV1Money"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="4dp"
+                android:layout_marginStart="4dp"
                 app:layout_constraintBottom_toBottomOf="@+id/shopGuitarCourseV1"
-                app:layout_constraintEnd_toStartOf="@+id/textViewGuitarCourseV1price"
+                app:layout_constraintStart_toStartOf="@+id/guideline28"
                 app:layout_constraintTop_toTopOf="@+id/shopGuitarCourseV1"
                 app:srcCompat="@drawable/ic_lock" />
 
@@ -78,7 +86,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="16dp"
-                android:text="1000"
+                android:text="@string/shop_guitar_course_v1_price"
                 android:textColor="@color/black"
                 android:textSize="16sp"
                 android:textStyle="bold"
@@ -96,6 +104,14 @@
             android:layout_marginStart="30dp"
             android:background="@color/design_default_color_error"
             android:visibility="gone">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline27"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.67"
+                app:layout_constraintStart_toStartOf="parent" />
 
             <Button
                 android:id="@+id/shopGuitarCourseV2"
@@ -123,13 +139,12 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="4dp"
-                android:layout_marginEnd="4dp"
                 android:text="@string/shop_guitar_course_v2"
                 android:textColor="@color/black"
                 android:textSize="16sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/imageViewGuitarCourseV2Money"
+                app:layout_constraintEnd_toStartOf="@+id/guideline27"
                 app:layout_constraintStart_toEndOf="@+id/imageViewGuitarCourseV2Icon"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -137,9 +152,9 @@
                 android:id="@+id/imageViewGuitarCourseV2Money"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="4dp"
+                android:layout_marginStart="4dp"
                 app:layout_constraintBottom_toBottomOf="@+id/shopGuitarCourseV2"
-                app:layout_constraintEnd_toStartOf="@+id/textViewGuitarCourseV2price"
+                app:layout_constraintStart_toStartOf="@+id/guideline27"
                 app:layout_constraintTop_toTopOf="@+id/shopGuitarCourseV2"
                 app:srcCompat="@drawable/ic_lock" />
 
@@ -148,7 +163,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="16dp"
-                android:text="1000"
+                android:text="@string/shop_guitar_course_v2_price"
                 android:textColor="@color/black"
                 android:textSize="16sp"
                 android:textStyle="bold"
@@ -166,6 +181,14 @@
             android:layout_marginStart="30dp"
             android:background="@color/design_default_color_error"
             android:visibility="gone">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline26"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.67"
+                app:layout_constraintStart_toStartOf="parent" />
 
             <Button
                 android:id="@+id/shopGuitarCourseV3"
@@ -193,13 +216,12 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="4dp"
-                android:layout_marginEnd="4dp"
                 android:text="@string/shop_guitar_course_v3"
                 android:textColor="@color/black"
                 android:textSize="16sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/imageViewGuitarCourseV3Money"
+                app:layout_constraintEnd_toStartOf="@+id/guideline26"
                 app:layout_constraintStart_toEndOf="@+id/imageViewGuitarCourseV3Icon"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -207,9 +229,9 @@
                 android:id="@+id/imageViewGuitarCourseV3Money"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="4dp"
+                android:layout_marginStart="4dp"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/textViewGuitarCourseV3price"
+                app:layout_constraintStart_toStartOf="@+id/guideline26"
                 app:layout_constraintTop_toTopOf="parent"
                 app:srcCompat="@drawable/ic_lock" />
 
@@ -218,7 +240,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="16dp"
-                android:text="1000"
+                android:text="@string/shop_guitar_course_v3_price"
                 android:textColor="@color/black"
                 android:textSize="16sp"
                 android:textStyle="bold"
@@ -237,6 +259,14 @@
             android:background="@color/design_default_color_error"
             android:visibility="gone">
 
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline25"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.671916"
+                app:layout_constraintStart_toStartOf="parent" />
+
             <Button
                 android:id="@+id/shopGuitarCourseV4"
                 android:layout_width="0dp"
@@ -245,8 +275,10 @@
                 android:insetTop="0dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
 
             <ImageView
                 android:id="@+id/imageViewGuitarCourseV4Icon"
@@ -263,13 +295,12 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="4dp"
-                android:layout_marginEnd="4dp"
                 android:text="@string/shop_guitar_course_v4"
                 android:textColor="@color/black"
                 android:textSize="16sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/imageViewGuitarCourseV4Money"
+                app:layout_constraintEnd_toStartOf="@+id/guideline25"
                 app:layout_constraintStart_toEndOf="@+id/imageViewGuitarCourseV4Icon"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -277,9 +308,9 @@
                 android:id="@+id/imageViewGuitarCourseV4Money"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="4dp"
+                android:layout_marginStart="4dp"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/textViewGuitarCourseV4price"
+                app:layout_constraintStart_toStartOf="@+id/guideline25"
                 app:layout_constraintTop_toTopOf="parent"
                 app:srcCompat="@drawable/ic_lock" />
 
@@ -288,7 +319,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="16dp"
-                android:text="1000"
+                android:text="@string/shop_guitar_course_v4_price"
                 android:textColor="@color/black"
                 android:textSize="16sp"
                 android:textStyle="bold"
@@ -305,6 +336,14 @@
             android:layout_marginStart="30dp"
             android:background="@color/design_default_color_error"
             android:visibility="gone">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline24"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.67"
+                app:layout_constraintStart_toStartOf="parent" />
 
             <Button
                 android:id="@+id/shopGuitarCourseV5"
@@ -332,13 +371,12 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="4dp"
-                android:layout_marginEnd="4dp"
                 android:text="@string/shop_guitar_course_v5"
                 android:textColor="@color/black"
                 android:textSize="16sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/imageViewGuitarCourseV5Money"
+                app:layout_constraintEnd_toStartOf="@+id/guideline24"
                 app:layout_constraintStart_toEndOf="@+id/imageViewGuitarCourseV5Icon"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -346,9 +384,9 @@
                 android:id="@+id/imageViewGuitarCourseV5Money"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="4dp"
+                android:layout_marginStart="4dp"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/textViewGuitarCourseV5price"
+                app:layout_constraintStart_toStartOf="@+id/guideline24"
                 app:layout_constraintTop_toTopOf="parent"
                 app:srcCompat="@drawable/ic_lock" />
 
@@ -357,7 +395,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="16dp"
-                android:text="1000"
+                android:text="@string/shop_guitar_course_v5_price"
                 android:textColor="@color/black"
                 android:textSize="16sp"
                 android:textStyle="bold"
@@ -372,6 +410,7 @@
             android:id="@+id/shopComputerCourses"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:drawableEnd="@drawable/ic_drop_down_up"
             android:text="@string/shop_computer_course" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -381,6 +420,14 @@
             android:layout_marginStart="30dp"
             android:background="@color/design_default_color_error"
             android:visibility="gone">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline19"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.67"
+                app:layout_constraintStart_toStartOf="parent" />
 
             <Button
                 android:id="@+id/shopComputerCourseV1"
@@ -408,13 +455,12 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="4dp"
-                android:layout_marginEnd="4dp"
                 android:text="@string/shop_computer_course_v1"
                 android:textColor="@color/black"
                 android:textSize="16sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/imageViewComputerCourseV1Money"
+                app:layout_constraintEnd_toStartOf="@+id/guideline19"
                 app:layout_constraintStart_toEndOf="@+id/imageViewComputerCourseV1Icon"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -422,9 +468,9 @@
                 android:id="@+id/imageViewComputerCourseV1Money"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="4dp"
+                android:layout_marginStart="4dp"
                 app:layout_constraintBottom_toBottomOf="@+id/shopGuitarCourseV1"
-                app:layout_constraintEnd_toStartOf="@+id/textViewComputerCourseV1price"
+                app:layout_constraintStart_toStartOf="@+id/guideline19"
                 app:layout_constraintTop_toTopOf="@+id/shopGuitarCourseV1"
                 app:srcCompat="@drawable/ic_lock" />
 
@@ -433,8 +479,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="22dp"
                 android:layout_marginRight="16dp"
-                android:text="1000"
-                android:textColor="@color/black"
+                android:text="@string/shop_computer_course_v1_price"
+                android:textColor="@color/design_default_color_error"
                 android:textSize="16sp"
                 android:textStyle="bold"
                 android:visibility="invisible"
@@ -451,6 +497,14 @@
             android:layout_marginStart="30dp"
             android:background="@color/design_default_color_error"
             android:visibility="gone">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline20"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.67"
+                app:layout_constraintStart_toStartOf="parent" />
 
             <Button
                 android:id="@+id/shopComputerCourseV2"
@@ -478,13 +532,12 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="4dp"
-                android:layout_marginEnd="4dp"
                 android:text="@string/shop_computer_course_v2"
                 android:textColor="@color/black"
                 android:textSize="16sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/imageViewComputerCourseV2Money"
+                app:layout_constraintEnd_toStartOf="@+id/guideline20"
                 app:layout_constraintStart_toEndOf="@+id/imageViewComputerCourseV2Icon"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -492,10 +545,10 @@
                 android:id="@+id/imageViewComputerCourseV2Money"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="4dp"
-                app:layout_constraintBottom_toBottomOf="@+id/shopGuitarCourseV2"
-                app:layout_constraintEnd_toStartOf="@+id/textViewComputerCourseV2price"
-                app:layout_constraintTop_toTopOf="@+id/shopGuitarCourseV1"
+                android:layout_marginStart="4dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/guideline20"
+                app:layout_constraintTop_toTopOf="parent"
                 app:srcCompat="@drawable/ic_lock" />
 
             <TextView
@@ -503,8 +556,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="16dp"
-                android:text="1000"
-                android:textColor="@color/black"
+                android:text="@string/shop_computer_course_v2_price"
+                android:textColor="@color/design_default_color_error"
                 android:textSize="16sp"
                 android:textStyle="bold"
                 android:visibility="invisible"
@@ -521,6 +574,14 @@
             android:layout_marginStart="30dp"
             android:background="@color/design_default_color_error"
             android:visibility="gone">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline21"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.67"
+                app:layout_constraintStart_toStartOf="parent" />
 
             <Button
                 android:id="@+id/shopComputerCourseV3"
@@ -548,13 +609,12 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="4dp"
-                android:layout_marginEnd="4dp"
                 android:text="@string/shop_computer_course_v3"
                 android:textColor="@color/black"
                 android:textSize="16sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/imageViewComputerCourseV3Money"
+                app:layout_constraintEnd_toStartOf="@+id/guideline21"
                 app:layout_constraintStart_toEndOf="@+id/imageViewComputerCourseV3Icon"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -562,9 +622,9 @@
                 android:id="@+id/imageViewComputerCourseV3Money"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="4dp"
+                android:layout_marginStart="4dp"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/textViewComputerCourseV3price"
+                app:layout_constraintStart_toStartOf="@+id/guideline21"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.0"
                 app:srcCompat="@drawable/ic_lock" />
@@ -574,8 +634,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="16dp"
-                android:text="1000"
-                android:textColor="@color/black"
+                android:text="@string/shop_computer_course_v3_price"
+                android:textColor="@color/design_default_color_error"
                 android:textSize="16sp"
                 android:textStyle="bold"
                 android:visibility="invisible"
@@ -592,6 +652,14 @@
             android:layout_marginStart="30dp"
             android:background="@color/design_default_color_error"
             android:visibility="gone">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline22"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.67"
+                app:layout_constraintStart_toStartOf="parent" />
 
             <Button
                 android:id="@+id/shopComputerCourseV4"
@@ -619,13 +687,12 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="4dp"
-                android:layout_marginEnd="4dp"
                 android:text="@string/shop_computer_course_v4"
                 android:textColor="@color/black"
                 android:textSize="16sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/imageViewComputerCourseV4Money"
+                app:layout_constraintEnd_toStartOf="@+id/guideline22"
                 app:layout_constraintStart_toEndOf="@+id/imageViewComputerCourseV4Icon"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -633,9 +700,9 @@
                 android:id="@+id/imageViewComputerCourseV4Money"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="4dp"
+                android:layout_marginStart="4dp"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/textViewComputerCourseV4price"
+                app:layout_constraintStart_toStartOf="@+id/guideline22"
                 app:layout_constraintTop_toTopOf="parent"
                 app:srcCompat="@drawable/ic_lock" />
 
@@ -644,8 +711,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="16dp"
-                android:text="1000"
-                android:textColor="@color/black"
+                android:text="@string/shop_computer_course_v4_price"
+                android:textColor="@color/design_default_color_error"
                 android:textSize="16sp"
                 android:textStyle="bold"
                 android:visibility="invisible"
@@ -662,6 +729,14 @@
             android:layout_marginStart="30dp"
             android:background="@color/design_default_color_error"
             android:visibility="gone">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline23"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.67"
+                app:layout_constraintStart_toStartOf="parent" />
 
             <Button
                 android:id="@+id/shopComputerCourseV5"
@@ -689,13 +764,12 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="4dp"
-                android:layout_marginEnd="4dp"
                 android:text="@string/shop_computer_course_v5"
                 android:textColor="@color/black"
                 android:textSize="16sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/imageViewComputerCourseV5Money"
+                app:layout_constraintEnd_toStartOf="@+id/guideline23"
                 app:layout_constraintStart_toEndOf="@+id/imageViewComputerCourseV5Icon"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -703,9 +777,9 @@
                 android:id="@+id/imageViewComputerCourseV5Money"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="4dp"
+                android:layout_marginStart="4dp"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/textViewComputerCourseV5price"
+                app:layout_constraintStart_toStartOf="@+id/guideline23"
                 app:layout_constraintTop_toTopOf="parent"
                 app:srcCompat="@drawable/ic_lock" />
 
@@ -714,8 +788,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="16dp"
-                android:text="1000"
-                android:textColor="@color/black"
+                android:text="@string/shop_computer_course_v5_price"
+                android:textColor="@color/design_default_color_error"
                 android:textSize="16sp"
                 android:textStyle="bold"
                 android:visibility="invisible"
@@ -729,6 +803,7 @@
             android:id="@+id/shopBicycles"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:drawableEnd="@drawable/ic_drop_down_up"
             android:text="@string/shop_bicycle" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -738,6 +813,14 @@
             android:layout_marginStart="30dp"
             android:background="@color/design_default_color_error"
             android:visibility="gone">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline18"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.67"
+                app:layout_constraintStart_toStartOf="parent" />
 
             <Button
                 android:id="@+id/shopUssrBicycle"
@@ -765,13 +848,12 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="4dp"
-                android:layout_marginEnd="4dp"
                 android:text="@string/shop_ussr_bicycle"
                 android:textColor="@color/black"
                 android:textSize="16sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/imageViewUssrBicycleMoney"
+                app:layout_constraintEnd_toStartOf="@+id/guideline18"
                 app:layout_constraintStart_toEndOf="@+id/imageViewUssrBicycleIcon"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -779,9 +861,9 @@
                 android:id="@+id/imageViewUssrBicycleMoney"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="4dp"
+                android:layout_marginStart="4dp"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/textViewUssrBicyclePrice"
+                app:layout_constraintStart_toStartOf="@+id/guideline18"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.0"
                 app:srcCompat="@drawable/ic_lock" />
@@ -791,7 +873,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="16dp"
-                android:text="1000"
+                android:text="@string/shop_ussr_bicycle_price"
                 android:textColor="@color/black"
                 android:textSize="16sp"
                 android:textStyle="bold"
@@ -809,6 +891,14 @@
             android:layout_marginStart="30dp"
             android:background="@color/design_default_color_error"
             android:visibility="gone">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline17"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.67"
+                app:layout_constraintStart_toStartOf="parent" />
 
             <Button
                 android:id="@+id/shopUsualBicycle"
@@ -836,13 +926,12 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="4dp"
-                android:layout_marginEnd="4dp"
                 android:text="@string/shop_usual_bicycle"
                 android:textColor="@color/black"
                 android:textSize="16sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/imageViewUsualBicycleMoney"
+                app:layout_constraintEnd_toStartOf="@+id/guideline17"
                 app:layout_constraintStart_toEndOf="@+id/imageViewUsualBicycleIcon"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -850,9 +939,9 @@
                 android:id="@+id/imageViewUsualBicycleMoney"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="4dp"
+                android:layout_marginStart="4dp"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/textViewUsualBicyclePrice"
+                app:layout_constraintStart_toStartOf="@+id/guideline17"
                 app:layout_constraintTop_toTopOf="parent"
                 app:srcCompat="@drawable/ic_lock" />
 
@@ -861,7 +950,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="16dp"
-                android:text="1000"
+                android:text="@string/shop_usual_bicycle_price"
                 android:textColor="@color/black"
                 android:textSize="16sp"
                 android:textStyle="bold"
@@ -879,6 +968,14 @@
             android:layout_marginStart="30dp"
             android:background="@color/design_default_color_error"
             android:visibility="gone">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.67"
+                app:layout_constraintStart_toStartOf="parent" />
 
             <Button
                 android:id="@+id/shopMountainBicycle"
@@ -906,13 +1003,12 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="4dp"
-                android:layout_marginEnd="4dp"
                 android:text="@string/shop_mountain_bicycle"
                 android:textColor="@color/black"
                 android:textSize="16sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/imageViewMountainBicycleMoney"
+                app:layout_constraintEnd_toStartOf="@+id/guideline16"
                 app:layout_constraintStart_toEndOf="@+id/imageViewMountainBicycleIcon"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -920,9 +1016,9 @@
                 android:id="@+id/imageViewMountainBicycleMoney"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="4dp"
+                android:layout_marginStart="4dp"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/textViewMountainBicyclePrice"
+                app:layout_constraintStart_toStartOf="@+id/guideline16"
                 app:layout_constraintTop_toTopOf="parent"
                 app:srcCompat="@drawable/ic_lock" />
 
@@ -931,7 +1027,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="22dp"
                 android:layout_marginRight="16dp"
-                android:text="1000"
+                android:text="@string/shop_mountain_bicycle_price"
                 android:textColor="@color/black"
                 android:textSize="16sp"
                 android:textStyle="bold"
@@ -946,6 +1042,7 @@
             android:id="@+id/shopGuitars"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:drawableEnd="@drawable/ic_drop_down_up"
             android:text="@string/shop_guitar" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -955,6 +1052,14 @@
             android:layout_marginStart="30dp"
             android:background="@color/design_default_color_error"
             android:visibility="gone">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.67"
+                app:layout_constraintStart_toStartOf="parent" />
 
             <Button
                 android:id="@+id/shopUssrGuitar"
@@ -982,13 +1087,12 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="4dp"
-                android:layout_marginEnd="4dp"
                 android:text="@string/shop_ussr_guitar"
                 android:textColor="@color/black"
                 android:textSize="16sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/imageViewUssrGuitarMoney"
+                app:layout_constraintEnd_toStartOf="@+id/guideline15"
                 app:layout_constraintStart_toEndOf="@+id/imageViewUssrGuitarIcon"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -996,9 +1100,9 @@
                 android:id="@+id/imageViewUssrGuitarMoney"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="4dp"
+                android:layout_marginStart="4dp"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/textViewUssrGuitarPrice"
+                app:layout_constraintStart_toStartOf="@+id/guideline15"
                 app:layout_constraintTop_toTopOf="parent"
                 app:srcCompat="@drawable/ic_lock" />
 
@@ -1007,8 +1111,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="16dp"
-                android:text="1000"
-                android:textColor="@color/black"
+                android:text="@string/shop_ussr_guitar_price"
+                android:textColor="@color/design_default_color_error"
                 android:textSize="16sp"
                 android:textStyle="bold"
                 android:visibility="invisible"
@@ -1025,6 +1129,14 @@
             android:layout_marginStart="30dp"
             android:background="@color/design_default_color_error"
             android:visibility="gone">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.67"
+                app:layout_constraintStart_toStartOf="parent" />
 
             <Button
                 android:id="@+id/shopUralGuitar"
@@ -1052,13 +1164,12 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="4dp"
-                android:layout_marginEnd="4dp"
                 android:text="@string/shop_ural_guitar"
                 android:textColor="@color/black"
                 android:textSize="16sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/imageViewUralGuitarMoney"
+                app:layout_constraintEnd_toStartOf="@+id/guideline14"
                 app:layout_constraintStart_toEndOf="@+id/imageViewUralGuitarIcon"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -1066,9 +1177,9 @@
                 android:id="@+id/imageViewUralGuitarMoney"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="4dp"
+                android:layout_marginStart="4dp"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/textViewUralGuitarPrice"
+                app:layout_constraintStart_toStartOf="@+id/guideline14"
                 app:layout_constraintTop_toTopOf="parent"
                 app:srcCompat="@drawable/ic_lock" />
 
@@ -1077,8 +1188,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="16dp"
-                android:text="1000"
-                android:textColor="@color/black"
+                android:text="@string/shop_ural_guitar_price"
+                android:textColor="@color/design_default_color_error"
                 android:textSize="16sp"
                 android:textStyle="bold"
                 android:visibility="invisible"
@@ -1095,6 +1206,14 @@
             android:layout_marginStart="30dp"
             android:background="@color/design_default_color_error"
             android:visibility="gone">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.67"
+                app:layout_constraintStart_toStartOf="parent" />
 
             <Button
                 android:id="@+id/shopYamahaGuitar"
@@ -1122,13 +1241,12 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="4dp"
-                android:layout_marginEnd="4dp"
                 android:text="@string/shop_yamaha_guitar"
                 android:textColor="@color/black"
                 android:textSize="16sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/imageViewYamahaGuitarMoney"
+                app:layout_constraintEnd_toStartOf="@+id/guideline13"
                 app:layout_constraintStart_toEndOf="@+id/imageViewYamahaGuitarIcon"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -1136,9 +1254,9 @@
                 android:id="@+id/imageViewYamahaGuitarMoney"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="4dp"
+                android:layout_marginStart="4dp"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/textViewYamahaGuitarPrice"
+                app:layout_constraintStart_toStartOf="@+id/guideline13"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.0"
                 app:srcCompat="@drawable/ic_lock" />
@@ -1148,8 +1266,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="16dp"
-                android:text="1000"
-                android:textColor="@color/black"
+                android:text="@string/shop_yamaha_guitar_price"
+                android:textColor="@color/design_default_color_error"
                 android:textSize="16sp"
                 android:textStyle="bold"
                 android:visibility="invisible"
@@ -1166,6 +1284,14 @@
             android:layout_marginStart="30dp"
             android:background="@color/design_default_color_error"
             android:visibility="gone">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.67"
+                app:layout_constraintStart_toStartOf="parent" />
 
             <Button
                 android:id="@+id/shopFenderGuitar"
@@ -1193,13 +1319,12 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="4dp"
-                android:layout_marginEnd="4dp"
                 android:text="@string/shop_fender_guitar"
                 android:textColor="@color/black"
                 android:textSize="16sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/imageViewFenderGuitarMoney"
+                app:layout_constraintEnd_toStartOf="@+id/guideline12"
                 app:layout_constraintStart_toEndOf="@+id/imageViewFenderGuitarIcon"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -1207,19 +1332,19 @@
                 android:id="@+id/imageViewFenderGuitarMoney"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="4dp"
+                android:layout_marginStart="4dp"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/textViewFenderGuitarPrice"
+                app:layout_constraintStart_toStartOf="@+id/guideline12"
                 app:layout_constraintTop_toTopOf="parent"
                 app:srcCompat="@drawable/ic_lock" />
 
             <TextView
                 android:id="@+id/textViewFenderGuitarPrice"
                 android:layout_width="wrap_content"
-                android:layout_height="22dp"
+                android:layout_height="wrap_content"
                 android:layout_marginRight="16dp"
-                android:text="1000"
-                android:textColor="@color/black"
+                android:text="@string/shop_fender_guitar_price"
+                android:textColor="@color/design_default_color_error"
                 android:textSize="16sp"
                 android:textStyle="bold"
                 android:visibility="invisible"
@@ -1236,6 +1361,14 @@
             android:layout_marginStart="30dp"
             android:background="@color/design_default_color_error"
             android:visibility="gone">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.67"
+                app:layout_constraintStart_toStartOf="parent" />
 
             <Button
                 android:id="@+id/shopDoubleNeckGuitar"
@@ -1263,13 +1396,12 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="4dp"
-                android:layout_marginEnd="4dp"
                 android:text="@string/shop_double_neck_guitar"
                 android:textColor="@color/black"
                 android:textSize="16sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/imageViewDoubleNeckGuitarMoney"
+                app:layout_constraintEnd_toStartOf="@+id/guideline11"
                 app:layout_constraintStart_toEndOf="@+id/imageViewDoubleNeckGuitarIcon"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -1277,9 +1409,9 @@
                 android:id="@+id/imageViewDoubleNeckGuitarMoney"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="4dp"
+                android:layout_marginStart="4dp"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/textViewDoubleNeckGuitarPrice"
+                app:layout_constraintStart_toStartOf="@+id/guideline11"
                 app:layout_constraintTop_toTopOf="parent"
                 app:srcCompat="@drawable/ic_lock" />
 
@@ -1288,8 +1420,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="16dp"
-                android:text="1000"
-                android:textColor="@color/black"
+                android:text="@string/shop_double_neck_guitar_price"
+                android:textColor="@color/design_default_color_error"
                 android:textSize="16sp"
                 android:textStyle="bold"
                 android:visibility="invisible"
@@ -1303,6 +1435,7 @@
             android:id="@+id/shopComputers"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:drawableEnd="@drawable/ic_drop_down_up"
             android:text="@string/shop_computer" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -1312,6 +1445,14 @@
             android:layout_marginStart="30dp"
             android:background="@color/design_default_color_error"
             android:visibility="gone">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.67"
+                app:layout_constraintStart_toStartOf="parent" />
 
             <Button
                 android:id="@+id/shopPreviouslyUsedComputer"
@@ -1339,13 +1480,13 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="4dp"
-                android:layout_marginEnd="4dp"
                 android:text="@string/shop_previously_used_computer"
                 android:textColor="@color/black"
                 android:textSize="16sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/imageViewPreviouslyUsedComputerMoney"
+                app:layout_constraintEnd_toStartOf="@+id/guideline6"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toEndOf="@+id/imageViewPreviouslyUsedComputerIcon"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -1353,19 +1494,19 @@
                 android:id="@+id/imageViewPreviouslyUsedComputerMoney"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="4dp"
+                android:layout_marginStart="4dp"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/textViewPreviouslyUsedComputerPrice"
+                app:layout_constraintStart_toStartOf="@+id/guideline6"
                 app:layout_constraintTop_toTopOf="parent"
                 app:srcCompat="@drawable/ic_lock" />
 
             <TextView
                 android:id="@+id/textViewPreviouslyUsedComputerPrice"
                 android:layout_width="wrap_content"
-                android:layout_height="22dp"
+                android:layout_height="wrap_content"
                 android:layout_marginEnd="16dp"
-                android:text="1000"
-                android:textColor="@color/black"
+                android:text="@string/shop_previously_used_computer_price"
+                android:textColor="@color/design_default_color_error"
                 android:textSize="16sp"
                 android:textStyle="bold"
                 android:visibility="invisible"
@@ -1382,6 +1523,14 @@
             android:layout_marginStart="30dp"
             android:background="@color/design_default_color_error"
             android:visibility="gone">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.67"
+                app:layout_constraintStart_toStartOf="parent" />
 
             <Button
                 android:id="@+id/shopOldComputer"
@@ -1409,13 +1558,13 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="4dp"
-                android:layout_marginEnd="4dp"
                 android:text="@string/shop_old_computer"
                 android:textColor="@color/black"
                 android:textSize="16sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/imageViewOldComputerMoney"
+                app:layout_constraintEnd_toStartOf="@+id/guideline7"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toEndOf="@+id/imageViewOldComputerIcon"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -1423,9 +1572,9 @@
                 android:id="@+id/imageViewOldComputerMoney"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="4dp"
+                android:layout_marginStart="4dp"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/textViewOldComputerPrice"
+                app:layout_constraintStart_toStartOf="@+id/guideline7"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.0"
                 app:srcCompat="@drawable/ic_lock" />
@@ -1435,8 +1584,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="16dp"
-                android:text="1000"
-                android:textColor="@color/black"
+                android:text="@string/shop_old_computer_price"
+                android:textColor="@color/design_default_color_error"
                 android:textSize="16sp"
                 android:textStyle="bold"
                 android:visibility="invisible"
@@ -1453,6 +1602,14 @@
             android:layout_marginStart="30dp"
             android:background="@color/design_default_color_error"
             android:visibility="gone">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.67"
+                app:layout_constraintStart_toStartOf="parent" />
 
             <Button
                 android:id="@+id/shopUsualComputer"
@@ -1480,13 +1637,12 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="4dp"
-                android:layout_marginEnd="4dp"
                 android:text="@string/shop_usual_computer"
                 android:textColor="@color/black"
                 android:textSize="16sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/imageViewUsualComputerMoney"
+                app:layout_constraintEnd_toStartOf="@+id/guideline8"
                 app:layout_constraintStart_toEndOf="@+id/imageViewUsualComputerIcon"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -1494,9 +1650,9 @@
                 android:id="@+id/imageViewUsualComputerMoney"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="4dp"
+                android:layout_marginStart="4dp"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/textViewUsualComputerPrice"
+                app:layout_constraintStart_toStartOf="@+id/guideline8"
                 app:layout_constraintTop_toTopOf="parent"
                 app:srcCompat="@drawable/ic_lock" />
 
@@ -1505,8 +1661,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="16dp"
-                android:text="1000"
-                android:textColor="@color/black"
+                android:text="@string/shop_usual_computer_price"
+                android:textColor="@color/design_default_color_error"
                 android:textSize="16sp"
                 android:textStyle="bold"
                 android:visibility="invisible"
@@ -1523,6 +1679,14 @@
             android:layout_marginStart="30dp"
             android:background="@color/design_default_color_error"
             android:visibility="gone">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.671916"
+                app:layout_constraintStart_toStartOf="parent" />
 
             <Button
                 android:id="@+id/shopXiaomiComputer"
@@ -1550,13 +1714,12 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="4dp"
-                android:layout_marginEnd="4dp"
                 android:text="@string/shop_xiaomi_computer"
                 android:textColor="@color/black"
                 android:textSize="16sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/imageViewXiaomiComputerMoney"
+                app:layout_constraintEnd_toStartOf="@+id/guideline10"
                 app:layout_constraintStart_toEndOf="@+id/imageViewXiaomiComputerIcon"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -1564,9 +1727,9 @@
                 android:id="@+id/imageViewXiaomiComputerMoney"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="4dp"
+                android:layout_marginStart="4dp"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/textViewXiaomiComputerPrice"
+                app:layout_constraintStart_toStartOf="@+id/guideline10"
                 app:layout_constraintTop_toTopOf="parent"
                 app:srcCompat="@drawable/ic_lock" />
 
@@ -1575,8 +1738,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="16dp"
-                android:text="1000"
-                android:textColor="@color/black"
+                android:text="@string/shop_xiaomi_computer_price"
+                android:textColor="@color/design_default_color_error"
                 android:textSize="16sp"
                 android:textStyle="bold"
                 android:visibility="invisible"
@@ -1593,6 +1756,14 @@
             android:layout_marginStart="30dp"
             android:background="@color/design_default_color_error"
             android:visibility="gone">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.67"
+                app:layout_constraintStart_toStartOf="parent" />
 
             <Button
                 android:id="@+id/shopMacbookComputer"
@@ -1620,13 +1791,12 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="4dp"
-                android:layout_marginEnd="4dp"
                 android:text="@string/shop_macbook_computer"
                 android:textColor="@color/black"
                 android:textSize="16sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/imageViewMacbookComputerMoney"
+                app:layout_constraintEnd_toStartOf="@+id/guideline9"
                 app:layout_constraintStart_toEndOf="@+id/imageViewMacbookComputerIcon"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -1634,9 +1804,9 @@
                 android:id="@+id/imageViewMacbookComputerMoney"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="4dp"
+                android:layout_marginStart="4dp"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/textViewMacbookComputerPrice"
+                app:layout_constraintStart_toStartOf="@+id/guideline9"
                 app:layout_constraintTop_toTopOf="parent"
                 app:srcCompat="@drawable/ic_lock" />
 
@@ -1645,8 +1815,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="16dp"
-                android:text="1000"
-                android:textColor="@color/black"
+                android:text="@string/shop_macbook_computer_price"
+                android:textColor="@color/design_default_color_error"
                 android:textSize="16sp"
                 android:textStyle="bold"
                 android:visibility="invisible"
