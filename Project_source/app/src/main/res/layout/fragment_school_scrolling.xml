@@ -14,11 +14,26 @@
         android:orientation="vertical">
 
 
-
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/layoutSchoolGoToSchool"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline91"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.51"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline92"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.74"
+                app:layout_constraintStart_toStartOf="parent" />
 
             <Button
                 android:id="@+id/schoolGoToSchool"
@@ -35,38 +50,39 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:layout_marginEnd="4dp"
                 android:text="@string/school_go_to_school"
                 android:textColor="@color/black"
                 android:textSize="16sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/imageViewGoToSchoolPerformance"
+                app:layout_constraintEnd_toStartOf="@+id/guideline91"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/textViewGoToSchoolPerformance"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:text="@string/go_to_school_school_performance"
-                android:layout_marginEnd="4dp"
                 android:textColor="@color/black"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/imageViewGoToSchoolMoney"
+                app:layout_constraintEnd_toStartOf="@+id/guideline92"
+                app:layout_constraintStart_toEndOf="@+id/imageViewGoToSchoolPerformance"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/textViewGoToSchoolMoney"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:text="@string/go_to_school_money"
-                android:layout_marginEnd="8dp"
                 android:textColor="@color/black"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="@+id/schoolGoToSchool"
+                app:layout_constraintStart_toEndOf="@+id/imageViewGoToSchoolMoney"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <ImageView
@@ -76,7 +92,7 @@
                 android:src="@drawable/ic_money"
 
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/textViewGoToSchoolMoney"
+                app:layout_constraintStart_toStartOf="@+id/guideline92"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <ImageView
@@ -85,7 +101,7 @@
                 android:layout_height="wrap_content"
                 android:src="@drawable/ic_school_performance"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/textViewGoToSchoolPerformance"
+                app:layout_constraintStart_toStartOf="@+id/guideline91"
                 app:layout_constraintTop_toTopOf="parent" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -93,6 +109,22 @@
             android:id="@+id/layoutSchoolLearnYourself"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline79"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.51"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline80"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.74"
+                app:layout_constraintStart_toStartOf="parent" />
 
             <Button
                 android:id="@+id/schoolBotat"
@@ -109,38 +141,40 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:layout_marginEnd="4dp"
                 android:text="@string/school_learn_yourself"
                 android:textColor="@color/black"
                 android:textSize="16sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/imageViewLearnYourselfSchoolPerformance"
+                app:layout_constraintEnd_toStartOf="@+id/guideline79"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/textViewLearnYourselfSchoolPerformance"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="4dp"
+                android:gravity="center"
                 android:text="@string/learn_yourself_school_performance"
                 android:textColor="@color/black"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/imageViewLearnYourselfMoney"
+                app:layout_constraintEnd_toStartOf="@+id/guideline80"
+                app:layout_constraintStart_toEndOf="@+id/imageViewLearnYourselfSchoolPerformance"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/textViewLearnYourselfMoney"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:text="@string/learn_yourself_money"
-                android:layout_marginEnd="8dp"
                 android:textColor="@color/black"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imageViewLearnYourselfMoney"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <ImageView
@@ -149,7 +183,7 @@
                 android:layout_height="wrap_content"
                 android:src="@drawable/ic_money"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/textViewLearnYourselfMoney"
+                app:layout_constraintStart_toStartOf="@+id/guideline80"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <ImageView
@@ -158,7 +192,7 @@
                 android:layout_height="wrap_content"
                 android:src="@drawable/ic_school_performance"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/textViewLearnYourselfSchoolPerformance"
+                app:layout_constraintStart_toStartOf="@+id/guideline79"
                 app:layout_constraintTop_toTopOf="parent" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -166,6 +200,22 @@
             android:id="@+id/layoutSchoolBuyCheatbook"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline83"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.51"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline84"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.74"
+                app:layout_constraintStart_toStartOf="parent" />
 
             <Button
                 android:id="@+id/schoolBuyCheatbook"
@@ -182,38 +232,39 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:layout_marginEnd="4dp"
                 android:text="@string/school_buy_cheatbook"
                 android:textColor="@color/black"
                 android:textSize="16sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/imageViewCheatbookSchoolPerformance"
+                app:layout_constraintEnd_toStartOf="@+id/guideline83"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/textViewCheatbookSchoolPerformance"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="4dp"
+                android:gravity="center"
                 android:text="@string/buy_cheatbook_school_performance"
                 android:textColor="@color/black"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/imageViewCheatbookMoney"
+                app:layout_constraintEnd_toStartOf="@+id/guideline84"
+                app:layout_constraintStart_toEndOf="@+id/imageViewCheatbookSchoolPerformance"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/textViewCheatbookMoney"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:text="@string/buy_cheatbook_money"
-                android:layout_marginEnd="8dp"
                 android:textColor="@color/black"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imageViewCheatbookMoney"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <ImageView
@@ -222,7 +273,7 @@
                 android:layout_height="wrap_content"
                 android:src="@drawable/ic_money"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/textViewCheatbookMoney"
+                app:layout_constraintStart_toStartOf="@+id/guideline84"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <ImageView
@@ -231,7 +282,7 @@
                 android:layout_height="wrap_content"
                 android:src="@drawable/ic_school_performance"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/textViewCheatbookSchoolPerformance"
+                app:layout_constraintStart_toStartOf="@+id/guideline83"
                 app:layout_constraintTop_toTopOf="parent" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -239,6 +290,22 @@
             android:id="@+id/layoutSchoolLearnFromStudent"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline85"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.51"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline86"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.74"
+                app:layout_constraintStart_toStartOf="parent" />
 
             <Button
                 android:id="@+id/schoolLearnFromStudent"
@@ -255,38 +322,39 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:layout_marginEnd="4dp"
                 android:text="@string/school_learn_from_a_student"
                 android:textColor="@color/black"
                 android:textSize="16sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/imageViewLearnFromStudentSchoolPerformance"
+                app:layout_constraintEnd_toStartOf="@+id/guideline85"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/textViewLearnFromStudentSchoolPerformance"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="4dp"
+                android:gravity="center"
                 android:text="@string/learn_from_student_school_performance"
                 android:textColor="@color/black"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/imageViewLearnFromStudentMoney"
+                app:layout_constraintEnd_toStartOf="@+id/guideline86"
+                app:layout_constraintStart_toEndOf="@+id/imageViewLearnFromStudentSchoolPerformance"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/textViewLearnFromStudentMoney"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:text="@string/learn_from_student_money"
-                android:layout_marginEnd="8dp"
                 android:textColor="@color/black"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imageViewLearnFromStudentMoney"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <ImageView
@@ -295,7 +363,7 @@
                 android:layout_height="wrap_content"
                 android:src="@drawable/ic_money"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/textViewLearnFromStudentMoney"
+                app:layout_constraintStart_toStartOf="@+id/guideline86"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <ImageView
@@ -304,7 +372,7 @@
                 android:layout_height="wrap_content"
                 android:src="@drawable/ic_school_performance"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/textViewLearnFromStudentSchoolPerformance"
+                app:layout_constraintStart_toStartOf="@+id/guideline85"
                 app:layout_constraintTop_toTopOf="parent" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -312,6 +380,22 @@
             android:id="@+id/layoutSchoolSignUpInAnOnlineSchool"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline87"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.51"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline88"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.74"
+                app:layout_constraintStart_toStartOf="parent" />
 
             <Button
                 android:id="@+id/schoolSignUpInAnOnlineSchool"
@@ -328,38 +412,39 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:layout_marginEnd="4dp"
                 android:text="@string/school_sign_up_in_an_online_school"
                 android:textColor="@color/black"
                 android:textSize="16sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/imageViewSignUpInAnOnlineSchoolPerformance"
+                app:layout_constraintEnd_toStartOf="@+id/guideline87"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/textViewSignUpInAnOnlineSchoolPerformance"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="4dp"
+                android:gravity="center"
                 android:text="@string/sign_up_in_an_online_school_school_performance"
                 android:textColor="@color/black"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/imageViewSignUpInAnOnlineSchoolMoney"
+                app:layout_constraintEnd_toStartOf="@+id/guideline88"
+                app:layout_constraintStart_toEndOf="@+id/imageViewSignUpInAnOnlineSchoolPerformance"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/textViewSignUpInAnOnlineSchoolMoney"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:text="@string/sign_up_in_an_online_schoold_money"
-                android:layout_marginEnd="8dp"
                 android:textColor="@color/black"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imageViewSignUpInAnOnlineSchoolMoney"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <ImageView
@@ -368,7 +453,7 @@
                 android:layout_height="wrap_content"
                 android:src="@drawable/ic_money"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/textViewSignUpInAnOnlineSchoolMoney"
+                app:layout_constraintStart_toStartOf="@+id/guideline88"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <ImageView
@@ -378,7 +463,7 @@
 
                 android:src="@drawable/ic_school_performance"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/textViewSignUpInAnOnlineSchoolPerformance"
+                app:layout_constraintStart_toStartOf="@+id/guideline87"
                 app:layout_constraintTop_toTopOf="parent" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -386,6 +471,22 @@
             android:id="@+id/layoutSchoolHireAGoodTutor"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline89"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.51"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline90"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.74"
+                app:layout_constraintStart_toStartOf="parent" />
 
             <Button
                 android:id="@+id/schoolHireAGoodTutor"
@@ -402,57 +503,57 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:layout_marginEnd="4dp"
                 android:text="@string/school_hire_a_good_tutor"
                 android:textColor="@color/black"
                 android:textSize="16sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/imageViewHireAGoodTutorSchoolPerformance"
+                app:layout_constraintEnd_toStartOf="@+id/guideline89"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/textViewHireAGoodTutorSchoolPerformance"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="4dp"
+                android:gravity="center"
                 android:text="@string/hire_a_good_tutor_school_performance"
                 android:textColor="@color/black"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/imageViewHireAGoodTutorMoney"
+                app:layout_constraintEnd_toStartOf="@+id/guideline90"
+                app:layout_constraintStart_toEndOf="@+id/imageViewHireAGoodTutorSchoolPerformance"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/textViewHireAGoodTutorMoney"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:text="@string/hire_a_good_tutor_money"
                 android:textColor="@color/black"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imageViewHireAGoodTutorMoney"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <ImageView
                 android:id="@+id/imageViewHireAGoodTutorMoney"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="4dp"
                 android:src="@drawable/ic_money"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/textViewHireAGoodTutorMoney"
+                app:layout_constraintStart_toStartOf="@+id/guideline90"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <ImageView
                 android:id="@+id/imageViewHireAGoodTutorSchoolPerformance"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="4dp"
                 android:src="@drawable/ic_school_performance"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/textViewHireAGoodTutorSchoolPerformance"
+                app:layout_constraintStart_toStartOf="@+id/guideline89"
                 app:layout_constraintTop_toTopOf="parent" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -460,6 +561,22 @@
             android:id="@+id/layoutSchoolStudyWithUniTeacher"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline81"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.51"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline82"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.74"
+                app:layout_constraintStart_toStartOf="parent" />
 
             <Button
                 android:id="@+id/schoolStudyWithUniTeacher"
@@ -476,57 +593,57 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:layout_marginEnd="4dp"
                 android:text="@string/school_study_with_uni_teacher"
                 android:textColor="@color/black"
                 android:textSize="16sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/imageViewStudyWithUniTeacherSchoolPerformance"
+                app:layout_constraintEnd_toStartOf="@+id/guideline81"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/textViewStudyWithUniTeacherSchoolPerformance"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="4dp"
+                android:gravity="center"
                 android:text="@string/study_with_uni_teacher_school_performance"
                 android:textColor="@color/black"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/imageViewStudyWithUniTeacherMoney"
+                app:layout_constraintEnd_toStartOf="@+id/guideline82"
+                app:layout_constraintStart_toEndOf="@+id/imageViewStudyWithUniTeacherSchoolPerformance"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/textViewStudyWithUniTeacherMoney"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:text="@string/study_with_uni_teacher_money"
                 android:textColor="@color/black"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imageViewStudyWithUniTeacherMoney"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <ImageView
                 android:id="@+id/imageViewStudyWithUniTeacherMoney"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="4dp"
                 android:src="@drawable/ic_money"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/textViewStudyWithUniTeacherMoney"
+                app:layout_constraintStart_toStartOf="@+id/guideline82"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <ImageView
                 android:id="@+id/imageViewStudyWithUniTeacherSchoolPerformance"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="4dp"
                 android:src="@drawable/ic_school_performance"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/textViewStudyWithUniTeacherSchoolPerformance"
+                app:layout_constraintStart_toStartOf="@+id/guideline81"
                 app:layout_constraintTop_toTopOf="parent" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 

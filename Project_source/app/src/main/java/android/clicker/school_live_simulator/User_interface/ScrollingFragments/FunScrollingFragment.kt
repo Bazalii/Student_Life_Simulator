@@ -84,6 +84,28 @@ class FunScrollingFragment : Fragment() {
                 binding.layoutFunGoToTheClub.visibility = GONE
             }
         }
+        binding.funArt.setOnClickListener {
+            if(binding.funWritePoem.visibility == GONE){
+                binding.funWritePoem.visibility = VISIBLE
+                binding.funDrawGraffities.visibility = VISIBLE
+                binding.funDrawOnDesks.visibility = VISIBLE
+                binding.funMakeSomethingHandmade.visibility = VISIBLE
+                binding.funCoverASong.visibility = VISIBLE
+                binding.funWriteASong.visibility = VISIBLE
+                binding.funStream.visibility = VISIBLE
+                binding.funMakeAYoutubeVideo.visibility = VISIBLE
+            }
+            else{
+                binding.funWritePoem.visibility = GONE
+                binding.funDrawGraffities.visibility = GONE
+                binding.funDrawOnDesks.visibility = GONE
+                binding.funMakeSomethingHandmade.visibility = GONE
+                binding.funCoverASong.visibility = GONE
+                binding.funWriteASong.visibility = GONE
+                binding.funStream.visibility = GONE
+                binding.funMakeAYoutubeVideo.visibility = GONE
+            }
+        }
 
         binding.funDrawOnDesks.setOnClickListener{
             try {

@@ -34,7 +34,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                app:layout_constraintGuide_percent="0.74"
+                app:layout_constraintGuide_percent="0.72"
                 app:layout_constraintStart_toStartOf="parent" />
 
             <androidx.constraintlayout.widget.Guideline
@@ -42,7 +42,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                app:layout_constraintGuide_percent="0.52"
+                app:layout_constraintGuide_percent="0.5"
                 app:layout_constraintStart_toStartOf="parent" />
 
             <Button
@@ -81,11 +81,12 @@
 
             <TextView
                 android:id="@+id/textViewDoNothingHappiness"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:text="+1000"
                 android:textColor="@color/black"
-                android:textSize="16sp"
+                android:textSize="14sp"
                 android:textStyle="bold"
                 android:visibility="visible"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -104,12 +105,12 @@
 
             <TextView
                 android:id="@+id/textViewDoNothingMoney"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="4dp"
+                android:gravity="center"
                 android:text="+20000"
                 android:textColor="@color/black"
-                android:textSize="16sp"
+                android:textSize="14sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="@+id/funDoNothing"
@@ -131,7 +132,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                app:layout_constraintGuide_percent="0.74"
+                app:layout_constraintGuide_percent="0.72"
                 app:layout_constraintStart_toStartOf="parent" />
 
             <androidx.constraintlayout.widget.Guideline
@@ -139,7 +140,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                app:layout_constraintGuide_percent="0.52"
+                app:layout_constraintGuide_percent="0.5"
                 app:layout_constraintStart_toStartOf="parent" />
 
             <Button
@@ -178,11 +179,12 @@
 
             <TextView
                 android:id="@+id/textViewGoCyclingHappiness"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:text="+1000"
                 android:textColor="@color/black"
-                android:textSize="16sp"
+                android:textSize="14sp"
                 android:textStyle="bold"
                 android:visibility="visible"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -202,11 +204,12 @@
 
             <TextView
                 android:id="@+id/textViewGoCyclingMoney"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:text="+20000"
                 android:textColor="@color/black"
-                android:textSize="16sp"
+                android:textSize="14sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="@+id/funGoCycling"
@@ -228,7 +231,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                app:layout_constraintGuide_percent="0.74"
+                app:layout_constraintGuide_percent="0.72"
                 app:layout_constraintStart_toStartOf="parent" />
 
             <androidx.constraintlayout.widget.Guideline
@@ -236,7 +239,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                app:layout_constraintGuide_percent="0.52"
+                app:layout_constraintGuide_percent="0.5"
                 app:layout_constraintStart_toStartOf="parent" />
 
             <Button
@@ -275,11 +278,12 @@
 
             <TextView
                 android:id="@+id/textViewListenToTheMusicHappiness"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:text="+1000"
                 android:textColor="@color/black"
-                android:textSize="16sp"
+                android:textSize="14sp"
                 android:textStyle="bold"
                 android:visibility="visible"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -298,11 +302,12 @@
 
             <TextView
                 android:id="@+id/textViewListenToTheMusicMoney"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:text="+20000"
                 android:textColor="@color/black"
-                android:textSize="16sp"
+                android:textSize="14sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="@+id/funListenToTheMusic"
@@ -324,7 +329,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                app:layout_constraintGuide_percent="0.74"
+                app:layout_constraintGuide_percent="0.72"
                 app:layout_constraintStart_toStartOf="parent" />
 
             <androidx.constraintlayout.widget.Guideline
@@ -332,7 +337,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                app:layout_constraintGuide_percent="0.52"
+                app:layout_constraintGuide_percent="0.5"
                 app:layout_constraintStart_toStartOf="parent" />
 
             <Button
@@ -371,11 +376,12 @@
 
             <TextView
                 android:id="@+id/textViewDonateAndPlayComputerHappiness"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:text="+1000"
                 android:textColor="@color/black"
-                android:textSize="16sp"
+                android:textSize="14sp"
                 android:textStyle="bold"
                 android:visibility="visible"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -394,11 +400,12 @@
 
             <TextView
                 android:id="@+id/textViewDonateAndPlayComputerMoney"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:text="+20000"
                 android:textColor="@color/black"
-                android:textSize="16sp"
+                android:textSize="14sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="@+id/funDonateAndPlayComputer"
@@ -420,7 +427,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                app:layout_constraintGuide_percent="0.74"
+                app:layout_constraintGuide_percent="0.72"
                 app:layout_constraintStart_toStartOf="parent" />
 
             <androidx.constraintlayout.widget.Guideline
@@ -428,7 +435,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                app:layout_constraintGuide_percent="0.52"
+                app:layout_constraintGuide_percent="0.5"
                 app:layout_constraintStart_toStartOf="parent" />
 
             <Button
@@ -467,11 +474,12 @@
 
             <TextView
                 android:id="@+id/textViewGoToTheShoppingMallHappiness"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:text="+1000"
                 android:textColor="@color/black"
-                android:textSize="16sp"
+                android:textSize="14sp"
                 android:textStyle="bold"
                 android:visibility="visible"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -490,11 +498,12 @@
 
             <TextView
                 android:id="@+id/textViewGoToTheShoppingMallMoney"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:text="+20000"
                 android:textColor="@color/black"
-                android:textSize="16sp"
+                android:textSize="14sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -516,7 +525,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                app:layout_constraintGuide_percent="0.74"
+                app:layout_constraintGuide_percent="0.72"
                 app:layout_constraintStart_toStartOf="parent" />
 
             <androidx.constraintlayout.widget.Guideline
@@ -524,7 +533,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                app:layout_constraintGuide_percent="0.52"
+                app:layout_constraintGuide_percent="0.5"
                 app:layout_constraintStart_toStartOf="parent" />
 
             <Button
@@ -563,11 +572,12 @@
 
             <TextView
                 android:id="@+id/textViewWalkWithYourGirlfriendHappiness"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:text="+1000"
                 android:textColor="@color/black"
-                android:textSize="16sp"
+                android:textSize="14sp"
                 android:textStyle="bold"
                 android:visibility="visible"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -586,11 +596,12 @@
 
             <TextView
                 android:id="@+id/textViewWalkWithYourGirlfriendMoney"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:text="+20000"
                 android:textColor="@color/black"
-                android:textSize="16sp"
+                android:textSize="14sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -619,7 +630,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                app:layout_constraintGuide_percent="0.74"
+                app:layout_constraintGuide_percent="0.72"
                 app:layout_constraintStart_toStartOf="parent" />
 
             <androidx.constraintlayout.widget.Guideline
@@ -627,7 +638,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                app:layout_constraintGuide_percent="0.52"
+                app:layout_constraintGuide_percent="0.5"
                 app:layout_constraintStart_toStartOf="parent" />
 
             <Button
@@ -666,15 +677,17 @@
 
             <TextView
                 android:id="@+id/textViewReadABookHappiness"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:text="+1000"
                 android:textColor="@color/black"
-                android:textSize="16sp"
+                android:textSize="14sp"
                 android:textStyle="bold"
                 android:visibility="visible"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/guideline40"
+                app:layout_constraintStart_toEndOf="@+id/imageViewReadABookHappiness"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <ImageView
@@ -688,11 +701,12 @@
 
             <TextView
                 android:id="@+id/textViewReadABookMoney"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:text="+20000"
                 android:textColor="@color/black"
-                android:textSize="16sp"
+                android:textSize="14sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="@+id/funReadABook"
@@ -714,7 +728,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                app:layout_constraintGuide_percent="0.74"
+                app:layout_constraintGuide_percent="0.72"
                 app:layout_constraintStart_toStartOf="parent" />
 
             <androidx.constraintlayout.widget.Guideline
@@ -722,7 +736,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                app:layout_constraintGuide_percent="0.52"
+                app:layout_constraintGuide_percent="0.5"
                 app:layout_constraintStart_toStartOf="parent" />
 
             <Button
@@ -741,7 +755,7 @@
                 android:id="@+id/textViewHelpYoungstersWithHomeworkName"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="@string/fun_donate_and_play_computer"
+                android:text="@string/fun_help_youngsters_with_homework"
                 android:textColor="@color/black"
                 android:textSize="16sp"
                 android:textStyle="bold"
@@ -762,11 +776,12 @@
 
             <TextView
                 android:id="@+id/textViewHelpYoungstersWithHomeworkHappiness"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:text="+1000"
                 android:textColor="@color/black"
-                android:textSize="16sp"
+                android:textSize="14sp"
                 android:textStyle="bold"
                 android:visibility="visible"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -785,11 +800,12 @@
 
             <TextView
                 android:id="@+id/textViewHelpYoungstersWithHomeworkMoney"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:text="+20000"
                 android:textColor="@color/black"
-                android:textSize="16sp"
+                android:textSize="14sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="@+id/funHelpYoungstersWithHomework"
@@ -811,7 +827,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                app:layout_constraintGuide_percent="0.74"
+                app:layout_constraintGuide_percent="0.72"
                 app:layout_constraintStart_toStartOf="parent" />
 
             <androidx.constraintlayout.widget.Guideline
@@ -819,7 +835,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                app:layout_constraintGuide_percent="0.52"
+                app:layout_constraintGuide_percent="0.5"
                 app:layout_constraintStart_toStartOf="parent" />
 
             <Button
@@ -858,11 +874,12 @@
 
             <TextView
                 android:id="@+id/textViewDoSportHappiness"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:text="+1000"
                 android:textColor="@color/black"
-                android:textSize="16sp"
+                android:textSize="14sp"
                 android:textStyle="bold"
                 android:visibility="visible"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -881,11 +898,12 @@
 
             <TextView
                 android:id="@+id/textViewDoSportMoney"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:text="+20000"
                 android:textColor="@color/black"
-                android:textSize="16sp"
+                android:textSize="14sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -907,7 +925,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                app:layout_constraintGuide_percent="0.74"
+                app:layout_constraintGuide_percent="0.72"
                 app:layout_constraintStart_toStartOf="parent" />
 
             <androidx.constraintlayout.widget.Guideline
@@ -915,7 +933,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                app:layout_constraintGuide_percent="0.52"
+                app:layout_constraintGuide_percent="0.5"
                 app:layout_constraintStart_toStartOf="parent" />
 
             <Button
@@ -954,11 +972,12 @@
 
             <TextView
                 android:id="@+id/textViewPlayGuitarHappiness"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:text="+1000"
                 android:textColor="@color/black"
-                android:textSize="16sp"
+                android:textSize="14sp"
                 android:textStyle="bold"
                 android:visibility="visible"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -977,11 +996,12 @@
 
             <TextView
                 android:id="@+id/textViewPlayGuitarMoney"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:text="+20000"
                 android:textColor="@color/black"
-                android:textSize="16sp"
+                android:textSize="14sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="@+id/funPlayGuitar"
@@ -1003,7 +1023,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                app:layout_constraintGuide_percent="0.74"
+                app:layout_constraintGuide_percent="0.72"
                 app:layout_constraintStart_toStartOf="parent" />
 
             <androidx.constraintlayout.widget.Guideline
@@ -1011,7 +1031,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                app:layout_constraintGuide_percent="0.52"
+                app:layout_constraintGuide_percent="0.5"
                 app:layout_constraintStart_toStartOf="parent" />
 
             <Button
@@ -1050,11 +1070,12 @@
 
             <TextView
                 android:id="@+id/textViewGoToTheTheatreHappiness"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:text="+1000"
                 android:textColor="@color/black"
-                android:textSize="16sp"
+                android:textSize="14sp"
                 android:textStyle="bold"
                 android:visibility="visible"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -1073,11 +1094,12 @@
 
             <TextView
                 android:id="@+id/textViewGoToTheTheatreMoney"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:text="+20000"
                 android:textColor="@color/black"
-                android:textSize="16sp"
+                android:textSize="14sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="@+id/funGoToTheTheatre"
@@ -1099,7 +1121,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                app:layout_constraintGuide_percent="0.74"
+                app:layout_constraintGuide_percent="0.72"
                 app:layout_constraintStart_toStartOf="parent" />
 
             <androidx.constraintlayout.widget.Guideline
@@ -1107,7 +1129,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                app:layout_constraintGuide_percent="0.52"
+                app:layout_constraintGuide_percent="0.5"
                 app:layout_constraintStart_toStartOf="parent" />
 
             <Button
@@ -1146,11 +1168,12 @@
 
             <TextView
                 android:id="@+id/textViewGoToTheConcertHappiness"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:text="+1000"
                 android:textColor="@color/black"
-                android:textSize="16sp"
+                android:textSize="14sp"
                 android:textStyle="bold"
                 android:visibility="visible"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -1169,11 +1192,12 @@
 
             <TextView
                 android:id="@+id/textViewGoToTheConcertMoney"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:text="+20000"
                 android:textColor="@color/black"
-                android:textSize="16sp"
+                android:textSize="14sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="@+id/funGoToTheConcert"
@@ -1202,7 +1226,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                app:layout_constraintGuide_percent="0.74"
+                app:layout_constraintGuide_percent="0.72"
                 app:layout_constraintStart_toStartOf="parent" />
 
             <androidx.constraintlayout.widget.Guideline
@@ -1210,7 +1234,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                app:layout_constraintGuide_percent="0.52"
+                app:layout_constraintGuide_percent="0.5"
                 app:layout_constraintStart_toStartOf="parent" />
 
             <Button
@@ -1251,9 +1275,10 @@
                 android:id="@+id/textViewKickATrashCanHappiness"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:text="+1000"
                 android:textColor="@color/black"
-                android:textSize="16sp"
+                android:textSize="14sp"
                 android:textStyle="bold"
                 android:visibility="visible"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -1274,9 +1299,10 @@
                 android:id="@+id/textViewKickATrashCanMoney"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:text="+20000"
                 android:textColor="@color/black"
-                android:textSize="16sp"
+                android:textSize="14sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="@+id/funKickATrashCan"
@@ -1298,7 +1324,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                app:layout_constraintGuide_percent="0.74"
+                app:layout_constraintGuide_percent="0.72"
                 app:layout_constraintStart_toStartOf="parent" />
 
             <androidx.constraintlayout.widget.Guideline
@@ -1306,7 +1332,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                app:layout_constraintGuide_percent="0.52"
+                app:layout_constraintGuide_percent="0.5"
                 app:layout_constraintStart_toStartOf="parent" />
 
             <Button
@@ -1347,9 +1373,10 @@
                 android:id="@+id/textViewIntimidateYoungstersHappiness"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:text="+1000"
                 android:textColor="@color/black"
-                android:textSize="16sp"
+                android:textSize="14sp"
                 android:textStyle="bold"
                 android:visibility="visible"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -1370,9 +1397,10 @@
                 android:id="@+id/textViewIntimidateYoungstersMoney"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:text="+20000"
                 android:textColor="@color/black"
-                android:textSize="16sp"
+                android:textSize="14sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -1394,7 +1422,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                app:layout_constraintGuide_percent="0.74"
+                app:layout_constraintGuide_percent="0.72"
                 app:layout_constraintStart_toStartOf="parent" />
 
             <androidx.constraintlayout.widget.Guideline
@@ -1402,7 +1430,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                app:layout_constraintGuide_percent="0.52"
+                app:layout_constraintGuide_percent="0.5"
                 app:layout_constraintStart_toStartOf="parent" />
 
             <Button
@@ -1443,9 +1471,10 @@
                 android:id="@+id/textViewUploadVirusHappiness"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:text="+1000"
                 android:textColor="@color/black"
-                android:textSize="16sp"
+                android:textSize="14sp"
                 android:textStyle="bold"
                 android:visibility="visible"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -1466,9 +1495,10 @@
                 android:id="@+id/textViewUploadVirusMoney"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:text="+20000"
                 android:textColor="@color/black"
-                android:textSize="16sp"
+                android:textSize="14sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="@+id/funUploadVirus"
@@ -1490,7 +1520,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                app:layout_constraintGuide_percent="0.74"
+                app:layout_constraintGuide_percent="0.72"
                 app:layout_constraintStart_toStartOf="parent" />
 
             <androidx.constraintlayout.widget.Guideline
@@ -1498,7 +1528,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                app:layout_constraintGuide_percent="0.52"
+                app:layout_constraintGuide_percent="0.5"
                 app:layout_constraintStart_toStartOf="parent" />
 
             <Button
@@ -1540,9 +1570,10 @@
                 android:id="@+id/textViewUseChatRouletteHappiness"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:text="+1000"
                 android:textColor="@color/black"
-                android:textSize="16sp"
+                android:textSize="14sp"
                 android:textStyle="bold"
                 android:visibility="visible"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -1563,9 +1594,10 @@
                 android:id="@+id/textViewUseChatRouletteMoney"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:text="+20000"
                 android:textColor="@color/black"
-                android:textSize="16sp"
+                android:textSize="14sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="@+id/funUseChatRoulette"
@@ -1587,7 +1619,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                app:layout_constraintGuide_percent="0.74"
+                app:layout_constraintGuide_percent="0.72"
                 app:layout_constraintStart_toStartOf="parent" />
 
             <androidx.constraintlayout.widget.Guideline
@@ -1595,7 +1627,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                app:layout_constraintGuide_percent="0.52"
+                app:layout_constraintGuide_percent="0.5"
                 app:layout_constraintStart_toStartOf="parent" />
 
             <Button
@@ -1636,9 +1668,10 @@
                 android:id="@+id/textViewHaveAPartyHappiness"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:text="+1000"
                 android:textColor="@color/black"
-                android:textSize="16sp"
+                android:textSize="14sp"
                 android:textStyle="bold"
                 android:visibility="visible"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -1659,9 +1692,10 @@
                 android:id="@+id/textViewHaveAPartyMoney"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:text="+20000"
                 android:textColor="@color/black"
-                android:textSize="16sp"
+                android:textSize="14sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="@+id/funHaveAParty"
@@ -1683,7 +1717,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                app:layout_constraintGuide_percent="0.74"
+                app:layout_constraintGuide_percent="0.72"
                 app:layout_constraintStart_toStartOf="parent" />
 
             <androidx.constraintlayout.widget.Guideline
@@ -1691,7 +1725,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                app:layout_constraintGuide_percent="0.52"
+                app:layout_constraintGuide_percent="0.5"
                 app:layout_constraintStart_toStartOf="parent" />
 
             <Button
@@ -1732,9 +1766,10 @@
                 android:id="@+id/textViewGoToTheClubHappiness"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:text="+1000"
                 android:textColor="@color/black"
-                android:textSize="16sp"
+                android:textSize="14sp"
                 android:textStyle="bold"
                 android:visibility="visible"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -1755,9 +1790,10 @@
                 android:id="@+id/textViewGoToTheClubMoney"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:text="+20000"
                 android:textColor="@color/black"
-                android:textSize="16sp"
+                android:textSize="14sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -1767,52 +1803,75 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <Button
+            android:id="@+id/funArt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableEnd="@drawable/ic_drop_down_up"
+            android:text="Art" />
+
+        <Button
             android:id="@+id/fun_write_poem"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/fun_write_a_poem" />
+            android:insetLeft="30dp"
+            android:text="@string/fun_write_a_poem"
+            android:visibility="gone" />
 
         <Button
             android:id="@+id/fun_draw_graffities"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/fun_draw_graffities" />
+            android:insetLeft="30dp"
+            android:text="@string/fun_draw_graffities"
+            android:visibility="gone" />
 
         <Button
             android:id="@+id/fun_draw_on_desks"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="@string/fun_draw_on_desks" />
+            android:insetLeft="30dp"
+            android:text="@string/fun_draw_on_desks"
+            android:visibility="gone" />
 
         <Button
             android:id="@+id/fun_make_something_handmade"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/fun_make_something_handmade" />
+            android:insetLeft="30dp"
+            android:text="@string/fun_make_something_handmade"
+            android:visibility="gone" />
 
         <Button
             android:id="@+id/fun_cover_a_song"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/fun_cover_a_song" />
+            android:insetLeft="30dp"
+            android:text="@string/fun_cover_a_song"
+            android:visibility="gone" />
 
         <Button
             android:id="@+id/fun_write_a_song"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/fun_write_a_song" />
+            android:insetLeft="30dp"
+            android:text="@string/fun_write_a_song"
+            android:visibility="gone" />
 
         <Button
             android:id="@+id/fun_stream"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/fun_stream" />
+            android:insetLeft="30dp"
+            android:text="@string/fun_stream"
+            android:visibility="gone" />
 
         <Button
             android:id="@+id/fun_make_a_youtube_video"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/fun_make_a_youtube_video" />
+            android:insetLeft="30dp"
+            android:text="@string/fun_make_a_youtube_video"
+            android:visibility="gone" />
 
     </LinearLayout>
 </androidx.core.widget.NestedScrollView>
