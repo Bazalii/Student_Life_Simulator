@@ -12,14 +12,10 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginBottom="8dp"
         android:max="1000"
         android:scaleY="6"
-        app:layout_constraintBottom_toTopOf="@+id/moneyDatelinearLayout"
         app:layout_constraintEnd_toStartOf="@+id/verticalGuideline"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/happinessProgressBar" />
@@ -105,7 +101,8 @@
         app:layout_constraintBottom_toBottomOf="@+id/satietyProgressBar"
         app:layout_constraintEnd_toEndOf="@+id/satietyProgressBar"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/satietyProgressBar" />
+        app:layout_constraintStart_toStartOf="@+id/satietyProgressBar"
+        app:layout_constraintTop_toTopOf="@+id/satietyProgressBar" />
 
     <TextView
         android:id="@+id/happinessTextView"
@@ -117,7 +114,8 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/happinessProgressBar"
         app:layout_constraintEnd_toEndOf="@+id/happinessProgressBar"
-        app:layout_constraintStart_toStartOf="@+id/happinessProgressBar" />
+        app:layout_constraintStart_toStartOf="@+id/happinessProgressBar"
+        app:layout_constraintTop_toTopOf="@+id/happinessProgressBar" />
 
     <TextView
         android:id="@+id/schoolPerformanceTextView"
@@ -129,34 +127,20 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/schoolPerformanceProgressBar"
         app:layout_constraintEnd_toEndOf="@+id/schoolPerformanceProgressBar"
-        app:layout_constraintStart_toStartOf="@+id/schoolPerformanceProgressBar" />
+        app:layout_constraintStart_toStartOf="@+id/schoolPerformanceProgressBar"
+        app:layout_constraintTop_toTopOf="@+id/schoolPerformanceProgressBar" />
 
     <LinearLayout
         android:id="@+id/moneyDatelinearLayout"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:orientation="horizontal"
+        android:visibility="gone"
         app:layout_constraintBottom_toTopOf="@+id/fragment"
         app:layout_constraintEnd_toStartOf="@+id/verticalGuideline"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/schoolPerformanceProgressBar">
 
-        <TextView
-            android:id="@+id/moneyTextView"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:text="300 bucks"
-            android:textStyle="bold" />
-
-        <TextView
-            android:id="@+id/dateTextView"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:text="10.08.2021" />
     </LinearLayout>
 
     <ImageView
@@ -184,14 +168,72 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            app:srcCompat="@drawable/ic_botnav_fun" />
+            app:srcCompat="@drawable/ic_achievements" />
 
         <ImageButton
             android:id="@+id/settingsButton"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            app:srcCompat="@drawable/ic_botnav_fun" />
+            app:srcCompat="@drawable/ic_settings" />
     </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/horizontalGuideline"
+        app:layout_constraintEnd_toStartOf="@+id/verticalGuideline"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/schoolPerformanceProgressBar">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline93"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.45"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/guideline93"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_wallet" />
+
+        <TextView
+            android:id="@+id/moneyTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="4dp"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:text="10000"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/imageView2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/dateTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="10 september 2021"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline93"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
