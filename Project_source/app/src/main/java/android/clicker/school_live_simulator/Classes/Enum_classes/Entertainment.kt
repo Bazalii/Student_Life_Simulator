@@ -2,39 +2,38 @@ package android.clicker.school_live_simulator.Classes.Enum_classes
 
 import android.clicker.school_live_simulator.Classes.GameDate.Timer
 import android.clicker.school_live_simulator.Game
-import android.clicker.school_live_simulator.R
-import android.util.Log
+
 
 enum class Entertainment(val happiness: Int, val money_diff: Int) {
-    DRAW_ON_DESK(30, 0),
-    DRAW_GRAFFITIES(50, money_diff = Game.context_bundle.getNumber("test_number")),
-    WRITE_A_POEM(70, 0),
-    MAKE_SOMETHING_HANDMADE(150, -500),
-    COVER_A_SONG(150, 0),
-    WRITE_A_SONG(100, 3000),
-    STREAM(-100, 5000),
-    MAKE_A_YOUTUBE_VIDEO(-50, 10000),
+    DRAW_ON_DESK(Game.context_bundle.getNumber("fun_draw_on_desks_happiness"), Game.context_bundle.getNumber("fun_draw_on_desks_price")),
+    DRAW_GRAFFITIES(Game.context_bundle.getNumber("fun_draw_graffities_happiness"), Game.context_bundle.getNumber("fun_draw_graffities_price")),
+    WRITE_A_POEM(Game.context_bundle.getNumber("fun_write_a_poem_happiness"), Game.context_bundle.getNumber("fun_write_a_poem_price")),
+    MAKE_SOMETHING_HANDMADE(Game.context_bundle.getNumber("fun_make_something_handmade_happiness"), Game.context_bundle.getNumber("fun_make_something_handmade_price")),
+    COVER_A_SONG(Game.context_bundle.getNumber("fun_cover_a_song_happiness"), Game.context_bundle.getNumber("fun_cover_a_song_price")),
+    WRITE_A_SONG(Game.context_bundle.getNumber("fun_write_a_song_happiness"), Game.context_bundle.getNumber("fun_write_a_song_price")),
+    STREAM(Game.context_bundle.getNumber("fun_stream_happiness"), Game.context_bundle.getNumber("fun_stream_price")),
+    MAKE_A_YOUTUBE_VIDEO(Game.context_bundle.getNumber("fun_make_a_youtube_video_happiness"), Game.context_bundle.getNumber("fun_make_a_youtube_video_price")),
 
-    DO_NOTHING(50, 0),
-    GO_CYCLING(100, 0),
-    LISTEN_TO_THE_MUSIC(10, -169),
-    DONATE_AND_PLAY_COMPUTER(300, -1000),
-    GO_TO_THE_SHOPPING_MALL(500, -10000),
-    WALK_WITH_YOUR_GIRLFRIEND(800, -20000),
+    DO_NOTHING(Game.context_bundle.getNumber("fun_do_nothing_happiness"), Game.context_bundle.getNumber("fun_do_nothing_price")),
+    GO_CYCLING(Game.context_bundle.getNumber("fun_go_cycling_happiness"), Game.context_bundle.getNumber("fun_go_cycling_price")),
+    LISTEN_TO_THE_MUSIC(Game.context_bundle.getNumber("fun_listen_to_the_music_happiness"), Game.context_bundle.getNumber("fun_listen_to_the_music_price")),
+    DONATE_AND_PLAY_COMPUTER(Game.context_bundle.getNumber("fun_donate_and_play_computer_happiness"), Game.context_bundle.getNumber("fun_donate_and_play_computer_price")),
+    GO_TO_THE_SHOPPING_MALL(Game.context_bundle.getNumber("fun_go_to_the_shopping_mall_happiness"), Game.context_bundle.getNumber("fun_go_to_the_shopping_mall_price")),
+    WALK_WITH_YOUR_GIRLFRIEND(Game.context_bundle.getNumber("fun_walk_with_your_girlfriend_happiness"), Game.context_bundle.getNumber("fun_walk_with_your_girlfriend_price")),
 
-    READ_A_BOOK(30, 0),
-    HELP_YOUNGSTERS_WITH_HOMEWORK(50, 0),
-    DO_SPORT(100, -1500),
-    PLAY_GUITAR(150, -5000),
-    GO_TO_THE_THEATRE(300, -4000),
-    GO_TO_THE_CONCERT(700, -10000),
+    READ_A_BOOK(Game.context_bundle.getNumber("fun_read_a_book_happiness"), Game.context_bundle.getNumber("fun_read_a_book_price")),
+    HELP_YOUNGSTERS_WITH_HOMEWORK(Game.context_bundle.getNumber("fun_help_youngsters_with_homework_happiness"), Game.context_bundle.getNumber("fun_help_youngsters_with_homework_price")),
+    DO_SPORT(Game.context_bundle.getNumber("fun_do_sport_happiness"), Game.context_bundle.getNumber("fun_do_sport_price")),
+    PLAY_GUITAR(Game.context_bundle.getNumber("fun_play_guitar_happiness"), Game.context_bundle.getNumber("fun_play_guitar_price")),
+    GO_TO_THE_THEATRE(Game.context_bundle.getNumber("fun_go_to_the_theatre_happiness"), Game.context_bundle.getNumber("fun_go_to_the_theatre_price")),
+    GO_TO_THE_CONCERT(Game.context_bundle.getNumber("fun_go_to_the_concert_happiness"), Game.context_bundle.getNumber("fun_go_to_the_concert_price")),
 
-    KICK_A_TRASH_CAN(70, 0),
-    INTIMIDATE_YOUNGSTERS(100, 150),
-    UPLOAD_VIRUS(250, 0),
-    USE_CHAT_ROULETTE(450, -5000),
-    HAVE_A_PARTY(600, -10000),
-    GO_TO_THE_CLUB(1000, -20000);
+    KICK_A_TRASH_CAN(Game.context_bundle.getNumber("fun_kick_a_trash_can_happiness"), Game.context_bundle.getNumber("fun_kick_a_trash_can_price")),
+    INTIMIDATE_YOUNGSTERS(Game.context_bundle.getNumber("fun_intimidate_youngsters_happiness"), Game.context_bundle.getNumber("fun_intimidate_youngsters_price")),
+    UPLOAD_VIRUS(Game.context_bundle.getNumber("fun_upload_virus_happiness"), Game.context_bundle.getNumber("fun_upload_virus_price")),
+    USE_CHAT_ROULETTE(Game.context_bundle.getNumber("fun_use_chat_roulette_happiness"), Game.context_bundle.getNumber("fun_use_chat_roulette_price")),
+    HAVE_A_PARTY(Game.context_bundle.getNumber("fun_have_a_party_happiness"), Game.context_bundle.getNumber("fun_have_a_party_price")),
+    GO_TO_THE_CLUB(Game.context_bundle.getNumber("fun_go_to_the_club_happiness"), Game.context_bundle.getNumber("fun_go_to_the_club_price"));
 
     fun listenToTheMusic() {
         Game.player.entertain(Entertainment.LISTEN_TO_THE_MUSIC)

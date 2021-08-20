@@ -1,5 +1,6 @@
 package android.clicker.school_live_simulator
 
+
 import android.clicker.school_live_simulator.Classes.Enum_classes.Entertainment
 import android.clicker.school_live_simulator.Classes.Enum_classes.OtherWork
 import android.clicker.school_live_simulator.Classes.Enum_classes.Studies

@@ -1,8 +1,8 @@
 package android.clicker.school_live_simulator.User_interface.ScrollingFragments
 
 import android.clicker.school_live_simulator.Classes.NotEnoughMoneyException
-import android.clicker.school_live_simulator.Food
 import android.clicker.school_live_simulator.Game
+import android.clicker.school_live_simulator.Food
 import android.clicker.school_live_simulator.R
 import android.clicker.school_live_simulator.User_interface.GameActivity
 import android.clicker.school_live_simulator.databinding.FragmentFoodScrollingBinding
