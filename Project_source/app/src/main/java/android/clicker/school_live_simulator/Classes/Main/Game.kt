@@ -1,5 +1,7 @@
 package android.clicker.school_live_simulator
 
+import kotlinx.serialization.*
+
 object Game {
     private var difficulty_state: GameDifficultyState = NormalMode()
 
@@ -10,7 +12,7 @@ object Game {
 //    private var load_handlers: ArrayList<function> = ArrayListOf()
 
     private lateinit var player: Player
-//    game: Game
+    lateinit var game: Game
     lateinit var game_date: GameDate
     lateinit var game_status: GameStatus
 
