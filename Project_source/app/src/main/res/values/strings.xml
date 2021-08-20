@@ -98,23 +98,41 @@
 
     Work stats:
     <string name="work_collect_change_income">+10</string>
+    <string name="work_collect_change_happiness">-10</string>
     <string name="work_watch_ads_income">+100</string>
+    <string name="work_watch_ads_happiness">-20</string>
     <string name="work_distribute_flyers_income">+200</string>
+    <string name="work_distribute_flyers_happiness">-40</string>
     <string name="work_as_a_greener_income">+500</string>
-    <string name="work_as_a_courier_v1_income">+100</string>
-    <string name="work_as_a_courier_v2_income">+500</string>
-    <string name="work_as_a_courier_v3_income">+5000</string>
+    <string name="work_as_a_greener_happiness">-50</string>
     <string name="work_as_an_operator_income">+1000</string>
+    <string name="work_as_an_operator_happiness">-80</string>
+    <string name="work_as_a_courier_v1_income">+100</string>
+    <string name="work_as_a_courier_v1_happiness">-20</string>
+    <string name="work_as_a_courier_v2_income">+500</string>
+    <string name="work_as_a_courier_v2_happiness">-15</string>
+    <string name="work_as_a_courier_v3_income">+5000</string>
+    <string name="work_as_a_courier_v3_happiness">-10</string>
     <string name="work_play_guitar_v1_income">+100</string>
+    <string name="work_play_guitar_v1_happiness">-10</string>
     <string name="work_play_guitar_v2_income">+500</string>
+    <string name="work_play_guitar_v2_happiness">-10</string>
     <string name="work_play_guitar_v3_income">+1000</string>
+    <string name="work_play_guitar_v3_happiness">-10</string>
     <string name="work_play_guitar_v4_income">+2500</string>
+    <string name="work_play_guitar_v4_happiness">-10</string>
     <string name="work_play_guitar_v5_income">+5000</string>
+    <string name="work_play_guitar_v5_happiness">-10</string>
     <string name="work_on_the_net_v1_income">+100</string>
+    <string name="work_on_the_net_v1_happiness">-10</string>
     <string name="work_on_the_net_v2_income">+500</string>
+    <string name="work_on_the_net_v2_happiness">-10</string>
     <string name="work_on_the_net_v3_income">+2000</string>
+    <string name="work_on_the_net_v3_happiness">-10</string>
     <string name="work_on_the_net_v4_income">+5000</string>
+    <string name="work_on_the_net_v4_happiness">-10</string>
     <string name="work_on_the_net_v5_income">+15000</string>
+    <string name="work_on_the_net_v5_happiness">-10</string>
 
 
 
