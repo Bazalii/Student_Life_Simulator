@@ -7,7 +7,11 @@ import android.content.Context
 class ContextBundle {
     lateinit var context: Context
 
-    fun getTitle(input: String): Int {
+    fun getTitle(input: String): String {
+        return Game.context_bundle.context.resources.getString(Game.context_bundle.context.resources.getIdentifier(input, "string", context.getPackageName()))
+    }
+
+    fun getNumber(input: String): Int {
         return Game.context_bundle.context.resources.getString(Game.context_bundle.context.resources.getIdentifier(input, "string", context.getPackageName())).toInt()
     }
 }
