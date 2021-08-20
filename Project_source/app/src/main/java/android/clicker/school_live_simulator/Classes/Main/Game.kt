@@ -1,6 +1,8 @@
 package android.clicker.school_live_simulator
 
 import kotlinx.serialization.*
+import kotlinx.serialization.json.Json
+import java.io.File
 
 object Game {
     private var difficulty_state: GameDifficultyState = NormalMode()
@@ -42,9 +44,11 @@ object Game {
 //    }
 
     fun save() {
-        TODO("Not yet implemented")
+        val data = Json.encodeToString(game)
+        File("data.txt").writeText(data)
     }
-    fun load() {
-        TODO("Not yet implemented")
+    fun load(): Game {
+        val data = File("data.txt").readText()
+        return Json.decodeFromString(data)
     }
 }
