@@ -1,15 +1,20 @@
 package android.clicker.school_live_simulator.Classes.GameDate
 
 import android.clicker.school_live_simulator.Classes.Enum_classes.Months
+import android.clicker.school_live_simulator.Game
+import android.util.Log
 
 data class GameDate(private var day: Int = 1, private var month: Months = Months.September, private var year: Int = 2009) {
-    public val subscription_length: Int = 30
+    val subscription_length: Int = 30
 
     /**
      * List of all current game timers
      */
-    private val timers: ArrayList<Timer> = arrayListOf()
+    val timers: ArrayList<Timer> = arrayListOf()
 
+
+    var timers_iterator: MutableListIterator<Timer> = timers.listIterator()
+        private set
     /**
      * List of all current game alarm clocks
      */
@@ -32,10 +37,13 @@ data class GameDate(private var day: Int = 1, private var month: Months = Months
         }
         else
             this.day += 1
-        for (timer: Timer in timers)
-            timer.tick()
-        for (alarm_clock: AlarmClock in alarm_clocks)
-            alarm_clock.tick()
+        this.timers_iterator = this.timers.listIterator()
+        while (this.timers_iterator.hasNext()) {
+            val current_timer = this.timers_iterator.next()
+            current_timer.tick()
+                //Добавляем или не добавляем таймер
+//                Log.d("MyLog", "gd" + Game.game_date.timers.toString())
+        }
     }
 
     /**
@@ -64,10 +72,13 @@ data class GameDate(private var day: Int = 1, private var month: Months = Months
      * @param   timer   timer to register
      */
     fun registerTimer(timer: Timer) {
-        timers.add(timer)
+        this.timers_iterator.add(timer)
     }
-    fun removeTimer(timer: Timer){
-        timers.remove(timer)
+    fun removeTimer(){
+        Log.d("MyLog", "before remove" + this.timers.toString())
+        this.timers_iterator.remove()
+        Log.d("MyLog", "after remove" + this.timers.toString())
+
     }
     /**
      *

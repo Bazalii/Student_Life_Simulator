@@ -2,9 +2,9 @@ package android.clicker.school_live_simulator
 
 import android.clicker.school_live_simulator.Classes.GameDate.GameDate
 import android.clicker.school_live_simulator.Classes.Main.ContextBundle
-import android.clicker.school_live_simulator.User_interface.GameActivity
-import android.content.Context
+import kotlinx.serialization.*
 
+@Serializable
 object Game {
     private var difficulty_state: GameDifficultyState = NormalMode()
 
