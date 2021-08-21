@@ -469,9 +469,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="4dp"
-                app:layout_constraintBottom_toBottomOf="@+id/shopGuitarCourseV1"
+                app:layout_constraintBottom_toBottomOf="@+id/shopComputerCourseV1"
                 app:layout_constraintStart_toStartOf="@+id/guideline19"
-                app:layout_constraintTop_toTopOf="@+id/shopGuitarCourseV1"
+                app:layout_constraintTop_toTopOf="@+id/shopComputerCourseV1"
                 app:srcCompat="@drawable/ic_lock" />
 
             <TextView

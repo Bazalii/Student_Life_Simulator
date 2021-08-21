@@ -3,7 +3,6 @@ package android.clicker.school_live_simulator.User_interface.ScrollingFragments
 import android.clicker.school_live_simulator.*
 import android.clicker.school_live_simulator.Classes.Enum_classes.OtherWork
 import android.clicker.school_live_simulator.Classes.IsNotAvailableException
-import android.clicker.school_live_simulator.Classes.NotEnoughMoneyException
 import android.clicker.school_live_simulator.User_interface.GameActivity
 import android.clicker.school_live_simulator.databinding.FragmentWorkScrollingBinding
 import android.os.Bundle

@@ -29,7 +29,6 @@ class Timer(input_days: Int): TimeObservable {
     fun tick() {
         this.days -= 1
         if (this.days == 0) {
-            Log.d("MyLog", "timer" + Game.game_date.timers.toString())
             this.end_signal_handler.call()
             if (this.end_signal_handler == Entertainment.LISTEN_TO_THE_MUSIC::listenToTheMusic ||
                 this.end_signal_handler == Entertainment.MAKE_A_YOUTUBE_VIDEO::makeYouTubeVideo ||

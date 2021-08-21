@@ -19,7 +19,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:drawableEnd="@drawable/ic_drop_down_up"
-            android:text="neutral actions" />
+            android:text="@string/fun_scr_1" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/layoutFunDoNothing"
@@ -615,7 +615,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:drawableEnd="@drawable/ic_drop_down_up"
-            android:text="Good actions" />
+            android:text="@string/fun_scr_2" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/layoutFunReadABook"
@@ -1211,7 +1211,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:drawableEnd="@drawable/ic_drop_down_up"
-            android:text="Bad Actions" />
+            android:text="@string/fun_scr_3" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/layoutFunKickATrashCan"
@@ -1558,7 +1558,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <ImageView
-                android:id="@+id/imageViewUseChatRoulettekHappiness"
+                android:id="@+id/imageViewUseChatRouletteHappiness"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -1578,7 +1578,7 @@
                 android:visibility="visible"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/guideline61"
-                app:layout_constraintStart_toEndOf="@+id/imageViewUseChatRoulettekHappiness"
+                app:layout_constraintStart_toEndOf="@+id/imageViewUseChatRouletteHappiness"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <ImageView
@@ -1807,7 +1807,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:drawableEnd="@drawable/ic_drop_down_up"
-            android:text="Art" />
+            android:text="@string/fun_scr_4" />
 
         <Button
             android:id="@+id/fun_write_poem"

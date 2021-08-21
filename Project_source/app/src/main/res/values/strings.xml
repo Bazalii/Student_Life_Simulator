@@ -1,8 +1,14 @@
 <resources>
     <string name="app_name">School_live_simulator</string>
+   <!--For debug-->
+    <string name="game_activity_1">10000</string>
+    <string name="game_activity_2">10 september 2021</string>
+    <string name="fun_scr_1">Neutral actions</string>
+    <string name="fun_scr_2">Good actions</string>
+    <string name="fun_scr_3">Bad Actions</string>
+    <string name="fun_scr_4">Art</string>
 
-    <string name="test_number">10</string>
-    Bottom navigation:
+    <!--Bottom navigation-->
     <string name="bot_nav_work">work</string>
     <string name="bot_nav_school">school</string>
     <string name="bot_nav_shop">shop</string>
@@ -10,13 +16,13 @@
     <string name="bot_nav_food">food</string>
 
 
-    Progress bars:
+    <!--Progress bars-->
     <string name="satietyProgressBar">Satiety</string>
     <string name="happinessProgressBar">Happiness</string>
     <string name="schoolPerformanceProgressBar">School performance</string>
 
 
-    School folder:
+    <!--School folder-->
     <string name="school_go_to_school">Go to school</string>
     <string name="school_learn_yourself">Learn by yourself</string>
     <string name="school_buy_cheatbook">Buy a cheatbook</string>
@@ -25,7 +31,8 @@
     <string name="school_hire_a_good_tutor">Hire a good tutor</string>
     <string name="school_study_with_uni_teacher">Study with a teacher from University</string>
 
-    School stats:
+
+    <!--School stats-->
     <string name="go_to_school_school_performance">+3</string>
     <string name="go_to_school_money">0</string>
     <string name="learn_yourself_school_performance">+50</string>
@@ -35,23 +42,22 @@
     <string name="learn_from_student_school_performance">+250</string>
     <string name="learn_from_student_money">-1000</string>
     <string name="sign_up_in_an_online_school_school_performance">+15</string>
-    <string name="sign_up_in_an_online_schoold_money">-10000</string>
+    <string name="sign_up_in_an_online_school_money">-10000</string>
     <string name="hire_a_good_tutor_school_performance">+600</string>
     <string name="hire_a_good_tutor_money">-15000</string>
     <string name="study_with_uni_teacher_school_performance">+1000</string>
     <string name="study_with_uni_teacher_money">-25000</string>
 
 
-
-    Food folder:
+    <!--Food folder-->
     <string name="food_eat_crackers">Eat some crackers</string>
-    <string name="food_eat_doshirack">Eat some noodles "Doshirack"</string>
+    <string name="food_eat_doshirack">Eat some noodles \"Doshirack\"</string>
     <string name="food_eat_at_the_canteen">Eat at the school canteen</string>
     <string name="food_eat_at_Mcdonalds">Eat at local McDonald\'s</string>
     <string name="food_order_delivery">Order a food delivery</string>
     <string name="food_go_to_the_restaurant">Go to the restaurant</string>
 
-    Food stats:
+    <!--Food stats-->
     <string name="crackers_satiety">+25</string>
     <string name="crackers_happiness">+50</string>
     <string name="crackers_money">-10</string>
@@ -72,8 +78,7 @@
     <string name="restaurant_food_money">-10000</string>
 
 
-
-    Work folder:
+    <!--Work folder-->
     <string name="work_collect_change">Collect change on the street</string>
     <string name="work_watch_ads">Watch online advertisement</string>
     <string name="work_distribute_flyers">Distribute flyers</string>
@@ -96,7 +101,7 @@
     <string name="work_on_the_net_v4">Work as a video editor</string>
     <string name="work_on_the_net_v5">Work as a GameDev</string>
 
-    Work stats:
+    <!--Work stats-->
     <string name="work_collect_change_income">+10</string>
     <string name="work_collect_change_happiness">-10</string>
     <string name="work_watch_ads_income">+100</string>
@@ -135,8 +140,7 @@
     <string name="work_on_the_net_v5_happiness">-10</string>
 
 
-
-    Entertainment folder:
+    <!--Entertainment folder-->
     <string name="fun_draw_on_desks">Draw on desks</string>
     <string name="fun_draw_graffities">Draw graffities in school toilets</string>
     <string name="fun_write_a_poem">Write a poem</string>
@@ -167,7 +171,7 @@
     <string name="fun_have_a_party">Have a party at home</string>
     <string name="fun_go_to_the_club">Go to the club(???)</string>
 
-    Entertainment stats:
+    <!--Entertainment stats-->
     <string name="fun_draw_on_desks_price">0</string>
     <string name="fun_draw_on_desks_happiness">+30</string>
     <string name="fun_draw_graffities_price">+10</string>
@@ -175,7 +179,7 @@
     <string name="fun_write_a_poem_price">0</string>
     <string name="fun_write_a_poem_happiness">+70</string>
     <string name="fun_make_something_handmade_price">-500</string>
-    <string name="fun_make_something_happiness">+150</string>
+    <string name="fun_make_something_handmade_happiness">+150</string>
     <string name="fun_cover_a_song_price">0</string>
     <string name="fun_cover_a_song_happiness">+150</string>
     <string name="fun_write_a_song_price">+3000</string>
@@ -225,10 +229,7 @@
     <string name="fun_go_to_the_club_happiness">+1000</string>
 
 
-
-
-
-    Shop folder:
+    <!--Shop folder-->
     <string name="shop_guitar_course">Guitar courses</string>
     <string name="shop_guitar_course_v1">Learn from a bum at the yard</string>
     <string name="shop_guitar_course_v2">First song course</string>
@@ -262,7 +263,7 @@
     <string name="shop_xiaomi_computer">Xiaomi Mi Notebook</string>
     <string name="shop_macbook_computer">Apple Macbook</string>
 
-    Shop stats:
+    <!--Shop stats-->
     <string name="shop_ussr_bicycle_price">-2000</string>
     <string name="shop_usual_bicycle_price">-10000</string>
     <string name="shop_mountain_bicycle_price">-40000</string>
@@ -279,7 +280,7 @@
     <string name="shop_xiaomi_computer_price">-60000</string>
     <string name="shop_macbook_computer_price">-200000</string>
 
-    <string name="shop_computer_course_v1_price">free</string>
+    <string name="shop_computer_course_v1_price">0</string>
     <string name="shop_computer_course_v2_price">-100</string>
     <string name="shop_computer_course_v3_price">-300</string>
     <string name="shop_computer_course_v4_price">-900</string>
@@ -290,7 +291,6 @@
     <string name="shop_guitar_course_v3_price">-300</string>
     <string name="shop_guitar_course_v4_price">-900</string>
     <string name="shop_guitar_course_v5_price">-2700</string>
-
 
 
 </resources>

@@ -36,15 +36,15 @@ enum class Entertainment(val happiness: Int, val money_diff: Int) {
     GO_TO_THE_CLUB(Game.context_bundle.getNumber("fun_go_to_the_club_happiness"), Game.context_bundle.getNumber("fun_go_to_the_club_price"));
 
     fun listenToTheMusic() {
-        Game.player.entertain(Entertainment.LISTEN_TO_THE_MUSIC)
-        Timer(Game.game_date.subscription_length).setEndSignalHandler(Entertainment.LISTEN_TO_THE_MUSIC::listenToTheMusic)
+        Game.player.entertain(LISTEN_TO_THE_MUSIC)
+        Timer(Game.game_date.subscription_length).setEndSignalHandler(LISTEN_TO_THE_MUSIC::listenToTheMusic)
     }
     fun makeYouTubeVideo() {
-        Game.player.entertain(Entertainment.MAKE_A_YOUTUBE_VIDEO)
-        Timer(Game.game_date.subscription_length).setEndSignalHandler(Entertainment.MAKE_A_YOUTUBE_VIDEO::makeYouTubeVideo)
+        Game.player.entertain(MAKE_A_YOUTUBE_VIDEO)
+        Timer(Game.game_date.subscription_length).setEndSignalHandler(MAKE_A_YOUTUBE_VIDEO::makeYouTubeVideo)
     }
     fun doSport() {
-        Game.player.entertain(Entertainment.DO_SPORT)
-        Timer(Game.game_date.subscription_length).setEndSignalHandler(Entertainment.DO_SPORT::doSport)
+        Game.player.entertain(DO_SPORT)
+        Timer(Game.game_date.subscription_length).setEndSignalHandler(DO_SPORT::doSport)
     }
 }

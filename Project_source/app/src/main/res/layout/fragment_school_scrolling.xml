@@ -439,7 +439,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="@string/sign_up_in_an_online_schoold_money"
+                android:text="@string/sign_up_in_an_online_school_money"
                 android:textColor="@color/black"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"

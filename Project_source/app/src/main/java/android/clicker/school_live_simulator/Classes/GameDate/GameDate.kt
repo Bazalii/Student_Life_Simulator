@@ -75,10 +75,7 @@ data class GameDate(private var day: Int = 1, private var month: Months = Months
         this.timers_iterator.add(timer)
     }
     fun removeTimer(){
-        Log.d("MyLog", "before remove" + this.timers.toString())
         this.timers_iterator.remove()
-        Log.d("MyLog", "after remove" + this.timers.toString())
-
     }
     /**
      *
