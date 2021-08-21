@@ -1,5 +1,8 @@
 package android.clicker.school_live_simulator
 
+import kotlinx.serialization.Serializable
+
+@Serializable
 class Player {
     inner class Bag {
         var bicycle: BicycleState = NullBicycleState()
