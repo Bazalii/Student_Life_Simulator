@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.School_live_simulator">
         <activity
+            android:name=".User_interface.AchievementsActivity"
+            android:exported="true"
+            android:parentActivityName=".User_interface.GameActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
             android:name=".User_interface.MainMenuActivity"
             android:screenOrientation="portrait">
             <intent-filter>
@@ -20,10 +26,12 @@
         </activity>
         <activity
             android:name=".User_interface.GameActivity"
-            android:screenOrientation="portrait"
-            android:exported="true">
-
-        </activity>
+            android:exported="true"
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>
+
+
+
+

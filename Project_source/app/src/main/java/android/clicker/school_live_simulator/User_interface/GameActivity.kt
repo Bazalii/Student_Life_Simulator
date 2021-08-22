@@ -11,6 +11,7 @@ import android.os.Looper
 
 
 import android.animation.ObjectAnimator
+import android.content.Intent
 import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
@@ -82,8 +83,8 @@ class GameActivity : AppCompatActivity() {
      * Achievements button listener that opens Achievements activity
      */
     fun openAchievementActivity(view: View){
-        //val intent = Intent(this, AchievementsActivity::class.java)
-        //startActivity(intent)
+        val intent = Intent(this, AchievementsActivity::class.java)
+        startActivity(intent)
     }
 
     inner class PagerAdapter(activity: FragmentActivity) : FragmentStateAdapter(activity){
