@@ -4,7 +4,6 @@ import android.clicker.school_live_simulator.Game
 import android.clicker.school_live_simulator.R
 import android.clicker.school_live_simulator.User_interface.ScrollingFragments.*
 import android.clicker.school_live_simulator.databinding.ActivityGameBinding
-import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
@@ -12,8 +11,11 @@ import android.os.Looper
 
 
 import android.animation.ObjectAnimator
-import android.util.Log
-
+import android.view.View
+import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentActivity
+import androidx.viewpager2.adapter.FragmentStateAdapter
+import androidx.viewpager2.widget.ViewPager2
 
 
 class GameActivity : AppCompatActivity() {
@@ -36,11 +38,68 @@ class GameActivity : AppCompatActivity() {
          */
         updateStats()
         /**
-         * Initially opens school fragment
+         * Set adapter for viewPager
          */
-        supportFragmentManager.beginTransaction().replace(R.id.fragment, SchoolScrollingFragment())
-            .commit()
-        bottomNavigationClick()
+        binding.viewPager.adapter = PagerAdapter(this)
+        /**
+         * Phone keeps in memory all pages for better swipe performance
+         */
+        binding.viewPager.offscreenPageLimit = 5
+        /**
+         * BottomNavigation listener
+         */
+        binding.bottomNavigation.setOnNavigationItemSelectedListener {
+            when (it.itemId) {
+                R.id.school -> binding.viewPager.currentItem = 0
+                R.id.food -> binding.viewPager.currentItem = 1
+                R.id.work -> binding.viewPager.currentItem = 2
+                R.id.entertainment -> binding.viewPager.currentItem = 3
+                else -> binding.viewPager.currentItem = 4
+            }
+            true
+        }
+        /**
+         * Matching BottomNavigation and ViewPager
+         */
+        binding.viewPager.apply {
+            adapter = PagerAdapter(this@GameActivity)
+            registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
+                override fun onPageSelected(position: Int) {
+                    super.onPageSelected(position)
+                    binding.bottomNavigation.selectedItemId = when (position) {
+                        0 -> R.id.school
+                        1 -> R.id.food
+                        2-> R.id.work
+                        3-> R.id.entertainment
+                        else -> R.id.shop
+                    }
+                }
+            })
+        }
+    }
+
+    /**
+     * Achievements button listener that opens Achievements activity
+     */
+    fun openAchievementActivity(view: View){
+        //val intent = Intent(this, AchievementsActivity::class.java)
+        //startActivity(intent)
+    }
+
+    inner class PagerAdapter(activity: FragmentActivity) : FragmentStateAdapter(activity){
+        override fun getItemCount(): Int {
+            return 5
+        }
+        override fun createFragment(position: Int): Fragment {
+            return when(position){
+                0 -> SchoolScrollingFragment()
+                1 -> FoodScrollingFragment()
+                2 -> WorkScrollingFragment()
+                3 ->  FunScrollingFragment()
+                else ->  ShopScrollingFragment()
+
+            }
+        }
     }
 
     override fun onResume() {
@@ -64,8 +123,7 @@ class GameActivity : AppCompatActivity() {
 
 
     /**
-     * Andrey:
-     * I think, this function is useful, but you can suggest another implementation
+     * Updates UI: progress bars, money and date
      */
     fun updateStats(){
         ObjectAnimator.ofInt(binding.satietyProgressBar, "progress", Game.player.satiety).setDuration(300).start();
@@ -84,24 +142,4 @@ class GameActivity : AppCompatActivity() {
         binding.dateTextView.text = Game.game_date.toString()
     }
 
-    fun bottomNavigationClick() {
-        /**
-         * Check deprecated option setOnNavigationItemSelectedListener
-         */
-        binding.bottomNavigation.setOnNavigationItemSelectedListener {
-            when (it.itemId) {
-                R.id.school -> supportFragmentManager.beginTransaction()
-                    .replace(R.id.fragment, SchoolScrollingFragment()).commit()
-                R.id.food -> supportFragmentManager.beginTransaction()
-                    .replace(R.id.fragment, FoodScrollingFragment()).commit()
-                R.id.work -> supportFragmentManager.beginTransaction()
-                    .replace(R.id.fragment, WorkScrollingFragment()).commit()
-                R.id.entertainment -> supportFragmentManager.beginTransaction()
-                    .replace(R.id.fragment, FunScrollingFragment()).commit()
-                R.id.shop -> supportFragmentManager.beginTransaction()
-                    .replace(R.id.fragment, ShopScrollingFragment()).commit()
-            }
-            true
-        }
-    }
 }
