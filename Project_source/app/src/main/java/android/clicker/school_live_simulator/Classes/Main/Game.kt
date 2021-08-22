@@ -1,5 +1,6 @@
 package android.clicker.school_live_simulator
 
+import android.clicker.school_live_simulator.User_interface.GameActivity
 import android.clicker.school_live_simulator.Classes.Main.GameData
 import kotlinx.serialization.*
 import kotlinx.serialization.json.Json
