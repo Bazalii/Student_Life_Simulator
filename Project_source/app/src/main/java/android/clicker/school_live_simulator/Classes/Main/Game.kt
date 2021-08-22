@@ -1,25 +1,30 @@
 package android.clicker.school_live_simulator
 
+
 import android.clicker.school_live_simulator.User_interface.GameActivity
 import android.clicker.school_live_simulator.Classes.Main.GameData
 import kotlinx.serialization.*
 import kotlinx.serialization.json.Json
 import java.io.File
 
+
+@Serializable
 object Game {
     private var difficulty_state: GameDifficultyState = NormalMode()
 
     var player: Player = Player()
-//    lateinit var game_date: GameDate
-//    lateinit var game_status: GameStatus
+//    game: Game
+    var game_date: GameDate = GameDate()
 
+//    lateinit var game_status: GameStatus
+    var context_bundle: ContextBundle = ContextBundle()
 
     fun init() {
         TODO("Not yet implemented")
     }
     fun tick() {
-        //TODO("Not yet implemented")
-        player.tick()
+        this.player.tick()
+        this.game_date.tick()
     }
 
     fun checkDefeat(school_performance: Int, happiness: Int, satiety: Int) {

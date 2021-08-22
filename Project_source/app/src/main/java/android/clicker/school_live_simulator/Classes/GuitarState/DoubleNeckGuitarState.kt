@@ -1,6 +1,6 @@
 package android.clicker.school_live_simulator
 
-class DualNeckGuitarState: FenderGuitarState() {
+class DoubleNeckGuitarState: FenderGuitarState() {
     override val price: Int = 150000
 
     init {

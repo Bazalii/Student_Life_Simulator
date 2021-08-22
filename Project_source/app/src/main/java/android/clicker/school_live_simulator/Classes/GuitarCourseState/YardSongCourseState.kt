@@ -3,6 +3,8 @@ package android.clicker.school_live_simulator
 open class YardSongCourseState: FirstSongCourseState() {
     override val price: Int = 300
 
+    override val course_length: Int = 30
+
     override fun buyNextCourse(courses: Player.Courses) {
         courses.guitar_course = MusicalSchoolCourseState()
     }
@@ -12,6 +14,6 @@ open class YardSongCourseState: FirstSongCourseState() {
     }
 
     override fun timerEndHandler() {
-        available_playlist.add(Song.JAZZ)
+        this.best_song = Song.SMELLS_LIKE
     }
 }

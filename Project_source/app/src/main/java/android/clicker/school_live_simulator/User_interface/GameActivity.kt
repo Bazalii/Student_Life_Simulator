@@ -4,10 +4,17 @@ import android.clicker.school_live_simulator.Game
 import android.clicker.school_live_simulator.R
 import android.clicker.school_live_simulator.User_interface.ScrollingFragments.*
 import android.clicker.school_live_simulator.databinding.ActivityGameBinding
+import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
+
+
+import android.animation.ObjectAnimator
+import android.util.Log
+
+
 
 class GameActivity : AppCompatActivity() {
     lateinit var binding: ActivityGameBinding
@@ -18,7 +25,7 @@ class GameActivity : AppCompatActivity() {
      */
     private lateinit var runnable: Runnable
     private var handler = Handler(Looper.getMainLooper())
-    private val delay: Long = 3000
+    private val delay: Long = 500
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -38,7 +45,7 @@ class GameActivity : AppCompatActivity() {
 
     override fun onResume() {
         super.onResume()
-
+        Game.context_bundle.context = this.applicationContext
         runnable = Runnable {
             /**
              * Code which is constantly called with delay
@@ -50,12 +57,23 @@ class GameActivity : AppCompatActivity() {
         handler.postDelayed(runnable, delay)
     }
 
+    override fun onPause() {
+        super.onPause()
+        handler.removeCallbacks(runnable)
+    }
+
+
     /**
      * Andrey:
      * I think, this function is useful, but you can suggest another implementation
      */
     fun updateStats(){
-         //Make fields open
+        ObjectAnimator.ofInt(binding.satietyProgressBar, "progress", Game.player.satiety).setDuration(300).start();
+        ObjectAnimator.ofInt(binding.happinessProgressBar, "progress", Game.player.happiness).setDuration(300).start();
+        ObjectAnimator.ofInt(binding.schoolPerformanceProgressBar, "progress", Game.player.school_performance).setDuration(300).start();
+        /**
+         * these assignments don't influence on animation
+         */
         binding.satietyProgressBar.progress = Game.player.satiety
         binding.happinessProgressBar.progress = Game.player.happiness
         binding.schoolPerformanceProgressBar.progress = Game.player.school_performance
@@ -63,7 +81,7 @@ class GameActivity : AppCompatActivity() {
          * Think, how to write these in TextView
          */
         binding.moneyTextView.text = Game.player.money.toString()
-        //binding.dateTextView
+        binding.dateTextView.text = Game.game_date.toString()
     }
 
     fun bottomNavigationClick() {
@@ -87,4 +105,3 @@ class GameActivity : AppCompatActivity() {
         }
     }
 }
-

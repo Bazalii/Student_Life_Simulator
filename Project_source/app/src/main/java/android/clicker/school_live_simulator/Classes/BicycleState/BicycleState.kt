@@ -1,5 +1,7 @@
 package android.clicker.school_live_simulator
 
+import android.clicker.school_live_simulator.Classes.IsNotAvailableException
+
 /**
  * Class defines player's bicycle.
  * Player can do delivery with his bicycle.
@@ -16,7 +18,7 @@ abstract class BicycleState {
      * A list of available types of delivery.
      * These types are described in enumeration class Delivery.
      */
-    protected val available_delivery: ArrayList<Delivery> = arrayListOf<Delivery>()
+    protected open val best_delivery: Delivery? = null
 
     /**
      * Upgrades bicycle.
@@ -29,7 +31,7 @@ abstract class BicycleState {
      * @param  delivery Element of enum Delivery which describes certain type of delivery.
      * @return true if a player can do chosen type of delivery.
      */
-    fun isAvailable(delivery: Delivery): Boolean {
-        return delivery in available_delivery
+    fun BestDelivery(): Delivery {
+        return best_delivery ?: throw IsNotAvailableException("delivery is not available!")
     }
 }
