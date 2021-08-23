@@ -42,7 +42,7 @@ class Player {
                 field = value
             }
     }
-    private var achieved_achievements: ArrayList<Achievements> = arrayListOf<Achievements>()
+     var achieved_achievements: ArrayList<Achievements> = arrayListOf<Achievements>()
     /**
      * Player's name
      */
@@ -243,9 +243,10 @@ class Player {
                     return true
                 }
             }
-            else
+            else {
                 this.achieved_achievements.add(achievement)
                 return true
+            }
         }
         return false
     }

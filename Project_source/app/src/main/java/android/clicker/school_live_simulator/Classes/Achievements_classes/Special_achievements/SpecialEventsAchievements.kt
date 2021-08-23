@@ -6,7 +6,7 @@ import android.clicker.school_live_simulator.Game
 /**
  * Special Achievements related to player's special actions
  */
-enum class SpecialEventsAchievements(val achievement_name: String, val achievement_message: String): SpecialAchievements {
+enum class SpecialEventsAchievements(override val achievement_name: String, override val achievement_message: String): SpecialAchievements {
     SPARTAK_WINNER(achievement_name = Game.context_bundle.getTitle("ach_spartak_winner_name"), achievement_message = Game.context_bundle.getTitle("ach_spartak_winner_text")),
     ZENIT_WINNER(achievement_name = Game.context_bundle.getTitle("ach_zenit_winner_name"), achievement_message = Game.context_bundle.getTitle("ach_zenit_winner_text")),
     JOIN_TO_WINNERS(achievement_name = Game.context_bundle.getTitle("ach_join_to_winners_name"), achievement_message = Game.context_bundle.getTitle("ach_join_to_winners_text")),

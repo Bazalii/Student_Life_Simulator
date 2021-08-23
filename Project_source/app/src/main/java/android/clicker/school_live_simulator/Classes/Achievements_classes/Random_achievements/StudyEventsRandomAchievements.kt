@@ -10,7 +10,7 @@ import android.clicker.school_live_simulator.Game
  * @param   achievement_message achievement message
  * @param   achievement_chance  achievement chance (in %)
  */
-enum class StudyEventsRandomAchievements(val achievement_name: String, val achievement_message: String, override val achievement_chance: Int): RandomAchievements {
+enum class StudyEventsRandomAchievements(override val achievement_name: String, override val achievement_message: String, override val achievement_chance: Int): RandomAchievements {
     DRUNK_STUDENT(achievement_name = Game.context_bundle.getTitle("ach_drunk_student_name"), achievement_message = Game.context_bundle.getTitle("ach_drunk_student_text"), achievement_chance = Game.context_bundle.getNumber("ach_drunk_student_chance")),
     PAR_ABOUT_REPRODUCTIVE(achievement_name = Game.context_bundle.getTitle("ach_par_about_reproductive_name"), achievement_message = Game.context_bundle.getTitle("ach_par_about_reproductive_text"), achievement_chance = Game.context_bundle.getNumber("ach_par_about_reproductive_chance")),
     //TODO NAME

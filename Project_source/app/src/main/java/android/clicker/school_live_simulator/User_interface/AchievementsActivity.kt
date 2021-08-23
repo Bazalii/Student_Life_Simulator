@@ -1,21 +1,26 @@
 package android.clicker.school_live_simulator.User_interface
 
+import android.clicker.school_live_simulator.Classes.Achievements_classes.Interfaces.Achievements
+import android.clicker.school_live_simulator.Classes.Achievements_classes.Random_achievements.StudyEventsRandomAchievements
+import android.clicker.school_live_simulator.Game
 import android.clicker.school_live_simulator.R
 import android.clicker.school_live_simulator.databinding.AchievementItemBinding
+import android.clicker.school_live_simulator.databinding.AchievementMessageboxBinding
 import android.clicker.school_live_simulator.databinding.ActivityAchievementsBinding
-import android.clicker.school_live_simulator.databinding.ActivityMainMenuBinding
+import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import androidx.appcompat.app.AlertDialog
+
 
 class AchievementsActivity : AppCompatActivity() {
     lateinit var binding: ActivityAchievementsBinding
-    private  val adapter = AchievementsAdapter()
+    private val adapter = AchievementsAdapter()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityAchievementsBinding.inflate(layoutInflater)
@@ -25,79 +30,79 @@ class AchievementsActivity : AppCompatActivity() {
          */
         setSupportActionBar(binding.toolbar)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
-
         binding.recyclerView.layoutManager = LinearLayoutManager(this)
         binding.recyclerView.adapter = adapter
-
-    }
-
-    inner class AchievementsAdapter: RecyclerView.Adapter<AchievementsAdapter.AchievementsHolder>() {
         /**
-         * Test arrays
+         * Send achieved_achievements array to RecyclerView
          */
-        val icons_list = listOf(
-            R.drawable.ic_lock,
-            R.drawable.ic_lock,
-            R.drawable.ic_lock,
-            R.drawable.ic_lock,
-            R.drawable.ic_lock,
-            R.drawable.ic_lock,
-            R.drawable.ic_lock,
-            R.drawable.ic_lock,
-            R.drawable.ic_lock,
-            R.drawable.ic_lock,
-            R.drawable.ic_lock,
-            R.drawable.ic_lock,
-            R.drawable.ic_lock,
-            R.drawable.ic_lock,
-            R.drawable.ic_lock,
-            R.drawable.ic_lock,
-            R.drawable.ic_lock,
-            R.drawable.ic_lock,
-            R.drawable.ic_lock,
-            R.drawable.ic_lock,
-        )
-        val text_list = listOf(
-            R.string.app_name,
-            R.string.app_name,
-            R.string.app_name,
-            R.string.app_name,
-            R.string.app_name,
-            R.string.app_name,
-            R.string.app_name,
-            R.string.app_name,
-            R.string.app_name,
-            R.string.app_name,
-            R.string.app_name,
-            R.string.app_name,
-            R.string.app_name,
-            R.string.app_name,
-            R.string.app_name,
-            R.string.app_name,
-            R.string.app_name,
-            R.string.app_name,
-            R.string.app_name,
-            R.string.app_name,
-        )
-        inner class AchievementsHolder(item: View): RecyclerView.ViewHolder(item) {
+        adapter.addAll(Game.player.achieved_achievements)
+        /**
+         * RecyclerView onClick listener
+         */
+        adapter.setOnItemClickListieer(object: AchievementsAdapter.onItemClickListener{
+            override fun onItemClick(position: Int) {
+                alertDialog(this@AchievementsActivity, position, layoutInflater)
+            }
+        })
+    }
+    private fun alertDialog(context: Context, position: Int, inflater: LayoutInflater){
+        val mBuilder = AlertDialog.Builder(context)
+        val mView = inflater.inflate(R.layout.achievement_messagebox, null)
+        val binding = AchievementMessageboxBinding.bind(mView)
+        binding.AchievementTitle.text = Game.player.achieved_achievements[position].achievement_name
+        binding.AchievementDescription.text = Game.player.achieved_achievements[position].achievement_message
+        mBuilder.setView(mView)
+        val dialog: AlertDialog = mBuilder.create()
+        dialog.show()
+        binding.AchievementOK.setOnClickListener {
+            dialog.dismiss()
+        }
+    }
+}
+
+
+    class AchievementsAdapter: RecyclerView.Adapter<AchievementsAdapter.AchievementsHolder>() {
+
+        private lateinit var mListener: onItemClickListener
+
+        interface onItemClickListener{
+            fun  onItemClick(position : Int)
+        }
+
+        fun setOnItemClickListieer(listener: onItemClickListener){
+            mListener = listener
+        }
+
+        val achievements = arrayListOf<Achievements>()
+
+
+        inner class AchievementsHolder(item: View, listener: onItemClickListener): RecyclerView.ViewHolder(item) {
             val binding = AchievementItemBinding.bind(item)
+
+            init{
+                item.setOnClickListener {
+                    listener.onItemClick(adapterPosition)
+                }
+            }
 
             /**
              * Fill template of achievement with certain values
              */
-            fun bind(text: Int, image: Int) = with(binding){
-                achievIV.setImageResource(image)
-                achievName.text = getString(text)
+            fun bind(achievement: Achievements) = with(binding){
+                //achievIV.setImageResource(image)
+                achievName.text = achievement.achievement_name
             }
         }
 
+
+
         override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): AchievementsHolder {
             val view = LayoutInflater.from(parent.context).inflate(R.layout.achievement_item, parent, false)
-            return AchievementsHolder(view)
+            return AchievementsHolder(view, mListener)
         }
 
         override fun onBindViewHolder(holder: AchievementsHolder, position: Int) {
-            holder.bind(text_list[position], icons_list[position])
+            holder.bind(achievements[position])
             // holder.bind(Game.player.achieved_achievements[position])
         }
 
@@ -105,8 +110,13 @@ class AchievementsActivity : AppCompatActivity() {
          * Number of elements = array size
          */
         override fun getItemCount(): Int {
-            return icons_list.size
+            return achievements.size
             // return Game.player.achieved_achievements.size
         }
+        fun addAll(achievements: List<Achievements>){
+            this.achievements.clear()
+            this.achievements.addAll(achievements)
+            notifyDataSetChanged()
+        }
     }
-}
+

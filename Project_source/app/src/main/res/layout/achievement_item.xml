@@ -24,7 +24,7 @@
                 android:id="@+id/achievIV"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:srcCompat="@drawable/ic_botnav_fun" />
+                app:srcCompat="@drawable/ic_achievement_done" />
 
             <TextView
                 android:id="@+id/achievName"
@@ -35,7 +35,8 @@
                 android:gravity="center"
                 android:text="TextView"
                 android:textColor="@color/black"
-                android:textSize="16sp" />
+                android:textSize="16sp"
+                android:textStyle="bold" />
         </LinearLayout>
 
     </androidx.cardview.widget.CardView>

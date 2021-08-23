@@ -10,7 +10,7 @@ import android.clicker.school_live_simulator.Game
  * @param   achievement_message achievement message
  * @param   achievement_chance  achievement chance (in %)
  */
-enum class EntertainmentEventsRandomAchievements(val achievement_name: String, val achievement_message: String, override val achievement_chance: Int): RandomAchievements {
+enum class EntertainmentEventsRandomAchievements(override val achievement_name: String, override val achievement_message: String, override val achievement_chance: Int): RandomAchievements {
     CAM2CAM_TRAP(achievement_name = Game.context_bundle.getTitle("ach_cam2cam_trap_name"), achievement_message = Game.context_bundle.getTitle("ach_cam2cam_trap_text"), achievement_chance = Game.context_bundle.getNumber("ach_cam2cam_trap_chance")),
     GET_BAN(achievement_name = Game.context_bundle.getTitle("ach_get_ban_name"), achievement_message = Game.context_bundle.getTitle("ach_get_ban_text"), achievement_chance = Game.context_bundle.getNumber("ach_get_ban_chance")),
     BE_REPORTED_BY_CHILDREN(achievement_name = Game.context_bundle.getTitle("ach_be_reported_by_children_name"), achievement_message = Game.context_bundle.getTitle("ach_be_reported_by_children_text"), achievement_chance = Game.context_bundle.getNumber("ach_be_reported_by_children_chance")),

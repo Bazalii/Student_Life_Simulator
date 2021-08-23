@@ -12,8 +12,11 @@ import android.os.Looper
 
 import android.animation.ObjectAnimator
 import android.clicker.school_live_simulator.Classes.Achievements_classes.Interfaces.Achievements
+import android.clicker.school_live_simulator.Classes.Achievements_classes.Interfaces.RandomAchievements
+import android.clicker.school_live_simulator.databinding.AchievementMessageboxBinding
 import android.content.Intent
 import android.view.View
+import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
 import androidx.viewpager2.adapter.FragmentStateAdapter
@@ -149,6 +152,34 @@ class GameActivity : AppCompatActivity() {
             /**
              * Logic with messageboxes
              */
+            handler.removeCallbacks(runnable)
+            val mBuilder = AlertDialog.Builder(this)
+            val mView = layoutInflater.inflate(R.layout.achievement_messagebox, null)
+            val binding = AchievementMessageboxBinding.bind(mView)
+            binding.AchievementNotification.visibility = View.VISIBLE
+            binding.AchievementTitle.text = achievement.achievement_name
+            binding.AchievementDescription.text = achievement.achievement_message
+            if(achievement is RandomAchievements){
+                binding.AchievementChance.text = "${achievement.achievement_chance.toString()}%"
+            }
+            mBuilder.setView(mView)
+            val dialog: AlertDialog = mBuilder.create()
+            dialog.show()
+            binding.AchievementOK.setOnClickListener {
+                dialog.dismiss()
+            }
+            dialog.setOnDismissListener {
+                Game.context_bundle.context = this.applicationContext
+                runnable = Runnable {
+                    /**
+                     * Code which is constantly called with delay
+                     */
+                    Game.tick()
+                    updateStats()
+                    handler.postDelayed(runnable, delay)
+                }
+                handler.postDelayed(runnable, delay)
+            }
         }
     }
 }
