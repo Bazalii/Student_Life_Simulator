@@ -1,6 +1,9 @@
 package android.clicker.school_live_simulator.User_interface.ScrollingFragments
 
 import android.clicker.school_live_simulator.*
+import android.clicker.school_live_simulator.Classes.Achievements_classes.Purchase_achievements.BicycleEventsAchievements
+import android.clicker.school_live_simulator.Classes.Achievements_classes.Purchase_achievements.ComputerEventsAchievements
+import android.clicker.school_live_simulator.Classes.Achievements_classes.Purchase_achievements.GuitarEventsAchievements
 import android.clicker.school_live_simulator.Classes.GameDate.Timer
 import android.clicker.school_live_simulator.Classes.IsNotAvailableException
 import android.clicker.school_live_simulator.Classes.NotEnoughMoneyException
@@ -325,6 +328,7 @@ class ShopScrollingFragment : Fragment() {
                 try {
                     Game.player.buyNewBicycle()
                     updateUI()
+                    (activity as GameActivity).achieve(BicycleEventsAchievements.USUAL_BIKE)
                 } catch(exception: NotEnoughMoneyException){
                     binding.layoutShopUsualBicycle.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
                 }
@@ -340,6 +344,7 @@ class ShopScrollingFragment : Fragment() {
                 try {
                     Game.player.buyNewBicycle()
                     updateUI()
+                    (activity as GameActivity).achieve(BicycleEventsAchievements.MOUNTAIN_BIKE)
                 } catch(exception: NotEnoughMoneyException){
                     binding.layoutShopMountainBicycle.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
                 }
@@ -358,6 +363,7 @@ class ShopScrollingFragment : Fragment() {
             try {
                 Game.player.buyNewGuitar()
                 updateUI()
+                (activity as GameActivity).achieve(GuitarEventsAchievements.USSR_GUITAR)
             } catch(exception: NotEnoughMoneyException){
                 binding.shopUssrGuitar.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
             }
@@ -368,21 +374,7 @@ class ShopScrollingFragment : Fragment() {
                 try {
                     Game.player.buyNewGuitar()
                     updateUI()
-                } catch(exception: NotEnoughMoneyException){
-                    binding.layoutShopUralGuitar.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
-                }
-            }
-            else{
-                Toast.makeText(activity, "buy previous", Toast.LENGTH_SHORT).show()
-                binding.layoutShopUralGuitar.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
-            }
-        }
-
-        binding.shopUralGuitar.setOnClickListener {
-            if(Game.player.items.guitar is UssrGuitarState){
-                try {
-                    Game.player.buyNewGuitar()
-                    updateUI()
+                    (activity as GameActivity).achieve(GuitarEventsAchievements.URAL_GUITAR)
                 } catch(exception: NotEnoughMoneyException){
                     binding.layoutShopUralGuitar.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
                 }
@@ -428,6 +420,7 @@ class ShopScrollingFragment : Fragment() {
                 try {
                     Game.player.buyNewGuitar()
                     updateUI()
+                    (activity as GameActivity).achieve(GuitarEventsAchievements.DOUBLE_NECK_GUITAR)
                 } catch(exception: NotEnoughMoneyException){
                     binding.layoutShopDoubleNeckGuitar.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
                 }
@@ -446,6 +439,7 @@ class ShopScrollingFragment : Fragment() {
             try {
                 Game.player.buyNewComputer()
                 updateUI()
+                (activity as GameActivity).achieve(ComputerEventsAchievements.PREVIOUSLY_USED_COMPUTER)
             } catch(exception: NotEnoughMoneyException){
                 binding.layoutShopPreviouslyUsedComputer.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
             }
@@ -486,6 +480,7 @@ class ShopScrollingFragment : Fragment() {
                 try {
                     Game.player.buyNewComputer()
                     updateUI()
+                    (activity as GameActivity).achieve(ComputerEventsAchievements.XIAOMI_MI_NOTEBOOK)
                 } catch(exception: NotEnoughMoneyException){
                     binding.layoutShopXiaomiComputer.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
                 }
@@ -501,6 +496,7 @@ class ShopScrollingFragment : Fragment() {
                 try {
                     Game.player.buyNewComputer()
                     updateUI()
+                    (activity as GameActivity).achieve(ComputerEventsAchievements.MACBOOK)
                 } catch(exception: NotEnoughMoneyException){
                     binding.layoutShopMacbookComputer.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
                 }

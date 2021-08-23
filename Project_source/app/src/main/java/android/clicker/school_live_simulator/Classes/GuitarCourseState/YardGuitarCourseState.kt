@@ -17,6 +17,5 @@ open class YardGuitarCourseState: NullGuitarCourseState() {
 
     override fun timerEndHandler() {
         this.best_song = Song.SINGLE_CHORD
-        Log.d("MyLog", Game.player.current_courses.guitar_course.BestSong().toString())
     }
 }

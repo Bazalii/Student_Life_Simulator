@@ -1,15 +1,17 @@
 package android.clicker.school_live_simulator
 
 
+import android.clicker.school_live_simulator.Classes.Achievements_classes.Interfaces.Achievements
+import android.clicker.school_live_simulator.Classes.Achievements_classes.Interfaces.RandomAchievements
 import android.clicker.school_live_simulator.Classes.Enum_classes.Entertainment
 import android.clicker.school_live_simulator.Classes.Enum_classes.OtherWork
 import android.clicker.school_live_simulator.Classes.Enum_classes.Studies
 import android.clicker.school_live_simulator.Classes.NotEnoughMoneyException
 import android.clicker.school_live_simulator.Classes.IsNotAvailableException
-import android.clicker.school_live_simulator.Classes.Main.ContextBundle
-import android.content.Context
+import kotlinx.serialization.Serializable
 import kotlin.reflect.KClass
 
+@Serializable
 class Player {
     inner class Bag {
         var bicycle: BicycleState = NullBicycleState()
@@ -40,7 +42,7 @@ class Player {
                 field = value
             }
     }
-//    private var achieved_achievements: ArrayList<GameAchievements> = arrayListOf<GameAchievements>()
+    private var achieved_achievements: ArrayList<Achievements> = arrayListOf<Achievements>()
     /**
      * Player's name
      */
@@ -130,7 +132,7 @@ class Player {
     fun playSong() {
         changeMoney(this.current_courses.guitar_course.BestSong().money_diff)
     }
-    fun deliver(){
+    fun deliver() {
         changeMoney(this.items.bicycle.BestDelivery().money_diff)
     }
     fun realiseWebTask() {
@@ -146,7 +148,6 @@ class Player {
         changeHappiness(food.happiness)
     }
     fun entertain(entertainment: Entertainment) {
-        //TODO everyday happiness and monthly payment
         changeMoney(entertainment.money_diff)
         changeHappiness(entertainment.happiness)
     }
@@ -231,6 +232,22 @@ class Player {
             this.current_courses.computer_course.buyNextCourse(this.current_courses)
         else
             throw IsNotAvailableException("Course is not available!")
+    }
+
+
+    fun achieved(achievement: Achievements): Boolean {
+        if (achievement !in achieved_achievements) {
+            if (achievement is RandomAchievements) {
+                if(achievement.achievementGetCheck()) {
+                    this.achieved_achievements.add(achievement)
+                    return true
+                }
+            }
+            else
+                this.achieved_achievements.add(achievement)
+                return true
+        }
+        return false
     }
 }
 

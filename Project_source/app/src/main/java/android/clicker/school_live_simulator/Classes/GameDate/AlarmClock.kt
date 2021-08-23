@@ -3,8 +3,10 @@ package android.clicker.school_live_simulator.Classes.GameDate
 import android.clicker.school_live_simulator.Classes.Enum_classes.Months
 import android.clicker.school_live_simulator.Game
 import android.text.TextUtils.indexOf
+import kotlinx.serialization.Serializable
 import kotlin.reflect.KFunction
 
+@Serializable
 class AlarmClock(private var day: Int, private var month: Months, private var year: Int): TimeObservable {
     init {
         Game.game_date.registerAlarmClock(this)

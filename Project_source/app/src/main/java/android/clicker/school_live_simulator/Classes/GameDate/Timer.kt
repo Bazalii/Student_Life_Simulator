@@ -3,9 +3,10 @@ package android.clicker.school_live_simulator.Classes.GameDate
 import android.clicker.school_live_simulator.Classes.Enum_classes.Entertainment
 import android.clicker.school_live_simulator.Classes.Enum_classes.Studies
 import android.clicker.school_live_simulator.Game
-import android.util.Log
+import kotlinx.serialization.Serializable
 import kotlin.reflect.KFunction
 
+@Serializable
 class Timer(input_days: Int): TimeObservable {
     init {
         Game.game_date.registerTimer(this)

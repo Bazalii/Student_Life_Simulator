@@ -1,7 +1,8 @@
 package android.clicker.school_live_simulator
 
 
-import android.clicker.school_live_simulator.User_interface.GameActivity
+import android.clicker.school_live_simulator.Classes.GameDate.GameDate
+import android.clicker.school_live_simulator.Classes.Main.ContextBundle
 import android.clicker.school_live_simulator.Classes.Main.GameData
 import kotlinx.serialization.*
 import kotlinx.serialization.json.Json
@@ -34,24 +35,13 @@ object Game {
         TODO("Not yet implemented")
     }
 
-    /**
-     * Commented because that should be realised later
-      */
-//    fun registerSaveHandler(handler: function) {
-//        TODO("Not yet implemented")
-//    }
-//    fun registerLoadHandler(handler: function) {
-//        TODO("Not yet implemented")
-//    }
-
-
 
     /**
      * init game_data with fields from object Game,
      * encode to JSON-format and write to file GameData.txt
      */
     fun save() {
-        val game_data = GameData(difficulty_state, player)//, game_date, game_status)
+        val game_data = GameData(difficulty_state, player, game_date)
         val game_data_to_json = Json.encodeToString(game_data)
         File("GameData.txt").writeText(game_data_to_json)
     }

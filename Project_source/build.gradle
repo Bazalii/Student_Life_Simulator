@@ -8,9 +8,6 @@ buildscript {
     dependencies {
         classpath 'com.android.tools.build:gradle:7.0.1'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
-//        classpath "org.jetbrains.kotlin:kotlin-serialization:$kotlin_version"
-        // NOTE: Do not place your application dependencies here; they belong
-        // in the individual module build.gradle files
     }
 }
 
@@ -18,10 +15,6 @@ plugins {
     id 'org.jetbrains.kotlin.jvm' version '1.5.21'
     id 'org.jetbrains.kotlin.plugin.serialization' version '1.5.20'
 }
-
-
-//apply plugin: 'kotlin' // or 'kotlin-multiplatform' for multiplatform projects
-//apply plugin: 'kotlinx-serialization'
 
 allprojects {
     repositories {

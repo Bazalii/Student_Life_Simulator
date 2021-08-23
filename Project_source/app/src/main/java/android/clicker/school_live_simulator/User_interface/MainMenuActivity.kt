@@ -1,13 +1,12 @@
 package android.clicker.school_live_simulator.User_interface
 
-import android.clicker.school_live_simulator.R
+import android.clicker.school_live_simulator.Game
 import android.clicker.school_live_simulator.databinding.ActivityMainMenuBinding
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
-import java.lang.Integer.getInteger
 
 class MainMenuActivity : AppCompatActivity() {
     lateinit var binding: ActivityMainMenuBinding

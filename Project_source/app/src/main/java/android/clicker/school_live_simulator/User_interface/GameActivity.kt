@@ -11,6 +11,7 @@ import android.os.Looper
 
 
 import android.animation.ObjectAnimator
+import android.clicker.school_live_simulator.Classes.Achievements_classes.Interfaces.Achievements
 import android.content.Intent
 import android.view.View
 import androidx.fragment.app.Fragment
@@ -143,4 +144,11 @@ class GameActivity : AppCompatActivity() {
         binding.dateTextView.text = Game.game_date.toString()
     }
 
+    fun achieve(achievement: Achievements) {
+        if (Game.player.achieved(achievement)) {
+            /**
+             * Logic with messageboxes
+             */
+        }
+    }
 }

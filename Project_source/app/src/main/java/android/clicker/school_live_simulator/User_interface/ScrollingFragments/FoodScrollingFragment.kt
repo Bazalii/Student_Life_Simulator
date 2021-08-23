@@ -1,5 +1,7 @@
 package android.clicker.school_live_simulator.User_interface.ScrollingFragments
 
+import android.clicker.school_live_simulator.Classes.Achievements_classes.Random_achievements.CreativityEventsRandomAchievements
+import android.clicker.school_live_simulator.Classes.Achievements_classes.Random_achievements.FoodEventsRandomAchievements
 import android.clicker.school_live_simulator.Classes.NotEnoughMoneyException
 import android.clicker.school_live_simulator.Game
 import android.clicker.school_live_simulator.Food
@@ -38,6 +40,7 @@ class FoodScrollingFragment : Fragment() {
             try {
                 Game.player.eat(Food.DOSHIRAK)
                 (activity as GameActivity).updateStats()
+                (activity as GameActivity).achieve(FoodEventsRandomAchievements.TWO_SPICES)
             } catch (exception: NotEnoughMoneyException){
                 binding.layoutFoodEatDoshirack.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
             }
@@ -48,6 +51,7 @@ class FoodScrollingFragment : Fragment() {
             try {
                 Game.player.eat(Food.EATERY_FOOD)
                 (activity as GameActivity).updateStats()
+                (activity as GameActivity).achieve(FoodEventsRandomAchievements.POISONING_OF_EATERY_FOOD)
             } catch (exception: NotEnoughMoneyException){
                 binding.layoutFoodEatAtTheCanteen.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
             }

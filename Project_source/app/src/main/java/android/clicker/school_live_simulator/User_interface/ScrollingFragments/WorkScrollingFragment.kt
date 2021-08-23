@@ -1,6 +1,8 @@
 package android.clicker.school_live_simulator.User_interface.ScrollingFragments
 
 import android.clicker.school_live_simulator.*
+import android.clicker.school_live_simulator.Classes.Achievements_classes.Random_achievements.FoodEventsRandomAchievements
+import android.clicker.school_live_simulator.Classes.Achievements_classes.Random_achievements.SongEventsRandomAchievements
 import android.clicker.school_live_simulator.Classes.Enum_classes.OtherWork
 import android.clicker.school_live_simulator.Classes.IsNotAvailableException
 import android.clicker.school_live_simulator.User_interface.GameActivity
@@ -63,6 +65,7 @@ class WorkScrollingFragment : Fragment() {
         binding.workPlayGuitar.setOnClickListener{
             try {
                 Game.player.playSong()
+                (activity as GameActivity).achieve(SongEventsRandomAchievements.WRONG_CHORDS)
             } catch(exception: IsNotAvailableException) {
                 Toast.makeText(activity, "Course is not passed yet", Toast.LENGTH_SHORT).show()
                 binding.layoutWorkPlayGuitar.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))

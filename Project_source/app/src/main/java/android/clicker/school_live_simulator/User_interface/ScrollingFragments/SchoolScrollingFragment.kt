@@ -1,5 +1,7 @@
 package android.clicker.school_live_simulator.User_interface.ScrollingFragments
 
+import android.clicker.school_live_simulator.Classes.Achievements_classes.Random_achievements.SongEventsRandomAchievements
+import android.clicker.school_live_simulator.Classes.Achievements_classes.Random_achievements.StudyEventsRandomAchievements
 import android.clicker.school_live_simulator.Classes.Enum_classes.Studies
 import android.clicker.school_live_simulator.Classes.GameDate.Timer
 import android.clicker.school_live_simulator.Classes.NotEnoughMoneyException
@@ -40,6 +42,7 @@ class SchoolScrollingFragment : Fragment() {
             try {
                 Game.player.study(Studies.LEARN_YOURSELF)
                 (activity as GameActivity).updateStats()
+                (activity as GameActivity).achieve(StudyEventsRandomAchievements.PAR_ABOUT_REPRODUCTIVE)
             } catch (exception: NotEnoughMoneyException){
                 binding.layoutSchoolLearnYourself.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
             }
@@ -49,6 +52,7 @@ class SchoolScrollingFragment : Fragment() {
             try {
                 Game.player.study(Studies.BUY_CHEATBOOK)
                 (activity as GameActivity).updateStats()
+                (activity as GameActivity).achieve(StudyEventsRandomAchievements.OLD_ANSWER_BOOK)
             } catch (exception: NotEnoughMoneyException){
                 binding.layoutSchoolBuyCheatbook.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
             }
@@ -58,6 +62,7 @@ class SchoolScrollingFragment : Fragment() {
             try {
                 Game.player.study(Studies.LEARN_FROM_A_STUDENT)
                 (activity as GameActivity).updateStats()
+                (activity as GameActivity).achieve(StudyEventsRandomAchievements.DRUNK_STUDENT)
             } catch (exception: NotEnoughMoneyException){
                 binding.layoutSchoolLearnFromStudent.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
             }
@@ -75,6 +80,7 @@ class SchoolScrollingFragment : Fragment() {
             try {
                 (activity as GameActivity).updateStats()
                 Timer(Game.game_date.subscription_length).setEndSignalHandler(Studies.SIGN_UP_IN_AN_ONLINE_SCHOOL::signUpInOnlineSchool)
+                (activity as GameActivity).achieve(StudyEventsRandomAchievements.FALL_ASLEEP_AT_WEBINAR)
             } catch (exception: NotEnoughMoneyException){
                 binding.layoutSchoolSignUpInAnOnlineSchool.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
             }
@@ -84,6 +90,7 @@ class SchoolScrollingFragment : Fragment() {
             try {
                 Game.player.study(Studies.STUDY_WITH_UNI_TEACHER)
                 (activity as GameActivity).updateStats()
+                (activity as GameActivity).achieve(StudyEventsRandomAchievements.STORIES_ABOUT_USSR)
             } catch (exception: NotEnoughMoneyException){
                 binding.layoutSchoolStudyWithUniTeacher.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
             }

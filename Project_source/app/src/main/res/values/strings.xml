@@ -297,9 +297,9 @@
     <string name="ach_wrong_chords_name">Autistic Guitarist</string>
     <string name="ach_wrong_chords_text">Get punched in the face for wrong chords</string>
     <string name="ach_wrong_chords_chance">5</string>
-    <string name="ach_in_spotlight_name">Convener</string>
-    <string name="ach_in_spotlight_text">A company has gathered around you</string>
-    <string name="ach_in_spotlight_chance">5</string>
+    <string name="ach_company_around_name">Convener</string>
+    <string name="ach_company_around_text">A company has gathered around you</string>
+    <string name="ach_company_around_chance">5</string>
 
     <string name="ach_drunk_student_name">Rare Kozel</string>
     <string name="ach_drunk_student_text">Do homework with a drunken student</string>
@@ -376,12 +376,12 @@
     <string name="ach_ivans_international_name">Paul McCartney</string>
     <string name="ach_ivans_international_text">Accidentally write "Yesterday"</string>
     <string name="ach_ivans_international_chance">3</string>
-    <string name="ach_poem_in_spotlight_name">Do you love roses?</string>
-    <string name="ach_poem_in_spotlight_text">The verse was posted by the class teacher</string>
-    <string name="ach_poem_in_spotlight_chance">10</string>
-    <string name="ach_song_in_spotlight_name">Kurt Cobain</string>
-    <string name="ach_song_in_spotlight_text">Girls liked the song</string>
-    <string name="ach_song_in_spotlight_chance">7</string>
+    <string name="ach_poem_posted_by_teacher_name">Do you love roses?</string>
+    <string name="ach_poem_posted_by_teacher_text">The verse was posted by the class teacher</string>
+    <string name="ach_poem_posted_by_teacher_chance">10</string>
+    <string name="ach_girls_like_the_song_name">Kurt Cobain</string>
+    <string name="ach_girls_like_the_song_text">Girls liked the song</string>
+    <string name="ach_girls_like_the_song_chance">7</string>
 
     <!--Special achievements-->
     <string name="ach_spartak_winner_name">Meat</string>
