@@ -7,6 +7,6 @@ import android.clicker.school_live_simulator.Game
  * Purchase Achievements related to the purchase of a bicycle
  */
 enum class BicycleEventsAchievements(val achievement_name: String, val achievement_message: String): PurchaseAchievements {
-    USUAL_BIKE(achievement_name = Game.context_bundle.getTitle(""), achievement_message = Game.context_bundle.getTitle("")),
-    MOUNTAIN_BIKE(achievement_name = Game.context_bundle.getTitle(""), achievement_message = Game.context_bundle.getTitle(""))
+    USUAL_BIKE(achievement_name = Game.context_bundle.getTitle("ach_usual_bike_name"), achievement_message = Game.context_bundle.getTitle("ach_usual_bike_text")),
+    MOUNTAIN_BIKE(achievement_name = Game.context_bundle.getTitle("ach_mountain_bike_name"), achievement_message = Game.context_bundle.getTitle("ach_mountain_bike_text"))
 }

@@ -7,6 +7,6 @@ import android.clicker.school_live_simulator.Game
  * Random song-related achievements
  */
 enum class SongEventsRandomAchievements(val achievement_name: String, val achievement_message: String): RandomAchievements {
-    WRONG_CHORDS(achievement_name = Game.context_bundle.getTitle(""), achievement_message = Game.context_bundle.getTitle("")),
-    IN_SPOTLIGHT(achievement_name = Game.context_bundle.getTitle(""), achievement_message = Game.context_bundle.getTitle(""))
+    WRONG_CHORDS(achievement_name = Game.context_bundle.getTitle("ach_wrong_chords_name"), achievement_message = Game.context_bundle.getTitle("ach_wrong_chords_text")),
+    IN_SPOTLIGHT(achievement_name = Game.context_bundle.getTitle("ach_in_spotlight_name"), achievement_message = Game.context_bundle.getTitle("ach_in_spotlight_text"))
 }
