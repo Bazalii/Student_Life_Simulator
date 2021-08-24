@@ -8,6 +8,8 @@ import android.clicker.school_live_simulator.databinding.AchievementItemBinding
 import android.clicker.school_live_simulator.databinding.AchievementMessageboxBinding
 import android.clicker.school_live_simulator.databinding.ActivityAchievementsBinding
 import android.content.Context
+import android.graphics.Color
+import android.graphics.drawable.ColorDrawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -53,6 +55,7 @@ class AchievementsActivity : AppCompatActivity() {
         binding.AchievementDescription.text = Game.player.achieved_achievements[position].achievement_message
         mBuilder.setView(mView)
         val dialog: AlertDialog = mBuilder.create()
+        dialog.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
         dialog.show()
         binding.AchievementOK.setOnClickListener {
             dialog.dismiss()

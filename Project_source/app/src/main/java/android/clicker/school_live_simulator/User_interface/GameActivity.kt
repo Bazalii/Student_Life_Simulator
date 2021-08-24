@@ -11,12 +11,21 @@ import android.os.Looper
 
 
 import android.animation.ObjectAnimator
+import android.animation.ValueAnimator
 import android.clicker.school_live_simulator.Classes.Achievements_classes.Interfaces.Achievements
 import android.clicker.school_live_simulator.Classes.Achievements_classes.Interfaces.RandomAchievements
 import android.clicker.school_live_simulator.databinding.AchievementMessageboxBinding
 import android.content.Intent
+import android.content.res.ColorStateList
+import android.graphics.Color
+import android.graphics.ColorSpace
+import android.graphics.PorterDuff
+import android.graphics.drawable.ColorDrawable
+import android.util.Log
 import android.view.View
 import androidx.appcompat.app.AlertDialog
+import androidx.core.graphics.ColorUtils.HSLToColor
+import androidx.core.graphics.drawable.DrawableCompat
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
 import androidx.viewpager2.adapter.FragmentStateAdapter
@@ -109,6 +118,9 @@ class GameActivity : AppCompatActivity() {
 
     override fun onResume() {
         super.onResume()
+        startTick()
+    }
+    private fun startTick(){
         Game.context_bundle.context = this.applicationContext
         runnable = Runnable {
             /**
@@ -120,7 +132,6 @@ class GameActivity : AppCompatActivity() {
         }
         handler.postDelayed(runnable, delay)
     }
-
     override fun onPause() {
         super.onPause()
         handler.removeCallbacks(runnable)
@@ -141,8 +152,15 @@ class GameActivity : AppCompatActivity() {
         binding.happinessProgressBar.progress = Game.player.happiness
         binding.schoolPerformanceProgressBar.progress = Game.player.school_performance
         /**
-         * Think, how to write these in TextView
+         * Change color of progressbars
          */
+        var colorHappiness  = ((1000 - binding.happinessProgressBar.progress) * 0.12).toFloat()
+        var colorSatiety  = ((1000 - binding.satietyProgressBar.progress) * 0.12).toFloat()
+        var colorSchoolPerformance  = ((1000 - binding.schoolPerformanceProgressBar.progress) * 0.12).toFloat()
+        binding.happinessProgressBar.progressTintList = ColorStateList.valueOf(HSLToColor(floatArrayOf(120-colorHappiness, 1f , 0.5f)))
+        binding.satietyProgressBar.progressTintList = ColorStateList.valueOf(HSLToColor(floatArrayOf(120-colorSatiety, 1f , 0.5f)))
+        binding.schoolPerformanceProgressBar.progressTintList = ColorStateList.valueOf(HSLToColor(floatArrayOf(120-colorSchoolPerformance, 1f , 0.5f)))
+
         binding.moneyTextView.text = Game.player.money.toString()
         binding.dateTextView.text = Game.game_date.toString()
     }
@@ -160,25 +178,19 @@ class GameActivity : AppCompatActivity() {
             binding.AchievementTitle.text = achievement.achievement_name
             binding.AchievementDescription.text = achievement.achievement_message
             if(achievement is RandomAchievements){
-                binding.AchievementChance.text = "${achievement.achievement_chance.toString()}%"
+                binding.AchievementChance.text = "  ${achievement.achievement_chance.toString()}%"
+                binding.AchievementChance.visibility = View.VISIBLE
+                binding.AchievementChanceText.visibility = View.VISIBLE
             }
             mBuilder.setView(mView)
             val dialog: AlertDialog = mBuilder.create()
+            dialog.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
             dialog.show()
             binding.AchievementOK.setOnClickListener {
                 dialog.dismiss()
             }
             dialog.setOnDismissListener {
-                Game.context_bundle.context = this.applicationContext
-                runnable = Runnable {
-                    /**
-                     * Code which is constantly called with delay
-                     */
-                    Game.tick()
-                    updateStats()
-                    handler.postDelayed(runnable, delay)
-                }
-                handler.postDelayed(runnable, delay)
+              startTick()
             }
         }
     }
