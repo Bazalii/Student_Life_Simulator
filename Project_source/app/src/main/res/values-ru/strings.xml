@@ -9,27 +9,27 @@
     <string name="fun_scr_4">Art</string>
 
     <!--Bottom navigation-->
-    <string name="bot_nav_work">работа</string>
-    <string name="bot_nav_school">учёба</string>
-    <string name="bot_nav_shop">магазин</string>
-    <string name="bot_nav_fun">веселье</string>
-    <string name="bot_nav_food">еда</string>
+    <string name="bot_nav_work">Работа</string>
+    <string name="bot_nav_school">Учёба</string>
+    <string name="bot_nav_shop">Магазин</string>
+    <string name="bot_nav_fun">Веселье</string>
+    <string name="bot_nav_food">Еда</string>
 
 
     <!--Progress bars-->
-    <string name="satietyProgressBar">Satiety</string>
-    <string name="happinessProgressBar">Happiness</string>
-    <string name="schoolPerformanceProgressBar">School performance</string>
+    <string name="satietyProgressBar">Сытость</string>
+    <string name="happinessProgressBar">Счастье</string>
+    <string name="schoolPerformanceProgressBar">Успеваемость</string>
 
 
     <!--School folder-->
-    <string name="school_go_to_school">Go to school</string>
-    <string name="school_learn_yourself">Learn by yourself</string>
-    <string name="school_buy_cheatbook">Buy a cheatbook</string>
-    <string name="school_learn_from_a_student">Learn from a student</string>
-    <string name="school_sign_up_in_an_online_school">Sign up in an online school</string>
-    <string name="school_hire_a_good_tutor">Hire a good tutor</string>
-    <string name="school_study_with_uni_teacher">Study with a teacher from University</string>
+    <string name="school_go_to_school">Ходить в школу</string>
+    <string name="school_learn_yourself">Ботать самому</string>
+    <string name="school_buy_cheatbook">Купить решебник</string>
+    <string name="school_learn_from_a_student">Нанять репета-студента</string>
+    <string name="school_sign_up_in_an_online_school">Записаться в онлайн-школу</string>
+    <string name="school_hire_a_good_tutor">Нанять хорошего репета</string>
+    <string name="school_study_with_uni_teacher">Заниматься с преподом из универа</string>
 
 
     <!--School stats-->
@@ -50,12 +50,12 @@
 
 
     <!--Food folder-->
-    <string name="food_eat_crackers">Eat some crackers</string>
-    <string name="food_eat_doshirack">Eat some noodles \"Doshirack\"</string>
-    <string name="food_eat_at_the_canteen">Eat at the school canteen</string>
-    <string name="food_eat_at_Mcdonalds">Eat at local McDonald\'s</string>
-    <string name="food_order_delivery">Order a food delivery</string>
-    <string name="food_go_to_the_restaurant">Go to the restaurant</string>
+    <string name="food_eat_crackers">Погрызть сухариков</string>
+    <string name="food_eat_doshirack">Заварить Дошик</string>
+    <string name="food_eat_at_the_canteen">Сходить в столовку</string>
+    <string name="food_eat_at_Mcdonalds">Сходить в Мак</string>
+    <string name="food_order_delivery">Заказать еду домой</string>
+    <string name="food_go_to_the_restaurant">Сходить в ресторан</string>
 
     <!--Food stats-->
     <string name="crackers_satiety">+25</string>
@@ -79,27 +79,27 @@
 
 
     <!--Work folder-->
-    <string name="work_collect_change">Collect change on the street</string>
-    <string name="work_watch_ads">Watch online advertisement</string>
-    <string name="work_distribute_flyers">Distribute flyers</string>
-    <string name="work_as_a_greener">Work as a greener</string>
-    <string name="work_as_a_courier_v0">Buy bicycle to work as a courier</string>
-    <string name="work_as_a_courier_v1">Work as a courier: Slow delivery</string>
-    <string name="work_as_a_courier_v2">Work as a courier: Normal Delivery</string>
-    <string name="work_as_a_courier_v3">Work as a courier: Fast Delivery</string>
-    <string name="work_as_an_operator">Work as a call center operator</string>
-    <string name="work_play_guitar_v0">Pass course first to play guitar</string>
-    <string name="work_play_guitar_v1">Play guitar: on one chord</string>
-    <string name="work_play_guitar_v2">Play guitar: Sector Gaza with three chords</string>
-    <string name="work_play_guitar_v3">Play guitar: Smells like teen spirit</string>
-    <string name="work_play_guitar_v4">Play guitar: Jazz with a friend(trumpet musician)</string>
-    <string name="work_play_guitar_v5">Play guitar: Bach Das Wohltemperierte Klavier</string>
-    <string name="work_on_the_net_v0">Pass course first to work on the net</string>
-    <string name="work_on_the_net_v1">Boost accounts in games</string>
-    <string name="work_on_the_net_v2">Promote instagram accounts</string>
-    <string name="work_on_the_net_v3">Make sites on wix</string>
-    <string name="work_on_the_net_v4">Work as a video editor</string>
-    <string name="work_on_the_net_v5">Work as a GameDev</string>
+    <string name="work_collect_change">Собирать мелочь на улице</string>
+    <string name="work_watch_ads">Зарабатывать на просмотре рекламы</string>
+    <string name="work_distribute_flyers">Раздавать листовки</string>
+    <string name="work_as_a_greener">Озеленитель</string>
+    <string name="work_as_a_courier_v0">Купите велосипед, чтобы работать курьером</string>
+    <string name="work_as_a_courier_v1">Работать курьером: медленная доставка</string>
+    <string name="work_as_a_courier_v2">Работать курьером: стандартная доставка</string>
+    <string name="work_as_a_courier_v3">Работать курьером: быстрая доставка</string>
+    <string name="work_as_an_operator">Работать оператором колл-центра</string>
+    <string name="work_play_guitar_v0">Пройдите курс, чтобы играть на гитаре</string>
+    <string name="work_play_guitar_v1">Играть на гитаре: на одном аккорде</string>
+    <string name="work_play_guitar_v2">Играть на гитаре: "Сектор газа" на трёх аккордах</string>
+    <string name="work_play_guitar_v3">Играть на гитаре: "Smells like teen spirit" по кругу</string>
+    <string name="work_play_guitar_v4">Играть на гитаре: джаз с другом-трубачом</string>
+    <string name="work_play_guitar_v5">Играть на гитаре: ХТК Баха наизусть</string>
+    <string name="work_on_the_net_v0">Пройдите курс, чтобы работать в интернете</string>
+    <string name="work_on_the_net_v1">Бустить аккаунты в играх</string>
+    <string name="work_on_the_net_v2">Пиарить паблики ВК</string>
+    <string name="work_on_the_net_v3">Делать сайты в виксе</string>
+    <string name="work_on_the_net_v4">Работать видеомонтажёром</string>
+    <string name="work_on_the_net_v5">Работать в GameDev</string>
 
     <!--Work stats-->
     <string name="work_collect_change_income">+10</string>
@@ -141,35 +141,35 @@
 
 
     <!--Entertainment folder-->
-    <string name="fun_draw_on_desks">Draw on desks</string>
-    <string name="fun_draw_graffities">Draw graffities in school toilets</string>
-    <string name="fun_write_a_poem">Write a poem</string>
-    <string name="fun_make_something_handmade">Make something handmade</string>
-    <string name="fun_cover_a_song">Cover your favorite song</string>
-    <string name="fun_write_a_song">Write a song yourself</string>
-    <string name="fun_stream">Stream on twitch for 4 hours</string>
-    <string name="fun_make_a_youtube_video">Make a video for youtube</string>
+    <string name="fun_draw_on_desks">Рисовать на партах</string>
+    <string name="fun_draw_graffities">Рисовать граффити в туалетах</string>
+    <string name="fun_write_a_poem">Написать стихотворение</string>
+    <string name="fun_make_something_handmade">Сделать что-нибудь своими руками</string>
+    <string name="fun_cover_a_song">Сделать кавер любимой песни</string>
+    <string name="fun_write_a_song">Написать песню самому </string>
+    <string name="fun_stream">Провести стрим</string>
+    <string name="fun_make_a_youtube_video">Сделать видео на Ютуб</string>
 
-    <string name="fun_do_nothing">Do nothing</string>
-    <string name="fun_go_cycling">Go cycling</string>
-    <string name="fun_listen_to_the_music">Listen to the music</string>
-    <string name="fun_donate_and_play_computer">Donate and play computer</string>
-    <string name="fun_go_to_the_shopping_mall">Go with friends to the shopping mall</string>
-    <string name="fun_walk_with_your_girlfriend">Walk with your girlfriend</string>
+    <string name="fun_do_nothing">Бездельничать</string>
+    <string name="fun_go_cycling">Кататься на велосипеде</string>
+    <string name="fun_listen_to_the_music">Слушать музыку</string>
+    <string name="fun_donate_and_play_computer">Задонатить и играть в комп</string>
+    <string name="fun_go_to_the_shopping_mall">Шариться по ТЦ с друзьями</string>
+    <string name="fun_walk_with_your_girlfriend">Гулять с девушкой</string>
 
-    <string name="fun_read_a_book">Read a book</string>
-    <string name="fun_help_youngsters_with_homework">Help youngsters with homework</string>
-    <string name="fun_do_sport">Do sport</string>
-    <string name="fun_play_guitar">Play guitar</string>
-    <string name="fun_go_to_the_theatre">Go to the theatre</string>
-    <string name="fun_go_to_the_concert">Go to the concert as a VIP</string>
+    <string name="fun_read_a_book">Читать книгу</string>
+    <string name="fun_help_youngsters_with_homework">Помочь шкетам с домашкой</string>
+    <string name="fun_do_sport">Заняться спортом</string>
+    <string name="fun_play_guitar">Играть на гитаре</string>
+    <string name="fun_go_to_the_theatre">Сходить в театр</string>
+    <string name="fun_go_to_the_concert">Сходить на концерт в ВИПку</string>
 
-    <string name="fun_kick_a_trash_can">Kick a trash can</string>
-    <string name="fun_intimidate_youngsters">Intimidate elementary school students</string>
-    <string name="fun_upload_virus">Upload virus to school computer</string>
-    <string name="fun_use_chat_roulette">Cam2cam in chat roulette(???)</string>
-    <string name="fun_have_a_party">Have a party at home</string>
-    <string name="fun_go_to_the_club">Go to the club(???)</string>
+    <string name="fun_kick_a_trash_can">Пнуть мусорку</string>
+    <string name="fun_intimidate_youngsters">Пойти бить младшеклассников</string>
+    <string name="fun_upload_virus">Залить вирус на школьный комп</string>
+    <string name="fun_use_chat_roulette">Cam2Cam в вебкам-чате</string>
+    <string name="fun_have_a_party">Устроить у себя вписку</string>
+    <string name="fun_go_to_the_club">Пойти в стрипклуб</string>
 
     <!--Entertainment stats-->
     <string name="fun_draw_on_desks_price">0</string>
@@ -230,38 +230,38 @@
 
 
     <!--Shop folder-->
-    <string name="shop_guitar_course">Guitar courses</string>
-    <string name="shop_guitar_course_v1">Learn from a bum at the yard</string>
-    <string name="shop_guitar_course_v2">First song course</string>
-    <string name="shop_guitar_course_v3">Learn from a neighbour at the yard</string>
-    <string name="shop_guitar_course_v4">Enroll in the music school</string>
-    <string name="shop_guitar_course_v5">Enroll in conservatory courses</string>
+    <string name="shop_guitar_course">Гитарные курсы</string>
+    <string name="shop_guitar_course_v1">Учиться у бомжа во дворе</string>
+    <string name="shop_guitar_course_v2">«Первая песня за неделю»</string>
+    <string name="shop_guitar_course_v3">Учиться у соседа во дворе</string>
+    <string name="shop_guitar_course_v4">Записаться в музыкалку</string>
+    <string name="shop_guitar_course_v5">Курсы при консерватории</string>
 
-    <string name="shop_computer_course">Computer courses</string>
-    <string name="shop_computer_course_v1">Friend\'s course</string>
-    <string name="shop_computer_course_v2">Online webinars</string>
-    <string name="shop_computer_course_v3">Online web design courses</string>
-    <string name="shop_computer_course_v4">Video editing courses</string>
-    <string name="shop_computer_course_v5">GameDev courses</string>
+    <string name="shop_computer_course">Компьютерны курсы</string>
+    <string name="shop_computer_course_v1">Взять уроки у друга</string>
+    <string name="shop_computer_course_v2">Вебинары по онлайн-заработку</string>
+    <string name="shop_computer_course_v3">Вебинары по веб-дизайну</string>
+    <string name="shop_computer_course_v4">Курсы видеомонтажа</string>
+    <string name="shop_computer_course_v5">GameDev курсы</string>
 
-    <string name="shop_bicycle">Bicycles</string>
-    <string name="shop_ussr_bicycle">USSR bicycle</string>
-    <string name="shop_usual_bicycle">Usual bicycle</string>
-    <string name="shop_mountain_bicycle">Mountain bicycle</string>
+    <string name="shop_bicycle">Велосипеды</string>
+    <string name="shop_ussr_bicycle">Советский велик с рынка</string>
+    <string name="shop_usual_bicycle">Простой велик из "Спортмастера"</string>
+    <string name="shop_mountain_bicycle">Горный велосипед</string>
 
-    <string name="shop_guitar">Guitars</string>
-    <string name="shop_ussr_guitar">USSR guitar</string>
-    <string name="shop_ural_guitar">Ural guitar</string>
-    <string name="shop_yamaha_guitar">Yamaha guitar</string>
-    <string name="shop_fender_guitar">Fender guitar</string>
-    <string name="shop_double_neck_guitar">Double Neck guitar</string>
+    <string name="shop_guitar">Гитары</string>
+    <string name="shop_ussr_guitar">Советская классическая гитара с авито</string>
+    <string name="shop_ural_guitar">Гитара "Урал" и убитый комбик</string>
+    <string name="shop_yamaha_guitar">Акустика Yamaha</string>
+    <string name="shop_fender_guitar">Fender Stratocaster и комбик</string>
+    <string name="shop_double_neck_guitar">Гитара с двумя грифами</string>
 
-    <string name="shop_computer">Computers</string>
-    <string name="shop_previously_used_computer">Previously used computer</string>
-    <string name="shop_old_computer">Old computer</string>
-    <string name="shop_usual_computer">Usual computer</string>
+    <string name="shop_computer">Компьютеры</string>
+    <string name="shop_previously_used_computer">Ноутбук с авито</string>
+    <string name="shop_old_computer">Старый ноут друга-мажора</string>
+    <string name="shop_usual_computer">Собрать бюджетный ПК</string>
     <string name="shop_xiaomi_computer">Xiaomi Mi Notebook</string>
-    <string name="shop_macbook_computer">Apple Macbook</string>
+    <string name="shop_macbook_computer">Макбук</string>
 
     <!--Shop stats-->
     <string name="shop_ussr_bicycle_price">-2000</string>
@@ -294,127 +294,127 @@
 
     <!--Achievements info-->
     <!--Random achievements-->
-    <string name="ach_wrong_chords_name">Autistic Guitarist</string>
-    <string name="ach_wrong_chords_text">Get punched in the face for wrong chords</string>
+    <string name="ach_wrong_chords_name">Гитарист-аутист</string>
+    <string name="ach_wrong_chords_text">Получить по лицу за перепутанные аккорды</string>
     <string name="ach_wrong_chords_chance">5</string>
-    <string name="ach_company_around_name">Convener</string>
-    <string name="ach_company_around_text">A company has gathered around you</string>
+    <string name="ach_company_around_name">Массовик-затейник</string>
+    <string name="ach_company_around_text">Вокруг тебя собралась компания</string>
     <string name="ach_company_around_chance">5</string>
 
-    <string name="ach_drunk_student_name">Rare Kozel</string>
-    <string name="ach_drunk_student_text">Do homework with a drunken student</string>
+    <string name="ach_drunk_student_name">Редкостный Kozel</string>
+    <string name="ach_drunk_student_text">Заниматься уроками с пьяным студентом</string>
     <string name="ach_drunk_student_chance">10</string>
-    <string name="ach_par_about_reproductive_name">Mama said I would become a doctor</string>
-    <string name="ach_par_about_reproductive_text">Stumble upon the paragraph on the genitals</string>
+    <string name="ach_par_about_reproductive_name">Мама сказала, что я стану врачом</string>
+    <string name="ach_par_about_reproductive_text">Наткнуться на параграф про половые органы</string>
     <string name="ach_par_about_reproductive_chance">8</string>
-    <string name="ach_old_answer_book_name">One spoon of fine print kills a horse</string>
-    <string name="ach_old_answer_book_text">The answer book turned out to be out of date</string>
+    <string name="ach_old_answer_book_name">Одна ложка мелкого шрифта убивает лошадь</string>
+    <string name="ach_old_answer_book_text">Решебник оказался прошлогодним</string>
     <string name="ach_old_answer_book_chance">15</string>
-    <string name="ach_fall_asleep_at_webinar_name">Online education is a fraud</string>
-    <string name="ach_fall_asleep_at_webinar_text">Fall asleep at the webinar</string>
+    <string name="ach_fall_asleep_at_webinar_name">Онлайн-образование есть обман</string>
+    <string name="ach_fall_asleep_at_webinar_text">Уснуть на вебинаре</string>
     <string name="ach_fall_asleep_at_webinar_chance">20</string>
-    <string name="ach_stories_about_ussr_name">It used to be better</string>
-    <string name="ach_stories_about_ussr_text">Listen to the teacher\'s stories about the USSR</string>
+    <string name="ach_stories_about_ussr_name">Раньше было лучше</string>
+    <string name="ach_stories_about_ussr_text">Слушать истории препода про СССР</string>
     <string name="ach_stories_about_ussr_chance">15</string>
 
     <string name="ach_two_spices_name">S.P.E.C.I.A.L. : 0–0–0–0–0–0–99999</string>
-    <string name="ach_two_spices_text">Find 2 cheese sauce mixes in Kraft Mac N\' Cheese</string>
+    <string name="ach_two_spices_text">Найти 2 приправки в Дошире</string>
     <string name="ach_two_spices_chance">3</string>
-    <string name="ach_poisoning_of_eatery_food_name">Life Winner (nah)</string>
-    <string name="ach_poisoning_of_eatery_food_text">Get poisoned in the school cafeteria</string>
+    <string name="ach_poisoning_of_eatery_food_name">Победитель по жизни (нет)</string>
+    <string name="ach_poisoning_of_eatery_food_text">Отравиться в столовке</string>
     <string name="ach_poisoning_of_eatery_food_chance">5</string>
 
-    <string name="ach_cam2cam_trap_name">Girl with surprise</string>
-    <string name="ach_cam2cam_trap_text">Get into cam2cam with shemale</string>
+    <string name="ach_cam2cam_trap_name">Виталий – любитель гениталий</string>
+    <string name="ach_cam2cam_trap_text">Попасть в cam2cam с трапом</string>
     <string name="ach_cam2cam_trap_chance">1</string>
-    <string name="ach_get_ban_name">Trash Talker</string>
-    <string name="ach_get_ban_text">Get banned in chat</string>
+    <string name="ach_get_ban_name">Нефильтрованный базар</string>
+    <string name="ach_get_ban_text">Словить бан чата</string>
     <string name="ach_get_ban_chance">60</string>
-    <string name="ach_be_reported_by_children_name">Another such trick, and this stick …</string>
-    <string name="ach_be_reported_by_children_text">The kids snitched on you</string>
+    <string name="ach_be_reported_by_children_name">Еще одна такая выходка, и эта палка …</string>
+    <string name="ach_be_reported_by_children_text">Малыши настучали на тебя</string>
     <string name="ach_be_reported_by_children_chance">2</string>
     <string name="ach_bottle_flip_name">Bottle flip challenge</string>
-    <string name="ach_bottle_flip_text">Trash doing a flip</string>
+    <string name="ach_bottle_flip_text">Мусорка делает флип</string>
     <string name="ach_bottle_flip_chance">10</string>
-    <string name="ach_future_pimp_name">Future pimp</string>
-    <string name="ach_future_pimp_text">Meet a beautiful classmate in a strip club</string>
+    <string name="ach_future_pimp_name">Будущий сутенер</string>
+    <string name="ach_future_pimp_text">Встретить красивую одноклассницу в стрипклубе</string>
     <string name="ach_future_pimp_chance">5</string>
-    <string name="ach_future_gay_pimp_name">Future gay pimp</string>
-    <string name="ach_future_gay_pimp_text">Meet an ugly classmate at a strip club</string>
+    <string name="ach_future_gay_pimp_name">Будущий гей-сутенер</string>
+    <string name="ach_future_gay_pimp_text">Встретить некрасивую одноклассницу в стрипклубе</string>
     <string name="ach_future_gay_pimp_chance">10</string>
-    <string name="ach_friend_in_theatre_name">Pseudo-intelligentsia</string>
-    <string name="ach_friend_in_theatre_text">Meet a Bully Friend at the Theater</string>
+    <string name="ach_friend_in_theatre_name">Псевдоинтеллигенция</string>
+    <string name="ach_friend_in_theatre_text">Встретить друга-гопника в театре</string>
     <string name="ach_friend_in_theatre_chance">5</string>
-    <string name="ach_moms_hacker_name">Mom\'s hacker</string>
-    <string name="ach_moms_hacker_text">Find photos from the teacher\'s bender</string>
+    <string name="ach_moms_hacker_name">Мамкин хакер</string>
+    <string name="ach_moms_hacker_text">Найти фотки с учительской пьянки</string>
     <string name="ach_moms_hacker_chance">8</string>
-    <string name="ach_evacuate_from_shop_centre_name">The trolleybus is on fire - give a …</string>
-    <string name="ach_evacuate_from_shop_centre_text">Evacuate from the shopping center</string>
+    <string name="ach_evacuate_from_shop_centre_name">Троллейбус горит – да и …</string>
+    <string name="ach_evacuate_from_shop_centre_text">Эвакуироваться из ТЦ</string>
     <string name="ach_evacuate_from_shop_centre_chance">3</string>
-    <string name="ach_sex_scene_in_book_name">Preoccupied housewife</string>
-    <string name="ach_sex_scene_in_book_text">Find a sex scene in a book</string>
+    <string name="ach_sex_scene_in_book_name">Озабоченная домохозяйка</string>
+    <string name="ach_sex_scene_in_book_text">Найти секс-сцену в книге</string>
     <string name="ach_sex_scene_in_book_chance">3</string>
-    <string name="ach_get_tip_from_youngs_name">Living wage</string>
-    <string name="ach_get_tip_from_youngs_text">Youngsters threw you a tip</string>
+    <string name="ach_get_tip_from_youngs_name">Прожиточный минимум</string>
+    <string name="ach_get_tip_from_youngs_text">Шкеты накинули чаевых</string>
     <string name="ach_get_tip_from_youngs_chance">5</string>
-    <string name="ach_destroyed_house_name">The Hangover</string>
-    <string name="ach_destroyed_house_text">During the party, your house was demolished</string>
+    <string name="ach_destroyed_house_name">Как Замай прошел</string>
+    <string name="ach_destroyed_house_text">Во время вписки твою хату разнесли</string>
     <string name="ach_destroyed_house_chance">2</string>
-    <string name="ach_photo_with_vocalist_name">Beginner paparazzi</string>
-    <string name="ach_photo_with_vocalist_text">Take a selfie with the vocalist</string>
+    <string name="ach_photo_with_vocalist_name">Начинающий папарацци</string>
+    <string name="ach_photo_with_vocalist_text">Сфоткаться с вокалистом</string>
     <string name="ach_photo_with_vocalist_chance">5</string>
-    <string name="ach_too_fast_running_name">Lewis Hamilton</string>
-    <string name="ach_too_fast_running_text">Outrun a fat woman on a jog</string>
+    <string name="ach_too_fast_running_name">Льюис Хэмилтон</string>
+    <string name="ach_too_fast_running_text">Обогнать жирную бабищу на пробежке</string>
     <string name="ach_too_fast_running_chance">10</string>
 
-    <string name="ach_draw_on_top_of_other_art_name">Renovation program</string>
-    <string name="ach_draw_on_top_of_other_art_text">Draw on top of the other art</string>
+    <string name="ach_draw_on_top_of_other_art_name">Программа реновации</string>
+    <string name="ach_draw_on_top_of_other_art_text">Рисовать поверх чужих художеств</string>
     <string name="ach_draw_on_top_of_other_art_chance">15</string>
-    <string name="ach_mister_proper_name">Bald from "Mister Proper"</string>
-    <string name="ach_mister_proper_text">You were forced to wash your desk</string>
+    <string name="ach_mister_proper_name">Лысый из «Мистера Пропера»</string>
+    <string name="ach_mister_proper_text">Заставили отмывать парту</string>
     <string name="ach_mister_proper_chance">20</string>
-    <string name="ach_ivans_international_name">Paul McCartney</string>
-    <string name="ach_ivans_international_text">Accidentally write "Yesterday"</string>
+    <string name="ach_ivans_international_name">Рыжий из «Иванушек»</string>
+    <string name="ach_ivans_international_text">Случайно написать «Тополиный пух»</string>
     <string name="ach_ivans_international_chance">3</string>
-    <string name="ach_poem_posted_by_teacher_name">Do you love roses?</string>
-    <string name="ach_poem_posted_by_teacher_text">The verse was posted by the class teacher</string>
+    <string name="ach_poem_posted_by_teacher_name">Вы любите розы?</string>
+    <string name="ach_poem_posted_by_teacher_text">Стих запостила классуха</string>
     <string name="ach_poem_posted_by_teacher_chance">10</string>
-    <string name="ach_girls_like_the_song_name">Kurt Cobain</string>
-    <string name="ach_girls_like_the_song_text">Girls liked the song</string>
+    <string name="ach_girls_like_the_song_name">Куртка Бэйн</string>
+    <string name="ach_girls_like_the_song_text">Песня понравилась телочкам</string>
     <string name="ach_girls_like_the_song_chance">7</string>
 
     <!--Special achievements-->
-    <string name="ach_spartak_winner_name">Meat</string>
-    <string name="ach_spartak_winner_text">Support Spartacus in a fight</string>
-    <string name="ach_zenit_winner_name">Stray</string>
-    <string name="ach_zenit_winner_text">Support Zenit in the fight</string>
-    <string name="ach_join_to_winners_name">200iq move</string>
-    <string name="ach_join_to_winners_text">Join the winners</string>
-    <string name="ach_join_to_losers_name">Bravery and stupidity</string>
-    <string name="ach_join_to_losers_text">Join the losers</string>
-    <string name="ach_moms_businessman_name">Mom\'s businessman</string>
-    <string name="ach_moms_businessman_text">Rent out the apartment of the parents</string>
-    <string name="ach_moms_not_bussinessman_name">Chickenshit</string>
-    <string name="ach_moms_not_bussinessman_text">Do not rent out the parents\' apartment</string>
+    <string name="ach_spartak_winner_name">Мясо</string>
+    <string name="ach_spartak_winner_text">Поддержать спартаковцев в драке</string>
+    <string name="ach_zenit_winner_name">Бомж</string>
+    <string name="ach_zenit_winner_text">Поддержать зенитовцев в драке</string>
+    <string name="ach_join_to_winners_name">Анатолий Вассерман</string>
+    <string name="ach_join_to_winners_text">Присоединиться к победителям</string>
+    <string name="ach_join_to_losers_name">Немец в 45-ом</string>
+    <string name="ach_join_to_losers_text">Присоединиться к проигрывающим</string>
+    <string name="ach_moms_businessman_name">Мамкин Брэнсон</string>
+    <string name="ach_moms_businessman_text">Сдать квартиру предков</string>
+    <string name="ach_moms_not_bussinessman_name">Славик, чё-то я очкую</string>
+    <string name="ach_moms_not_bussinessman_text">Не сдавать квартиру предков</string>
 
     <!--Purchase achievements-->
-    <string name="ach_usual_bike_name">Young cyclist</string>
-    <string name="ach_usual_bike_text">Buy a bicycle</string>
-    <string name="ach_mountain_bike_name">Mountain goat</string>
-    <string name="ach_mountain_bike_text">Buy a mountain bike</string>
+    <string name="ach_usual_bike_name">ВелосиПедик</string>
+    <string name="ach_usual_bike_text">Купить велик</string>
+    <string name="ach_mountain_bike_name">Горный козел</string>
+    <string name="ach_mountain_bike_text">Купить горный велик</string>
 
-    <string name="ach_previously_used_computer_name">сlick lover</string>
-    <string name="ach_previously_used_computer_text">Buy a laptop on ebay</string>
-    <string name="ach_xiaomi_mi_notebook_name">The best for its price</string>
-    <string name="ach_xiaomi_mi_notebook_text">Buy Xiaomi laptop</string>
-    <string name="ach_macbook_name">Calculator for $1300</string>
-    <string name="ach_macbook_text">Buy MacBook</string>
+    <string name="ach_previously_used_computer_name">Начинающий пекарь</string>
+    <string name="ach_previously_used_computer_text">Купить ноут на авито</string>
+    <string name="ach_xiaomi_mi_notebook_name">Топ за свои деньги</string>
+    <string name="ach_xiaomi_mi_notebook_text">Купить ноут Xiaomi</string>
+    <string name="ach_macbook_name">Калькулятор за $1300</string>
+    <string name="ach_macbook_text">Купить Макбук</string>
 
-    <string name="ach_ussr_guitar_name">Death to the neighbors!</string>
-    <string name="ach_ussr_guitar_text">Buy a Soviet guitar</string>
-    <string name="ach_ural_guitar_name">Death to ALL neighbors</string>
-    <string name="ach_ural_guitar_text">Buy guitar "Ural"</string>
-    <string name="ach_dual_neck_guitar_name">Monsieur knows a lot about perversions …</string>
-    <string name="ach_dual_neck_guitar_text">Buy a guitar with 2 necks</string>
+    <string name="ach_ussr_guitar_name">Смерть соседям!</string>
+    <string name="ach_ussr_guitar_text">Купить советскую гитару</string>
+    <string name="ach_ural_guitar_name">Смерть вообще всем соседям!!!</string>
+    <string name="ach_ural_guitar_text">Купить гитару «Урал»</string>
+    <string name="ach_dual_neck_guitar_name">Мсье знает толк в извращениях …</string>
+    <string name="ach_dual_neck_guitar_text">Купить гитару с двумя грифами</string>
 
 </resources>
