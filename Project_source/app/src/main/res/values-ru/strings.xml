@@ -417,4 +417,28 @@
     <string name="ach_dual_neck_guitar_name">Мсье знает толк в извращениях …</string>
     <string name="ach_dual_neck_guitar_text">Купить гитару с двумя грифами</string>
 
+
+    <!--Main menu-->
+    <string name="new_game">новая игра</string>
+    <string name="continue_game">продолжить игру</string>
+
+
+    <!--Achievement dialog-->
+    <string name="new_achievement">Открыто новое достижение!</string>
+    <string name="achievement_chance">Шанс:</string>
+
+
+    <!--Toast messages-->
+    <string name="toast_not_passed">Не пройден курс</string>
+    <string name="toast_buy_previous">Купите предыдущий</string>
+    <string name="toast_buy_new_computer">Купите новый компьютер</string>
+    <string name="toast_double_neck_guitar_required">Нужна двухгрифовая гитара</string>
+    <string name="toast_fender_guitar_or_better_required">Нужна гитара Fender или лучше</string>
+    <string name="toast_yamaha_guitar_or_better_required">Нужна гитара Yamaha или лучше</string>
+    <string name="toast_ural_guitar_or_better_required">Нужна гитара Урал или лучше</string>
+    <string name="toast_ussr_guitar_or_better_required">Нужна советская гитара или лучше</string>
+    <string name="toast_buy_bike">Купите велосипед</string>
+
+    <!--Achievements activity-->
+    <string name="toolbar_achievements">Достижения</string>
 </resources>

@@ -417,4 +417,29 @@
     <string name="ach_dual_neck_guitar_name">Monsieur knows a lot about perversions …</string>
     <string name="ach_dual_neck_guitar_text">Buy a guitar with 2 necks</string>
 
+
+    <!--Main menu-->
+    <string name="new_game">new game</string>
+    <string name="continue_game">continue game</string>
+
+
+    <!--Achievement dialog-->
+    <string name="new_achievement">You got a new achievement!</string>
+    <string name="achievement_chance">chance:</string>
+
+
+    <!--Toast messages-->
+    <string name="toast_not_passed">Course is not passed yet</string>
+    <string name="toast_buy_previous">Buy previous</string>
+    <string name="toast_buy_new_computer">buy new computer</string>
+    <string name="toast_double_neck_guitar_required">Double neck guitar is required</string>
+    <string name="toast_fender_guitar_or_better_required">Fender guitar or better is required</string>
+    <string name="toast_yamaha_guitar_or_better_required">Yamaha guitar or better is required</string>
+    <string name="toast_ural_guitar_or_better_required">Ural guitar or better is required</string>
+    <string name="toast_ussr_guitar_or_better_required">USSR guitar or better is required</string>
+    <string name="toast_buy_bike">Buy bike</string>
+
+
+    <!--Achievements activity-->
+    <string name="toolbar_achievements">Achievements</string>
 </resources>
