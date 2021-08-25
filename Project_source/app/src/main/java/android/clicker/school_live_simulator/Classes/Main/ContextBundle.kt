@@ -8,6 +8,7 @@ class ContextBundle {
     lateinit var context: Context
 
     fun getTitle(input: String): String {
+        Game.setLocale(context.resources,context)
         return Game.context_bundle.context.resources.getString(Game.context_bundle.context.resources.getIdentifier(input, "string", context.getPackageName()))
     }
 

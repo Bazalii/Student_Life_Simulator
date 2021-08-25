@@ -1,5 +1,6 @@
 package android.clicker.school_live_simulator.User_interface
 
+import android.animation.ArgbEvaluator
 import android.clicker.school_live_simulator.Game
 import android.clicker.school_live_simulator.R
 import android.clicker.school_live_simulator.User_interface.ScrollingFragments.*
@@ -11,30 +12,28 @@ import android.os.Looper
 
 
 import android.animation.ObjectAnimator
-import android.animation.ValueAnimator
 import android.clicker.school_live_simulator.Classes.Achievements_classes.Interfaces.Achievements
 import android.clicker.school_live_simulator.Classes.Achievements_classes.Interfaces.RandomAchievements
-import android.clicker.school_live_simulator.databinding.AchievementMessageboxBinding
+import android.clicker.school_live_simulator.databinding.AchievementDialogBinding
 import android.content.Intent
 import android.content.res.ColorStateList
 import android.graphics.Color
-import android.graphics.ColorSpace
-import android.graphics.PorterDuff
 import android.graphics.drawable.ColorDrawable
 import android.util.Log
 import android.view.View
 import androidx.appcompat.app.AlertDialog
+import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.graphics.ColorUtils.HSLToColor
-import androidx.core.graphics.drawable.DrawableCompat
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
 import androidx.viewpager2.adapter.FragmentStateAdapter
 import androidx.viewpager2.widget.ViewPager2
+import java.util.*
 
 
 class GameActivity : AppCompatActivity() {
     lateinit var binding: ActivityGameBinding
-
+    private var current_vp_page = 0 //save current ViewPager position
     /**
      * Values for timer(function that is called every x seconds)
      * Need to write more documentation about them
@@ -45,6 +44,9 @@ class GameActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        Game.setLocale(resources, this@GameActivity)
+
         binding = ActivityGameBinding.inflate(layoutInflater)
         setContentView(binding.root)
         /**
@@ -83,8 +85,8 @@ class GameActivity : AppCompatActivity() {
                     binding.bottomNavigation.selectedItemId = when (position) {
                         0 -> R.id.school
                         1 -> R.id.food
-                        2-> R.id.work
-                        3-> R.id.entertainment
+                        2 -> R.id.work
+                        3 -> R.id.entertainment
                         else -> R.id.shop
                     }
                 }
@@ -100,6 +102,9 @@ class GameActivity : AppCompatActivity() {
         startActivity(intent)
     }
 
+    override fun onDestroy() {
+        super.onDestroy()
+    }
     inner class PagerAdapter(activity: FragmentActivity) : FragmentStateAdapter(activity){
         override fun getItemCount(): Int {
             return 5
@@ -119,6 +124,7 @@ class GameActivity : AppCompatActivity() {
     override fun onResume() {
         super.onResume()
         startTick()
+        binding.viewPager.currentItem = current_vp_page
     }
     private fun startTick(){
         Game.context_bundle.context = this.applicationContext
@@ -135,6 +141,7 @@ class GameActivity : AppCompatActivity() {
     override fun onPause() {
         super.onPause()
         handler.removeCallbacks(runnable)
+        current_vp_page = binding.viewPager.currentItem
     }
 
 
@@ -167,18 +174,18 @@ class GameActivity : AppCompatActivity() {
 
     fun achieve(achievement: Achievements) {
         if (Game.player.achieved(achievement)) {
+            handler.removeCallbacks(runnable) // stop ticks
             /**
-             * Logic with messageboxes
+             *  Achievement alert dialog
              */
-            handler.removeCallbacks(runnable)
             val mBuilder = AlertDialog.Builder(this)
-            val mView = layoutInflater.inflate(R.layout.achievement_messagebox, null)
-            val binding = AchievementMessageboxBinding.bind(mView)
+            val mView = layoutInflater.inflate(R.layout.achievement_dialog, null)
+            val binding = AchievementDialogBinding.bind(mView)
             binding.AchievementNotification.visibility = View.VISIBLE
             binding.AchievementTitle.text = achievement.achievement_name
-            binding.AchievementDescription.text = achievement.achievement_message
+            binding.AchievementDescription.text =  achievement.achievement_message
             if(achievement is RandomAchievements){
-                binding.AchievementChance.text = "  ${achievement.achievement_chance.toString()}%"
+                binding.AchievementChance.text = "${achievement.achievement_chance.toString()}%"
                 binding.AchievementChance.visibility = View.VISIBLE
                 binding.AchievementChanceText.visibility = View.VISIBLE
             }
@@ -186,6 +193,7 @@ class GameActivity : AppCompatActivity() {
             val dialog: AlertDialog = mBuilder.create()
             dialog.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
             dialog.show()
+            dialog.setCanceledOnTouchOutside(false) // don't close dialog on outside tap
             binding.AchievementOK.setOnClickListener {
                 dialog.dismiss()
             }
@@ -193,5 +201,12 @@ class GameActivity : AppCompatActivity() {
               startTick()
             }
         }
+    }
+    fun notEnoughMoneyAnim(){
+        val anim = ObjectAnimator.ofInt(binding.moneyTextView, "backgroundColor", android.R.color.transparent, Color.RED,  android.R.color.transparent)
+        anim.duration = 300
+        anim.setEvaluator(ArgbEvaluator())
+        anim.repeatCount = 3
+        anim.start()
     }
 }

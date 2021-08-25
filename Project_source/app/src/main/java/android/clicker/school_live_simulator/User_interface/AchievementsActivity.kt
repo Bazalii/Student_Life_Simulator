@@ -1,17 +1,17 @@
 package android.clicker.school_live_simulator.User_interface
 
 import android.clicker.school_live_simulator.Classes.Achievements_classes.Interfaces.Achievements
-import android.clicker.school_live_simulator.Classes.Achievements_classes.Random_achievements.StudyEventsRandomAchievements
 import android.clicker.school_live_simulator.Game
 import android.clicker.school_live_simulator.R
 import android.clicker.school_live_simulator.databinding.AchievementItemBinding
-import android.clicker.school_live_simulator.databinding.AchievementMessageboxBinding
+import android.clicker.school_live_simulator.databinding.AchievementDialogBinding
 import android.clicker.school_live_simulator.databinding.ActivityAchievementsBinding
 import android.content.Context
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.provider.Settings.Global.getString
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -26,11 +26,15 @@ class AchievementsActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityAchievementsBinding.inflate(layoutInflater)
+        Game.setLocale(resources, this@AchievementsActivity)
         setContentView(binding.root)
         /**
          * add Toolbar with back button
          */
         setSupportActionBar(binding.toolbar)
+        binding.toolbar.setNavigationOnClickListener {
+            onBackPressed()
+        }
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         binding.recyclerView.layoutManager = LinearLayoutManager(this)
         binding.recyclerView.adapter = adapter
@@ -49,8 +53,8 @@ class AchievementsActivity : AppCompatActivity() {
     }
     private fun alertDialog(context: Context, position: Int, inflater: LayoutInflater){
         val mBuilder = AlertDialog.Builder(context)
-        val mView = inflater.inflate(R.layout.achievement_messagebox, null)
-        val binding = AchievementMessageboxBinding.bind(mView)
+        val mView = inflater.inflate(R.layout.achievement_dialog, null)
+        val binding = AchievementDialogBinding.bind(mView)
         binding.AchievementTitle.text = Game.player.achieved_achievements[position].achievement_name
         binding.AchievementDescription.text = Game.player.achieved_achievements[position].achievement_message
         mBuilder.setView(mView)

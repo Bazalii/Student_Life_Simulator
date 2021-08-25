@@ -4,15 +4,31 @@ package android.clicker.school_live_simulator
 import android.clicker.school_live_simulator.Classes.GameDate.GameDate
 import android.clicker.school_live_simulator.Classes.Main.ContextBundle
 import android.clicker.school_live_simulator.Classes.Main.GameData
+import android.content.Context
+import android.content.res.Resources
+import android.os.Build
 import kotlinx.serialization.*
 import kotlinx.serialization.json.Json
 import java.io.File
+import java.util.*
 
 
 @Serializable
 object Game {
     private var difficulty_state: GameDifficultyState = NormalMode()
+    lateinit var locale: String
+    var isDefaultLanguage = true
+    fun setLocale(resources: Resources, context: Context){
+        val config = resources.configuration
+        val lang = Game.locale // your language code
+        val locale = Locale(lang)
+        Locale.setDefault(locale)
+        config.setLocale(locale)
 
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N)
+            context.createConfigurationContext(config)
+        resources.updateConfiguration(config, resources.displayMetrics)
+    }
     var player: Player = Player()
 //    game: Game
     var game_date: GameDate = GameDate()
