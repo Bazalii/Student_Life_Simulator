@@ -1,7 +1,11 @@
 package android.clicker.school_live_simulator.Classes.Enum_classes
 
 import android.clicker.school_live_simulator.Classes.GameDate.Timer
+import android.clicker.school_live_simulator.Classes.NotEnoughMoneyException
 import android.clicker.school_live_simulator.Game
+import android.clicker.school_live_simulator.R
+import android.clicker.school_live_simulator.User_interface.GameActivity
+import android.view.animation.AnimationUtils
 
 enum class Studies(val school_performance: Int, val money_diff: Int) {
     GO_TO_SCHOOL(Game.context_bundle.getNumber("go_to_school_school_performance"),Game.context_bundle.getNumber("go_to_school_money") ),
@@ -13,12 +17,20 @@ enum class Studies(val school_performance: Int, val money_diff: Int) {
     STUDY_WITH_UNI_TEACHER(Game.context_bundle.getNumber("study_with_uni_teacher_school_performance"),Game.context_bundle.getNumber("study_with_uni_teacher_money"));
 
     fun goToSchool() {
-        Game.player.study(GO_TO_SCHOOL)
-        Timer(Game.game_date.subscription_length).setEndSignalHandler(GO_TO_SCHOOL::goToSchool)
+        try {
+            Game.player.study(GO_TO_SCHOOL)
+            Timer(Game.game_date.subscription_length).setEndSignalHandler(GO_TO_SCHOOL::goToSchool)
+        } catch (exception: NotEnoughMoneyException){
+
+        }
     }
     fun signUpInOnlineSchool() {
-        Game.player.study(SIGN_UP_IN_AN_ONLINE_SCHOOL)
-        Timer(Game.game_date.subscription_length).setEndSignalHandler(SIGN_UP_IN_AN_ONLINE_SCHOOL::signUpInOnlineSchool)
+        try {
+            Game.player.study(SIGN_UP_IN_AN_ONLINE_SCHOOL)
+            Timer(Game.game_date.subscription_length).setEndSignalHandler(SIGN_UP_IN_AN_ONLINE_SCHOOL::signUpInOnlineSchool)
+        } catch (exception: NotEnoughMoneyException){
+
+        }
     }
 
 }

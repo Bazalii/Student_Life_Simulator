@@ -18,6 +18,8 @@ object Game {
     private var difficulty_state: GameDifficultyState = NormalMode()
     lateinit var locale: String
     var isDefaultLanguage = true
+    lateinit var counters: Map<String, Int>
+
     fun setLocale(resources: Resources, context: Context){
         val config = resources.configuration
         val lang = Game.locale // your language code
@@ -29,6 +31,7 @@ object Game {
             context.createConfigurationContext(config)
         resources.updateConfiguration(config, resources.displayMetrics)
     }
+
     var player: Player = Player()
 //    game: Game
     var game_date: GameDate = GameDate()

@@ -1,9 +1,5 @@
 package android.clicker.school_live_simulator.User_interface.ScrollingFragments
 
-import android.animation.Animator
-import android.animation.ArgbEvaluator
-import android.animation.ObjectAnimator
-import android.clicker.school_live_simulator.Classes.Achievements_classes.Random_achievements.CreativityEventsRandomAchievements
 import android.clicker.school_live_simulator.Classes.Achievements_classes.Random_achievements.FoodEventsRandomAchievements
 import android.clicker.school_live_simulator.Classes.NotEnoughMoneyException
 import android.clicker.school_live_simulator.Game
@@ -11,12 +7,10 @@ import android.clicker.school_live_simulator.Food
 import android.clicker.school_live_simulator.R
 import android.clicker.school_live_simulator.User_interface.GameActivity
 import android.clicker.school_live_simulator.databinding.FragmentFoodScrollingBinding
-import android.graphics.Color
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.view.animation.Animation
 import android.view.animation.AnimationUtils
 import androidx.fragment.app.Fragment
 
@@ -93,7 +87,7 @@ class FoodScrollingFragment : Fragment() {
 
         binding.foodGoToTheRestaurant.setOnClickListener{
             try {
-                Game.player.eat(Food.RESTORANT_FOOD)
+                Game.player.eat(Food.RESTAURANT_FOOD)
                 (activity as GameActivity).updateStats()
                 binding.layoutFoodGoToTheRestaurant.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.click))
             } catch (exception: NotEnoughMoneyException){
