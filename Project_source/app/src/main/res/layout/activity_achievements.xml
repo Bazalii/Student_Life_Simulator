@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/darker_gray"
+    android:background="@color/main_fragment_background"
     tools:context=".User_interface.AchievementsActivity">
 
     <androidx.recyclerview.widget.RecyclerView
@@ -31,5 +31,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:title="Achievements" />
+        app:title="@string/toolbar_achievements" />
 </androidx.constraintlayout.widget.ConstraintLayout>

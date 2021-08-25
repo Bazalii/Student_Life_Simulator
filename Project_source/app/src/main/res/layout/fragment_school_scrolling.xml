@@ -17,7 +17,10 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/layoutSchoolGoToSchool"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:layout_marginBottom="6dp"
+            android:background="@color/main_fragment_background"
+            android:elevation="10dp">
 
             <androidx.constraintlayout.widget.Guideline
                 android:id="@+id/guideline91"
@@ -108,7 +111,10 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/layoutSchoolLearnYourself"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:layout_marginBottom="6dp"
+            android:background="@color/main_fragment_background"
+            android:elevation="10dp">
 
             <androidx.constraintlayout.widget.Guideline
                 android:id="@+id/guideline79"
@@ -199,7 +205,10 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/layoutSchoolBuyCheatbook"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:layout_marginBottom="6dp"
+            android:background="@color/main_fragment_background"
+            android:elevation="10dp">
 
             <androidx.constraintlayout.widget.Guideline
                 android:id="@+id/guideline83"
@@ -289,7 +298,10 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/layoutSchoolLearnFromStudent"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:layout_marginBottom="6dp"
+            android:background="@color/main_fragment_background"
+            android:elevation="10dp">
 
             <androidx.constraintlayout.widget.Guideline
                 android:id="@+id/guideline85"
@@ -379,7 +391,10 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/layoutSchoolSignUpInAnOnlineSchool"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:layout_marginBottom="6dp"
+            android:background="@color/main_fragment_background"
+            android:elevation="10dp">
 
             <androidx.constraintlayout.widget.Guideline
                 android:id="@+id/guideline87"
@@ -470,7 +485,10 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/layoutSchoolHireAGoodTutor"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:layout_marginBottom="6dp"
+            android:background="@color/main_fragment_background"
+            android:elevation="10dp">
 
             <androidx.constraintlayout.widget.Guideline
                 android:id="@+id/guideline89"
@@ -560,7 +578,10 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/layoutSchoolStudyWithUniTeacher"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:layout_marginBottom="6dp"
+            android:background="@color/main_fragment_background"
+            android:elevation="10dp">
 
             <androidx.constraintlayout.widget.Guideline
                 android:id="@+id/guideline81"

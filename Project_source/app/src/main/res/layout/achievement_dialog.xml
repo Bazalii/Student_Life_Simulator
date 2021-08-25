@@ -9,7 +9,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@android:color/transparent"
-        app:cardBackgroundColor="@android:color/holo_orange_light"
         app:cardCornerRadius="40dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -19,7 +18,7 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@android:color/holo_orange_light">
+            android:background="@color/main_achievevement_background">
 
             <TextView
                 android:id="@+id/AchievementTitle"
@@ -38,11 +37,11 @@
                 android:id="@+id/AchievementNotification"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="You got new achievement!"
+                android:text="@string/new_achievement"
                 android:textColor="@color/black"
                 android:textSize="20sp"
                 android:textStyle="bold"
-                android:visibility="gone"
+                android:visibility="visible"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.564"
                 app:layout_constraintStart_toStartOf="parent"
@@ -52,6 +51,7 @@
                 android:id="@+id/AchievementChance"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
                 android:layout_marginTop="16dp"
                 android:text="TextView"
                 android:textColor="@color/black"
@@ -79,8 +79,9 @@
                 android:id="@+id/AchievementChanceText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
                 android:layout_marginTop="16dp"
-                android:text="Chance:"
+                android:text="@string/achievement_chance"
                 android:textColor="@color/black"
                 android:textSize="16sp"
                 android:visibility="gone"
@@ -94,7 +95,6 @@
                 android:layout_marginTop="36dp"
                 android:text="Ok"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.498"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/AchievementChance" />
         </androidx.constraintlayout.widget.ConstraintLayout>

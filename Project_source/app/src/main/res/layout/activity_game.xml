@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/darker_gray"
+    android:background="@color/main_stats_background"
     tools:context=".User_interface.GameActivity">
 
     <ProgressBar
@@ -25,6 +25,7 @@
         android:id="@+id/bottomNavigation"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:background="@color/main_stats_background"
         android:visibility="visible"
         app:labelVisibilityMode="labeled"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -69,10 +70,8 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
         android:max="1000"
         android:scaleY="6"
         app:layout_constraintEnd_toStartOf="@+id/verticalGuideline"
@@ -125,7 +124,7 @@
         android:layout_height="0dp"
         app:layout_constraintBottom_toTopOf="@+id/AchievSettingslinearLayout"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/satietyProgressBar"
+        app:layout_constraintStart_toStartOf="@+id/verticalGuideline"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ic_botnav_food" />
 
@@ -143,6 +142,8 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:backgroundTint="@color/main_button_background"
+            android:elevation="10dp"
             android:onClick="openAchievementActivity"
             app:srcCompat="@drawable/ic_achievements" />
 
@@ -151,6 +152,9 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:backgroundTint="@color/main_button_background"
+            android:elevation="7dp"
+            android:onClick="click"
             app:srcCompat="@drawable/ic_settings" />
     </LinearLayout>
 
@@ -183,10 +187,11 @@
 
         <TextView
             android:id="@+id/moneyTextView"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="4dp"
             android:layout_weight="1"
+            android:background="@android:color/transparent"
             android:gravity="end"
             android:text="@string/game_activity_1"
             android:textColor="@color/black"
@@ -216,6 +221,7 @@
         android:id="@+id/viewPager"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:background="@color/main_fragment_background"
         app:layout_constraintBottom_toTopOf="@+id/bottomNavigation"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"

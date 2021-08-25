@@ -134,8 +134,9 @@ class ShopScrollingFragment : Fragment() {
                 Timer(Game.player.current_courses.guitar_course.course_length).setEndSignalHandler(Game.player.current_courses.guitar_course::timerEndHandler)
             } catch(exception: NotEnoughMoneyException){
                 binding.layoutShopGuitarCourseV1.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
+                (activity as GameActivity).notEnoughMoneyAnim()
             } catch(exception: IsNotAvailableException){
-                Toast.makeText(activity, "USSR guitar or better is required", Toast.LENGTH_SHORT).show()
+                Toast.makeText(activity, getString(R.string.toast_ussr_guitar_or_better_required), Toast.LENGTH_SHORT).show()
                 binding.layoutShopGuitarCourseV1.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
             }
         }
@@ -148,13 +149,14 @@ class ShopScrollingFragment : Fragment() {
                     Timer(Game.player.current_courses.guitar_course.course_length).setEndSignalHandler(Game.player.current_courses.guitar_course::timerEndHandler)
                 } catch(exception: NotEnoughMoneyException){
                     binding.layoutShopGuitarCourseV2.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
+                    (activity as GameActivity).notEnoughMoneyAnim()
                 } catch(exception: IsNotAvailableException){
-                    Toast.makeText(activity, "Ural guitar or better is required", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(activity, getString(R.string.toast_ural_guitar_or_better_required), Toast.LENGTH_SHORT).show()
                     binding.layoutShopGuitarCourseV2.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
                 }
             }
             else{
-                Toast.makeText(activity, "buy previous", Toast.LENGTH_SHORT).show()
+                Toast.makeText(activity, getString(R.string.toast_buy_previous), Toast.LENGTH_SHORT).show()
                 binding.layoutShopGuitarCourseV2.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
             }
         }
@@ -167,13 +169,14 @@ class ShopScrollingFragment : Fragment() {
                     Timer(Game.player.current_courses.guitar_course.course_length).setEndSignalHandler(Game.player.current_courses.guitar_course::timerEndHandler)
                 } catch(exception: NotEnoughMoneyException){
                     binding.layoutShopGuitarCourseV3.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
+                    (activity as GameActivity).notEnoughMoneyAnim()
                 } catch(exception: IsNotAvailableException){
-                    Toast.makeText(activity, "Yamaha guitar or better is required", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(activity, getString(R.string.toast_yamaha_guitar_or_better_required), Toast.LENGTH_SHORT).show()
                     binding.layoutShopGuitarCourseV3.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
                 }
             }
             else{
-                Toast.makeText(activity, "buy previous", Toast.LENGTH_SHORT).show()
+                Toast.makeText(activity, getString(R.string.toast_buy_previous), Toast.LENGTH_SHORT).show()
                 binding.layoutShopGuitarCourseV3.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
             }
         }
@@ -186,13 +189,14 @@ class ShopScrollingFragment : Fragment() {
                     Timer(Game.player.current_courses.guitar_course.course_length).setEndSignalHandler(Game.player.current_courses.guitar_course::timerEndHandler)
                 } catch(exception: NotEnoughMoneyException){
                     binding.layoutShopGuitarCourseV4.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
+                    (activity as GameActivity).notEnoughMoneyAnim()
                 } catch(exception: IsNotAvailableException){
-                    Toast.makeText(activity, "Fender guitar or better is required", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(activity, getString(R.string.toast_fender_guitar_or_better_required), Toast.LENGTH_SHORT).show()
                     binding.layoutShopGuitarCourseV4.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
                 }
             }
             else{
-                Toast.makeText(activity, "buy previous", Toast.LENGTH_SHORT).show()
+                Toast.makeText(activity, getString(R.string.toast_buy_previous), Toast.LENGTH_SHORT).show()
                 binding.layoutShopGuitarCourseV4.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
             }
         }
@@ -205,13 +209,14 @@ class ShopScrollingFragment : Fragment() {
                     Timer(Game.player.current_courses.guitar_course.course_length).setEndSignalHandler(Game.player.current_courses.guitar_course::timerEndHandler)
                 } catch(exception: NotEnoughMoneyException){
                     binding.layoutShopGuitarCourseV5.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
+                    (activity as GameActivity).notEnoughMoneyAnim()
                 } catch(exception: IsNotAvailableException){
-                    Toast.makeText(activity, "Double neck guitar is required", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(activity, getString(R.string.toast_double_neck_guitar_required), Toast.LENGTH_SHORT).show()
                     binding.layoutShopGuitarCourseV5.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
                 }
             }
             else{
-                Toast.makeText(activity, "buy previous", Toast.LENGTH_SHORT).show()
+                Toast.makeText(activity, getString(R.string.toast_buy_previous), Toast.LENGTH_SHORT).show()
                 binding.layoutShopGuitarCourseV5.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
             }
         }
@@ -228,8 +233,9 @@ class ShopScrollingFragment : Fragment() {
                 Timer(Game.player.current_courses.computer_course.course_length).setEndSignalHandler(Game.player.current_courses.computer_course::timerEndHandler)
             } catch(exception: NotEnoughMoneyException){
                 binding.layoutShopComputerCourseV1.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
+                (activity as GameActivity).notEnoughMoneyAnim()
             } catch(exception: IsNotAvailableException){
-                Toast.makeText(activity, "buy new computer", Toast.LENGTH_SHORT).show()
+                Toast.makeText(activity, getString(R.string.toast_buy_new_computer), Toast.LENGTH_SHORT).show()
                 binding.layoutShopComputerCourseV1.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
             }
         }
@@ -242,13 +248,14 @@ class ShopScrollingFragment : Fragment() {
                     Timer(Game.player.current_courses.computer_course.course_length).setEndSignalHandler(Game.player.current_courses.computer_course::timerEndHandler)
                 } catch(exception: NotEnoughMoneyException){
                     binding.layoutShopComputerCourseV2.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
+                    (activity as GameActivity).notEnoughMoneyAnim()
                 } catch(exception: IsNotAvailableException){
-                    Toast.makeText(activity, "buy new computer", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(activity, getString(R.string.toast_buy_new_computer), Toast.LENGTH_SHORT).show()
                     binding.layoutShopComputerCourseV2.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
                 }
             }
             else{
-                Toast.makeText(activity, "buy previous", Toast.LENGTH_SHORT).show()
+                Toast.makeText(activity, getString(R.string.toast_buy_previous), Toast.LENGTH_SHORT).show()
                 binding.layoutShopComputerCourseV2.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
             }
         }
@@ -261,13 +268,14 @@ class ShopScrollingFragment : Fragment() {
                     Timer(Game.player.current_courses.computer_course.course_length).setEndSignalHandler(Game.player.current_courses.computer_course::timerEndHandler)
                 } catch(exception: NotEnoughMoneyException){
                     binding.layoutShopComputerCourseV3.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
+                    (activity as GameActivity).notEnoughMoneyAnim()
                 } catch(exception: IsNotAvailableException){
-                    Toast.makeText(activity, "buy new computer", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(activity, getString(R.string.toast_buy_new_computer), Toast.LENGTH_SHORT).show()
                     binding.layoutShopComputerCourseV3.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
                 }
             }
             else{
-                Toast.makeText(activity, "buy previous", Toast.LENGTH_SHORT).show()
+                Toast.makeText(activity, getString(R.string.toast_buy_previous), Toast.LENGTH_SHORT).show()
                 binding.layoutShopComputerCourseV3.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
             }
         }
@@ -280,13 +288,14 @@ class ShopScrollingFragment : Fragment() {
                     Timer(Game.player.current_courses.computer_course.course_length).setEndSignalHandler(Game.player.current_courses.computer_course::timerEndHandler)
                 } catch(exception: NotEnoughMoneyException){
                     binding.layoutShopComputerCourseV4.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
+                    (activity as GameActivity).notEnoughMoneyAnim()
                 } catch(exception: IsNotAvailableException){
-                    Toast.makeText(activity, "buy new computer", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(activity, getString(R.string.toast_buy_new_computer), Toast.LENGTH_SHORT).show()
                     binding.layoutShopComputerCourseV4.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
                 }
             }
             else{
-                Toast.makeText(activity, "buy previous", Toast.LENGTH_SHORT).show()
+                Toast.makeText(activity, getString(R.string.toast_buy_previous), Toast.LENGTH_SHORT).show()
                 binding.layoutShopComputerCourseV4.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
             }
         }
@@ -299,13 +308,14 @@ class ShopScrollingFragment : Fragment() {
                     Timer(Game.player.current_courses.computer_course.course_length).setEndSignalHandler(Game.player.current_courses.computer_course::timerEndHandler)
                 } catch(exception: NotEnoughMoneyException){
                     binding.layoutShopComputerCourseV5.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
+                    (activity as GameActivity).notEnoughMoneyAnim()
                 } catch(exception: IsNotAvailableException){
-                    Toast.makeText(activity, "buy new computer", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(activity, getString(R.string.toast_buy_new_computer), Toast.LENGTH_SHORT).show()
                     binding.layoutShopComputerCourseV5.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
                 }
             }
             else{
-                Toast.makeText(activity, "buy previous", Toast.LENGTH_SHORT).show()
+                Toast.makeText(activity, getString(R.string.toast_buy_previous), Toast.LENGTH_SHORT).show()
                 binding.layoutShopComputerCourseV5.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
             }
         }
@@ -320,6 +330,7 @@ class ShopScrollingFragment : Fragment() {
                     updateUI()
                 } catch(exception: NotEnoughMoneyException){
                     binding.layoutShopUssrBicycle.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
+                    (activity as GameActivity).notEnoughMoneyAnim()
                 }
         }
 
@@ -331,10 +342,11 @@ class ShopScrollingFragment : Fragment() {
                     (activity as GameActivity).achieve(BicycleEventsAchievements.USUAL_BIKE)
                 } catch(exception: NotEnoughMoneyException){
                     binding.layoutShopUsualBicycle.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
+                    (activity as GameActivity).notEnoughMoneyAnim()
                 }
             }
             else{
-                Toast.makeText(activity, "buy previous", Toast.LENGTH_SHORT).show()
+                Toast.makeText(activity, getString(R.string.toast_buy_previous), Toast.LENGTH_SHORT).show()
                 binding.layoutShopUsualBicycle.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
             }
         }
@@ -347,10 +359,11 @@ class ShopScrollingFragment : Fragment() {
                     (activity as GameActivity).achieve(BicycleEventsAchievements.MOUNTAIN_BIKE)
                 } catch(exception: NotEnoughMoneyException){
                     binding.layoutShopMountainBicycle.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
+                    (activity as GameActivity).notEnoughMoneyAnim()
                 }
             }
             else{
-                Toast.makeText(activity, "buy previous", Toast.LENGTH_SHORT).show()
+                Toast.makeText(activity, getString(R.string.toast_buy_previous), Toast.LENGTH_SHORT).show()
                 binding.layoutShopMountainBicycle.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
             }
         }
@@ -366,6 +379,7 @@ class ShopScrollingFragment : Fragment() {
                 (activity as GameActivity).achieve(GuitarEventsAchievements.USSR_GUITAR)
             } catch(exception: NotEnoughMoneyException){
                 binding.shopUssrGuitar.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
+                (activity as GameActivity).notEnoughMoneyAnim()
             }
         }
 
@@ -377,10 +391,11 @@ class ShopScrollingFragment : Fragment() {
                     (activity as GameActivity).achieve(GuitarEventsAchievements.URAL_GUITAR)
                 } catch(exception: NotEnoughMoneyException){
                     binding.layoutShopUralGuitar.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
+                    (activity as GameActivity).notEnoughMoneyAnim()
                 }
             }
             else{
-                Toast.makeText(activity, "buy previous", Toast.LENGTH_SHORT).show()
+                Toast.makeText(activity, getString(R.string.toast_buy_previous), Toast.LENGTH_SHORT).show()
                 binding.layoutShopUralGuitar.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
             }
         }
@@ -392,10 +407,11 @@ class ShopScrollingFragment : Fragment() {
                     updateUI()
                 } catch(exception: NotEnoughMoneyException){
                     binding.layoutShopYamahaGuitar.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
+                    (activity as GameActivity).notEnoughMoneyAnim()
                 }
             }
             else{
-                Toast.makeText(activity, "buy previous", Toast.LENGTH_SHORT).show()
+                Toast.makeText(activity, getString(R.string.toast_buy_previous), Toast.LENGTH_SHORT).show()
                 binding.layoutShopYamahaGuitar.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
             }
         }
@@ -407,10 +423,11 @@ class ShopScrollingFragment : Fragment() {
                     updateUI()
                 } catch(exception: NotEnoughMoneyException){
                     binding.layoutShopFenderGuitar.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
+                    (activity as GameActivity).notEnoughMoneyAnim()
                 }
             }
             else{
-                Toast.makeText(activity, "buy previous", Toast.LENGTH_SHORT).show()
+                Toast.makeText(activity, getString(R.string.toast_buy_previous), Toast.LENGTH_SHORT).show()
                 binding.layoutShopFenderGuitar.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
             }
         }
@@ -423,10 +440,11 @@ class ShopScrollingFragment : Fragment() {
                     (activity as GameActivity).achieve(GuitarEventsAchievements.DOUBLE_NECK_GUITAR)
                 } catch(exception: NotEnoughMoneyException){
                     binding.layoutShopDoubleNeckGuitar.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
+                    (activity as GameActivity).notEnoughMoneyAnim()
                 }
             }
             else{
-                Toast.makeText(activity, "buy previous", Toast.LENGTH_SHORT).show()
+                Toast.makeText(activity, getString(R.string.toast_buy_previous), Toast.LENGTH_SHORT).show()
                 binding.layoutShopDoubleNeckGuitar.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
             }
         }
@@ -442,6 +460,7 @@ class ShopScrollingFragment : Fragment() {
                 (activity as GameActivity).achieve(ComputerEventsAchievements.PREVIOUSLY_USED_COMPUTER)
             } catch(exception: NotEnoughMoneyException){
                 binding.layoutShopPreviouslyUsedComputer.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
+                (activity as GameActivity).notEnoughMoneyAnim()
             }
         }
 
@@ -452,10 +471,11 @@ class ShopScrollingFragment : Fragment() {
                     updateUI()
                 } catch(exception: NotEnoughMoneyException){
                     binding.layoutShopOldComputer.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
+                    (activity as GameActivity).notEnoughMoneyAnim()
                 }
             }
             else{
-                Toast.makeText(activity, "buy previous", Toast.LENGTH_SHORT).show()
+                Toast.makeText(activity, getString(R.string.toast_buy_previous), Toast.LENGTH_SHORT).show()
                 binding.layoutShopOldComputer.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
             }
         }
@@ -467,10 +487,11 @@ class ShopScrollingFragment : Fragment() {
                     updateUI()
                 } catch(exception: NotEnoughMoneyException){
                     binding.layoutShopUsualComputer.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
+                    (activity as GameActivity).notEnoughMoneyAnim()
                 }
             }
             else{
-                Toast.makeText(activity, "buy previous", Toast.LENGTH_SHORT).show()
+                Toast.makeText(activity, getString(R.string.toast_buy_previous), Toast.LENGTH_SHORT).show()
                 binding.layoutShopUsualComputer.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
             }
         }
@@ -483,10 +504,11 @@ class ShopScrollingFragment : Fragment() {
                     (activity as GameActivity).achieve(ComputerEventsAchievements.XIAOMI_MI_NOTEBOOK)
                 } catch(exception: NotEnoughMoneyException){
                     binding.layoutShopXiaomiComputer.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
+                    (activity as GameActivity).notEnoughMoneyAnim()
                 }
             }
             else{
-                Toast.makeText(activity, "buy previous", Toast.LENGTH_SHORT).show()
+                Toast.makeText(activity, getString(R.string.toast_buy_previous), Toast.LENGTH_SHORT).show()
                 binding.layoutShopXiaomiComputer.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
             }
         }
@@ -499,10 +521,11 @@ class ShopScrollingFragment : Fragment() {
                     (activity as GameActivity).achieve(ComputerEventsAchievements.MACBOOK)
                 } catch(exception: NotEnoughMoneyException){
                     binding.layoutShopMacbookComputer.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
+                    (activity as GameActivity).notEnoughMoneyAnim()
                 }
             }
             else{
-                Toast.makeText(activity, "buy previous", Toast.LENGTH_SHORT).show()
+                Toast.makeText(activity, getString(R.string.toast_buy_previous), Toast.LENGTH_SHORT).show()
                 binding.layoutShopMacbookComputer.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
             }
         }

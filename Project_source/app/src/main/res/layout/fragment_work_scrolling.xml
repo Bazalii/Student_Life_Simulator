@@ -16,7 +16,10 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/layoutWorkCollectChange"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:layout_marginBottom="6dp"
+            android:background="@color/main_fragment_background"
+            android:elevation="10dp">
 
             <androidx.constraintlayout.widget.Guideline
                 android:id="@+id/guideline94"
@@ -88,10 +91,10 @@
                 android:id="@+id/imageViewWorkCollectChangeMoney"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:srcCompat="@drawable/ic_money"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="@+id/guideline95"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_money" />
 
             <ImageView
                 android:id="@+id/imageViewWorkCollectChangeHappiness"
@@ -106,7 +109,10 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/layoutWorkWatchAds"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:layout_marginBottom="6dp"
+            android:background="@color/main_fragment_background"
+            android:elevation="10dp">
 
             <androidx.constraintlayout.widget.Guideline
                 android:id="@+id/guideline108"
@@ -179,10 +185,10 @@
                 android:id="@+id/imageViewWorkWatchAdsMoney"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:srcCompat="@drawable/ic_money"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="@+id/guideline109"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_money" />
 
             <ImageView
                 android:id="@+id/imageViewWorkWatchAdsHappiness"
@@ -197,7 +203,10 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/layoutWorkDistributeFlyers"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:layout_marginBottom="6dp"
+            android:background="@color/main_fragment_background"
+            android:elevation="10dp">
 
             <androidx.constraintlayout.widget.Guideline
                 android:id="@+id/guideline102"
@@ -270,10 +279,10 @@
                 android:id="@+id/imageViewWorkDistributeFlyersMoney"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:srcCompat="@drawable/ic_money"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="@+id/guideline103"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_money" />
 
             <ImageView
                 android:id="@+id/imageViewWorkDistributeFlyersHappiness"
@@ -288,7 +297,10 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/layoutWorkAsAGreener"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:layout_marginBottom="6dp"
+            android:background="@color/main_fragment_background"
+            android:elevation="10dp">
 
             <androidx.constraintlayout.widget.Guideline
                 android:id="@+id/guideline104"
@@ -361,10 +373,10 @@
                 android:id="@+id/imageViewWorkAsAGreenerMoney"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:srcCompat="@drawable/ic_money"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="@+id/guideline105"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_money" />
 
             <ImageView
                 android:id="@+id/imageViewWorkAsAGreenerMoneySchoolPerformace"
@@ -379,7 +391,10 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/layoutWorkAsAnOperator"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:layout_marginBottom="6dp"
+            android:background="@color/main_fragment_background"
+            android:elevation="10dp">
 
             <androidx.constraintlayout.widget.Guideline
                 android:id="@+id/guideline106"
@@ -452,10 +467,10 @@
                 android:id="@+id/imageViewWorkAsAnOperatorMoney"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:srcCompat="@drawable/ic_money"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="@+id/guideline107"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_money" />
 
             <ImageView
                 android:id="@+id/imageViewWorkAsAnOperatorHappiness"
@@ -470,7 +485,10 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/layoutWorkAsACourier"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:layout_marginBottom="6dp"
+            android:background="@color/main_fragment_background"
+            android:elevation="10dp">
 
             <androidx.constraintlayout.widget.Guideline
                 android:id="@+id/guideline100"
@@ -517,7 +535,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="-15"
+                android:text="0"
                 android:textColor="@color/black"
                 android:textStyle="bold"
                 android:visibility="visible"
@@ -564,7 +582,10 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/layoutWorkPlayGuitar"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:layout_marginBottom="6dp"
+            android:background="@color/main_fragment_background"
+            android:elevation="10dp">
 
             <androidx.constraintlayout.widget.Guideline
                 android:id="@+id/guideline98"
@@ -611,7 +632,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="-15"
+                android:text="0"
                 android:textColor="@color/black"
                 android:textStyle="bold"
                 android:visibility="visible"
@@ -626,7 +647,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="4dp"
                 android:gravity="center"
-                android:text="-16"
+                android:text="0"
                 android:textColor="@color/black"
                 android:textStyle="bold"
                 android:visibility="visible"
@@ -658,7 +679,10 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/layoutWorkOnTheNet"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:layout_marginBottom="6dp"
+            android:background="@color/main_fragment_background"
+            android:elevation="10dp">
 
             <androidx.constraintlayout.widget.Guideline
                 android:id="@+id/guideline96"
@@ -706,7 +730,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="-100"
+                android:text="0"
                 android:textColor="@color/black"
                 android:textStyle="bold"
                 android:visibility="visible"
@@ -721,7 +745,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="4dp"
                 android:gravity="center"
-                android:text="+15000"
+                android:text="0"
                 android:textColor="@color/black"
                 android:textStyle="bold"
                 android:visibility="visible"

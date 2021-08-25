@@ -15,7 +15,10 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/layout_food_eat_crackers"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:layout_marginBottom="6dp"
+            android:background="@color/main_fragment_background"
+            android:elevation="10dp">
 
             <androidx.constraintlayout.widget.Guideline
                 android:id="@+id/guideline2"
@@ -99,14 +102,14 @@
                 android:id="@+id/textView_crackers_happinnes"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:text="@string/crackers_happiness"
                 android:textColor="@color/black"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/guideline2"
                 app:layout_constraintStart_toEndOf="@+id/imageView_crackers_happiness"
-                app:layout_constraintTop_toTopOf="parent"
-                android:gravity="center" />
+                app:layout_constraintTop_toTopOf="parent" />
 
             <ImageView
                 android:id="@+id/imageView_crackers_happiness"
@@ -139,7 +142,10 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/layout_food_eat_doshirack"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:layout_marginBottom="6dp"
+            android:background="@color/main_fragment_background"
+            android:elevation="10dp">
 
             <androidx.constraintlayout.widget.Guideline
                 android:id="@+id/guideline52"
@@ -263,7 +269,10 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/layout_food_eat_at_the_canteen"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:layout_marginBottom="6dp"
+            android:background="@color/main_fragment_background"
+            android:elevation="10dp">
 
             <androidx.constraintlayout.widget.Guideline
                 android:id="@+id/guideline73"
@@ -387,7 +396,10 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/layout_food_eat_at_Mcdonalds"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:layout_marginBottom="6dp"
+            android:background="@color/main_fragment_background"
+            android:elevation="10dp">
 
             <androidx.constraintlayout.widget.Guideline
                 android:id="@+id/guideline78"
@@ -509,7 +521,10 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/layout_food_order_delivery"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:layout_marginBottom="6dp"
+            android:background="@color/main_fragment_background"
+            android:elevation="10dp">
 
             <androidx.constraintlayout.widget.Guideline
                 android:id="@+id/guideline70"
@@ -591,14 +606,14 @@
                 android:id="@+id/textView_delivery_happiness"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:text="@string/pizza_at_home_happiness"
                 android:textColor="@color/black"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/guideline69"
                 app:layout_constraintStart_toEndOf="@+id/imageView_delivery_happiness"
-                app:layout_constraintTop_toTopOf="parent"
-                android:gravity="center" />
+                app:layout_constraintTop_toTopOf="parent" />
 
             <ImageView
                 android:id="@+id/imageView_delivery_happiness"
@@ -632,7 +647,10 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/layout_food_go_to_the_restaurant"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:layout_marginBottom="6dp"
+            android:background="@color/main_fragment_background"
+            android:elevation="10dp">
 
             <androidx.constraintlayout.widget.Guideline
                 android:id="@+id/guideline55"
@@ -718,7 +736,7 @@
                 android:gravity="center"
                 android:text="@string/restaurant_food_happiness"
                 android:textColor="@color/black"
-                android:textSize="16sp"
+                android:textSize="14sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/guideline66"

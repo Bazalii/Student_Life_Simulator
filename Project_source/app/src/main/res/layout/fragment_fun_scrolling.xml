@@ -19,6 +19,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:drawableEnd="@drawable/ic_drop_down_up"
+            android:elevation="10dp"
             android:text="@string/fun_scr_1" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -26,7 +27,9 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginStart="30dp"
-            android:background="?attr/selectableItemBackground"
+            android:layout_marginBottom="6dp"
+            android:background="@color/main_fragment_background"
+            android:elevation="5dp"
             android:visibility="gone">
 
             <androidx.constraintlayout.widget.Guideline
@@ -124,7 +127,9 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginStart="30dp"
-            android:background="?attr/selectableItemBackground"
+            android:layout_marginBottom="6dp"
+            android:background="@color/main_fragment_background"
+            android:elevation="5dp"
             android:visibility="gone">
 
             <androidx.constraintlayout.widget.Guideline
@@ -223,7 +228,9 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginStart="30dp"
-            android:background="?attr/selectableItemBackground"
+            android:layout_marginBottom="6dp"
+            android:background="@color/main_fragment_background"
+            android:elevation="5dp"
             android:visibility="gone">
 
             <androidx.constraintlayout.widget.Guideline
@@ -321,7 +328,9 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginStart="30dp"
-            android:background="?attr/selectableItemBackground"
+            android:layout_marginBottom="6dp"
+            android:background="@color/main_fragment_background"
+            android:elevation="5dp"
             android:visibility="gone">
 
             <androidx.constraintlayout.widget.Guideline
@@ -419,7 +428,9 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginStart="30dp"
-            android:background="?attr/selectableItemBackground"
+            android:layout_marginBottom="6dp"
+            android:background="@color/main_fragment_background"
+            android:elevation="5dp"
             android:visibility="gone">
 
             <androidx.constraintlayout.widget.Guideline
@@ -517,7 +528,9 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginStart="30dp"
-            android:background="?attr/selectableItemBackground"
+            android:layout_marginBottom="6dp"
+            android:background="@color/main_fragment_background"
+            android:elevation="5dp"
             android:visibility="gone">
 
             <androidx.constraintlayout.widget.Guideline
@@ -615,6 +628,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:drawableEnd="@drawable/ic_drop_down_up"
+            android:elevation="10dp"
             android:text="@string/fun_scr_2" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -622,7 +636,9 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginStart="30dp"
-            android:background="?attr/selectableItemBackground"
+            android:layout_marginBottom="6dp"
+            android:background="@color/main_fragment_background"
+            android:elevation="5dp"
             android:visibility="gone">
 
             <androidx.constraintlayout.widget.Guideline
@@ -720,7 +736,9 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginStart="30dp"
-            android:background="?attr/selectableItemBackground"
+            android:layout_marginBottom="6dp"
+            android:background="@color/main_fragment_background"
+            android:elevation="5dp"
             android:visibility="gone">
 
             <androidx.constraintlayout.widget.Guideline
@@ -819,7 +837,9 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginStart="30dp"
-            android:background="?attr/selectableItemBackground"
+            android:layout_marginBottom="6dp"
+            android:background="@color/main_fragment_background"
+            android:elevation="5dp"
             android:visibility="gone">
 
             <androidx.constraintlayout.widget.Guideline
@@ -917,7 +937,9 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginStart="30dp"
-            android:background="?attr/selectableItemBackground"
+            android:layout_marginBottom="6dp"
+            android:background="@color/main_fragment_background"
+            android:elevation="5dp"
             android:visibility="gone">
 
             <androidx.constraintlayout.widget.Guideline
@@ -1015,7 +1037,9 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginStart="30dp"
-            android:background="?attr/selectableItemBackground"
+            android:layout_marginBottom="6dp"
+            android:background="@color/main_fragment_background"
+            android:elevation="5dp"
             android:visibility="gone">
 
             <androidx.constraintlayout.widget.Guideline
@@ -1113,7 +1137,9 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginStart="30dp"
-            android:background="?attr/selectableItemBackground"
+            android:layout_marginBottom="6dp"
+            android:background="@color/main_fragment_background"
+            android:elevation="5dp"
             android:visibility="gone">
 
             <androidx.constraintlayout.widget.Guideline
@@ -1211,6 +1237,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:drawableEnd="@drawable/ic_drop_down_up"
+            android:elevation="10dp"
             android:text="@string/fun_scr_3" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -1218,7 +1245,9 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginStart="30dp"
-            android:background="?attr/selectableItemBackground"
+            android:layout_marginBottom="6dp"
+            android:background="@color/main_fragment_background"
+            android:elevation="5dp"
             android:visibility="gone">
 
             <androidx.constraintlayout.widget.Guideline
@@ -1316,7 +1345,9 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginStart="30dp"
-            android:background="?attr/selectableItemBackground"
+            android:layout_marginBottom="6dp"
+            android:background="@color/main_fragment_background"
+            android:elevation="5dp"
             android:visibility="gone">
 
             <androidx.constraintlayout.widget.Guideline
@@ -1414,7 +1445,9 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginStart="30dp"
-            android:background="?attr/selectableItemBackground"
+            android:layout_marginBottom="6dp"
+            android:background="@color/main_fragment_background"
+            android:elevation="5dp"
             android:visibility="gone">
 
             <androidx.constraintlayout.widget.Guideline
@@ -1512,7 +1545,9 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginStart="30dp"
-            android:background="?attr/selectableItemBackground"
+            android:layout_marginBottom="6dp"
+            android:background="@color/main_fragment_background"
+            android:elevation="5dp"
             android:visibility="gone">
 
             <androidx.constraintlayout.widget.Guideline
@@ -1611,7 +1646,9 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginStart="30dp"
-            android:background="?attr/selectableItemBackground"
+            android:layout_marginBottom="6dp"
+            android:background="@color/main_fragment_background"
+            android:elevation="5dp"
             android:visibility="gone">
 
             <androidx.constraintlayout.widget.Guideline
@@ -1709,7 +1746,9 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginStart="30dp"
-            android:background="?attr/selectableItemBackground"
+            android:layout_marginBottom="6dp"
+            android:background="@color/main_fragment_background"
+            android:elevation="5dp"
             android:visibility="gone">
 
             <androidx.constraintlayout.widget.Guideline
@@ -1807,6 +1846,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:drawableEnd="@drawable/ic_drop_down_up"
+            android:elevation="10dp"
             android:text="@string/fun_scr_4" />
 
         <Button

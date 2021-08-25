@@ -31,9 +31,11 @@ class SchoolScrollingFragment : Fragment() {
         binding.schoolGoToSchool.setOnClickListener{
             try {
                 (activity as GameActivity).updateStats()
+                binding.layoutSchoolGoToSchool.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.click))
                 Timer(Game.game_date.subscription_length).setEndSignalHandler(Studies.GO_TO_SCHOOL::goToSchool)
             } catch (exception: NotEnoughMoneyException){
                 binding.layoutSchoolGoToSchool.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
+                (activity as GameActivity).notEnoughMoneyAnim()
             }
 
         }
@@ -41,58 +43,70 @@ class SchoolScrollingFragment : Fragment() {
         binding.schoolBotat.setOnClickListener{
             try {
                 Game.player.study(Studies.LEARN_YOURSELF)
+                binding.layoutSchoolLearnYourself.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.click))
                 (activity as GameActivity).updateStats()
                 (activity as GameActivity).achieve(StudyEventsRandomAchievements.PAR_ABOUT_REPRODUCTIVE)
             } catch (exception: NotEnoughMoneyException){
                 binding.layoutSchoolLearnYourself.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
+                (activity as GameActivity).notEnoughMoneyAnim()
             }
         }
 
         binding.schoolBuyCheatbook.setOnClickListener{
             try {
                 Game.player.study(Studies.BUY_CHEATBOOK)
+                binding.layoutSchoolBuyCheatbook.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.click))
                 (activity as GameActivity).updateStats()
                 (activity as GameActivity).achieve(StudyEventsRandomAchievements.OLD_ANSWER_BOOK)
             } catch (exception: NotEnoughMoneyException){
                 binding.layoutSchoolBuyCheatbook.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
+                (activity as GameActivity).notEnoughMoneyAnim()
             }
         }
 
         binding.schoolLearnFromStudent.setOnClickListener{
             try {
                 Game.player.study(Studies.LEARN_FROM_A_STUDENT)
+                binding.layoutSchoolLearnFromStudent.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.click))
                 (activity as GameActivity).updateStats()
                 (activity as GameActivity).achieve(StudyEventsRandomAchievements.DRUNK_STUDENT)
             } catch (exception: NotEnoughMoneyException){
                 binding.layoutSchoolLearnFromStudent.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
+                (activity as GameActivity).notEnoughMoneyAnim()
             }
         }
         binding.schoolHireAGoodTutor.setOnClickListener{
             try {
                 Game.player.study(Studies.HIRE_A_GOOD_TUTOR)
+                binding.layoutSchoolHireAGoodTutor.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.click))
                 (activity as GameActivity).updateStats()
             } catch (exception: NotEnoughMoneyException){
                 binding.layoutSchoolHireAGoodTutor.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
+                (activity as GameActivity).notEnoughMoneyAnim()
             }
         }
 
         binding.schoolSignUpInAnOnlineSchool.setOnClickListener{
             try {
                 (activity as GameActivity).updateStats()
+                binding.layoutSchoolSignUpInAnOnlineSchool.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.click))
                 Timer(Game.game_date.subscription_length).setEndSignalHandler(Studies.SIGN_UP_IN_AN_ONLINE_SCHOOL::signUpInOnlineSchool)
                 (activity as GameActivity).achieve(StudyEventsRandomAchievements.FALL_ASLEEP_AT_WEBINAR)
             } catch (exception: NotEnoughMoneyException){
                 binding.layoutSchoolSignUpInAnOnlineSchool.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
+                (activity as GameActivity).notEnoughMoneyAnim()
             }
         }
 
         binding.schoolStudyWithUniTeacher.setOnClickListener{
             try {
                 Game.player.study(Studies.STUDY_WITH_UNI_TEACHER)
+                binding.layoutSchoolStudyWithUniTeacher.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.click))
                 (activity as GameActivity).updateStats()
                 (activity as GameActivity).achieve(StudyEventsRandomAchievements.STORIES_ABOUT_USSR)
             } catch (exception: NotEnoughMoneyException){
                 binding.layoutSchoolStudyWithUniTeacher.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
+                (activity as GameActivity).notEnoughMoneyAnim()
             }
         }
 
