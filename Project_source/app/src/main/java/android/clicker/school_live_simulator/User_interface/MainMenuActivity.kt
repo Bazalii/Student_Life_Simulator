@@ -1,12 +1,11 @@
 package android.clicker.school_live_simulator.User_interface
 
 import android.clicker.school_live_simulator.Game
+import android.clicker.school_live_simulator.R
 import android.clicker.school_live_simulator.databinding.ActivityMainMenuBinding
 import android.content.Intent
-import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import java.util.*
 import android.graphics.Color.*
@@ -36,14 +35,11 @@ class MainMenuActivity : AppCompatActivity() {
          */
         val intent = Intent(this, GameActivity::class.java)
         startActivity(intent)
+        overridePendingTransition(R.anim.start_activity_1, R.anim.start_activity_2)
     }
     fun OnClickRussianLanguage(view: View){
         Game.locale = "ru"
         Game.isDefaultLanguage = false
-        /*finish();
-        overridePendingTransition(0, 0);
-        startActivity(intent)
-        overridePendingTransition(0, 0);*/
         this.recreate()
     }
     fun OnClickEnglishLanguage(view: View){

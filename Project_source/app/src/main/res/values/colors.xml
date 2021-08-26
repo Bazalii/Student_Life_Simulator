@@ -48,10 +48,21 @@
     <color name="main_achievevement_background">#ED8C72</color>
     <color name="main_button_background">#B3DBC0</color>
     <color name="main_menu_background">#67BACA</color>
-<!--    <color name="main_fragment_background">#F4EBDB</color>
-    <color name="main_stats_background">#8E9B97</color>
-    <color name="main_botnav_background">#8E9B97</color>
-    <color name="main_achievevement_background">#DCC6C6</color>
-    <color name="main_button_background">#537072</color>-->
+    <color name="botnav_checked">#ED8C72</color>
+    <color name="botnav_unchecked">#B3DBC0</color>
+
+    <!--Rare type colors-->
+    <color name="super_rare_glow">#F0D809</color>
+    <color name="rare">#3E1883</color>
+    <color name="rare_glow">#7C50CA</color>
+    <color name="super_rare">#E7B315</color>
+    <color name="uncommon">#4CAF50</color>
+    <color name="common">#03A9F4</color>
+    <!--    <color name="main_fragment_background">#F4EBDB</color>
+        <color name="main_stats_background">#8E9B97</color>
+        <color name="main_botnav_background">#8E9B97</color>
+        <color name="main_achievevement_background">#DCC6C6</color>
+        <color name="main_button_background">#537072</color>-->
 
 </resources>
+

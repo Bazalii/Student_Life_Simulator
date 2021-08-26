@@ -426,7 +426,10 @@
     <!--Achievement dialog-->
     <string name="new_achievement">Открыто новое достижение!</string>
     <string name="achievement_chance">Шанс:</string>
-
+    <string name="achievement_super_rare">очень редкое</string>
+    <string name="achievement_rare">редкое</string>
+    <string name="achievement_uncommon">необычное</string>
+    <string name="achievement_common">обычное</string>
 
     <!--Toast messages-->
     <string name="toast_not_passed">Не пройден курс</string>

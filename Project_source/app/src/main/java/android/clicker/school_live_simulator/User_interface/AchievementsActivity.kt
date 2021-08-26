@@ -1,6 +1,7 @@
 package android.clicker.school_live_simulator.User_interface
 
 import android.clicker.school_live_simulator.Classes.Achievements_classes.Interfaces.Achievements
+import android.clicker.school_live_simulator.Classes.Achievements_classes.Interfaces.RandomAchievements
 import android.clicker.school_live_simulator.Game
 import android.clicker.school_live_simulator.R
 import android.clicker.school_live_simulator.databinding.AchievementItemBinding
@@ -55,8 +56,35 @@ class AchievementsActivity : AppCompatActivity() {
         val mBuilder = AlertDialog.Builder(context)
         val mView = inflater.inflate(R.layout.achievement_dialog, null)
         val binding = AchievementDialogBinding.bind(mView)
-        binding.AchievementTitle.text = Game.player.achieved_achievements[position].achievement_name
-        binding.AchievementDescription.text = Game.player.achieved_achievements[position].achievement_message
+        val achievement = Game.player.achieved_achievements[position]
+        binding.AchievementTitle.text = achievement.achievement_name
+        binding.AchievementDescription.text = achievement.achievement_message
+        if(achievement is RandomAchievements){
+            binding.AchievementChance.text = "${achievement.achievement_chance.toString()}%"
+            binding.AchievementChance.visibility = View.VISIBLE
+            binding.AchievementChanceText.visibility = View.VISIBLE
+            binding.AchievementRarityType.visibility= View.VISIBLE
+            when(achievement.achievement_chance.toString().toFloat()){
+                in 0.0..1.0 -> {
+                    binding.AchievementRarityType.text = getText(R.string.achievement_super_rare)
+                    binding.AchievementRarityType.setTextColor(resources.getColor(R.color.super_rare))
+                    binding.AchievementRarityType.setShadowLayer(4f, 0f, 0f, resources.getColor(R.color.super_rare))
+                }
+                in 1.0..5.0 -> {
+                    binding.AchievementRarityType.text = getText(R.string.achievement_rare)
+                    binding.AchievementRarityType.setTextColor(resources.getColor(R.color.rare))
+                    binding.AchievementRarityType.setShadowLayer(8f, 0f, 0f, resources.getColor(R.color.rare_glow))
+                }
+                in 5.0..15.0 ->{
+                    binding.AchievementRarityType.text = getText(R.string.achievement_uncommon)
+                    binding.AchievementRarityType.setTextColor(resources.getColor(R.color.uncommon))
+                }
+                else ->{
+                    binding.AchievementRarityType.text = getText(R.string.achievement_common)
+                    binding.AchievementRarityType.setTextColor(resources.getColor(R.color.common))
+                }
+            }
+        }
         mBuilder.setView(mView)
         val dialog: AlertDialog = mBuilder.create()
         dialog.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
@@ -96,8 +124,23 @@ class AchievementsActivity : AppCompatActivity() {
              * Fill template of achievement with certain values
              */
             fun bind(achievement: Achievements) = with(binding){
-                //achievIV.setImageResource(image)
                 achievName.text = achievement.achievement_name
+                if(achievement is RandomAchievements){
+                    when(achievement.achievement_chance.toString().toFloat()){
+                        in 0.0..1.0 -> {
+                            achievName.setTextColor(Game.context_bundle.context.resources.getColor(R.color.super_rare))
+                        }
+                        in 1.0..5.0 -> {
+                            achievName.setTextColor(Game.context_bundle.context.resources.getColor(R.color.rare))
+                        }
+                        in 5.0..15.0 ->{
+                            achievName.setTextColor(Game.context_bundle.context.resources.getColor(R.color.uncommon))
+                        }
+                        else ->{
+                            achievName.setTextColor(Game.context_bundle.context.resources.getColor(R.color.common))
+                        }
+                    }
+                }
             }
         }
 

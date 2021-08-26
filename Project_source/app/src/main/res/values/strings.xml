@@ -426,6 +426,10 @@
     <!--Achievement dialog-->
     <string name="new_achievement">You got a new achievement!</string>
     <string name="achievement_chance">chance:</string>
+    <string name="achievement_super_rare">super rare</string>
+    <string name="achievement_rare">rare</string>
+    <string name="achievement_uncommon">uncommon</string>
+    <string name="achievement_common">common</string>
 
 
     <!--Toast messages-->

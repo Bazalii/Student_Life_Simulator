@@ -27,6 +27,8 @@
         android:layout_height="wrap_content"
         android:background="@color/main_stats_background"
         android:visibility="visible"
+        app:itemIconTint="@color/botnav_colors"
+        app:itemTextColor="@color/botnav_colors"
         app:labelVisibilityMode="labeled"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

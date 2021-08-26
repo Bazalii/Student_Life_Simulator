@@ -23,12 +23,15 @@ import android.util.Log
 import android.view.View
 import androidx.appcompat.app.AlertDialog
 import androidx.constraintlayout.widget.ConstraintLayout
+import androidx.core.content.ContextCompat.getColor
 import androidx.core.graphics.ColorUtils.HSLToColor
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
 import androidx.viewpager2.adapter.FragmentStateAdapter
 import androidx.viewpager2.widget.ViewPager2
 import java.util.*
+import android.animation.ValueAnimator
+import android.animation.ValueAnimator.AnimatorUpdateListener
 
 
 class GameActivity : AppCompatActivity() {
@@ -167,9 +170,21 @@ class GameActivity : AppCompatActivity() {
         binding.happinessProgressBar.progressTintList = ColorStateList.valueOf(HSLToColor(floatArrayOf(120-colorHappiness, 1f , 0.5f)))
         binding.satietyProgressBar.progressTintList = ColorStateList.valueOf(HSLToColor(floatArrayOf(120-colorSatiety, 1f , 0.5f)))
         binding.schoolPerformanceProgressBar.progressTintList = ColorStateList.valueOf(HSLToColor(floatArrayOf(120-colorSchoolPerformance, 1f , 0.5f)))
-
-        binding.moneyTextView.text = Game.player.money.toString()
+        changeMoneyAnimation( binding.moneyTextView.text.toString().toInt(), Game.player.money)
+       // binding.moneyTextView.text = Game.player.money.toString()
         binding.dateTextView.text = Game.game_date.toString()
+    }
+    private fun changeMoneyAnimation(from: Int, to: Int){
+        val animator = ValueAnimator.ofInt(from, to)
+        when(to - from){
+            in 0..20 -> animator.duration = 200
+            in 21..10000 -> animator.duration = 300
+            else -> animator.duration = 400
+        }
+        animator.addUpdateListener {
+                animation -> binding.moneyTextView.text = animation.animatedValue.toString()
+        }
+        animator.start()
     }
 
     fun achieve(achievement: Achievements) {
@@ -188,6 +203,27 @@ class GameActivity : AppCompatActivity() {
                 binding.AchievementChance.text = "${achievement.achievement_chance.toString()}%"
                 binding.AchievementChance.visibility = View.VISIBLE
                 binding.AchievementChanceText.visibility = View.VISIBLE
+                binding.AchievementRarityType.visibility= View.VISIBLE
+                when(achievement.achievement_chance.toString().toFloat()){
+                    in 0.0..1.0 -> {
+                        binding.AchievementRarityType.text = getText(R.string.achievement_super_rare)
+                        binding.AchievementRarityType.setTextColor(resources.getColor(R.color.super_rare))
+                        binding.AchievementRarityType.setShadowLayer(4f, 0f, 0f, resources.getColor(R.color.super_rare))
+                    }
+                    in 1.0..5.0 -> {
+                        binding.AchievementRarityType.text = getText(R.string.achievement_rare)
+                        binding.AchievementRarityType.setTextColor(resources.getColor(R.color.rare))
+                        binding.AchievementRarityType.setShadowLayer(8f, 0f, 0f, resources.getColor(R.color.rare_glow))
+                    }
+                    in 5.0..15.0 ->{
+                        binding.AchievementRarityType.text = getText(R.string.achievement_uncommon)
+                        binding.AchievementRarityType.setTextColor(resources.getColor(R.color.uncommon))
+                    }
+                    else ->{
+                        binding.AchievementRarityType.text = getText(R.string.achievement_common)
+                        binding.AchievementRarityType.setTextColor(resources.getColor(R.color.common))
+                    }
+                }
             }
             mBuilder.setView(mView)
             val dialog: AlertDialog = mBuilder.create()

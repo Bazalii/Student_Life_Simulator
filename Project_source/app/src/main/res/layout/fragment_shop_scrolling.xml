@@ -85,7 +85,7 @@
                 android:id="@+id/textViewGuitarCourseV1price"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="16dp"
+                android:layout_marginEnd="8dp"
                 android:text="@string/shop_guitar_course_v1_price"
                 android:textColor="@color/black"
                 android:textSize="16sp"
@@ -93,6 +93,7 @@
                 android:visibility="invisible"
                 app:layout_constraintBottom_toBottomOf="@+id/shopGuitarCourseV1"
                 app:layout_constraintEnd_toEndOf="@+id/shopGuitarCourseV1"
+                app:layout_constraintStart_toEndOf="@+id/imageViewGuitarCourseV1Money"
                 app:layout_constraintTop_toTopOf="@+id/shopGuitarCourseV1" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -162,7 +163,7 @@
                 android:id="@+id/textViewGuitarCourseV2price"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="16dp"
+                android:layout_marginEnd="8dp"
                 android:text="@string/shop_guitar_course_v2_price"
                 android:textColor="@color/black"
                 android:textSize="16sp"
@@ -170,6 +171,7 @@
                 android:visibility="invisible"
                 app:layout_constraintBottom_toBottomOf="@+id/shopGuitarCourseV2"
                 app:layout_constraintEnd_toEndOf="@+id/shopGuitarCourseV2"
+                app:layout_constraintStart_toEndOf="@+id/imageViewGuitarCourseV2Money"
                 app:layout_constraintTop_toTopOf="@+id/shopGuitarCourseV2" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -239,7 +241,7 @@
                 android:id="@+id/textViewGuitarCourseV3price"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="16dp"
+                android:layout_marginEnd="8dp"
                 android:text="@string/shop_guitar_course_v3_price"
                 android:textColor="@color/black"
                 android:textSize="16sp"
@@ -247,6 +249,7 @@
                 android:visibility="invisible"
                 app:layout_constraintBottom_toBottomOf="@+id/shopGuitarCourseV3"
                 app:layout_constraintEnd_toEndOf="@+id/shopGuitarCourseV3"
+                app:layout_constraintStart_toEndOf="@+id/imageViewGuitarCourseV3Money"
                 app:layout_constraintTop_toTopOf="@+id/shopGuitarCourseV3" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -318,7 +321,7 @@
                 android:id="@+id/textViewGuitarCourseV4price"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="16dp"
+                android:layout_marginEnd="8dp"
                 android:text="@string/shop_guitar_course_v4_price"
                 android:textColor="@color/black"
                 android:textSize="16sp"
@@ -326,6 +329,7 @@
                 android:visibility="invisible"
                 app:layout_constraintBottom_toBottomOf="@+id/shopGuitarCourseV4"
                 app:layout_constraintEnd_toEndOf="@+id/shopGuitarCourseV4"
+                app:layout_constraintStart_toEndOf="@+id/imageViewGuitarCourseV4Money"
                 app:layout_constraintTop_toTopOf="@+id/shopGuitarCourseV4" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -394,7 +398,7 @@
                 android:id="@+id/textViewGuitarCourseV5price"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="16dp"
+                android:layout_marginEnd="8dp"
                 android:text="@string/shop_guitar_course_v5_price"
                 android:textColor="@color/black"
                 android:textSize="16sp"
@@ -402,6 +406,7 @@
                 android:visibility="invisible"
                 app:layout_constraintBottom_toBottomOf="@+id/shopGuitarCourseV5"
                 app:layout_constraintEnd_toEndOf="@+id/shopGuitarCourseV5"
+                app:layout_constraintStart_toEndOf="@+id/imageViewGuitarCourseV5Money"
                 app:layout_constraintTop_toTopOf="@+id/shopGuitarCourseV5" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -478,7 +483,7 @@
                 android:id="@+id/textViewComputerCourseV1price"
                 android:layout_width="wrap_content"
                 android:layout_height="22dp"
-                android:layout_marginRight="16dp"
+                android:layout_marginRight="8dp"
                 android:text="@string/shop_computer_course_v1_price"
                 android:textColor="@color/design_default_color_error"
                 android:textSize="16sp"
@@ -486,6 +491,7 @@
                 android:visibility="invisible"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="@+id/shopComputerCourseV1"
+                app:layout_constraintStart_toEndOf="@+id/imageViewComputerCourseV1Money"
                 app:layout_constraintTop_toTopOf="parent" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -555,7 +561,7 @@
                 android:id="@+id/textViewComputerCourseV2price"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginRight="16dp"
+                android:layout_marginRight="8dp"
                 android:text="@string/shop_computer_course_v2_price"
                 android:textColor="@color/design_default_color_error"
                 android:textSize="16sp"
@@ -563,6 +569,7 @@
                 android:visibility="invisible"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imageViewComputerCourseV2Money"
                 app:layout_constraintTop_toTopOf="parent" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -633,7 +640,7 @@
                 android:id="@+id/textViewComputerCourseV3price"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginRight="16dp"
+                android:layout_marginRight="8dp"
                 android:text="@string/shop_computer_course_v3_price"
                 android:textColor="@color/design_default_color_error"
                 android:textSize="16sp"
@@ -641,6 +648,7 @@
                 android:visibility="invisible"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="@+id/shopComputerCourseV3"
+                app:layout_constraintStart_toEndOf="@+id/imageViewComputerCourseV3Money"
                 app:layout_constraintTop_toTopOf="parent" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -710,7 +718,7 @@
                 android:id="@+id/textViewComputerCourseV4price"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginRight="16dp"
+                android:layout_marginRight="8dp"
                 android:text="@string/shop_computer_course_v4_price"
                 android:textColor="@color/design_default_color_error"
                 android:textSize="16sp"
@@ -718,6 +726,7 @@
                 android:visibility="invisible"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imageViewComputerCourseV4Money"
                 app:layout_constraintTop_toTopOf="parent" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -787,7 +796,7 @@
                 android:id="@+id/textViewComputerCourseV5price"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginRight="16dp"
+                android:layout_marginRight="8dp"
                 android:text="@string/shop_computer_course_v5_price"
                 android:textColor="@color/design_default_color_error"
                 android:textSize="16sp"
@@ -795,6 +804,7 @@
                 android:visibility="invisible"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="@+id/shopComputerCourseV5"
+                app:layout_constraintStart_toEndOf="@+id/imageViewComputerCourseV5Money"
                 app:layout_constraintTop_toTopOf="parent" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -872,7 +882,7 @@
                 android:id="@+id/textViewUssrBicyclePrice"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginRight="16dp"
+                android:layout_marginRight="8dp"
                 android:text="@string/shop_ussr_bicycle_price"
                 android:textColor="@color/black"
                 android:textSize="16sp"
@@ -880,6 +890,7 @@
                 android:visibility="invisible"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imageViewUssrBicycleMoney"
                 app:layout_constraintTop_toTopOf="parent" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -949,7 +960,7 @@
                 android:id="@+id/textViewUsualBicyclePrice"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginRight="16dp"
+                android:layout_marginRight="8dp"
                 android:text="@string/shop_usual_bicycle_price"
                 android:textColor="@color/black"
                 android:textSize="16sp"
@@ -957,6 +968,7 @@
                 android:visibility="invisible"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imageViewUsualBicycleMoney"
                 app:layout_constraintTop_toTopOf="parent" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -1025,8 +1037,8 @@
             <TextView
                 android:id="@+id/textViewMountainBicyclePrice"
                 android:layout_width="wrap_content"
-                android:layout_height="22dp"
-                android:layout_marginRight="16dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="8dp"
                 android:text="@string/shop_mountain_bicycle_price"
                 android:textColor="@color/black"
                 android:textSize="16sp"
@@ -1034,6 +1046,7 @@
                 android:visibility="invisible"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="@+id/shopMountainBicycle"
+                app:layout_constraintStart_toEndOf="@+id/imageViewMountainBicycleMoney"
                 app:layout_constraintTop_toTopOf="parent" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -1110,7 +1123,7 @@
                 android:id="@+id/textViewUssrGuitarPrice"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginRight="16dp"
+                android:layout_marginRight="8dp"
                 android:text="@string/shop_ussr_guitar_price"
                 android:textColor="@color/design_default_color_error"
                 android:textSize="16sp"
@@ -1118,6 +1131,7 @@
                 android:visibility="invisible"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imageViewUssrGuitarMoney"
                 app:layout_constraintTop_toTopOf="parent" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -1187,7 +1201,7 @@
                 android:id="@+id/textViewUralGuitarPrice"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginRight="16dp"
+                android:layout_marginRight="8dp"
                 android:text="@string/shop_ural_guitar_price"
                 android:textColor="@color/design_default_color_error"
                 android:textSize="16sp"
@@ -1195,6 +1209,7 @@
                 android:visibility="invisible"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imageViewUralGuitarMoney"
                 app:layout_constraintTop_toTopOf="parent" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -1258,14 +1273,13 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="@+id/guideline13"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.0"
                 app:srcCompat="@drawable/ic_lock" />
 
             <TextView
                 android:id="@+id/textViewYamahaGuitarPrice"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginRight="16dp"
+                android:layout_marginRight="8dp"
                 android:text="@string/shop_yamaha_guitar_price"
                 android:textColor="@color/design_default_color_error"
                 android:textSize="16sp"
@@ -1273,6 +1287,7 @@
                 android:visibility="invisible"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="@+id/shopYamahaGuitar"
+                app:layout_constraintStart_toEndOf="@+id/imageViewYamahaGuitarMoney"
                 app:layout_constraintTop_toTopOf="parent" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -1342,7 +1357,7 @@
                 android:id="@+id/textViewFenderGuitarPrice"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginRight="16dp"
+                android:layout_marginRight="8dp"
                 android:text="@string/shop_fender_guitar_price"
                 android:textColor="@color/design_default_color_error"
                 android:textSize="16sp"
@@ -1350,6 +1365,7 @@
                 android:visibility="invisible"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="@+id/shopFenderGuitar"
+                app:layout_constraintStart_toEndOf="@+id/imageViewFenderGuitarMoney"
                 app:layout_constraintTop_toTopOf="parent" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -1419,7 +1435,7 @@
                 android:id="@+id/textViewDoubleNeckGuitarPrice"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginRight="16dp"
+                android:layout_marginRight="8dp"
                 android:text="@string/shop_double_neck_guitar_price"
                 android:textColor="@color/design_default_color_error"
                 android:textSize="16sp"
@@ -1427,6 +1443,7 @@
                 android:visibility="invisible"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imageViewDoubleNeckGuitarMoney"
                 app:layout_constraintTop_toTopOf="parent" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -1504,7 +1521,7 @@
                 android:id="@+id/textViewPreviouslyUsedComputerPrice"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="16dp"
+                android:layout_marginEnd="8dp"
                 android:text="@string/shop_previously_used_computer_price"
                 android:textColor="@color/design_default_color_error"
                 android:textSize="16sp"
@@ -1512,6 +1529,7 @@
                 android:visibility="invisible"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="@+id/shopPreviouslyUsedComputer"
+                app:layout_constraintStart_toEndOf="@+id/imageViewPreviouslyUsedComputerMoney"
                 app:layout_constraintTop_toTopOf="parent" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -1576,14 +1594,13 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="@+id/guideline7"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.0"
                 app:srcCompat="@drawable/ic_lock" />
 
             <TextView
                 android:id="@+id/textViewOldComputerPrice"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="16dp"
+                android:layout_marginEnd="8dp"
                 android:text="@string/shop_old_computer_price"
                 android:textColor="@color/design_default_color_error"
                 android:textSize="16sp"
@@ -1591,6 +1608,7 @@
                 android:visibility="invisible"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imageViewOldComputerMoney"
                 app:layout_constraintTop_toTopOf="parent" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -1660,7 +1678,7 @@
                 android:id="@+id/textViewUsualComputerPrice"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="16dp"
+                android:layout_marginEnd="8dp"
                 android:text="@string/shop_usual_computer_price"
                 android:textColor="@color/design_default_color_error"
                 android:textSize="16sp"
@@ -1668,6 +1686,7 @@
                 android:visibility="invisible"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imageViewUsualComputerMoney"
                 app:layout_constraintTop_toTopOf="parent" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -1737,7 +1756,7 @@
                 android:id="@+id/textViewXiaomiComputerPrice"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="16dp"
+                android:layout_marginEnd="8dp"
                 android:text="@string/shop_xiaomi_computer_price"
                 android:textColor="@color/design_default_color_error"
                 android:textSize="16sp"
@@ -1745,6 +1764,7 @@
                 android:visibility="invisible"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imageViewXiaomiComputerMoney"
                 app:layout_constraintTop_toTopOf="parent" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -1814,7 +1834,7 @@
                 android:id="@+id/textViewMacbookComputerPrice"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="16dp"
+                android:layout_marginEnd="8dp"
                 android:text="@string/shop_macbook_computer_price"
                 android:textColor="@color/design_default_color_error"
                 android:textSize="16sp"
@@ -1822,6 +1842,7 @@
                 android:visibility="invisible"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imageViewMacbookComputerMoney"
                 app:layout_constraintTop_toTopOf="parent" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
