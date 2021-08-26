@@ -22,8 +22,12 @@ import androidx.appcompat.app.AlertDialog
 
 
 class AchievementsActivity : AppCompatActivity() {
+
     lateinit var binding: ActivityAchievementsBinding
     private val adapter = AchievementsAdapter()
+    var biggest_counter: Pair<String, Int> = Pair("", 0)
+    var number_of_clicks: Int = 0
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityAchievementsBinding.inflate(layoutInflater)
@@ -51,6 +55,13 @@ class AchievementsActivity : AppCompatActivity() {
                 alertDialog(this@AchievementsActivity, position, layoutInflater)
             }
         })
+
+        for (i in Game.counters.keys) {
+            biggest_counter = if (Game.counters[i]!! > biggest_counter.second) Pair(i, Game.counters[i]!!) else biggest_counter
+            number_of_clicks += Game.counters[i]!!
+        }
+
+
     }
     private fun alertDialog(context: Context, position: Int, inflater: LayoutInflater){
         val mBuilder = AlertDialog.Builder(context)
