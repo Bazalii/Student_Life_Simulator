@@ -29,8 +29,10 @@ class FoodScrollingFragment : Fragment() {
         binding.foodEatCrackers.setOnClickListener{
             try {
                 Game.player.eat(Food.CRACKERS)
-                (activity as GameActivity).updateStats()
                 binding.layoutFoodEatCrackers.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.click))
+                Game.counters[Game.context_bundle.getTitle("food_eat_crackers")] =
+                    Game.counters[Game.context_bundle.getTitle("food_eat_crackers")] ?: 0 + 1
+                (activity as GameActivity).updateStats()
 
             } catch (exception: NotEnoughMoneyException){
                 binding.layoutFoodEatCrackers.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
@@ -41,9 +43,11 @@ class FoodScrollingFragment : Fragment() {
         binding.foodEatDoshirack.setOnClickListener{
             try {
                 Game.player.eat(Food.DOSHIRAK)
+                binding.layoutFoodEatDoshirack.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.click))
+                Game.counters[Game.context_bundle.getTitle("food_eat_doshirack")] =
+                    Game.counters[Game.context_bundle.getTitle("food_eat_doshirack")] ?: 0 + 1
                 (activity as GameActivity).updateStats()
                 (activity as GameActivity).achieve(FoodEventsRandomAchievements.TWO_SPICES)
-                binding.layoutFoodEatDoshirack.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.click))
             } catch (exception: NotEnoughMoneyException){
                 binding.layoutFoodEatDoshirack.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
                 (activity as GameActivity).notEnoughMoneyAnim()
@@ -54,9 +58,11 @@ class FoodScrollingFragment : Fragment() {
         binding.foodEatAtTheCanteen.setOnClickListener{
             try {
                 Game.player.eat(Food.EATERY_FOOD)
+                binding.layoutFoodEatAtTheCanteen.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.click))
+                Game.counters[Game.context_bundle.getTitle("food_eat_at_the_canteen")] =
+                    Game.counters[Game.context_bundle.getTitle("food_eat_at_the_canteen")] ?: 0 + 1
                 (activity as GameActivity).updateStats()
                 (activity as GameActivity).achieve(FoodEventsRandomAchievements.POISONING_OF_EATERY_FOOD)
-                binding.layoutFoodEatAtTheCanteen.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.click))
             } catch (exception: NotEnoughMoneyException){
                 binding.layoutFoodEatAtTheCanteen.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
                 (activity as GameActivity).notEnoughMoneyAnim()
@@ -66,8 +72,10 @@ class FoodScrollingFragment : Fragment() {
         binding.foodEatAtMcdonalds.setOnClickListener{
             try {
                 Game.player.eat(Food.MCDONALDS)
-                (activity as GameActivity).updateStats()
                 binding.layoutFoodEatAtMcdonalds.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.click))
+                Game.counters[Game.context_bundle.getTitle("food_eat_at_Mcdonalds")] =
+                    Game.counters[Game.context_bundle.getTitle("food_eat_at_Mcdonalds")] ?: 0 + 1
+                (activity as GameActivity).updateStats()
             } catch (exception: NotEnoughMoneyException){
                 binding.layoutFoodEatAtMcdonalds.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
                 (activity as GameActivity).notEnoughMoneyAnim()
@@ -77,8 +85,10 @@ class FoodScrollingFragment : Fragment() {
         binding.foodOrderDelivery.setOnClickListener{
             try {
                 Game.player.eat(Food.PIZZA_AT_HOME)
-                (activity as GameActivity).updateStats()
                 binding.layoutFoodOrderDelivery.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.click))
+                Game.counters[Game.context_bundle.getTitle("food_order_delivery")] =
+                    Game.counters[Game.context_bundle.getTitle("food_order_delivery")] ?: 0 + 1
+                (activity as GameActivity).updateStats()
             } catch (exception: NotEnoughMoneyException){
                 binding.layoutFoodOrderDelivery.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
                 (activity as GameActivity).notEnoughMoneyAnim()
@@ -88,8 +98,10 @@ class FoodScrollingFragment : Fragment() {
         binding.foodGoToTheRestaurant.setOnClickListener{
             try {
                 Game.player.eat(Food.RESTAURANT_FOOD)
-                (activity as GameActivity).updateStats()
                 binding.layoutFoodGoToTheRestaurant.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.click))
+                Game.counters[Game.context_bundle.getTitle("food_go_to_the_restaurant")] =
+                    Game.counters[Game.context_bundle.getTitle("food_go_to_the_restaurant")] ?: 0 + 1
+                (activity as GameActivity).updateStats()
             } catch (exception: NotEnoughMoneyException){
                 binding.layoutFoodGoToTheRestaurant.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
                 (activity as GameActivity).notEnoughMoneyAnim()

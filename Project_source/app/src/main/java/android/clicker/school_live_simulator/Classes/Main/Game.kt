@@ -18,7 +18,7 @@ object Game {
     private var difficulty_state: GameDifficultyState = NormalMode()
     lateinit var locale: String
     var isDefaultLanguage = true
-    lateinit var counters: Map<String, Int>
+    var counters: MutableMap<String, Int> = mutableMapOf()
 
     fun setLocale(resources: Resources, context: Context){
         val config = resources.configuration

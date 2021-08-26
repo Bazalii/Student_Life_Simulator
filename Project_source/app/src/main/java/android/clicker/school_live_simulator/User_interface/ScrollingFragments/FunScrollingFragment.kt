@@ -116,6 +116,8 @@ class FunScrollingFragment : Fragment() {
         binding.funDrawOnDesks.setOnClickListener{
             try {
                 Game.player.entertain(Entertainment.DRAW_ON_DESK)
+                Game.counters[Game.context_bundle.getTitle("fun_draw_on_desks")] =
+                    Game.counters[Game.context_bundle.getTitle("fun_draw_on_desks")] ?: 0 + 1
                 (activity as GameActivity).updateStats()
                 (activity as GameActivity).achieve(CreativityEventsRandomAchievements.MISTER_PROPER)
             } catch (exception: NotEnoughMoneyException){
@@ -128,6 +130,8 @@ class FunScrollingFragment : Fragment() {
         binding.funDrawGraffities.setOnClickListener{
             try {
                 Game.player.entertain(Entertainment.DRAW_GRAFFITIES)
+                Game.counters[Game.context_bundle.getTitle("fun_draw_graffities")] =
+                    Game.counters[Game.context_bundle.getTitle("fun_draw_graffities")] ?: 0 + 1
                 (activity as GameActivity).updateStats()
                 (activity as GameActivity).achieve(CreativityEventsRandomAchievements.DRAW_ON_TOP_OF_OTHER_ART)
             } catch (exception: NotEnoughMoneyException){
@@ -139,6 +143,8 @@ class FunScrollingFragment : Fragment() {
         binding.funWritePoem.setOnClickListener{
             try {
                 Game.player.entertain(Entertainment.WRITE_A_POEM)
+                Game.counters[Game.context_bundle.getTitle("fun_write_a_poem")] =
+                    Game.counters[Game.context_bundle.getTitle("fun_write_a_poem")] ?: 0 + 1
                 (activity as GameActivity).updateStats()
                 (activity as GameActivity).achieve(CreativityEventsRandomAchievements.POEM_POSTED_BY_TEACHER)
             } catch (exception: NotEnoughMoneyException){
@@ -150,6 +156,8 @@ class FunScrollingFragment : Fragment() {
         binding.funMakeSomethingHandmade.setOnClickListener{
             try {
                 Game.player.entertain(Entertainment.MAKE_SOMETHING_HANDMADE)
+                Game.counters[Game.context_bundle.getTitle("fun_make_something_handmade")] =
+                    Game.counters[Game.context_bundle.getTitle("fun_make_something_handmade")] ?: 0 + 1
                 (activity as GameActivity).updateStats()
             } catch (exception: NotEnoughMoneyException){
                 binding.funMakeSomethingHandmade.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
@@ -160,6 +168,8 @@ class FunScrollingFragment : Fragment() {
         binding.funCoverASong.setOnClickListener{
             try {
                 Game.player.entertain(Entertainment.COVER_A_SONG)
+                Game.counters[Game.context_bundle.getTitle("fun_cover_a_song")] =
+                    Game.counters[Game.context_bundle.getTitle("fun_cover_a_song")] ?: 0 + 1
                 (activity as GameActivity).updateStats()
             } catch (exception: NotEnoughMoneyException){
                 binding.funCoverASong.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
@@ -170,6 +180,8 @@ class FunScrollingFragment : Fragment() {
         binding.funWriteASong.setOnClickListener{
             try {
                 Game.player.entertain(Entertainment.WRITE_A_SONG)
+                Game.counters[Game.context_bundle.getTitle("fun_write_a_song")] =
+                    Game.counters[Game.context_bundle.getTitle("fun_write_a_song")] ?: 0 + 1
                 (activity as GameActivity).updateStats()
                 (activity as GameActivity).achieve(CreativityEventsRandomAchievements.IVANS_INTERNATIONAL)
                 (activity as GameActivity).achieve(CreativityEventsRandomAchievements.GIRLS_LIKE_THE_SONG)
@@ -182,6 +194,8 @@ class FunScrollingFragment : Fragment() {
         binding.funStream.setOnClickListener{
             try {
                 Game.player.entertain(Entertainment.STREAM)
+                Game.counters[Game.context_bundle.getTitle("fun_stream")] =
+                    Game.counters[Game.context_bundle.getTitle("fun_stream")] ?: 0 + 1
                 (activity as GameActivity).updateStats()
             } catch (exception: NotEnoughMoneyException){
                 binding.funStream.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
@@ -203,6 +217,8 @@ class FunScrollingFragment : Fragment() {
             try {
                 Game.player.entertain(Entertainment.DO_NOTHING)
                 binding.layoutFunDoNothing.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.click))
+                Game.counters[Game.context_bundle.getTitle("fun_do_nothing")] =
+                    Game.counters[Game.context_bundle.getTitle("fun_do_nothing")] ?: 0 + 1
                 (activity as GameActivity).updateStats()
             } catch (exception: NotEnoughMoneyException){
                 binding.layoutFunDoNothing.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
@@ -214,6 +230,8 @@ class FunScrollingFragment : Fragment() {
             try {
                 Game.player.entertain(Entertainment.GO_CYCLING)
                 binding.layoutFunGoCycling.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.click))
+                Game.counters[Game.context_bundle.getTitle("fun_go_cycling")] =
+                    Game.counters[Game.context_bundle.getTitle("fun_go_cycling")] ?: 0 + 1
                 (activity as GameActivity).updateStats()
             } catch (exception: NotEnoughMoneyException){
                 binding.layoutFunGoCycling.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
@@ -236,6 +254,8 @@ class FunScrollingFragment : Fragment() {
             try {
                 Game.player.entertain(Entertainment.DONATE_AND_PLAY_COMPUTER)
                 binding.layoutFunDonateAndPlayComputer.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.click))
+                Game.counters[Game.context_bundle.getTitle("fun_donate_and_play_computer")] =
+                    Game.counters[Game.context_bundle.getTitle("fun_donate_and_play_computer")] ?: 0 + 1
                 (activity as GameActivity).updateStats()
                 (activity as GameActivity).achieve(EntertainmentEventsRandomAchievements.GET_BAN)
             } catch (exception: NotEnoughMoneyException){
@@ -248,6 +268,8 @@ class FunScrollingFragment : Fragment() {
             try {
                 Game.player.entertain(Entertainment.GO_TO_THE_SHOPPING_MALL)
                 binding.layoutFunGoToTheShoppingMall.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.click))
+                Game.counters[Game.context_bundle.getTitle("fun_go_to_the_shopping_mall")] =
+                    Game.counters[Game.context_bundle.getTitle("fun_go_to_the_shopping_mall")] ?: 0 + 1
                 (activity as GameActivity).updateStats()
                 (activity as GameActivity).achieve(EntertainmentEventsRandomAchievements.EVACUATE_FROM_SHOP_CENTRE)
             } catch (exception: NotEnoughMoneyException){
@@ -259,6 +281,8 @@ class FunScrollingFragment : Fragment() {
         binding.funWalkWithYourGirlfriend.setOnClickListener{
             try {
                 Game.player.entertain(Entertainment.WALK_WITH_YOUR_GIRLFRIEND)
+                Game.counters[Game.context_bundle.getTitle("fun_walk_with_your_girlfriend")] =
+                    Game.counters[Game.context_bundle.getTitle("fun_walk_with_your_girlfriend")] ?: 0 + 1
                 binding.layoutFunWalkWithYourGirlfriend.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.click))
                 (activity as GameActivity).updateStats()
             } catch (exception: NotEnoughMoneyException){
@@ -271,6 +295,8 @@ class FunScrollingFragment : Fragment() {
             try {
                 Game.player.entertain(Entertainment.READ_A_BOOK)
                 binding.layoutFunReadABook.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.click))
+                Game.counters[Game.context_bundle.getTitle("fun_read_a_book")] =
+                    Game.counters[Game.context_bundle.getTitle("fun_read_a_book")] ?: 0 + 1
                 (activity as GameActivity).updateStats()
                 (activity as GameActivity).achieve(EntertainmentEventsRandomAchievements.SEX_SCENE_IN_BOOK)
             } catch (exception: NotEnoughMoneyException){
@@ -283,6 +309,8 @@ class FunScrollingFragment : Fragment() {
             try {
                 Game.player.entertain(Entertainment.HELP_YOUNGSTERS_WITH_HOMEWORK)
                 binding.layoutFunHelpYoungstersWithHomework.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.click))
+                Game.counters[Game.context_bundle.getTitle("fun_help_youngsters_with_homework")] =
+                    Game.counters[Game.context_bundle.getTitle("fun_help_youngsters_with_homework")] ?: 0 + 1
                 (activity as GameActivity).updateStats()
                 (activity as GameActivity).achieve(EntertainmentEventsRandomAchievements.GET_TIP_FROM_YOUNGS)
             } catch (exception: NotEnoughMoneyException){
@@ -307,6 +335,8 @@ class FunScrollingFragment : Fragment() {
             try {
                 Game.player.entertain(Entertainment.PLAY_GUITAR)
                 binding.layoutFunPlayGuitar.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.click))
+                Game.counters[Game.context_bundle.getTitle("fun_play_guitar")] =
+                    Game.counters[Game.context_bundle.getTitle("fun_play_guitar")] ?: 0 + 1
                 (activity as GameActivity).updateStats()
                 (activity as GameActivity).achieve(SongEventsRandomAchievements.COMPANY_AROUND)
             } catch (exception: NotEnoughMoneyException){
@@ -319,6 +349,8 @@ class FunScrollingFragment : Fragment() {
             try {
                 Game.player.entertain(Entertainment.GO_TO_THE_THEATRE)
                 binding.layoutFunGoToTheTheatre.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.click))
+                Game.counters[Game.context_bundle.getTitle("fun_go_to_the_theatre")] =
+                    Game.counters[Game.context_bundle.getTitle("fun_go_to_the_theatre")] ?: 0 + 1
                 (activity as GameActivity).updateStats()
                 (activity as GameActivity).achieve(EntertainmentEventsRandomAchievements.FRIEND_IN_THEATRE)
             } catch (exception: NotEnoughMoneyException){
@@ -331,6 +363,8 @@ class FunScrollingFragment : Fragment() {
             try {
                 Game.player.entertain(Entertainment.GO_TO_THE_CONCERT)
                 binding.layoutFunGoToTheConcert.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.click))
+                Game.counters[Game.context_bundle.getTitle("fun_go_to_the_concert")] =
+                    Game.counters[Game.context_bundle.getTitle("fun_go_to_the_concert")] ?: 0 + 1
                 (activity as GameActivity).updateStats()
                 (activity as GameActivity).achieve(EntertainmentEventsRandomAchievements.PHOTO_WITH_VOCALIST)
             } catch (exception: NotEnoughMoneyException){
@@ -343,6 +377,8 @@ class FunScrollingFragment : Fragment() {
             try {
                 Game.player.entertain(Entertainment.KICK_A_TRASH_CAN)
                 binding.layoutFunKickATrashCan.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.click))
+                Game.counters[Game.context_bundle.getTitle("fun_kick_a_trash_can")] =
+                    Game.counters[Game.context_bundle.getTitle("fun_kick_a_trash_can")] ?: 0 + 1
                 (activity as GameActivity).updateStats()
                 (activity as GameActivity).achieve(EntertainmentEventsRandomAchievements.CAN_FLIP)
             } catch (exception: NotEnoughMoneyException){
@@ -355,6 +391,8 @@ class FunScrollingFragment : Fragment() {
             try {
                 Game.player.entertain(Entertainment.INTIMIDATE_YOUNGSTERS)
                 binding.layoutFunIntimidateYoungsters.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.click))
+                Game.counters[Game.context_bundle.getTitle("fun_intimidate_youngsters")] =
+                    Game.counters[Game.context_bundle.getTitle("fun_intimidate_youngsters")] ?: 0 + 1
                 (activity as GameActivity).updateStats()
                 (activity as GameActivity).achieve(EntertainmentEventsRandomAchievements.BE_REPORTED_BY_CHILDREN)
             } catch (exception: NotEnoughMoneyException){
@@ -367,6 +405,8 @@ class FunScrollingFragment : Fragment() {
             try {
                 Game.player.entertain(Entertainment.UPLOAD_VIRUS)
                 binding.layoutFunUploadVirus.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.click))
+                Game.counters[Game.context_bundle.getTitle("fun_upload_virus")] =
+                    Game.counters[Game.context_bundle.getTitle("fun_upload_virus")] ?: 0 + 1
                 (activity as GameActivity).updateStats()
             } catch (exception: NotEnoughMoneyException){
                 binding.layoutFunUploadVirus.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
@@ -378,6 +418,8 @@ class FunScrollingFragment : Fragment() {
             try {
                 Game.player.entertain(Entertainment.USE_CHAT_ROULETTE)
                 binding.layoutFunUseChatRoulette.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.click))
+                Game.counters[Game.context_bundle.getTitle("fun_use_chat_roulette")] =
+                    Game.counters[Game.context_bundle.getTitle("fun_use_chat_roulette")] ?: 0 + 1
                 (activity as GameActivity).updateStats()
                 (activity as GameActivity).achieve(EntertainmentEventsRandomAchievements.CAM2CAM_TRAP)
             } catch (exception: NotEnoughMoneyException){
@@ -390,6 +432,8 @@ class FunScrollingFragment : Fragment() {
             try {
                 Game.player.entertain(Entertainment.HAVE_A_PARTY)
                 binding.layoutFunHaveAParty.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.click))
+                Game.counters[Game.context_bundle.getTitle("fun_have_a_party")] =
+                    Game.counters[Game.context_bundle.getTitle("fun_have_a_party")] ?: 0 + 1
                 (activity as GameActivity).updateStats()
                 (activity as GameActivity).achieve(EntertainmentEventsRandomAchievements.DESTROYED_HOUSE)
             } catch (exception: NotEnoughMoneyException){
@@ -402,6 +446,8 @@ class FunScrollingFragment : Fragment() {
             try {
                 Game.player.entertain(Entertainment.GO_TO_THE_CLUB)
                 binding.layoutFunGoToTheClub.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.click))
+                Game.counters[Game.context_bundle.getTitle("fun_go_to_the_club")] =
+                    Game.counters[Game.context_bundle.getTitle("fun_go_to_the_club")] ?: 0 + 1
                 (activity as GameActivity).updateStats()
                 (activity as GameActivity).achieve(EntertainmentEventsRandomAchievements.FUTURE_PIMP)
                 (activity as GameActivity).achieve(EntertainmentEventsRandomAchievements.FUTURE_GAY_PIMP)

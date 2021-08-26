@@ -95,6 +95,53 @@ class GameActivity : AppCompatActivity() {
                 }
             })
         }
+
+//        /**
+//         * Initialization of click counters for School folder
+//         */
+////        Game.counters[Game.context_bundle.getTitle("school_go_to_school")] = 0
+//        Game.counters[Game.context_bundle.getTitle("school_learn_yourself")] = 0
+//        Game.counters[Game.context_bundle.getTitle("school_buy_cheatbook")] = 0
+//        Game.counters[Game.context_bundle.getTitle("school_learn_from_a_student")] = 0
+////        Game.counters[Game.context_bundle.getTitle("school_sign_up_in_an_online_school")] = 0
+//        Game.counters[Game.context_bundle.getTitle("school_hire_a_good_tutor")] = 0
+//        Game.counters[Game.context_bundle.getTitle("school_study_with_uni_teacher")] = 0
+//
+//
+//        /**
+//         * Initialization of click counters for food folder
+//         */
+//        Game.counters[Game.context_bundle.getTitle("food_eat_crackers")] = 0
+//        Game.counters[Game.context_bundle.getTitle("food_eat_doshirack")] = 0
+//        Game.counters[Game.context_bundle.getTitle("food_eat_at_the_canteen")] = 0
+//        Game.counters[Game.context_bundle.getTitle("food_eat_at_Mcdonalds")] = 0
+//        Game.counters[Game.context_bundle.getTitle("food_order_delivery")] = 0
+//        Game.counters[Game.context_bundle.getTitle("food_go_to_the_restaurant")] = 0
+//
+//
+//        /**
+//         * Initialization of click counters for work folder
+//         */
+//        Game.counters[Game.context_bundle.getTitle("work_collect_change")] = 0
+//        Game.counters[Game.context_bundle.getTitle("work_watch_ads")] = 0
+//        Game.counters[Game.context_bundle.getTitle("work_distribute_flyers")] = 0
+//        Game.counters[Game.context_bundle.getTitle("work_as_a_greener")] = 0
+//        Game.counters[Game.context_bundle.getTitle("work_as_a_courier")] = 0
+//        Game.counters[Game.context_bundle.getTitle("work_as_an_operator")] = 0
+//        Game.counters[Game.context_bundle.getTitle("work_play_guitar")] = 0
+//        Game.counters[Game.context_bundle.getTitle("work_on_the_net")] = 0
+//
+//
+//
+//        Game.counters[Game.context_bundle.getTitle("work_as_a_courier")] = 0
+//        Game.counters[Game.context_bundle.getTitle("work_as_a_courier")] = 0
+//        Game.counters[Game.context_bundle.getTitle("work_as_a_courier")] = 0
+//        Game.counters[Game.context_bundle.getTitle("work_as_a_courier")] = 0
+//        Game.counters[Game.context_bundle.getTitle("work_as_a_courier")] = 0
+
+
+
+
     }
 
     /**
