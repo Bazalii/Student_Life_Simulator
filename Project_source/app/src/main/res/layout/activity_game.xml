@@ -156,7 +156,6 @@
             android:layout_weight="1"
             android:backgroundTint="@color/main_button_background"
             android:elevation="7dp"
-            android:onClick="click"
             app:srcCompat="@drawable/ic_settings" />
     </LinearLayout>
 

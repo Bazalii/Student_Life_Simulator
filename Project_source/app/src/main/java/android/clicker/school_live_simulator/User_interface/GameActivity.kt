@@ -32,6 +32,8 @@ import androidx.viewpager2.widget.ViewPager2
 import java.util.*
 import android.animation.ValueAnimator
 import android.animation.ValueAnimator.AnimatorUpdateListener
+import android.clicker.school_live_simulator.databinding.EndGameDialogBinding
+import android.view.KeyEvent
 
 
 class GameActivity : AppCompatActivity() {
@@ -105,10 +107,7 @@ class GameActivity : AppCompatActivity() {
         val intent = Intent(this, AchievementsActivity::class.java)
         startActivity(intent)
     }
-
-    override fun onDestroy() {
-        super.onDestroy()
-    }
+    
     inner class PagerAdapter(activity: FragmentActivity) : FragmentStateAdapter(activity){
         override fun getItemCount(): Int {
             return 5
@@ -139,6 +138,7 @@ class GameActivity : AppCompatActivity() {
             game_time += delay
             Game.tick()
             updateStats()
+            if(!Game.player.dead()) // to stop ticks when game is over
             handler.postDelayed(runnable, delay)
         }
         handler.postDelayed(runnable, delay)
@@ -149,12 +149,10 @@ class GameActivity : AppCompatActivity() {
         current_vp_page = binding.viewPager.currentItem
     }
 
-
     /**
      * Updates UI: progress bars, money and date
      */
     fun updateStats(){
-
         if (Game.player.dead()) death()
 
         ObjectAnimator.ofInt(binding.satietyProgressBar, "progress", Game.player.satiety).setDuration(300).start();
@@ -258,7 +256,7 @@ class GameActivity : AppCompatActivity() {
         var biggest_counter: Pair<String, Int> = Pair("", 0)
         var number_of_clicks: Int = 0
         val number_of_achievements: Int = Game.player.achieved_achievements.size
-        val earned_money_in_doshiraks: Double = Game.player.earned_money.toDouble() / Game.context_bundle.getNumber("doshirack_money")
+        val earned_money_in_doshiraks: Double =  Game.player.earned_money.toDouble() / Game.context_bundle.getNumber("doshirack_money")
 
         for (i in Game.counters.keys) {
             biggest_counter = if (Game.counters[i]!! > biggest_counter.second) Pair(i, Game.counters[i]!!) else biggest_counter
@@ -266,7 +264,36 @@ class GameActivity : AppCompatActivity() {
         }
 
 
-        //Alertdialog here
-
+        //Alertdialog
+        val mBuilder = AlertDialog.Builder(this)
+        val mView = layoutInflater.inflate(R.layout.end_game_dialog, null)
+        val binding = EndGameDialogBinding.bind(mView)
+        with(binding){
+            //playedTime.text =
+            clickNumber.text = number_of_clicks.toString()
+            //favouriteAction.text =
+            totalEarnings.text = Game.player.earned_money.toString()
+            earningsInDoshirak.text = earned_money_in_doshiraks.toString()
+            totalAchievements.text = number_of_achievements.toString()
+            goToMainMenu.setOnClickListener {
+                finish()
+            }
+        }
+        mBuilder.setView(mView)
+        val dialog: AlertDialog = mBuilder.create()
+        dialog.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
+        dialog.show()
+        dialog.setCanceledOnTouchOutside(false) // don't close dialog on outside tap
+        /**
+         * Finish activity if back button pressed
+         */
+        dialog.setOnKeyListener { _, keyCode, _ ->
+            if(keyCode == KeyEvent.KEYCODE_BACK) {
+                if(dialog.isShowing) {
+                    finish()
+                }
+            }
+            true
+        }
     }
 }
