@@ -250,6 +250,12 @@ class Player {
         }
         return false
     }
+
+    fun dead(): Boolean {
+        if (this.satiety <= 0)
+            return true
+        return false
+    }
 }
 
 

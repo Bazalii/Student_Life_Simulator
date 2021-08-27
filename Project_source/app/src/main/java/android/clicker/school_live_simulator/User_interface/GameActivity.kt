@@ -35,6 +35,7 @@ import android.animation.ValueAnimator.AnimatorUpdateListener
 
 
 class GameActivity : AppCompatActivity() {
+
     lateinit var binding: ActivityGameBinding
     private var current_vp_page = 0 //save current ViewPager position
     /**
@@ -45,11 +46,10 @@ class GameActivity : AppCompatActivity() {
     private var handler = Handler(Looper.getMainLooper())
     private val delay: Long = 500
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
         Game.setLocale(resources, this@GameActivity)
-
         binding = ActivityGameBinding.inflate(layoutInflater)
         setContentView(binding.root)
         /**
@@ -95,54 +95,8 @@ class GameActivity : AppCompatActivity() {
                 }
             })
         }
-
-//        /**
-//         * Initialization of click counters for School folder
-//         */
-////        Game.counters[Game.context_bundle.getTitle("school_go_to_school")] = 0
-//        Game.counters[Game.context_bundle.getTitle("school_learn_yourself")] = 0
-//        Game.counters[Game.context_bundle.getTitle("school_buy_cheatbook")] = 0
-//        Game.counters[Game.context_bundle.getTitle("school_learn_from_a_student")] = 0
-////        Game.counters[Game.context_bundle.getTitle("school_sign_up_in_an_online_school")] = 0
-//        Game.counters[Game.context_bundle.getTitle("school_hire_a_good_tutor")] = 0
-//        Game.counters[Game.context_bundle.getTitle("school_study_with_uni_teacher")] = 0
-//
-//
-//        /**
-//         * Initialization of click counters for food folder
-//         */
-//        Game.counters[Game.context_bundle.getTitle("food_eat_crackers")] = 0
-//        Game.counters[Game.context_bundle.getTitle("food_eat_doshirack")] = 0
-//        Game.counters[Game.context_bundle.getTitle("food_eat_at_the_canteen")] = 0
-//        Game.counters[Game.context_bundle.getTitle("food_eat_at_Mcdonalds")] = 0
-//        Game.counters[Game.context_bundle.getTitle("food_order_delivery")] = 0
-//        Game.counters[Game.context_bundle.getTitle("food_go_to_the_restaurant")] = 0
-//
-//
-//        /**
-//         * Initialization of click counters for work folder
-//         */
-//        Game.counters[Game.context_bundle.getTitle("work_collect_change")] = 0
-//        Game.counters[Game.context_bundle.getTitle("work_watch_ads")] = 0
-//        Game.counters[Game.context_bundle.getTitle("work_distribute_flyers")] = 0
-//        Game.counters[Game.context_bundle.getTitle("work_as_a_greener")] = 0
-//        Game.counters[Game.context_bundle.getTitle("work_as_a_courier")] = 0
-//        Game.counters[Game.context_bundle.getTitle("work_as_an_operator")] = 0
-//        Game.counters[Game.context_bundle.getTitle("work_play_guitar")] = 0
-//        Game.counters[Game.context_bundle.getTitle("work_on_the_net")] = 0
-//
-//
-//
-//        Game.counters[Game.context_bundle.getTitle("work_as_a_courier")] = 0
-//        Game.counters[Game.context_bundle.getTitle("work_as_a_courier")] = 0
-//        Game.counters[Game.context_bundle.getTitle("work_as_a_courier")] = 0
-//        Game.counters[Game.context_bundle.getTitle("work_as_a_courier")] = 0
-//        Game.counters[Game.context_bundle.getTitle("work_as_a_courier")] = 0
-
-
-
-
     }
+
 
     /**
      * Achievements button listener that opens Achievements activity
@@ -151,6 +105,7 @@ class GameActivity : AppCompatActivity() {
         val intent = Intent(this, AchievementsActivity::class.java)
         startActivity(intent)
     }
+
 
     override fun onDestroy() {
         super.onDestroy()
@@ -170,6 +125,7 @@ class GameActivity : AppCompatActivity() {
             }
         }
     }
+
 
     override fun onResume() {
         super.onResume()
@@ -221,6 +177,8 @@ class GameActivity : AppCompatActivity() {
        // binding.moneyTextView.text = Game.player.money.toString()
         binding.dateTextView.text = Game.game_date.toString()
     }
+
+
     private fun changeMoneyAnimation(from: Int, to: Int){
         val animator = ValueAnimator.ofInt(from, to)
         when(to - from){
@@ -233,6 +191,7 @@ class GameActivity : AppCompatActivity() {
         }
         animator.start()
     }
+
 
     fun achieve(achievement: Achievements) {
         if (Game.player.achieved(achievement)) {
@@ -285,11 +244,24 @@ class GameActivity : AppCompatActivity() {
             }
         }
     }
+
+
     fun notEnoughMoneyAnim(){
         val anim = ObjectAnimator.ofInt(binding.moneyTextView, "backgroundColor", android.R.color.transparent, Color.RED,  android.R.color.transparent)
         anim.duration = 300
         anim.setEvaluator(ArgbEvaluator())
         anim.repeatCount = 3
         anim.start()
+    }
+
+
+    fun death() {
+        var biggest_counter: Pair<String, Int> = Pair("", 0)
+        var number_of_clicks: Int = 0
+
+        for (i in Game.counters.keys) {
+            biggest_counter = if (Game.counters[i]!! > biggest_counter.second) Pair(i, Game.counters[i]!!) else biggest_counter
+            number_of_clicks += Game.counters[i]!!
+        }
     }
 }
