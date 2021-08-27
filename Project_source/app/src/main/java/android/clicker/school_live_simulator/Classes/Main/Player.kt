@@ -69,6 +69,8 @@ class Player {
      */
     var money: Int = 100000
         private set
+    var earned_money: Int = 0
+        private set
     /**
      * Player's class at school
      */
@@ -180,6 +182,7 @@ class Player {
             this.satiety = 1000
     }
     fun changeMoney(value: Int) {
+        if (value > 0) earned_money += value
         if (checkMin(this.money, value))
             this.money += value
         else

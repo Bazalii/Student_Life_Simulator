@@ -35,7 +35,6 @@ import android.animation.ValueAnimator.AnimatorUpdateListener
 
 
 class GameActivity : AppCompatActivity() {
-
     lateinit var binding: ActivityGameBinding
     private var current_vp_page = 0 //save current ViewPager position
     /**
@@ -45,11 +44,13 @@ class GameActivity : AppCompatActivity() {
     private lateinit var runnable: Runnable
     private var handler = Handler(Looper.getMainLooper())
     private val delay: Long = 500
-
+    private var game_time: Long = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         Game.setLocale(resources, this@GameActivity)
+
         binding = ActivityGameBinding.inflate(layoutInflater)
         setContentView(binding.root)
         /**
@@ -97,7 +98,6 @@ class GameActivity : AppCompatActivity() {
         }
     }
 
-
     /**
      * Achievements button listener that opens Achievements activity
      */
@@ -105,7 +105,6 @@ class GameActivity : AppCompatActivity() {
         val intent = Intent(this, AchievementsActivity::class.java)
         startActivity(intent)
     }
-
 
     override fun onDestroy() {
         super.onDestroy()
@@ -126,7 +125,6 @@ class GameActivity : AppCompatActivity() {
         }
     }
 
-
     override fun onResume() {
         super.onResume()
         startTick()
@@ -138,6 +136,7 @@ class GameActivity : AppCompatActivity() {
             /**
              * Code which is constantly called with delay
              */
+            game_time += delay
             Game.tick()
             updateStats()
             handler.postDelayed(runnable, delay)
@@ -155,15 +154,20 @@ class GameActivity : AppCompatActivity() {
      * Updates UI: progress bars, money and date
      */
     fun updateStats(){
+
+        if (Game.player.dead()) death()
+
         ObjectAnimator.ofInt(binding.satietyProgressBar, "progress", Game.player.satiety).setDuration(300).start();
         ObjectAnimator.ofInt(binding.happinessProgressBar, "progress", Game.player.happiness).setDuration(300).start();
         ObjectAnimator.ofInt(binding.schoolPerformanceProgressBar, "progress", Game.player.school_performance).setDuration(300).start();
+
         /**
          * these assignments don't influence on animation
          */
         binding.satietyProgressBar.progress = Game.player.satiety
         binding.happinessProgressBar.progress = Game.player.happiness
         binding.schoolPerformanceProgressBar.progress = Game.player.school_performance
+
         /**
          * Change color of progressbars
          */
@@ -177,8 +181,6 @@ class GameActivity : AppCompatActivity() {
        // binding.moneyTextView.text = Game.player.money.toString()
         binding.dateTextView.text = Game.game_date.toString()
     }
-
-
     private fun changeMoneyAnimation(from: Int, to: Int){
         val animator = ValueAnimator.ofInt(from, to)
         when(to - from){
@@ -191,7 +193,6 @@ class GameActivity : AppCompatActivity() {
         }
         animator.start()
     }
-
 
     fun achieve(achievement: Achievements) {
         if (Game.player.achieved(achievement)) {
@@ -245,7 +246,6 @@ class GameActivity : AppCompatActivity() {
         }
     }
 
-
     fun notEnoughMoneyAnim(){
         val anim = ObjectAnimator.ofInt(binding.moneyTextView, "backgroundColor", android.R.color.transparent, Color.RED,  android.R.color.transparent)
         anim.duration = 300
@@ -254,14 +254,19 @@ class GameActivity : AppCompatActivity() {
         anim.start()
     }
 
-
     fun death() {
         var biggest_counter: Pair<String, Int> = Pair("", 0)
         var number_of_clicks: Int = 0
+        val number_of_achievements: Int = Game.player.achieved_achievements.size
+        val earned_money_in_doshiraks: Double = Game.player.earned_money.toDouble() / Game.context_bundle.getNumber("doshirack_money")
 
         for (i in Game.counters.keys) {
             biggest_counter = if (Game.counters[i]!! > biggest_counter.second) Pair(i, Game.counters[i]!!) else biggest_counter
             number_of_clicks += Game.counters[i]!!
         }
+
+
+        //Alertdialog here
+
     }
 }
