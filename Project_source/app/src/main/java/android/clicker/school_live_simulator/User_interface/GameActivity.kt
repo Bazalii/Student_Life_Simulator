@@ -132,16 +132,12 @@ class GameActivity : AppCompatActivity() {
     private fun startTick(){
         Game.context_bundle.context = this.applicationContext
         runnable = Runnable {
-            /**
-             * Code which is constantly called with delay
-             */
+            handler.postDelayed(runnable, delay) // calls itself with delay
             game_time += delay
             Game.tick()
             updateStats()
-            if(!Game.player.dead()) // to stop ticks when game is over
-            handler.postDelayed(runnable, delay)
         }
-        handler.postDelayed(runnable, delay)
+        handler.postDelayed(runnable, delay) // initial itself call
     }
     override fun onPause() {
         super.onPause()
@@ -232,7 +228,7 @@ class GameActivity : AppCompatActivity() {
             }
             mBuilder.setView(mView)
             val dialog: AlertDialog = mBuilder.create()
-            dialog.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
+            dialog.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT)) // transparent background of dialog
             dialog.show()
             dialog.setCanceledOnTouchOutside(false) // don't close dialog on outside tap
             binding.AchievementOK.setOnClickListener {
@@ -279,6 +275,7 @@ class GameActivity : AppCompatActivity() {
             number_of_clicks += Game.counters[i]!!
         }
 
+        handler.removeCallbacks(runnable) // stop ticks
 
         /**
          * Next block of code is for AlertDialog settings
@@ -288,15 +285,12 @@ class GameActivity : AppCompatActivity() {
         val mView = layoutInflater.inflate(R.layout.end_game_dialog, null)
         val binding = EndGameDialogBinding.bind(mView)
         with(binding){
-            playedTime.text = "${game_time/1000} sec"
+            playedTime.text = "${game_time/1000} ${getString(R.string.end_game_seconds)}"
             clickNumber.text = number_of_clicks.toString()
-            favouriteAction.text = biggest_counter.first + ": ${biggest_counter.second} times"
+            favouriteAction.text = biggest_counter.first + " - ${biggest_counter.second} ${getString(R.string.end_game_times_number)}"
             totalEarnings.text = Game.player.earned_money.toString()
             earningsInDoshirak.text = earned_money_in_doshiraks.toString()
             totalAchievements.text = "$number_of_achievements/50"
-            goToMainMenu.setOnClickListener {
-                finish()
-            }
         }
         mBuilder.setView(mView)
         val dialog: AlertDialog = mBuilder.create()
@@ -304,11 +298,19 @@ class GameActivity : AppCompatActivity() {
         dialog.show()
         dialog.setCanceledOnTouchOutside(false) // don't close dialog on outside tap
         /**
+         * Finish activity if goToMainMenu button pressed
+         */
+        binding.goToMainMenu.setOnClickListener {
+            dialog.dismiss()
+            finish()
+        }
+        /**
          * Finish activity if back button pressed
          */
         dialog.setOnKeyListener { _, keyCode, _ ->
             if(keyCode == KeyEvent.KEYCODE_BACK) {
                 if(dialog.isShowing) {
+                    dialog.dismiss()
                     finish()
                 }
             }

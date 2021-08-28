@@ -447,4 +447,17 @@
 
     <!--Achievements activity-->
     <string name="toolbar_achievements">Достижения</string>
+
+
+    <!--End game dialog-->
+    <string name="end_game_lose">Вы проиграли!</string>
+    <string name="end_game_played_time">Время игры:</string>
+    <string name="end_game_click_number">Количество кликов:</string>
+    <string name="end_game_favourite_action">Любимое действие:</string>
+    <string name="end_game_total_earnings">Всего заработано:</string>
+    <string name="end_game_earnings_in_doshirak">Заработано в дошираковом эквиваленте:</string>
+    <string name="end_game_total_achievements">Открыто достижений:</string>
+    <string name="end_game_go_to_main_menu">В главное меню</string>
+    <string name="end_game_times_number">раз</string>
+    <string name="end_game_seconds">сек</string>
 </resources>

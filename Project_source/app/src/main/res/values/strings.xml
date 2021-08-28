@@ -449,4 +449,17 @@
 
     <!--Achievements activity-->
     <string name="toolbar_achievements">Achievements</string>
+
+
+    <!--End game dialog-->
+    <string name="end_game_lose">You lose!</string>
+    <string name="end_game_played_time">Played time:</string>
+    <string name="end_game_click_number">Click number:</string>
+    <string name="end_game_favourite_action">Favourite action:</string>
+    <string name="end_game_total_earnings">Total earnings:</string>
+    <string name="end_game_earnings_in_doshirak">Earnings in doshirak:</string>
+    <string name="end_game_total_achievements">Total achievements:</string>
+    <string name="end_game_go_to_main_menu">Go to main menu</string>
+    <string name="end_game_times_number">times</string>
+    <string name="end_game_seconds">sec</string>
 </resources>
