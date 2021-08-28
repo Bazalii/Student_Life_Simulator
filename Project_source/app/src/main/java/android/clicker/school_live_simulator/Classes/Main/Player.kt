@@ -255,7 +255,7 @@ class Player {
     }
 
     fun dead(): Boolean {
-        if (this.satiety <= 0)
+        if (this.satiety <= 0 || this.happiness <= 0)
             return true
         return false
     }

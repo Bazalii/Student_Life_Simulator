@@ -107,7 +107,7 @@ class GameActivity : AppCompatActivity() {
         val intent = Intent(this, AchievementsActivity::class.java)
         startActivity(intent)
     }
-    
+
     inner class PagerAdapter(activity: FragmentActivity) : FragmentStateAdapter(activity){
         override fun getItemCount(): Int {
             return 5
@@ -253,10 +253,26 @@ class GameActivity : AppCompatActivity() {
     }
 
     fun death() {
+        /**
+         * Pair (favourite action, how many times it was clicked)
+         */
         var biggest_counter: Pair<String, Int> = Pair("", 0)
+
+        /**
+         * Number of clicks that player did before death or victory
+         */
         var number_of_clicks: Int = 0
+
+        /**
+         * Number of achievements that player earned before death or victory
+         */
         val number_of_achievements: Int = Game.player.achieved_achievements.size
-        val earned_money_in_doshiraks: Double =  Game.player.earned_money.toDouble() / Game.context_bundle.getNumber("doshirack_money")
+
+        /**
+         * Number of doshiraks that player could buy if he spent all his money
+         * on them
+         */
+        val earned_money_in_doshiraks: Double =  Game.player.earned_money.toDouble() / -Game.context_bundle.getNumber("doshirack_money")
 
         for (i in Game.counters.keys) {
             biggest_counter = if (Game.counters[i]!! > biggest_counter.second) Pair(i, Game.counters[i]!!) else biggest_counter
@@ -264,17 +280,20 @@ class GameActivity : AppCompatActivity() {
         }
 
 
-        //Alertdialog
+        /**
+         * Next block of code is for AlertDialog settings
+         * that appears at the end of the game
+         */
         val mBuilder = AlertDialog.Builder(this)
         val mView = layoutInflater.inflate(R.layout.end_game_dialog, null)
         val binding = EndGameDialogBinding.bind(mView)
         with(binding){
-            //playedTime.text =
+            playedTime.text = "${game_time/1000} sec"
             clickNumber.text = number_of_clicks.toString()
-            //favouriteAction.text =
+            favouriteAction.text = biggest_counter.first + ": ${biggest_counter.second} times"
             totalEarnings.text = Game.player.earned_money.toString()
             earningsInDoshirak.text = earned_money_in_doshiraks.toString()
-            totalAchievements.text = number_of_achievements.toString()
+            totalAchievements.text = "$number_of_achievements/50"
             goToMainMenu.setOnClickListener {
                 finish()
             }

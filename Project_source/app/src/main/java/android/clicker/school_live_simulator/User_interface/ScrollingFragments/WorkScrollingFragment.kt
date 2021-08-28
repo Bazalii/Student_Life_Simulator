@@ -36,22 +36,23 @@ class WorkScrollingFragment : Fragment() {
             Game.player.work(OtherWork.COLLECT_CHANGE)
             binding.layoutWorkCollectChange.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.click))
             Game.counters[Game.context_bundle.getTitle("work_collect_change")] =
-                Game.counters[Game.context_bundle.getTitle("work_collect_change")] ?: 0 + 1
+                (Game.counters[Game.context_bundle.getTitle("work_collect_change")] ?: 0) + 1
             (activity as GameActivity).updateStats()
         }
 
         binding.workWatchAds.setOnClickListener{
             Game.player.work(OtherWork.WATCH_ADS)
             binding.layoutWorkWatchAds.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.click))
-
+            Game.counters[Game.context_bundle.getTitle("work_watch_ads")] =
+                (Game.counters[Game.context_bundle.getTitle("work_watch_ads")] ?: 0) + 1
             (activity as GameActivity).updateStats()
         }
 
         binding.workDistributeFlyers.setOnClickListener{
             Game.player.work(OtherWork.DISTRIBUTE_FLYERS)
             binding.layoutWorkDistributeFlyers.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.click))
-            Game.counters[Game.context_bundle.getTitle("work_watch_ads")] =
-                Game.counters[Game.context_bundle.getTitle("work_watch_ads")] ?: 0 + 1
+            Game.counters[Game.context_bundle.getTitle("work_distribute_flyers")] =
+                (Game.counters[Game.context_bundle.getTitle("work_distribute_flyers")] ?: 0) + 1
             (activity as GameActivity).updateStats()
         }
 
@@ -59,7 +60,7 @@ class WorkScrollingFragment : Fragment() {
             Game.player.work(OtherWork.AS_A_GREENER)
             binding.layoutWorkAsAGreener.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.click))
             Game.counters[Game.context_bundle.getTitle("work_as_a_greener")] =
-                Game.counters[Game.context_bundle.getTitle("work_as_a_greener")] ?: 0 + 1
+                (Game.counters[Game.context_bundle.getTitle("work_as_a_greener")] ?: 0) + 1
             (activity as GameActivity).updateStats()
         }
 
@@ -68,7 +69,7 @@ class WorkScrollingFragment : Fragment() {
                 Game.player.deliver()
                 binding.layoutWorkAsACourier.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.click))
                 Game.counters[Game.context_bundle.getTitle("work_as_a_courier")] =
-                    Game.counters[Game.context_bundle.getTitle("work_as_a_courier")] ?: 0 + 1
+                    (Game.counters[Game.context_bundle.getTitle("work_as_a_courier")] ?: 0) + 1
                 (activity as GameActivity).updateStats()
             } catch(exception: IsNotAvailableException) {
                 Toast.makeText(activity, getString(R.string.toast_buy_bike), Toast.LENGTH_SHORT).show()
@@ -81,7 +82,7 @@ class WorkScrollingFragment : Fragment() {
             Game.player.work(OtherWork.AS_AN_OPERATOR)
             binding.layoutWorkAsAnOperator.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.click))
             Game.counters[Game.context_bundle.getTitle("work_as_an_operator")] =
-                Game.counters[Game.context_bundle.getTitle("work_as_an_operator")] ?: 0 + 1
+                (Game.counters[Game.context_bundle.getTitle("work_as_an_operator")] ?: 0) + 1
             (activity as GameActivity).updateStats()
         }
 
@@ -90,7 +91,7 @@ class WorkScrollingFragment : Fragment() {
                 Game.player.playSong()
                 binding.layoutWorkPlayGuitar.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.click))
                 Game.counters[Game.context_bundle.getTitle("work_play_guitar")] =
-                    Game.counters[Game.context_bundle.getTitle("work_play_guitar")] ?: 0 + 1
+                    (Game.counters[Game.context_bundle.getTitle("work_play_guitar")] ?: 0) + 1
                 (activity as GameActivity).updateStats()
                 (activity as GameActivity).achieve(SongEventsRandomAchievements.WRONG_CHORDS)
             } catch(exception: IsNotAvailableException) {
@@ -105,7 +106,7 @@ class WorkScrollingFragment : Fragment() {
                 Game.player.realiseWebTask()
                 binding.layoutWorkOnTheNet.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.click))
                 Game.counters[Game.context_bundle.getTitle("work_on_the_net")] =
-                    Game.counters[Game.context_bundle.getTitle("work_on_the_net")] ?: 0 + 1
+                    (Game.counters[Game.context_bundle.getTitle("work_on_the_net")] ?: 0) + 1
                 (activity as GameActivity).updateStats()
             } catch(exception: IsNotAvailableException) {
                 Toast.makeText(activity, getString(R.string.toast_not_passed), Toast.LENGTH_SHORT).show()

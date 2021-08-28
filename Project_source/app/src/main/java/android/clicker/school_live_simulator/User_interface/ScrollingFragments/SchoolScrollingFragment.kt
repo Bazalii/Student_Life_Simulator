@@ -46,7 +46,7 @@ class SchoolScrollingFragment : Fragment() {
                 Game.player.study(Studies.LEARN_YOURSELF)
                 binding.layoutSchoolLearnYourself.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.click))
                 Game.counters[Game.context_bundle.getTitle("school_learn_yourself")] =
-                    Game.counters[Game.context_bundle.getTitle("school_learn_yourself")] ?: 0 + 1
+                    (Game.counters[Game.context_bundle.getTitle("school_learn_yourself")] ?: 0) + 1
                 (activity as GameActivity).updateStats()
                 (activity as GameActivity).achieve(StudyEventsRandomAchievements.PAR_ABOUT_REPRODUCTIVE)
             } catch (exception: NotEnoughMoneyException){
@@ -60,7 +60,7 @@ class SchoolScrollingFragment : Fragment() {
                 Game.player.study(Studies.BUY_CHEATBOOK)
                 binding.layoutSchoolBuyCheatbook.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.click))
                 Game.counters[Game.context_bundle.getTitle("school_buy_cheatbook")] =
-                    Game.counters[Game.context_bundle.getTitle("school_buy_cheatbook")] ?: 0 + 1
+                    (Game.counters[Game.context_bundle.getTitle("school_buy_cheatbook")] ?: 0) + 1
                 (activity as GameActivity).updateStats()
                 (activity as GameActivity).achieve(StudyEventsRandomAchievements.OLD_ANSWER_BOOK)
             } catch (exception: NotEnoughMoneyException){
@@ -74,7 +74,7 @@ class SchoolScrollingFragment : Fragment() {
                 Game.player.study(Studies.LEARN_FROM_A_STUDENT)
                 binding.layoutSchoolLearnFromStudent.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.click))
                 Game.counters[Game.context_bundle.getTitle("school_learn_from_a_student")] =
-                    Game.counters[Game.context_bundle.getTitle("school_learn_from_a_student")] ?: 0 + 1
+                    (Game.counters[Game.context_bundle.getTitle("school_learn_from_a_student")] ?: 0) + 1
                 (activity as GameActivity).updateStats()
                 (activity as GameActivity).achieve(StudyEventsRandomAchievements.DRUNK_STUDENT)
             } catch (exception: NotEnoughMoneyException){
@@ -100,7 +100,7 @@ class SchoolScrollingFragment : Fragment() {
                 Game.player.study(Studies.HIRE_A_GOOD_TUTOR)
                 binding.layoutSchoolHireAGoodTutor.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.click))
                 Game.counters[Game.context_bundle.getTitle("school_hire_a_good_tutor")] =
-                    Game.counters[Game.context_bundle.getTitle("school_hire_a_good_tutor")] ?: 0 + 1
+                    (Game.counters[Game.context_bundle.getTitle("school_hire_a_good_tutor")] ?: 0) + 1
                 (activity as GameActivity).updateStats()
             } catch (exception: NotEnoughMoneyException){
                 binding.layoutSchoolHireAGoodTutor.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
@@ -113,7 +113,7 @@ class SchoolScrollingFragment : Fragment() {
                 Game.player.study(Studies.STUDY_WITH_UNI_TEACHER)
                 binding.layoutSchoolStudyWithUniTeacher.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.click))
                 Game.counters[Game.context_bundle.getTitle("school_study_with_uni_teacher")] =
-                    Game.counters[Game.context_bundle.getTitle("school_study_with_uni_teacher")] ?: 0 + 1
+                    (Game.counters[Game.context_bundle.getTitle("school_study_with_uni_teacher")] ?: 0) + 1
                 (activity as GameActivity).updateStats()
                 (activity as GameActivity).achieve(StudyEventsRandomAchievements.STORIES_ABOUT_USSR)
             } catch (exception: NotEnoughMoneyException){
