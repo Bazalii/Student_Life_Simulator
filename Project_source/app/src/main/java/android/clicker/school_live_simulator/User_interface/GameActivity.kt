@@ -33,6 +33,7 @@ import java.util.*
 import android.animation.ValueAnimator
 import android.animation.ValueAnimator.AnimatorUpdateListener
 import android.clicker.school_live_simulator.databinding.EndGameDialogBinding
+import android.os.HandlerThread
 import android.view.KeyEvent
 
 
@@ -45,6 +46,8 @@ class GameActivity : AppCompatActivity() {
      */
     private lateinit var runnable: Runnable
     private var handler = Handler(Looper.getMainLooper())
+    private lateinit var tick_handler: Handler
+    private lateinit var  tick_thread: HandlerThread
     private val delay: Long = 500
     private var game_time: Long = 0
 
@@ -131,17 +134,27 @@ class GameActivity : AppCompatActivity() {
     }
     private fun startTick(){
         Game.context_bundle.context = this.applicationContext
-        runnable = Runnable {
-            handler.postDelayed(runnable, delay) // calls itself with delay
-            game_time += delay
-            Game.tick()
-            updateStats()
-        }
-        handler.postDelayed(runnable, delay) // initial itself call
+        tick_thread = HandlerThread("Tick thread")
+        tick_thread.start()
+        tick_handler = Handler(tick_thread.looper)
+            runnable = Runnable {
+                tick_handler.postDelayed(runnable, delay) // calls itself with delay
+                game_time += delay
+                Game.tick()
+                handler.post{updateStats()}
+            }
+        tick_handler.postDelayed(runnable, delay)
     }
+
+    private fun stopTick(){
+        handler.removeCallbacks(runnable)
+        tick_handler.removeCallbacks(runnable)
+        tick_thread.quitSafely()
+    }
+
     override fun onPause() {
         super.onPause()
-        handler.removeCallbacks(runnable)
+        stopTick()
         current_vp_page = binding.viewPager.currentItem
     }
 
@@ -190,7 +203,9 @@ class GameActivity : AppCompatActivity() {
 
     fun achieve(achievement: Achievements) {
         if (Game.player.achieved(achievement)) {
-            handler.removeCallbacks(runnable) // stop ticks
+
+            stopTick()
+
             /**
              *  Achievement alert dialog
              */
@@ -275,7 +290,7 @@ class GameActivity : AppCompatActivity() {
             number_of_clicks += Game.counters[i]!!
         }
 
-        handler.removeCallbacks(runnable) // stop ticks
+        stopTick()
 
         /**
          * Next block of code is for AlertDialog settings
