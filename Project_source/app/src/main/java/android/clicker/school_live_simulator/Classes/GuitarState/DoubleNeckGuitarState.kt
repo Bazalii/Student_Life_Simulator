@@ -4,7 +4,7 @@ class DoubleNeckGuitarState: FenderGuitarState() {
     override val price: Int = 150000
 
     init {
-        available_courses.add(MusicalObservatoryCourseState::class)
+        available_courses.add(MusicalObservatoryCourseState())
     }
 
     override fun changeState(bag: Player.Bag):

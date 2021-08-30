@@ -1,7 +1,9 @@
 package android.clicker.school_live_simulator
 
 import android.clicker.school_live_simulator.Classes.IsNotAvailableException
+import kotlinx.serialization.Serializable
 
+@Serializable
 abstract class ComputerCourseState: StudyCourseState() {
     /**
      * List of available web tasks

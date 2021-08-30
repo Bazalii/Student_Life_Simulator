@@ -8,37 +8,40 @@ import android.clicker.school_live_simulator.Classes.Enum_classes.OtherWork
 import android.clicker.school_live_simulator.Classes.Enum_classes.Studies
 import android.clicker.school_live_simulator.Classes.NotEnoughMoneyException
 import android.clicker.school_live_simulator.Classes.IsNotAvailableException
-import kotlinx.serialization.Serializable
+import kotlinx.serialization.*
 import kotlin.reflect.KClass
 
 @Serializable
 class Player {
-    inner class Bag {
+    @Serializable
+    class Bag {
+        @Contextual
         var bicycle: BicycleState = NullBicycleState()
             set(value) {
-                changeMoney(-value.price)
+                Game.player.changeMoney(-value.price)
                 field = value
             }
         var guitar: GuitarState = NullGuitarState()
             set(value) {
-                changeMoney(-value.price)
+                Game.player.changeMoney(-value.price)
                 field = value
             }
         var computer: ComputerState = NullComputerState()
             set(value) {
-                changeMoney(-value.price)
+                Game.player.changeMoney(-value.price)
                 field = value
             }
     }
-    inner class Courses {
+    @Serializable
+    class Courses {
         var guitar_course: GuitarCourseState = NullGuitarCourseState()
             set(value) {
-                changeMoney(value.price)
+                Game.player.changeMoney(value.price)
                 field = value
             }
         var computer_course: ComputerCourseState = NullComputerCourseState()
             set(value) {
-                changeMoney(value.price)
+                Game.player.changeMoney(value.price)
                 field = value
             }
     }
@@ -46,7 +49,7 @@ class Player {
     /**
      * Player's name
      */
-    private lateinit var name: String
+//    private lateinit var name: String
 //    private lateinit var birthday: Birthday
     /**
      * Points of Player school studies
@@ -221,7 +224,7 @@ class Player {
     fun buyNewGuitar() {
         this.items.guitar.changeState(this.items)
     }
-    fun buyNextGuitarCourse(course: KClass<*>) {
+    fun buyNextGuitarCourse(course: GuitarCourseState) {
         if (this.items.guitar.isAvailable(course))
             this.current_courses.guitar_course.buyNextCourse(this.current_courses)
         else

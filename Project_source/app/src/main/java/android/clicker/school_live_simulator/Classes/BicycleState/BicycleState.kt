@@ -1,6 +1,9 @@
 package android.clicker.school_live_simulator
 
 import android.clicker.school_live_simulator.Classes.IsNotAvailableException
+import kotlinx.serialization.*
+import kotlinx.serialization.json.*
+import kotlinx.serialization.modules.*
 
 /**
  * Class defines player's bicycle.
@@ -8,6 +11,10 @@ import android.clicker.school_live_simulator.Classes.IsNotAvailableException
  * The better bicycle the faster delivery is available.
  * Player can upgrade bicycle (change his bicycle state).
  */
+
+
+
+@Serializable
 abstract class BicycleState {
     /**
      * Bike price

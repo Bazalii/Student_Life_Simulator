@@ -3,6 +3,7 @@ package android.clicker.school_live_simulator.Classes.GameDate
 import android.clicker.school_live_simulator.Classes.Enum_classes.Months
 import android.clicker.school_live_simulator.Game
 import android.text.TextUtils.indexOf
+import kotlinx.serialization.Contextual
 import kotlinx.serialization.Serializable
 import kotlin.reflect.KFunction
 
@@ -14,12 +15,12 @@ class AlarmClock(private var day: Int, private var month: Months, private var ye
     /**
      * Handler function of tick timer signal
      */
-    private lateinit var tick_signal_handler: KFunction<Any>
+    private lateinit var tick_signal_handler: KFunction<@Contextual Any>
 
     /**
      * Handler function of end timer signal
      */
-    private lateinit var end_signal_handler: KFunction<Any>
+    private lateinit var end_signal_handler: KFunction<@Contextual Any>
 
     /**
      * Delay before ticks

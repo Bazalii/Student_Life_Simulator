@@ -1,8 +1,11 @@
 package android.clicker.school_live_simulator
 
 import android.clicker.school_live_simulator.Classes.IsNotAvailableException
+import kotlinx.serialization.Contextual
+import kotlinx.serialization.Serializable
 import kotlin.reflect.KClass
 
+@Serializable
 abstract class ComputerState {
 
     /**
@@ -15,7 +18,7 @@ abstract class ComputerState {
      * This is a list of available courses for Player
      */
 
-    protected val available_courses: ArrayList<KClass<*>> = arrayListOf<KClass<*>>()
+    protected val available_courses: ArrayList<@Contextual Any> = arrayListOf()
 
     /**
      * This is a function to change computer

@@ -5,6 +5,7 @@ import android.clicker.school_live_simulator.R
 import android.content.Context
 
 class ContextBundle {
+    @Transient
     lateinit var context: Context
 
     fun getTitle(input: String): String {

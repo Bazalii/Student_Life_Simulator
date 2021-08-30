@@ -130,6 +130,7 @@ class GameActivity : AppCompatActivity() {
     override fun onResume() {
         super.onResume()
         startTick()
+        Game.load(this.applicationContext.filesDir)
         binding.viewPager.currentItem = current_vp_page
     }
     private fun startTick(){

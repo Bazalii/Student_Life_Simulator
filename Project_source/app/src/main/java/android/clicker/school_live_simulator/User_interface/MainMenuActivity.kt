@@ -10,6 +10,7 @@ import android.view.View
 import java.util.*
 import android.graphics.Color.*
 import androidx.core.content.ContextCompat
+import java.io.File
 
 class MainMenuActivity : AppCompatActivity() {
     lateinit var binding: ActivityMainMenuBinding
@@ -27,9 +28,15 @@ class MainMenuActivity : AppCompatActivity() {
             "ru" -> binding.RussianButton.setBackgroundColor(ContextCompat.getColor(this, android.R.color.holo_green_dark))
             else -> binding.EnglishButton.setBackgroundColor(ContextCompat.getColor(this, android.R.color.holo_green_dark))
         }
+
+        val letDirectory = File(this.applicationContext.filesDir, "DATA")
+        letDirectory.mkdirs()
+//        val file = File(letDirectory, "GameData.txt")
     }
 
     fun onClickNewGame(view: View){
+        Game.save(this.applicationContext.filesDir)
+
         /**
          * start GameActivity
          */

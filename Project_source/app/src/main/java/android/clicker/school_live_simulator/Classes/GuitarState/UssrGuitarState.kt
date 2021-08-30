@@ -4,7 +4,7 @@ open class UssrGuitarState : NullGuitarState() {
     override val price: Int = 1000
 
     init {
-        available_courses.add(YardGuitarCourseState::class)
+        available_courses.add(YardGuitarCourseState())
     }
 
     override fun changeState(bag: Player.Bag) {

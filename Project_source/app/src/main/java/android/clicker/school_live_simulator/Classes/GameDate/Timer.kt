@@ -3,11 +3,12 @@ package android.clicker.school_live_simulator.Classes.GameDate
 import android.clicker.school_live_simulator.Classes.Enum_classes.Entertainment
 import android.clicker.school_live_simulator.Classes.Enum_classes.Studies
 import android.clicker.school_live_simulator.Game
+import kotlinx.serialization.Contextual
 import kotlinx.serialization.Serializable
 import kotlin.reflect.KFunction
 
 @Serializable
-class Timer(input_days: Int): TimeObservable {
+class Timer(var days: Int): TimeObservable {
     init {
         Game.game_date.registerTimer(this)
     }
@@ -15,15 +16,15 @@ class Timer(input_days: Int): TimeObservable {
     /**
      * Handler function of tick timer signal
      */
-    private lateinit var tick_signal_handler: KFunction<Any>
+    private lateinit var tick_signal_handler: KFunction<@Contextual Any>
 
     /**
      * Handler function of end timer signal
      */
-    private lateinit var end_signal_handler: KFunction<Any>
+    private lateinit var end_signal_handler: KFunction<@Contextual Any>
 
-    var days = input_days
-        private set
+//    var days = input_days
+//        private set
     /**
      *
      */

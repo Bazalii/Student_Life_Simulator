@@ -129,7 +129,7 @@ class ShopScrollingFragment : Fragment() {
          */
         binding.shopGuitarCourseV1.setOnClickListener {
             try {
-                Game.player.buyNextGuitarCourse(YardGuitarCourseState::class)
+                Game.player.buyNextGuitarCourse(YardGuitarCourseState())
                 updateUI()
                 Timer(Game.player.current_courses.guitar_course.course_length).setEndSignalHandler(Game.player.current_courses.guitar_course::timerEndHandler)
             } catch(exception: NotEnoughMoneyException){
@@ -144,7 +144,7 @@ class ShopScrollingFragment : Fragment() {
         binding.shopGuitarCourseV2.setOnClickListener {
             if(Game.player.current_courses.guitar_course is YardGuitarCourseState){
                 try {
-                    Game.player.buyNextGuitarCourse(FirstSongCourseState::class)
+                    Game.player.buyNextGuitarCourse(FirstSongCourseState())
                     updateUI()
                     Timer(Game.player.current_courses.guitar_course.course_length).setEndSignalHandler(Game.player.current_courses.guitar_course::timerEndHandler)
                 } catch(exception: NotEnoughMoneyException){
@@ -164,7 +164,7 @@ class ShopScrollingFragment : Fragment() {
         binding.shopGuitarCourseV3.setOnClickListener {
             if(Game.player.current_courses.guitar_course is FirstSongCourseState){
                 try {
-                    Game.player.buyNextGuitarCourse(YardSongCourseState::class)
+                    Game.player.buyNextGuitarCourse(YardSongCourseState())
                     updateUI()
                     Timer(Game.player.current_courses.guitar_course.course_length).setEndSignalHandler(Game.player.current_courses.guitar_course::timerEndHandler)
                 } catch(exception: NotEnoughMoneyException){
@@ -184,7 +184,7 @@ class ShopScrollingFragment : Fragment() {
         binding.shopGuitarCourseV4.setOnClickListener {
             if(Game.player.current_courses.guitar_course is YardSongCourseState){
                 try {
-                    Game.player.buyNextGuitarCourse(MusicalSchoolCourseState::class)
+                    Game.player.buyNextGuitarCourse(MusicalSchoolCourseState())
                     updateUI()
                     Timer(Game.player.current_courses.guitar_course.course_length).setEndSignalHandler(Game.player.current_courses.guitar_course::timerEndHandler)
                 } catch(exception: NotEnoughMoneyException){
@@ -204,7 +204,7 @@ class ShopScrollingFragment : Fragment() {
         binding.shopGuitarCourseV5.setOnClickListener {
             if(Game.player.current_courses.guitar_course is MusicalSchoolCourseState){
                 try {
-                    Game.player.buyNextGuitarCourse(MusicalObservatoryCourseState::class)
+                    Game.player.buyNextGuitarCourse(MusicalObservatoryCourseState())
                     updateUI()
                     Timer(Game.player.current_courses.guitar_course.course_length).setEndSignalHandler(Game.player.current_courses.guitar_course::timerEndHandler)
                 } catch(exception: NotEnoughMoneyException){
