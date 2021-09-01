@@ -9,6 +9,7 @@ import android.os.Bundle
 import android.view.View
 import java.util.*
 import android.graphics.Color.*
+import android.util.Log
 import androidx.core.content.ContextCompat
 import java.io.File
 
@@ -29,14 +30,20 @@ class MainMenuActivity : AppCompatActivity() {
             else -> binding.EnglishButton.setBackgroundColor(ContextCompat.getColor(this, android.R.color.holo_green_dark))
         }
 
-        val letDirectory = File(this.applicationContext.filesDir, "DATA")
-        letDirectory.mkdirs()
+//        val letDirectory = File(this.applicationContext.filesDir, "DATA")
+//        letDirectory.mkdirs()
 //        val file = File(letDirectory, "GameData.txt")
     }
 
-    fun onClickNewGame(view: View){
-        Game.save(this.applicationContext.filesDir)
+    fun onClickContinueGame(view: View) {
+        Log.d("MyLog", File(this.applicationContext.filesDir, "GameData.txt").readLines().toString())
+        val intent = Intent(this, GameActivity::class.java)
+        startActivity(intent)
+        overridePendingTransition(R.anim.start_activity_1, R.anim.start_activity_2)
+        Game.load(this.applicationContext.filesDir)
+    }
 
+    fun onClickNewGame(view: View){
         /**
          * start GameActivity
          */

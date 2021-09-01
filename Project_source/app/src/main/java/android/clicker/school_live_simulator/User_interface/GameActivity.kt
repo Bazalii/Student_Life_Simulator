@@ -35,6 +35,7 @@ import android.animation.ValueAnimator.AnimatorUpdateListener
 import android.clicker.school_live_simulator.databinding.EndGameDialogBinding
 import android.os.HandlerThread
 import android.view.KeyEvent
+import java.io.File
 
 
 class GameActivity : AppCompatActivity() {
@@ -130,7 +131,6 @@ class GameActivity : AppCompatActivity() {
     override fun onResume() {
         super.onResume()
         startTick()
-        Game.load(this.applicationContext.filesDir)
         binding.viewPager.currentItem = current_vp_page
     }
     private fun startTick(){
@@ -158,7 +158,19 @@ class GameActivity : AppCompatActivity() {
         stopTick()
         current_vp_page = binding.viewPager.currentItem
     }
-
+    override fun onStop() {
+        Log.d("MyLog", "onStop")
+        Log.d("MyLog", File(this.applicationContext.filesDir, "GameData.txt").readLines().toString())
+        Game.save(this.applicationContext.filesDir)
+        stopTick()
+        super.onStop()
+    }
+    override fun onDestroy() {
+        Log.d("MyLog", "onDestroy")
+        Log.d("MyLog", File(this.applicationContext.filesDir, "GameData.txt").readLines().toString())
+        Game.save(this.applicationContext.filesDir)
+        super.onDestroy()
+    }
     /**
      * Updates UI: progress bars, money and date
      */

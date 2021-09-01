@@ -1,6 +1,9 @@
 package android.clicker.school_live_simulator
 
-open class UssrBicycleState : NullBicycleState() {
+import kotlinx.serialization.Serializable
+
+@Serializable
+open class UssrBicycleState : BicycleState() {
     override val price = 2000
 
     override val best_delivery: Delivery? = Delivery.SLOW_DELIVERY

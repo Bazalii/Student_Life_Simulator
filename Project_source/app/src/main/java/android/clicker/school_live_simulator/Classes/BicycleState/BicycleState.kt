@@ -25,7 +25,7 @@ abstract class BicycleState {
      * A list of available types of delivery.
      * These types are described in enumeration class Delivery.
      */
-    protected open val best_delivery: Delivery? = null
+    abstract val best_delivery: Delivery?
 
     /**
      * Upgrades bicycle.

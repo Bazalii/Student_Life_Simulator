@@ -7,6 +7,7 @@ import android.clicker.school_live_simulator.Classes.Main.GameData
 import android.content.Context
 import android.content.res.Resources
 import android.os.Build
+import android.util.Log
 import kotlinx.serialization.*
 import kotlinx.serialization.Serializable
 import kotlinx.serialization.json.Json
@@ -24,6 +25,9 @@ val module = SerializersModule {
     }
     polymorphic(BicycleState::class) {
         subclass(NullBicycleState::class)
+        subclass(UssrBicycleState::class)
+        subclass(UsualBicycleState::class)
+        subclass(MountainBicycleState::class)
     }
     polymorphic(GuitarState::class) {
         subclass(NullGuitarState::class)
@@ -101,6 +105,7 @@ object Game {
         }
         val game_data = GameData(this.difficulty_state, this.player)
         val game_data_to_json = format.encodeToString(game_data)
+//        Log.d("MyLog", game_data_to_json)
         File(path,"GameData.txt").writeText(game_data_to_json)
 //        val fos = FileOutputStream(File(path,"GameData.txt"))
 //        val os = ObjectOutputStream(fos)
@@ -119,10 +124,13 @@ object Game {
 //        os.readObject() as Game
 //        os.close()
 //        fis.close()
-
         val format = Json { serializersModule = module }
         val game_data_text = File(path,"GameData.txt").readText()
+        Log.d("MyLog", File(path,"GameData.txt").readText())
+        Log.d("MyLog", "Json")
+        Log.d("MyLog", Json.decodeFromString<GameData>(game_data_text).toString())
         val game_data = format.decodeFromString<GameData>(game_data_text)
+        Log.d("MyLog", game_data.toString())
         this.difficulty_state = game_data.difficulty_state
         this.player = game_data.player
         //Game.game_date = game_data.game_date
