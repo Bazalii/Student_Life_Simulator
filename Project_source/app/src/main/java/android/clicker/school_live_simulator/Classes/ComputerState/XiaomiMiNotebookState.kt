@@ -4,7 +4,7 @@ open class XiaomiMiNotebookState : UsualComputerState() {
     override val price: Int = 60000
 
     init {
-        available_courses.add(VideoEditingCourseState::class)
+        available_courses.add(VideoEditingCourseState())
     }
 
     override fun changeState(bag: Player.Bag) {

@@ -4,7 +4,7 @@ open class UsualComputerState : OldComputerState() {
     override val price: Int = 30000
 
     init {
-        available_courses.add(WebDesignCourseState::class)
+        available_courses.add(WebDesignCourseState())
     }
 
     override fun changeState(bag: Player.Bag) {

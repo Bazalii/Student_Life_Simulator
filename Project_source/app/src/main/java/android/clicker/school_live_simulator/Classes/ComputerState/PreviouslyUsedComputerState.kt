@@ -4,7 +4,7 @@ open class PreviouslyUsedComputerState : NullComputerState() {
     override val price: Int = 3000
 
     init {
-        available_courses.add(FriendsCourseState::class)
+        available_courses.add(FriendsCourseState())
     }
 
     override fun changeState(bag: Player.Bag) {

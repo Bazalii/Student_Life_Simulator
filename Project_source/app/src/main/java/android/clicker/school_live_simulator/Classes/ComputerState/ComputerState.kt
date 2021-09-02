@@ -18,7 +18,7 @@ abstract class ComputerState {
      * This is a list of available courses for Player
      */
 
-    protected val available_courses: ArrayList<@Contextual Any> = arrayListOf()
+    protected val available_courses: ArrayList<ComputerCourseState> = arrayListOf()
 
     /**
      * This is a function to change computer
@@ -34,7 +34,7 @@ abstract class ComputerState {
      * @return True if the course is available
      */
 
-    fun isAvailable(course_name: KClass<*>): Boolean {
-        return course_name in available_courses
+    fun isAvailable(course_name: ComputerCourseState): Boolean {
+        return available_courses.contains(course_name)
     }
 }
