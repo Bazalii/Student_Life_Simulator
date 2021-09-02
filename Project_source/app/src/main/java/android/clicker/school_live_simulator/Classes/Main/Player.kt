@@ -9,7 +9,6 @@ import android.clicker.school_live_simulator.Classes.Enum_classes.Studies
 import android.clicker.school_live_simulator.Classes.NotEnoughMoneyException
 import android.clicker.school_live_simulator.Classes.IsNotAvailableException
 import kotlinx.serialization.*
-import kotlin.reflect.KClass
 
 @Serializable
 class Player {
@@ -233,7 +232,7 @@ class Player {
     fun buyNewComputer() {
         this.items.computer.changeState(this.items)
     }
-    fun buyNextComputerCourse(course: KClass<*>) {
+    fun buyNextComputerCourse(course: ComputerCourseState) {
         if (this.items.computer.isAvailable(course))
             this.current_courses.computer_course.buyNextCourse(this.current_courses)
         else

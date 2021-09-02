@@ -228,7 +228,7 @@ class ShopScrollingFragment : Fragment() {
          */
         binding.shopComputerCourseV1.setOnClickListener {
             try {
-                Game.player.buyNextComputerCourse(FriendsCourseState::class)
+                Game.player.buyNextComputerCourse(FriendsCourseState())
                 updateUI()
                 Timer(Game.player.current_courses.computer_course.course_length).setEndSignalHandler(Game.player.current_courses.computer_course::timerEndHandler)
             } catch(exception: NotEnoughMoneyException){
@@ -243,7 +243,7 @@ class ShopScrollingFragment : Fragment() {
         binding.shopComputerCourseV2.setOnClickListener {
             if(Game.player.current_courses.computer_course is FriendsCourseState){
                 try {
-                    Game.player.buyNextComputerCourse(OnlineWorkCourseState::class)
+                    Game.player.buyNextComputerCourse(OnlineWorkCourseState())
                     updateUI()
                     Timer(Game.player.current_courses.computer_course.course_length).setEndSignalHandler(Game.player.current_courses.computer_course::timerEndHandler)
                 } catch(exception: NotEnoughMoneyException){
@@ -263,7 +263,7 @@ class ShopScrollingFragment : Fragment() {
         binding.shopComputerCourseV3.setOnClickListener {
             if(Game.player.current_courses.computer_course is OnlineWorkCourseState){
                 try {
-                    Game.player.buyNextComputerCourse(WebDesignCourseState::class)
+                    Game.player.buyNextComputerCourse(WebDesignCourseState())
                     updateUI()
                     Timer(Game.player.current_courses.computer_course.course_length).setEndSignalHandler(Game.player.current_courses.computer_course::timerEndHandler)
                 } catch(exception: NotEnoughMoneyException){
@@ -283,7 +283,7 @@ class ShopScrollingFragment : Fragment() {
         binding.shopComputerCourseV4.setOnClickListener {
             if(Game.player.current_courses.computer_course is WebDesignCourseState){
                 try {
-                    Game.player.buyNextComputerCourse(VideoEditingCourseState::class)
+                    Game.player.buyNextComputerCourse(VideoEditingCourseState())
                     updateUI()
                     Timer(Game.player.current_courses.computer_course.course_length).setEndSignalHandler(Game.player.current_courses.computer_course::timerEndHandler)
                 } catch(exception: NotEnoughMoneyException){
@@ -303,7 +303,7 @@ class ShopScrollingFragment : Fragment() {
         binding.shopComputerCourseV5.setOnClickListener {
             if(Game.player.current_courses.computer_course is VideoEditingCourseState){
                 try {
-                    Game.player.buyNextComputerCourse(GameDevelopmentCourseState::class)
+                    Game.player.buyNextComputerCourse(GameDevelopmentCourseState())
                     updateUI()
                     Timer(Game.player.current_courses.computer_course.course_length).setEndSignalHandler(Game.player.current_courses.computer_course::timerEndHandler)
                 } catch(exception: NotEnoughMoneyException){
