@@ -134,7 +134,6 @@ class GameActivity : AppCompatActivity() {
         binding.viewPager.currentItem = current_vp_page
     }
     private fun startTick(){
-        Game.context_bundle.context = this.applicationContext
         tick_thread = HandlerThread("Tick thread")
         tick_thread.start()
         tick_handler = Handler(tick_thread.looper)
@@ -160,7 +159,6 @@ class GameActivity : AppCompatActivity() {
     }
     override fun onStop() {
         Log.d("MyLog", "onStop")
-        Log.d("MyLog", File(this.applicationContext.filesDir, "GameData.txt").readLines().toString())
         Game.save(this.applicationContext.filesDir)
         stopTick()
         super.onStop()

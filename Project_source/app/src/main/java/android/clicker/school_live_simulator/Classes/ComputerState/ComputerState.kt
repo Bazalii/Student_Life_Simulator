@@ -18,7 +18,7 @@ abstract class ComputerState {
      * This is a list of available courses for Player
      */
 
-    protected val available_courses: ArrayList<ComputerCourseState> = arrayListOf()
+    protected abstract val available_courses: ArrayList<ComputerCourseState>
 
     /**
      * This is a function to change computer
@@ -35,6 +35,7 @@ abstract class ComputerState {
      */
 
     fun isAvailable(course_name: ComputerCourseState): Boolean {
-        return available_courses.contains(course_name)
+        for (i in available_courses) if (i::class == course_name::class) return true
+        return false
     }
 }

@@ -1,6 +1,9 @@
 package android.clicker.school_live_simulator
 
-open class FirstSongCourseState: YardGuitarCourseState() {
+import kotlinx.serialization.Serializable
+
+@Serializable
+open class FirstSongCourseState : GuitarCourseState() {
     override val price: Int = 100
 
     override val course_length: Int = 30

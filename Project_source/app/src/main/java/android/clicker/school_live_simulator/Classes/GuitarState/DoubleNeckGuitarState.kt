@@ -1,11 +1,18 @@
 package android.clicker.school_live_simulator
 
-class DoubleNeckGuitarState: FenderGuitarState() {
+import kotlinx.serialization.Serializable
+
+@Serializable
+class DoubleNeckGuitarState : GuitarState() {
     override val price: Int = 150000
 
-    init {
-        available_courses.add(MusicalObservatoryCourseState())
-    }
+    override val available_courses = arrayListOf(
+        YardGuitarCourseState(),
+        FirstSongCourseState(),
+        YardSongCourseState(),
+        MusicalSchoolCourseState(),
+        MusicalObservatoryCourseState()
+    )
 
     override fun changeState(bag: Player.Bag):
         Unit = throw UnsupportedOperationException("Operation not supported")

@@ -1,6 +1,9 @@
 package android.clicker.school_live_simulator
 
 
+import android.clicker.school_live_simulator.Classes.Achievements_classes.Interfaces.Achievements
+import android.clicker.school_live_simulator.Classes.Achievements_classes.Interfaces.PurchaseAchievements
+import android.clicker.school_live_simulator.Classes.Achievements_classes.Purchase_achievements.BicycleEventsAchievements
 import android.clicker.school_live_simulator.Classes.GameDate.GameDate
 import android.clicker.school_live_simulator.Classes.Main.ContextBundle
 import android.clicker.school_live_simulator.Classes.Main.GameData
@@ -31,19 +34,49 @@ val module = SerializersModule {
     }
     polymorphic(GuitarState::class) {
         subclass(NullGuitarState::class)
+        subclass(UssrGuitarState::class)
+        subclass(UralGuitarState::class)
+        subclass(YamahaGuitarState::class)
+        subclass(FenderGuitarState::class)
+        subclass(DoubleNeckGuitarState::class)
     }
     polymorphic(GuitarCourseState::class) {
         subclass(NullGuitarCourseState::class)
+        subclass(YardGuitarCourseState::class)
+        subclass(FirstSongCourseState::class)
+        subclass(YardSongCourseState::class)
+        subclass(MusicalSchoolCourseState::class)
+        subclass(MusicalObservatoryCourseState::class)
     }
     polymorphic(ComputerState::class) {
         subclass(NullComputerState::class)
+        subclass(PreviouslyUsedComputerState::class)
+        subclass(OldComputerState::class)
+        subclass(UsualComputerState::class)
+        subclass(XiaomiMiNotebookState::class)
+        subclass(MacbookState::class)
     }
     polymorphic(ComputerCourseState::class) {
         subclass(NullComputerCourseState::class)
+        subclass(FriendsCourseState::class)
+        subclass(OnlineWorkCourseState::class)
+        subclass(WebDesignCourseState::class)
+        subclass(VideoEditingCourseState::class)
+        subclass(GameDevelopmentCourseState::class)
     }
     polymorphic(PlayerState::class) {
         subclass(NormalState::class)
     }
+
+
+
+//    polymorphic(Achievements::class) {
+////        subclass(PurchaseAchievements::class)
+//        subclass(BicycleEventsAchievements::class)
+//    }
+//    polymorphic(PurchaseAchievements::class) {
+//        subclass(BicycleEventsAchievements::class)
+//    }
 }
 
 
@@ -105,7 +138,7 @@ object Game {
         }
         val game_data = GameData(this.difficulty_state, this.player)
         val game_data_to_json = format.encodeToString(game_data)
-//        Log.d("MyLog", game_data_to_json)
+        Log.d("MyLog", game_data_to_json)
         File(path,"GameData.txt").writeText(game_data_to_json)
 //        val fos = FileOutputStream(File(path,"GameData.txt"))
 //        val os = ObjectOutputStream(fos)
@@ -127,8 +160,6 @@ object Game {
         val format = Json { serializersModule = module }
         val game_data_text = File(path,"GameData.txt").readText()
         Log.d("MyLog", File(path,"GameData.txt").readText())
-        Log.d("MyLog", "Json")
-        Log.d("MyLog", Json.decodeFromString<GameData>(game_data_text).toString())
         val game_data = format.decodeFromString<GameData>(game_data_text)
         Log.d("MyLog", game_data.toString())
         this.difficulty_state = game_data.difficulty_state

@@ -2,10 +2,12 @@ package android.clicker.school_live_simulator.Classes.Achievements_classes.Purch
 
 import android.clicker.school_live_simulator.Classes.Achievements_classes.Interfaces.PurchaseAchievements
 import android.clicker.school_live_simulator.Game
+import kotlinx.serialization.Serializable
 
 /**
  * Purchase Achievements related to the purchase of a bicycle
  */
+
 enum class BicycleEventsAchievements(
     override val achievement_name: String,
     override val achievement_message: String

@@ -2,8 +2,8 @@ package android.clicker.school_live_simulator
 
 import kotlinx.serialization.Serializable
 
-
-open class WebDesignCourseState : OnlineWorkCourseState() {
+@Serializable
+open class WebDesignCourseState : ComputerCourseState() {
     override val price: Int = 300
 
     override val course_length: Int = 30

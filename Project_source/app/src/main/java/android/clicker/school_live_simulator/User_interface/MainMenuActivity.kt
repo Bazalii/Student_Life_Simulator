@@ -29,7 +29,7 @@ class MainMenuActivity : AppCompatActivity() {
             "ru" -> binding.RussianButton.setBackgroundColor(ContextCompat.getColor(this, android.R.color.holo_green_dark))
             else -> binding.EnglishButton.setBackgroundColor(ContextCompat.getColor(this, android.R.color.holo_green_dark))
         }
-
+        Game.context_bundle.context = this.applicationContext
 //        val letDirectory = File(this.applicationContext.filesDir, "DATA")
 //        letDirectory.mkdirs()
 //        val file = File(letDirectory, "GameData.txt")
@@ -44,6 +44,7 @@ class MainMenuActivity : AppCompatActivity() {
     }
 
     fun onClickNewGame(view: View){
+        File(this.applicationContext.filesDir, "GameData.txt").freeSpace
         /**
          * start GameActivity
          */

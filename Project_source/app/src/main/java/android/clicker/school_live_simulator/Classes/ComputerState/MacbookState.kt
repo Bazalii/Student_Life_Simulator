@@ -1,11 +1,19 @@
 package android.clicker.school_live_simulator
 
-open class MacbookState : XiaomiMiNotebookState() {
+import kotlinx.serialization.Serializable
+
+@Serializable
+open class MacbookState : ComputerState() {
     override val price: Int = 200000
 
-    init {
-        available_courses.add(GameDevelopmentCourseState())
-    }
+    override val available_courses = arrayListOf(
+        FriendsCourseState(),
+        OnlineWorkCourseState(),
+        WebDesignCourseState(),
+        VideoEditingCourseState(),
+        GameDevelopmentCourseState()
+    )
+
     override fun changeState(bag: Player.Bag) {
 //        Unit = throw UnsupportedOperationException("Operation not supported")
     }
