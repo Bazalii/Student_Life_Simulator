@@ -33,7 +33,7 @@ class SchoolScrollingFragment : Fragment() {
             try {
                 (activity as GameActivity).updateStats()
                 binding.layoutSchoolGoToSchool.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.click))
-                Timer(Game.game_date.subscription_length).setEndSignalHandler(Studies.GO_TO_SCHOOL::goToSchool)
+                Timer(Game.game_date.subscription_length).setEndSignalHandler(Studies.GO_TO_SCHOOL.name.lowercase(), Studies.GO_TO_SCHOOL::goToSchool)
             } catch (exception: NotEnoughMoneyException){
                 binding.layoutSchoolGoToSchool.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
                 (activity as GameActivity).notEnoughMoneyAnim()
@@ -87,7 +87,10 @@ class SchoolScrollingFragment : Fragment() {
             try {
                 (activity as GameActivity).updateStats()
                 binding.layoutSchoolSignUpInAnOnlineSchool.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.click))
-                Timer(Game.game_date.subscription_length).setEndSignalHandler(Studies.SIGN_UP_IN_AN_ONLINE_SCHOOL::signUpInOnlineSchool)
+                Timer(Game.game_date.subscription_length).setEndSignalHandler(
+                    Studies.SIGN_UP_IN_AN_ONLINE_SCHOOL.name.lowercase(),
+                    Studies.SIGN_UP_IN_AN_ONLINE_SCHOOL::signUpInOnlineSchool
+                )
                 (activity as GameActivity).achieve(StudyEventsRandomAchievements.FALL_ASLEEP_AT_WEBINAR)
             } catch (exception: NotEnoughMoneyException){
                 binding.layoutSchoolSignUpInAnOnlineSchool.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))

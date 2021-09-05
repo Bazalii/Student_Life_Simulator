@@ -1,9 +1,7 @@
 package android.clicker.school_live_simulator.User_interface.ScrollingFragments
 
-import android.clicker.school_live_simulator.Classes.Achievements_classes.Purchase_achievements.GuitarEventsAchievements
 import android.clicker.school_live_simulator.Classes.Achievements_classes.Random_achievements.CreativityEventsRandomAchievements
 import android.clicker.school_live_simulator.Classes.Achievements_classes.Random_achievements.EntertainmentEventsRandomAchievements
-import android.clicker.school_live_simulator.Classes.Achievements_classes.Random_achievements.FoodEventsRandomAchievements
 import android.clicker.school_live_simulator.Classes.Achievements_classes.Random_achievements.SongEventsRandomAchievements
 import android.clicker.school_live_simulator.Classes.Enum_classes.Entertainment
 import android.clicker.school_live_simulator.Classes.GameDate.Timer
@@ -206,7 +204,10 @@ class FunScrollingFragment : Fragment() {
         binding.funMakeAYoutubeVideo.setOnClickListener{
             try {
                 (activity as GameActivity).updateStats()
-                Timer(Game.game_date.subscription_length).setEndSignalHandler(Entertainment.MAKE_A_YOUTUBE_VIDEO::makeYouTubeVideo)
+                Timer(Game.game_date.subscription_length).setEndSignalHandler(
+                    Entertainment.MAKE_A_YOUTUBE_VIDEO.name.lowercase(),
+                    Entertainment.MAKE_A_YOUTUBE_VIDEO::makeYouTubeVideo
+                )
             } catch (exception: NotEnoughMoneyException){
                 binding.funMakeAYoutubeVideo.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
                 (activity as GameActivity).notEnoughMoneyAnim()
@@ -243,7 +244,10 @@ class FunScrollingFragment : Fragment() {
             try {
                 (activity as GameActivity).updateStats()
                 binding.layoutFunListenToTheMusic.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.click))
-                Timer(Game.game_date.subscription_length).setEndSignalHandler(Entertainment.LISTEN_TO_THE_MUSIC::listenToTheMusic)
+                Timer(Game.game_date.subscription_length).setEndSignalHandler(
+                    Entertainment.LISTEN_TO_THE_MUSIC.name.lowercase(),
+                    Entertainment.LISTEN_TO_THE_MUSIC::listenToTheMusic
+                )
             } catch (exception: NotEnoughMoneyException){
                 binding.layoutFunListenToTheMusic.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
                 (activity as GameActivity).notEnoughMoneyAnim()
@@ -323,7 +327,7 @@ class FunScrollingFragment : Fragment() {
             try {
                 (activity as GameActivity).updateStats()
                 binding.layoutFunDoSport.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.click))
-                Timer(Game.game_date.subscription_length).setEndSignalHandler(Entertainment.DO_SPORT::doSport)
+                Timer(Game.game_date.subscription_length).setEndSignalHandler(Entertainment.DO_SPORT.name.lowercase(), Entertainment.DO_SPORT::doSport)
                 (activity as GameActivity).achieve(EntertainmentEventsRandomAchievements.TOO_FAST_RUNNING)
             } catch (exception: NotEnoughMoneyException){
                 binding.layoutFunDoSport.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))

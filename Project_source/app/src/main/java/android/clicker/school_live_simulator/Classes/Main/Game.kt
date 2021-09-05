@@ -4,7 +4,6 @@ package android.clicker.school_live_simulator
 import android.clicker.school_live_simulator.Classes.Achievements_classes.Interfaces.Achievements
 import android.clicker.school_live_simulator.Classes.Achievements_classes.Interfaces.PurchaseAchievements
 import android.clicker.school_live_simulator.Classes.Achievements_classes.Purchase_achievements.BicycleEventsAchievements
-import android.clicker.school_live_simulator.Classes.Enum_classes.Studies
 import android.clicker.school_live_simulator.Classes.GameDate.GameDate
 import android.clicker.school_live_simulator.Classes.Main.ContextBundle
 import android.clicker.school_live_simulator.Classes.Main.GameData
@@ -21,12 +20,12 @@ import kotlinx.serialization.modules.subclass
 import java.io.*
 import java.util.*
 import kotlin.jvm.Transient
-import kotlin.reflect.KFunction
 
 
 val module = SerializersModule {
     polymorphic(GameDifficultyState::class) {
         subclass(NormalMode::class)
+        subclass(HardMode::class)
     }
     polymorphic(BicycleState::class) {
         subclass(NullBicycleState::class)
@@ -68,11 +67,17 @@ val module = SerializersModule {
     }
     polymorphic(PlayerState::class) {
         subclass(NormalState::class)
+        subclass(BadState::class)
+        subclass(ExtremeState::class)
     }
-//    polymorphic(KFunction::class) {
-//        subclass(Studies.SIGN_UP_IN_AN_ONLINE_SCHOOL::signUpInOnlineSchool)
-//    }
 
+//    polymorphic(Achievements::class) {
+////        subclass(PurchaseAchievements::class)
+//        subclass(BicycleEventsAchievements::class)
+//    }
+//    polymorphic(PurchaseAchievements::class) {
+//        subclass(BicycleEventsAchievements::class)
+//    }
 }
 
 
@@ -82,11 +87,12 @@ object Game {
     private var difficulty_state: GameDifficultyState = NormalMode()
 
     lateinit var locale: String
+
     var isDefaultLanguage = true
+
     var counters: MutableMap<String, Int> = mutableMapOf()
 
     var player: Player = Player()
-//    game: Game
 
     var game_date: GameDate = GameDate()
 
@@ -130,9 +136,10 @@ object Game {
     fun save(path: File) {
         val format = Json {
             serializersModule = module
-//            encodeDefaults = true
+            encodeDefaults = true
+            prettyPrint = true
         }
-        val game_data = GameData(this.difficulty_state, this.counters, this.player, this.game_date)
+        val game_data = GameData(this.difficulty_state, this.counters, this.player)
         val game_data_to_json = format.encodeToString(game_data)
         Log.d("MyLog", game_data_to_json)
         File(path,"GameData.txt").writeText(game_data_to_json)

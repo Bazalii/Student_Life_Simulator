@@ -1,5 +1,8 @@
 package android.clicker.school_live_simulator
 
+import kotlinx.serialization.Serializable
+
+@Serializable
 class BadState : PlayerState() {
     /**
      * values will be balanced in the future, now they are default(=0)

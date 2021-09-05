@@ -13,5 +13,5 @@ data class GameData(
     var difficulty_state: GameDifficultyState,
     var counters: MutableMap<String, Int>,
     var player: Player,
-    var game_date: GameDate
+//    var game_date: GameDate,
 )

@@ -58,7 +58,8 @@ class AlarmClock(private var day: Int, private var month: Months, private var ye
         tick_delay = tickDelay
     }
 
-    override fun setEndSignalHandler(handler: KFunction<Any>) {
-        end_signal_handler = handler
+    override fun setEndSignalHandler(key: String, input_kfunction: KFunction<Any>) {
+        if (Game.game_date.end_signal_handlers[key] == null)
+            Game.game_date.end_signal_handlers[key] = input_kfunction
     }
 }
