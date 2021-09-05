@@ -60,33 +60,33 @@ class AchievementsActivity : AppCompatActivity() {
         val binding = AchievementDialogBinding.bind(mView)
         val achievement = Game.player.achieved_achievements[position]
         binding.AchievementTitle.text = achievement.substring(0, achievement.indexOf('$'))
-        binding.AchievementDescription.text = achievement.substring(achievement.indexOf('$') + 1, achievement.length)
-//        if(achievement is RandomAchievements){
-//            binding.AchievementChance.text = "${achievement.achievement_chance.toString()}%"
-//            binding.AchievementChance.visibility = View.VISIBLE
-//            binding.AchievementChanceText.visibility = View.VISIBLE
-//            binding.AchievementRarityType.visibility= View.VISIBLE
-//            when(achievement.achievement_chance.toString().toFloat()){
-//                in 0.0..1.0 -> {
-//                    binding.AchievementRarityType.text = getText(R.string.achievement_super_rare)
-//                    binding.AchievementRarityType.setTextColor(resources.getColor(R.color.super_rare))
-//                    binding.AchievementRarityType.setShadowLayer(4f, 0f, 0f, resources.getColor(R.color.super_rare))
-//                }
-//                in 1.0..5.0 -> {
-//                    binding.AchievementRarityType.text = getText(R.string.achievement_rare)
-//                    binding.AchievementRarityType.setTextColor(resources.getColor(R.color.rare))
-//                    binding.AchievementRarityType.setShadowLayer(8f, 0f, 0f, resources.getColor(R.color.rare_glow))
-//                }
-//                in 5.0..15.0 ->{
-//                    binding.AchievementRarityType.text = getText(R.string.achievement_uncommon)
-//                    binding.AchievementRarityType.setTextColor(resources.getColor(R.color.uncommon))
-//                }
-//                else ->{
-//                    binding.AchievementRarityType.text = getText(R.string.achievement_common)
-//                    binding.AchievementRarityType.setTextColor(resources.getColor(R.color.common))
-//                }
-//            }
-//        }
+        binding.AchievementDescription.text = achievement.substring(achievement.indexOf('$') + 1, achievement.lastIndexOf('$'))
+        if(achievement.substring(achievement.lastIndexOf('$') + 1, achievement.length).toIntOrNull() is Int){
+            binding.AchievementChance.text = achievement.substring(achievement.lastIndexOf('$') + 1, achievement.length)
+            binding.AchievementChance.visibility = View.VISIBLE
+            binding.AchievementChanceText.visibility = View.VISIBLE
+            binding.AchievementRarityType.visibility= View.VISIBLE
+            when(binding.AchievementChance.text.toString().toFloat()){
+                in 0.0..1.0 -> {
+                    binding.AchievementRarityType.text = getText(R.string.achievement_super_rare)
+                    binding.AchievementRarityType.setTextColor(resources.getColor(R.color.super_rare))
+                    binding.AchievementRarityType.setShadowLayer(4f, 0f, 0f, resources.getColor(R.color.super_rare))
+                }
+                in 1.0..5.0 -> {
+                    binding.AchievementRarityType.text = getText(R.string.achievement_rare)
+                    binding.AchievementRarityType.setTextColor(resources.getColor(R.color.rare))
+                    binding.AchievementRarityType.setShadowLayer(8f, 0f, 0f, resources.getColor(R.color.rare_glow))
+                }
+                in 5.0..15.0 ->{
+                    binding.AchievementRarityType.text = getText(R.string.achievement_uncommon)
+                    binding.AchievementRarityType.setTextColor(resources.getColor(R.color.uncommon))
+                }
+                else ->{
+                    binding.AchievementRarityType.text = getText(R.string.achievement_common)
+                    binding.AchievementRarityType.setTextColor(resources.getColor(R.color.common))
+              }
+            }
+        }
         mBuilder.setView(mView)
         val dialog: AlertDialog = mBuilder.create()
         dialog.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
@@ -126,22 +126,22 @@ class AchievementsActivity : AppCompatActivity() {
              */
             fun bind(achievement: String) = with(binding){
                 achievName.text = achievement.substring(0, achievement.indexOf('$'))
-//                if(achievement is RandomAchievements){
-//                    when(achievement.achievement_chance.toString().toFloat()){
-//                        in 0.0..1.0 -> {
-//                            achievName.setTextColor(Game.context_bundle.context.resources.getColor(R.color.super_rare))
-//                        }
-//                        in 1.0..5.0 -> {
-//                            achievName.setTextColor(Game.context_bundle.context.resources.getColor(R.color.rare))
-//                        }
-//                        in 5.0..15.0 ->{
-//                            achievName.setTextColor(Game.context_bundle.context.resources.getColor(R.color.uncommon))
-//                        }
-//                        else ->{
-//                            achievName.setTextColor(Game.context_bundle.context.resources.getColor(R.color.common))
-//                        }
-//                    }
-//                }
+                if(achievement.substring(achievement.lastIndexOf('$') + 1, achievement.length).toIntOrNull() is Int){
+                    when(achievement.substring(achievement.lastIndexOf('$') + 1, achievement.length).toFloat()){
+                        in 0.0..1.0 -> {
+                            achievName.setTextColor(Game.context_bundle.context.resources.getColor(R.color.super_rare))
+                        }
+                        in 1.0..5.0 -> {
+                            achievName.setTextColor(Game.context_bundle.context.resources.getColor(R.color.rare))
+                        }
+                        in 5.0..15.0 ->{
+                            achievName.setTextColor(Game.context_bundle.context.resources.getColor(R.color.uncommon))
+                        }
+                        else ->{
+                            achievName.setTextColor(Game.context_bundle.context.resources.getColor(R.color.common))
+                        }
+                    }
+                }
             }
         }
 

@@ -242,15 +242,15 @@ class Player {
 
 
     fun achieved(achievement: Achievements): Boolean {
-        if (achievement.achievement_name + "$" + achievement.achievement_message !in achieved_achievements) {
+        if (!achieved_achievements.any{it.contains(achievement.achievement_name + "$" + achievement.achievement_message)}) {
             if (achievement is RandomAchievements) {
                 if(achievement.achievementGetCheck()) {
-                    this.achieved_achievements.add(achievement.achievement_name + "$" + achievement.achievement_message)
+                    this.achieved_achievements.add(achievement.achievement_name + "$" + achievement.achievement_message + "$" + achievement.achievement_chance)
                     return true
                 }
             }
             else {
-                this.achieved_achievements.add(achievement.achievement_name + "$" + achievement.achievement_message)
+                this.achieved_achievements.add(achievement.achievement_name + "$" + achievement.achievement_message + "$")
                 return true
             }
         }
