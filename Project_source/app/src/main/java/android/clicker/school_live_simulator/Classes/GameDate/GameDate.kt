@@ -6,27 +6,28 @@ import kotlinx.serialization.Serializable
 
 @Serializable
 class GameDate(private var day: Int = 1, private var month: Months = Months.September, private var year: Int = 2009) {
+
     val subscription_length: Int = 30
 
     /**
      * List of all current game timers
      */
-    @Transient
+
     val timers: ArrayList<Timer> = arrayListOf()
 
-    @Transient
+    @kotlinx.serialization.Transient
     var timers_iterator: MutableListIterator<Timer> = timers.listIterator()
         private set
     /**
      * List of all current game alarm clocks
      */
-    @Transient
+    @kotlinx.serialization.Transient
     private val alarm_clocks: ArrayList<AlarmClock> = arrayListOf()
 
     /**
      *
      */
-    @Transient
+    @kotlinx.serialization.Transient
     private val time_dependencies: ArrayList<() -> Unit> = arrayListOf()
 
     /**

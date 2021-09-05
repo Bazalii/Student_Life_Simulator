@@ -16,6 +16,7 @@ class Timer(var days: Int): TimeObservable {
     /**
      * Handler function of tick timer signal
      */
+    @kotlinx.serialization.Transient
     private lateinit var tick_signal_handler: KFunction<@Contextual Any>
 
     /**

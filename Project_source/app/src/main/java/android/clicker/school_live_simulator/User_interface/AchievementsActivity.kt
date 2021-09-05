@@ -60,7 +60,7 @@ class AchievementsActivity : AppCompatActivity() {
         val binding = AchievementDialogBinding.bind(mView)
         val achievement = Game.player.achieved_achievements[position]
         binding.AchievementTitle.text = achievement.substring(0, achievement.indexOf('$'))
-        binding.AchievementDescription.text = achievement.substring(achievement.indexOf('\n'), achievement.length)
+        binding.AchievementDescription.text = achievement.substring(achievement.indexOf('$') + 1, achievement.length)
 //        if(achievement is RandomAchievements){
 //            binding.AchievementChance.text = "${achievement.achievement_chance.toString()}%"
 //            binding.AchievementChance.visibility = View.VISIBLE

@@ -4,6 +4,7 @@ package android.clicker.school_live_simulator
 import android.clicker.school_live_simulator.Classes.Achievements_classes.Interfaces.Achievements
 import android.clicker.school_live_simulator.Classes.Achievements_classes.Interfaces.PurchaseAchievements
 import android.clicker.school_live_simulator.Classes.Achievements_classes.Purchase_achievements.BicycleEventsAchievements
+import android.clicker.school_live_simulator.Classes.Enum_classes.Studies
 import android.clicker.school_live_simulator.Classes.GameDate.GameDate
 import android.clicker.school_live_simulator.Classes.Main.ContextBundle
 import android.clicker.school_live_simulator.Classes.Main.GameData
@@ -20,6 +21,7 @@ import kotlinx.serialization.modules.subclass
 import java.io.*
 import java.util.*
 import kotlin.jvm.Transient
+import kotlin.reflect.KFunction
 
 
 val module = SerializersModule {
@@ -67,16 +69,10 @@ val module = SerializersModule {
     polymorphic(PlayerState::class) {
         subclass(NormalState::class)
     }
-
-
-
-//    polymorphic(Achievements::class) {
-////        subclass(PurchaseAchievements::class)
-//        subclass(BicycleEventsAchievements::class)
+//    polymorphic(KFunction::class) {
+//        subclass(Studies.SIGN_UP_IN_AN_ONLINE_SCHOOL::signUpInOnlineSchool)
 //    }
-//    polymorphic(PurchaseAchievements::class) {
-//        subclass(BicycleEventsAchievements::class)
-//    }
+
 }
 
 
@@ -136,7 +132,7 @@ object Game {
             serializersModule = module
 //            encodeDefaults = true
         }
-        val game_data = GameData(this.difficulty_state, this.counters, this.player)
+        val game_data = GameData(this.difficulty_state, this.counters, this.player, this.game_date)
         val game_data_to_json = format.encodeToString(game_data)
         Log.d("MyLog", game_data_to_json)
         File(path,"GameData.txt").writeText(game_data_to_json)
