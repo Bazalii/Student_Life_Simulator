@@ -44,7 +44,8 @@ class Player {
                 field = value
             }
     }
-     var achieved_achievements: ArrayList<Achievements> = arrayListOf<Achievements>()
+
+     var achieved_achievements: ArrayList<String> = arrayListOf()
     /**
      * Player's name
      */
@@ -241,15 +242,15 @@ class Player {
 
 
     fun achieved(achievement: Achievements): Boolean {
-        if (achievement !in achieved_achievements) {
+        if (achievement.achievement_name + "$" + achievement.achievement_message !in achieved_achievements) {
             if (achievement is RandomAchievements) {
                 if(achievement.achievementGetCheck()) {
-                    this.achieved_achievements.add(achievement)
+                    this.achieved_achievements.add(achievement.achievement_name + "$" + achievement.achievement_message)
                     return true
                 }
             }
             else {
-                this.achieved_achievements.add(achievement)
+                this.achieved_achievements.add(achievement.achievement_name + "$" + achievement.achievement_message)
                 return true
             }
         }

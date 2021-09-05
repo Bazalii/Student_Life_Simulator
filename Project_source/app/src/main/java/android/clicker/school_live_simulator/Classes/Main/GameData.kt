@@ -9,4 +9,9 @@ import kotlinx.serialization.Serializable
  * data class whose instances help to serialize data from Game object
  */
 @Serializable
-data class GameData(var difficulty_state: GameDifficultyState, var player: Player)
+data class GameData(
+    var difficulty_state: GameDifficultyState,
+    var counters: MutableMap<String, Int>,
+    var player: Player,
+//    var game_date: GameDate,
+)

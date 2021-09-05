@@ -6,6 +6,8 @@ import kotlinx.serialization.Serializable
 open class YardSongCourseState : GuitarCourseState() {
     override val price: Int = 300
 
+    override var best_song: Song? = null
+
     override val course_length: Int = 30
 
     override fun buyNextCourse(courses: Player.Courses) {

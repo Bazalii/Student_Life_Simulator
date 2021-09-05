@@ -6,6 +6,8 @@ import kotlinx.serialization.Serializable
 open class FriendsCourseState : ComputerCourseState() {
     override val price: Int = 0
 
+    override var best_web_task: WebTask? = null
+
     override val course_length: Int = 40
 
     override fun buyNextCourse(courses: Player.Courses) {

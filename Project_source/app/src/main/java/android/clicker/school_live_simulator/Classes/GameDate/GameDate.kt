@@ -11,19 +11,22 @@ class GameDate(private var day: Int = 1, private var month: Months = Months.Sept
     /**
      * List of all current game timers
      */
+    @Transient
     val timers: ArrayList<Timer> = arrayListOf()
 
-
+    @Transient
     var timers_iterator: MutableListIterator<Timer> = timers.listIterator()
         private set
     /**
      * List of all current game alarm clocks
      */
+    @Transient
     private val alarm_clocks: ArrayList<AlarmClock> = arrayListOf()
 
     /**
      *
      */
+    @Transient
     private val time_dependencies: ArrayList<() -> Unit> = arrayListOf()
 
     /**

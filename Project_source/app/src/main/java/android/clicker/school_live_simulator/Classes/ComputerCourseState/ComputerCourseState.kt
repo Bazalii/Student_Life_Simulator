@@ -10,7 +10,7 @@ abstract class ComputerCourseState: StudyCourseState() {
      * These types are described in enumeration class WebTask
      */
 
-    protected var best_web_task: WebTask? = null
+    protected abstract var best_web_task: WebTask?
 
     /**
      * Function to ckeck if course is available to buy
