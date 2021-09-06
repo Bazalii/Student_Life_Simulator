@@ -37,10 +37,7 @@ enum class Studies(val school_performance: Int, val money_diff: Int) {
     fun goToSchool() {
         try {
             Game.player.study(GO_TO_SCHOOL)
-            Timer(Game.game_date.subscription_length).setEndSignalHandler(
-                GO_TO_SCHOOL.name.lowercase(),
-                GO_TO_SCHOOL::goToSchool
-            )
+            Timer(Game.game_date.subscription_length).setEndSignalHandler(GO_TO_SCHOOL.name.lowercase())
         } catch (exception: NotEnoughMoneyException){
 
         }
@@ -48,10 +45,7 @@ enum class Studies(val school_performance: Int, val money_diff: Int) {
     fun signUpInOnlineSchool() {
         try {
             Game.player.study(SIGN_UP_IN_AN_ONLINE_SCHOOL)
-            Timer(Game.game_date.subscription_length).setEndSignalHandler(
-                SIGN_UP_IN_AN_ONLINE_SCHOOL.name.lowercase(),
-                SIGN_UP_IN_AN_ONLINE_SCHOOL::signUpInOnlineSchool
-            )
+            Timer(Game.game_date.subscription_length).setEndSignalHandler(SIGN_UP_IN_AN_ONLINE_SCHOOL.name.lowercase())
         } catch (exception: NotEnoughMoneyException){
 
         }

@@ -30,9 +30,6 @@ class MainMenuActivity : AppCompatActivity() {
             else -> binding.EnglishButton.setBackgroundColor(ContextCompat.getColor(this, android.R.color.holo_green_dark))
         }
         Game.context_bundle.context = this.applicationContext
-//        val letDirectory = File(this.applicationContext.filesDir, "DATA")
-//        letDirectory.mkdirs()
-//        val file = File(letDirectory, "GameData.txt")
     }
 
     fun onClickContinueGame(view: View) {

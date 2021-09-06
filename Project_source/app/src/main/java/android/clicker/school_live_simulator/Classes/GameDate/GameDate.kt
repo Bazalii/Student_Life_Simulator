@@ -1,6 +1,8 @@
 package android.clicker.school_live_simulator.Classes.GameDate
 
+import android.clicker.school_live_simulator.Classes.Enum_classes.Entertainment
 import android.clicker.school_live_simulator.Classes.Enum_classes.Months
+import android.clicker.school_live_simulator.Classes.Enum_classes.Studies
 import android.clicker.school_live_simulator.Game
 import kotlinx.serialization.Contextual
 import kotlinx.serialization.Serializable
@@ -8,6 +10,7 @@ import kotlin.reflect.KFunction
 
 @Serializable
 class GameDate(private var day: Int = 1, private var month: Months = Months.September, private var year: Int = 2009) {
+
     @kotlinx.serialization.Transient
     val subscription_length: Int = 30
 
@@ -17,22 +20,22 @@ class GameDate(private var day: Int = 1, private var month: Months = Months.Sept
     /**
      * List of all current game timers
      */
-    @Transient
+
     val timers: ArrayList<Timer> = arrayListOf()
 
-    @Transient
+    @kotlinx.serialization.Transient
     var timers_iterator: MutableListIterator<Timer> = timers.listIterator()
         private set
     /**
      * List of all current game alarm clocks
      */
-    @Transient
+    @kotlinx.serialization.Transient
     private val alarm_clocks: ArrayList<AlarmClock> = arrayListOf()
 
     /**
      *
      */
-    @Transient
+    @kotlinx.serialization.Transient
     private val time_dependencies: ArrayList<() -> Unit> = arrayListOf()
 
     /**

@@ -9,18 +9,15 @@ import kotlin.reflect.KFunction
 
 @Serializable
 class Timer(var days: Int): TimeObservable {
-    init {
-        Game.game_date.registerTimer(this)
-    }
 
     /**
      * Handler function of tick timer signal
+     *
+     * Maybe this should be deleted
      */
 
     @kotlinx.serialization.Transient
     private lateinit var tick_signal_handler: KFunction<Any>
-
-
 
     /**
      * Handler function of end timer signal
@@ -53,10 +50,8 @@ class Timer(var days: Int): TimeObservable {
         tick_signal_handler = handler
     }
 
-    override fun setEndSignalHandler(key: String, input_kfunction: KFunction<Any>) {
+    override fun setEndSignalHandler(key: String) {
         this.end_signal_handler_id = key
-        if (Game.game_date.end_signal_handlers[key] == null) {
-            Game.game_date.end_signal_handlers[key] = input_kfunction
-        }
+        Game.game_date.registerTimer(this)
     }
 }

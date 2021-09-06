@@ -40,11 +40,6 @@ class AlarmClock(private var day: Int, private var month: Months, private var ye
      * @param   month   new month
      * @param   year    new year
      */
-//    fun update(day: Int, month: Int, year: Int) {
-//        this.day = day
-//        this.month = month
-//        this.year = year
-//    }
 
     fun tick() {
         if (this.toString() == Game.game_date.toString()) {
@@ -58,8 +53,7 @@ class AlarmClock(private var day: Int, private var month: Months, private var ye
         tick_delay = tickDelay
     }
 
-    override fun setEndSignalHandler(key: String, input_kfunction: KFunction<Any>) {
-        if (Game.game_date.end_signal_handlers[key] == null)
-            Game.game_date.end_signal_handlers[key] = input_kfunction
+    override fun setEndSignalHandler(key: String) {
+
     }
 }

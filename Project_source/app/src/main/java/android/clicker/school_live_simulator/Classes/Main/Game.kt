@@ -4,6 +4,8 @@ package android.clicker.school_live_simulator
 import android.clicker.school_live_simulator.Classes.Achievements_classes.Interfaces.Achievements
 import android.clicker.school_live_simulator.Classes.Achievements_classes.Interfaces.PurchaseAchievements
 import android.clicker.school_live_simulator.Classes.Achievements_classes.Purchase_achievements.BicycleEventsAchievements
+import android.clicker.school_live_simulator.Classes.Enum_classes.Entertainment
+import android.clicker.school_live_simulator.Classes.Enum_classes.Studies
 import android.clicker.school_live_simulator.Classes.GameDate.GameDate
 import android.clicker.school_live_simulator.Classes.Main.ContextBundle
 import android.clicker.school_live_simulator.Classes.Main.GameData
@@ -70,14 +72,6 @@ val module = SerializersModule {
         subclass(BadState::class)
         subclass(ExtremeState::class)
     }
-
-//    polymorphic(Achievements::class) {
-////        subclass(PurchaseAchievements::class)
-//        subclass(BicycleEventsAchievements::class)
-//    }
-//    polymorphic(PurchaseAchievements::class) {
-//        subclass(BicycleEventsAchievements::class)
-//    }
 }
 
 
@@ -139,15 +133,10 @@ object Game {
             encodeDefaults = true
             prettyPrint = true
         }
-        val game_data = GameData(this.difficulty_state, this.counters, this.player)
+        val game_data = GameData(this.difficulty_state, this.counters, this.player, this.game_date)
         val game_data_to_json = format.encodeToString(game_data)
         Log.d("MyLog", game_data_to_json)
         File(path,"GameData.txt").writeText(game_data_to_json)
-//        val fos = FileOutputStream(File(path,"GameData.txt"))
-//        val os = ObjectOutputStream(fos)
-//        os.writeObject(GameData(10))
-//        os.close()
-//        fos.close()
     }
 
     /**
@@ -168,7 +157,27 @@ object Game {
         this.difficulty_state = game_data.difficulty_state
         this.counters = game_data.counters
         this.player = game_data.player
-        //Game.game_date = game_data.game_date
+        this.game_date = game_data.game_date
+
+
+        this.game_date.end_signal_handlers[Studies.GO_TO_SCHOOL.name.lowercase()] =
+            Studies.GO_TO_SCHOOL::goToSchool
+        this.game_date.end_signal_handlers[Studies.SIGN_UP_IN_AN_ONLINE_SCHOOL.name.lowercase()] =
+            Studies.SIGN_UP_IN_AN_ONLINE_SCHOOL::signUpInOnlineSchool
+
+        this.game_date.end_signal_handlers[Entertainment.MAKE_A_YOUTUBE_VIDEO.name.lowercase()] =
+            Entertainment.MAKE_A_YOUTUBE_VIDEO::makeYouTubeVideo
+        this.game_date.end_signal_handlers[Entertainment.LISTEN_TO_THE_MUSIC.name.lowercase()] =
+            Entertainment.LISTEN_TO_THE_MUSIC::listenToTheMusic
+        this.game_date.end_signal_handlers[Entertainment.DO_SPORT.name.lowercase()] =
+            Entertainment.DO_SPORT::doSport
+
+
+        this.game_date.end_signal_handlers["computer_course"] =
+            Game.player.current_courses.computer_course::timerEndHandler
+        this.game_date.end_signal_handlers["guitar_course"] =
+            Game.player.current_courses.guitar_course::timerEndHandler
+
         //Game.game_status = game_data.game_status
     }
 }
