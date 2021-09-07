@@ -4,10 +4,13 @@ import kotlinx.serialization.Serializable
 
 @Serializable
 open class WebDesignCourseState : ComputerCourseState() {
+
+    @kotlinx.serialization.Transient
     override val price: Int = 300
 
     override var best_web_task: WebTask? = null
 
+    @kotlinx.serialization.Transient
     override val course_length: Int = 30
 
     override fun buyNextCourse(courses: Player.Courses) {

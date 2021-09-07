@@ -338,6 +338,7 @@ class ShopScrollingFragment : Fragment() {
                 try {
                     Game.player.buyNewBicycle()
                     updateUI()
+                    (activity as GameActivity).achieve(BicycleEventsAchievements.USSR_BIKE)
                 } catch(exception: NotEnoughMoneyException){
                     binding.layoutShopUssrBicycle.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
                     (activity as GameActivity).notEnoughMoneyAnim()
@@ -349,7 +350,6 @@ class ShopScrollingFragment : Fragment() {
                 try {
                     Game.player.buyNewBicycle()
                     updateUI()
-                    (activity as GameActivity).achieve(BicycleEventsAchievements.USUAL_BIKE)
                 } catch(exception: NotEnoughMoneyException){
                     binding.layoutShopUsualBicycle.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
                     (activity as GameActivity).notEnoughMoneyAnim()

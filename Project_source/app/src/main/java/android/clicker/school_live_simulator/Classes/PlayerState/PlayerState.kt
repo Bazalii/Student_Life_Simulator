@@ -9,7 +9,7 @@ import kotlinx.serialization.Serializable
  * These constants define player characteristics reduce.
  */
 @Serializable
-abstract class PlayerState {
+sealed class PlayerState {
     abstract val reduce_school_performance_value: Int
     abstract val reduce_happiness_value: Int
     abstract val reduce_satiety_value: Int

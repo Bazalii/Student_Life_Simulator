@@ -4,8 +4,11 @@ import kotlinx.serialization.Serializable
 
 @Serializable
 class DoubleNeckGuitarState : GuitarState() {
+
+    @kotlinx.serialization.Transient
     override val price: Int = 150000
 
+    @kotlinx.serialization.Transient
     override val available_courses = arrayListOf(
         YardGuitarCourseState(),
         FirstSongCourseState(),

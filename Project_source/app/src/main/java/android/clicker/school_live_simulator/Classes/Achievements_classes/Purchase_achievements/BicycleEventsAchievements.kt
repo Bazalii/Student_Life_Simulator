@@ -12,7 +12,7 @@ enum class BicycleEventsAchievements(
     override val achievement_name: String,
     override val achievement_message: String
 ) : PurchaseAchievements {
-    USUAL_BIKE(
+    USSR_BIKE(
         achievement_name = Game.context_bundle.getTitle("ach_usual_bike_name"),
         achievement_message = Game.context_bundle.getTitle("ach_usual_bike_text")
     ),

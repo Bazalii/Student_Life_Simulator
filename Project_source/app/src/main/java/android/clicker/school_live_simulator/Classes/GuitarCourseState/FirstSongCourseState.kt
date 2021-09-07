@@ -4,10 +4,13 @@ import kotlinx.serialization.Serializable
 
 @Serializable
 open class FirstSongCourseState : GuitarCourseState() {
+
+    @kotlinx.serialization.Transient
     override val price: Int = 100
 
     override var best_song: Song? = null
 
+    @kotlinx.serialization.Transient
     override val course_length: Int = 30
 
     override fun buyNextCourse(courses: Player.Courses) {

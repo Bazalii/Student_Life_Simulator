@@ -9,7 +9,7 @@ import kotlinx.serialization.Serializable
 import kotlin.reflect.KFunction
 
 @Serializable
-class GameDate(private var day: Int = 1, private var month: Months = Months.September, private var year: Int = 2009) {
+class GameDate(private var day: Int, private var month: Months, private var year: Int){
 
     @kotlinx.serialization.Transient
     val subscription_length: Int = 30
@@ -54,8 +54,6 @@ class GameDate(private var day: Int = 1, private var month: Months = Months.Sept
         while (this.timers_iterator.hasNext()) {
             val current_timer = this.timers_iterator.next()
             current_timer.tick()
-                //Добавляем или не добавляем таймер
-//                Log.d("MyLog", "gd" + Game.game_date.timers.toString())
         }
     }
 
@@ -65,7 +63,7 @@ class GameDate(private var day: Int = 1, private var month: Months = Months.Sept
      * @return      date string
      */
     override fun toString(): String {
-        return "${this.day} ${this.month} ${this.year}"
+        return "${this.day} ${this.month.title} ${this.year}"
     }
 
     /**

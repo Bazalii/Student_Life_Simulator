@@ -90,7 +90,7 @@ class Player {
     var current_courses: Courses = Courses()
         private set
 
-    private var player_state: PlayerState = NormalState()
+    private var player_state: PlayerState = NormalState
 //    private var live_observers: ArrayList<LiveObserver> = arrayListOf<LiveObserver>()
 
     /**

@@ -4,8 +4,11 @@ import kotlinx.serialization.Serializable
 
 @Serializable
 open class XiaomiMiNotebookState : ComputerState() {
+
+    @kotlinx.serialization.Transient
     override val price: Int = 60000
 
+    @kotlinx.serialization.Transient
     override val available_courses = arrayListOf(
         FriendsCourseState(),
         OnlineWorkCourseState(),

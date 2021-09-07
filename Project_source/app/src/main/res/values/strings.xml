@@ -462,4 +462,18 @@
     <string name="end_game_go_to_main_menu">Go to main menu</string>
     <string name="end_game_times_number">times</string>
     <string name="end_game_seconds">sec</string>
+
+    <!--Months-->
+    <string name="months_january">January</string>
+    <string name="months_february">February</string>
+    <string name="months_march">March</string>
+    <string name="months_april">April</string>
+    <string name="months_may">May</string>
+    <string name="months_june">June</string>
+    <string name="months_july">July</string>
+    <string name="months_august">August</string>
+    <string name="months_september">September</string>
+    <string name="months_october">October</string>
+    <string name="months_november">November</string>
+    <string name="months_december">December</string>
 </resources>

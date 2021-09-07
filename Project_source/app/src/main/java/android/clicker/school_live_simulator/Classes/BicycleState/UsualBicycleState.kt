@@ -4,6 +4,8 @@ import kotlinx.serialization.Serializable
 
 @Serializable
 open class UsualBicycleState : BicycleState() {
+
+    @kotlinx.serialization.Transient
     override val price = 10000
 
     override val best_delivery: Delivery? = Delivery.USUAL_DELIVERY

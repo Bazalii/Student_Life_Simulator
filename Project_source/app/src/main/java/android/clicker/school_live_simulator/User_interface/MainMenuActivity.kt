@@ -1,5 +1,7 @@
 package android.clicker.school_live_simulator.User_interface
 
+import android.clicker.school_live_simulator.Classes.Enum_classes.Months
+import android.clicker.school_live_simulator.Classes.GameDate.GameDate
 import android.clicker.school_live_simulator.Game
 import android.clicker.school_live_simulator.R
 import android.clicker.school_live_simulator.databinding.ActivityMainMenuBinding
@@ -33,7 +35,7 @@ class MainMenuActivity : AppCompatActivity() {
     }
 
     fun onClickContinueGame(view: View) {
-        Log.d("MyLog", File(this.applicationContext.filesDir, "GameData.txt").readLines().toString())
+//        Log.d("MyLog", File(this.applicationContext.filesDir, "GameData.txt").readLines().toString())
         val intent = Intent(this, GameActivity::class.java)
         startActivity(intent)
         overridePendingTransition(R.anim.start_activity_1, R.anim.start_activity_2)
@@ -41,10 +43,10 @@ class MainMenuActivity : AppCompatActivity() {
     }
 
     fun onClickNewGame(view: View){
-        File(this.applicationContext.filesDir, "GameData.txt").freeSpace
         /**
          * start GameActivity
          */
+        Game.game_date = GameDate(1, Months.September, 2009)
         val intent = Intent(this, GameActivity::class.java)
         startActivity(intent)
         overridePendingTransition(R.anim.start_activity_1, R.anim.start_activity_2)

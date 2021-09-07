@@ -460,4 +460,18 @@
     <string name="end_game_go_to_main_menu">В главное меню</string>
     <string name="end_game_times_number">раз</string>
     <string name="end_game_seconds">сек</string>
+
+    <!--Months-->
+    <string name="months_january">Января</string>
+    <string name="months_february">Февраля</string>
+    <string name="months_march">Марта</string>
+    <string name="months_april">Апреля</string>
+    <string name="months_may">Мая</string>
+    <string name="months_june">Июня</string>
+    <string name="months_july">Июля</string>
+    <string name="months_august">Августа</string>
+    <string name="months_september">Сентября</string>
+    <string name="months_october">Октября</string>
+    <string name="months_november">Ноября</string>
+    <string name="months_december">Декабря</string>
 </resources>

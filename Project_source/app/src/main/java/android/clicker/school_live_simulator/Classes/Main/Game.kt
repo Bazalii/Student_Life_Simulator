@@ -1,9 +1,6 @@
 package android.clicker.school_live_simulator
 
 
-import android.clicker.school_live_simulator.Classes.Achievements_classes.Interfaces.Achievements
-import android.clicker.school_live_simulator.Classes.Achievements_classes.Interfaces.PurchaseAchievements
-import android.clicker.school_live_simulator.Classes.Achievements_classes.Purchase_achievements.BicycleEventsAchievements
 import android.clicker.school_live_simulator.Classes.Enum_classes.Entertainment
 import android.clicker.school_live_simulator.Classes.Enum_classes.Studies
 import android.clicker.school_live_simulator.Classes.GameDate.GameDate
@@ -21,7 +18,6 @@ import kotlinx.serialization.modules.polymorphic
 import kotlinx.serialization.modules.subclass
 import java.io.*
 import java.util.*
-import kotlin.jvm.Transient
 
 
 val module = SerializersModule {
@@ -78,7 +74,7 @@ val module = SerializersModule {
 
 @Serializable
 object Game {
-    private var difficulty_state: GameDifficultyState = NormalMode()
+    private var difficulty_state: GameDifficultyState = NormalMode
 
     lateinit var locale: String
 
@@ -88,16 +84,16 @@ object Game {
 
     var player: Player = Player()
 
-    var game_date: GameDate = GameDate()
+    lateinit var game_date: GameDate
 
 //    lateinit var game_status: GameStatus
-    @Transient
+    @kotlinx.serialization.Transient
     var context_bundle: ContextBundle = ContextBundle()
 
 
     fun setLocale(resources: Resources, context: Context){
         val config = resources.configuration
-        val lang = Game.locale // your language code
+        val lang = this.locale // your language code
         val locale = Locale(lang)
         Locale.setDefault(locale)
         config.setLocale(locale)
@@ -107,9 +103,7 @@ object Game {
         resources.updateConfiguration(config, resources.displayMetrics)
     }
 
-    fun init() {
-        TODO("Not yet implemented")
-    }
+
     fun tick() {
         this.player.tick()
         this.game_date.tick()
@@ -124,7 +118,7 @@ object Game {
 
 
     /**
-     * init game_data with fields from object Game,
+     * Init game_data with fields from object Game,
      * encode to JSON-format and write to file GameData.txt
      */
     fun save(path: File) {
@@ -140,20 +134,15 @@ object Game {
     }
 
     /**
-     * read fields of game_data from GameData.txt, decode from JSON-format and
+     * Read fields of game_data from GameData.txt, decode from JSON-format and
      * fill Game's fields
      */
     fun load(path: File) {
-//        val fis: FileInputStream = FileInputStream(File("D:\\Ivan\\ITMO\\Summer_project\\Project_source\\GameData.txt"))
-//        val os = ObjectInputStream(fis)
-//        os.readObject() as Game
-//        os.close()
-//        fis.close()
         val format = Json { serializersModule = module }
         val game_data_text = File(path,"GameData.txt").readText()
-        Log.d("MyLog", File(path,"GameData.txt").readText())
         val game_data = format.decodeFromString<GameData>(game_data_text)
-        Log.d("MyLog", game_data.toString())
+
+
         this.difficulty_state = game_data.difficulty_state
         this.counters = game_data.counters
         this.player = game_data.player
@@ -172,12 +161,9 @@ object Game {
         this.game_date.end_signal_handlers[Entertainment.DO_SPORT.name.lowercase()] =
             Entertainment.DO_SPORT::doSport
 
-
         this.game_date.end_signal_handlers["computer_course"] =
-            Game.player.current_courses.computer_course::timerEndHandler
+            this.player.current_courses.computer_course::timerEndHandler
         this.game_date.end_signal_handlers["guitar_course"] =
-            Game.player.current_courses.guitar_course::timerEndHandler
-
-        //Game.game_status = game_data.game_status
+            this.player.current_courses.guitar_course::timerEndHandler
     }
 }

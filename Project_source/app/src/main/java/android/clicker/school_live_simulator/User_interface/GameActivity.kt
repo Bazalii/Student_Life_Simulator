@@ -195,8 +195,7 @@ class GameActivity : AppCompatActivity() {
         binding.happinessProgressBar.progressTintList = ColorStateList.valueOf(HSLToColor(floatArrayOf(120-colorHappiness, 1f , 0.5f)))
         binding.satietyProgressBar.progressTintList = ColorStateList.valueOf(HSLToColor(floatArrayOf(120-colorSatiety, 1f , 0.5f)))
         binding.schoolPerformanceProgressBar.progressTintList = ColorStateList.valueOf(HSLToColor(floatArrayOf(120-colorSchoolPerformance, 1f , 0.5f)))
-        changeMoneyAnimation( binding.moneyTextView.text.toString().toInt(), Game.player.money)
-       // binding.moneyTextView.text = Game.player.money.toString()
+        changeMoneyAnimation(binding.moneyTextView.text.toString().toInt(), Game.player.money)
         binding.dateTextView.text = Game.game_date.toString()
     }
     private fun changeMoneyAnimation(from: Int, to: Int){
