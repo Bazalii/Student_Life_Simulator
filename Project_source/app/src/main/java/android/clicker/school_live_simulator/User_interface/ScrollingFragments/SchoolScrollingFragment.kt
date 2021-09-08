@@ -1,6 +1,5 @@
 package android.clicker.school_live_simulator.User_interface.ScrollingFragments
 
-import android.clicker.school_live_simulator.Classes.Achievements_classes.Random_achievements.SongEventsRandomAchievements
 import android.clicker.school_live_simulator.Classes.Achievements_classes.Random_achievements.StudyEventsRandomAchievements
 import android.clicker.school_live_simulator.Classes.Enum_classes.Studies
 import android.clicker.school_live_simulator.Classes.GameDate.Timer
@@ -35,7 +34,7 @@ class SchoolScrollingFragment : Fragment() {
                 binding.layoutSchoolGoToSchool.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.click))
                 Game.game_date.end_signal_handlers[Studies.GO_TO_SCHOOL.name.lowercase()] =
                     Studies.GO_TO_SCHOOL::goToSchool
-                Timer(Game.game_date.subscription_length).setEndSignalHandler(Studies.GO_TO_SCHOOL.name.lowercase())
+                Timer(Game.game_date.subscription_length).registerTimeHandler(Studies.GO_TO_SCHOOL.name.lowercase())
             } catch (exception: NotEnoughMoneyException){
                 binding.layoutSchoolGoToSchool.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
                 (activity as GameActivity).notEnoughMoneyAnim()
@@ -91,7 +90,7 @@ class SchoolScrollingFragment : Fragment() {
                 binding.layoutSchoolSignUpInAnOnlineSchool.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.click))
                 Game.game_date.end_signal_handlers[Studies.SIGN_UP_IN_AN_ONLINE_SCHOOL.name.lowercase()] =
                     Studies.SIGN_UP_IN_AN_ONLINE_SCHOOL::signUpInOnlineSchool
-                Timer(Game.game_date.subscription_length).setEndSignalHandler(Studies.SIGN_UP_IN_AN_ONLINE_SCHOOL.name.lowercase())
+                Timer(Game.game_date.subscription_length).registerTimeHandler(Studies.SIGN_UP_IN_AN_ONLINE_SCHOOL.name.lowercase())
                 (activity as GameActivity).achieve(StudyEventsRandomAchievements.FALL_ASLEEP_AT_WEBINAR)
             } catch (exception: NotEnoughMoneyException){
                 binding.layoutSchoolSignUpInAnOnlineSchool.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))

@@ -117,7 +117,7 @@ enum class Entertainment(val happiness: Int, val money_diff: Int) {
     fun listenToTheMusic() {
         try {
             Game.player.entertain(LISTEN_TO_THE_MUSIC)
-            Timer(Game.game_date.subscription_length).setEndSignalHandler(LISTEN_TO_THE_MUSIC.name.lowercase())
+            Timer(Game.game_date.subscription_length).registerTimeHandler(LISTEN_TO_THE_MUSIC.name.lowercase())
         } catch (exception: NotEnoughMoneyException){
 
         }
@@ -125,7 +125,7 @@ enum class Entertainment(val happiness: Int, val money_diff: Int) {
     fun makeYouTubeVideo() {
         try {
             Game.player.entertain(MAKE_A_YOUTUBE_VIDEO)
-            Timer(Game.game_date.subscription_length).setEndSignalHandler(MAKE_A_YOUTUBE_VIDEO.name.lowercase())
+            Timer(Game.game_date.subscription_length).registerTimeHandler(MAKE_A_YOUTUBE_VIDEO.name.lowercase())
         } catch (exception: NotEnoughMoneyException){
 
         }
@@ -133,7 +133,7 @@ enum class Entertainment(val happiness: Int, val money_diff: Int) {
     fun doSport() {
         try {
             Game.player.entertain(DO_SPORT)
-            Timer(Game.game_date.subscription_length).setEndSignalHandler(DO_SPORT.name.lowercase())
+            Timer(Game.game_date.subscription_length).registerTimeHandler(DO_SPORT.name.lowercase())
         } catch (exception: NotEnoughMoneyException){
 
         }

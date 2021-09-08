@@ -16,5 +16,5 @@ interface TimeObservable {
      *
      * @param   handler     handler function
      */
-    fun setEndSignalHandler(key: String)
+    fun registerTimeHandler(key: String)
 }

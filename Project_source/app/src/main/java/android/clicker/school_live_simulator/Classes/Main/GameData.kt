@@ -6,7 +6,7 @@ import kotlinx.serialization.Serializable
 
 
 /**
- * data class whose instances help to serialize data from Game object
+ * Data class that contains all fields for serialization
  */
 @Serializable
 data class GameData(

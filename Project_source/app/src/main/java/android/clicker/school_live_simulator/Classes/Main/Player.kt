@@ -14,7 +14,6 @@ import kotlinx.serialization.*
 class Player {
     @Serializable
     class Bag {
-        @Contextual
         var bicycle: BicycleState = NullBicycleState()
             set(value) {
                 Game.player.changeMoney(-value.price)

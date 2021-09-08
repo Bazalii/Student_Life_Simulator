@@ -13,7 +13,6 @@ import android.os.Bundle
 import android.view.View
 import java.util.*
 import android.graphics.Color.*
-import android.util.Log
 import androidx.core.content.ContextCompat
 
 class MainMenuActivity : AppCompatActivity() {
@@ -21,11 +20,7 @@ class MainMenuActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         if (Game.isDefaultLanguage) {
-
 //            Game.locale = resources.configuration.locale.toString().take(2)
-            Log.d("MyLog", resources.configuration.locale.toString().take(2))
-            Log.d("MyLog", "   ")
-            Log.d("MyLog", Locale.getDefault().toString().take(2))
             Game.locale = Locale.getDefault().toString().take(2)
         }
         else {

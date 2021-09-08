@@ -206,7 +206,7 @@ class FunScrollingFragment : Fragment() {
                 (activity as GameActivity).updateStats()
                 Game.game_date.end_signal_handlers[Entertainment.MAKE_A_YOUTUBE_VIDEO.name.lowercase()] =
                     Entertainment.MAKE_A_YOUTUBE_VIDEO::makeYouTubeVideo
-                Timer(Game.game_date.subscription_length).setEndSignalHandler(Entertainment.MAKE_A_YOUTUBE_VIDEO.name.lowercase())
+                Timer(Game.game_date.subscription_length).registerTimeHandler(Entertainment.MAKE_A_YOUTUBE_VIDEO.name.lowercase())
             } catch (exception: NotEnoughMoneyException){
                 binding.funMakeAYoutubeVideo.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
                 (activity as GameActivity).notEnoughMoneyAnim()
@@ -245,7 +245,7 @@ class FunScrollingFragment : Fragment() {
                 binding.layoutFunListenToTheMusic.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.click))
                 Game.game_date.end_signal_handlers[Entertainment.LISTEN_TO_THE_MUSIC.name.lowercase()] =
                     Entertainment.LISTEN_TO_THE_MUSIC::listenToTheMusic
-                Timer(Game.game_date.subscription_length).setEndSignalHandler(Entertainment.LISTEN_TO_THE_MUSIC.name.lowercase())
+                Timer(Game.game_date.subscription_length).registerTimeHandler(Entertainment.LISTEN_TO_THE_MUSIC.name.lowercase())
             } catch (exception: NotEnoughMoneyException){
                 binding.layoutFunListenToTheMusic.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
                 (activity as GameActivity).notEnoughMoneyAnim()
@@ -327,7 +327,7 @@ class FunScrollingFragment : Fragment() {
                 binding.layoutFunDoSport.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.click))
                 Game.game_date.end_signal_handlers[Entertainment.DO_SPORT.name.lowercase()] =
                     Entertainment.DO_SPORT::doSport
-                Timer(Game.game_date.subscription_length).setEndSignalHandler(Entertainment.DO_SPORT.name.lowercase())
+                Timer(Game.game_date.subscription_length).registerTimeHandler(Entertainment.DO_SPORT.name.lowercase())
                 (activity as GameActivity).achieve(EntertainmentEventsRandomAchievements.TOO_FAST_RUNNING)
             } catch (exception: NotEnoughMoneyException){
                 binding.layoutFunDoSport.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))

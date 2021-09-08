@@ -130,7 +130,7 @@ object Game {
         val game_data = GameData(this.difficulty_state, this.counters, this.player, this.game_date)
         val game_data_to_json = format.encodeToString(game_data)
         Log.d("MyLog", game_data_to_json)
-        File(path,"GameData.txt").writeText(game_data_to_json)
+        File(path,"GameData").writeText(game_data_to_json)
     }
 
     /**
@@ -139,7 +139,7 @@ object Game {
      */
     fun load(path: File) {
         val format = Json { serializersModule = module }
-        val game_data_text = File(path,"GameData.txt").readText()
+        val game_data_text = File(path,"GameData").readText()
         val game_data = format.decodeFromString<GameData>(game_data_text)
 
 
