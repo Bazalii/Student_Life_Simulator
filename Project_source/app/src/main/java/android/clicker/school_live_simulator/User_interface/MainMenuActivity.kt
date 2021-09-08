@@ -3,6 +3,8 @@ package android.clicker.school_live_simulator.User_interface
 import android.clicker.school_live_simulator.Classes.Enum_classes.Months
 import android.clicker.school_live_simulator.Classes.GameDate.GameDate
 import android.clicker.school_live_simulator.Game
+import android.clicker.school_live_simulator.NormalMode
+import android.clicker.school_live_simulator.Player
 import android.clicker.school_live_simulator.R
 import android.clicker.school_live_simulator.databinding.ActivityMainMenuBinding
 import android.content.Intent
@@ -13,14 +15,18 @@ import java.util.*
 import android.graphics.Color.*
 import android.util.Log
 import androidx.core.content.ContextCompat
-import java.io.File
 
 class MainMenuActivity : AppCompatActivity() {
     lateinit var binding: ActivityMainMenuBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         if (Game.isDefaultLanguage) {
-            Game.locale = resources.configuration.locale.toString().take(2)
+
+//            Game.locale = resources.configuration.locale.toString().take(2)
+            Log.d("MyLog", resources.configuration.locale.toString().take(2))
+            Log.d("MyLog", "   ")
+            Log.d("MyLog", Locale.getDefault().toString().take(2))
+            Game.locale = Locale.getDefault().toString().take(2)
         }
         else {
             Game.setLocale(resources, this@MainMenuActivity)
@@ -35,7 +41,6 @@ class MainMenuActivity : AppCompatActivity() {
     }
 
     fun onClickContinueGame(view: View) {
-//        Log.d("MyLog", File(this.applicationContext.filesDir, "GameData.txt").readLines().toString())
         val intent = Intent(this, GameActivity::class.java)
         startActivity(intent)
         overridePendingTransition(R.anim.start_activity_1, R.anim.start_activity_2)
@@ -44,19 +49,26 @@ class MainMenuActivity : AppCompatActivity() {
 
     fun onClickNewGame(view: View){
         /**
+         * Assign defaults to all properties of Game
+         */
+        Game.difficulty_state = NormalMode
+        Game.counters = mutableMapOf()
+        Game.player = Player()
+        Game.game_date = GameDate(1, Months.September, 2009)
+
+        /**
          * start GameActivity
          */
-        Game.game_date = GameDate(1, Months.September, 2009)
         val intent = Intent(this, GameActivity::class.java)
         startActivity(intent)
         overridePendingTransition(R.anim.start_activity_1, R.anim.start_activity_2)
     }
-    fun OnClickRussianLanguage(view: View){
+    fun onClickRussianLanguage(view: View){
         Game.locale = "ru"
         Game.isDefaultLanguage = false
         this.recreate()
     }
-    fun OnClickEnglishLanguage(view: View){
+    fun onClickEnglishLanguage(view: View){
         Game.locale = "en"
         Game.isDefaultLanguage = false
         this.recreate()

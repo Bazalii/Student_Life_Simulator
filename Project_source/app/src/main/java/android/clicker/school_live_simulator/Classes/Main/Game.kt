@@ -74,7 +74,7 @@ val module = SerializersModule {
 
 @Serializable
 object Game {
-    private var difficulty_state: GameDifficultyState = NormalMode
+    var difficulty_state: GameDifficultyState = NormalMode
 
     lateinit var locale: String
 

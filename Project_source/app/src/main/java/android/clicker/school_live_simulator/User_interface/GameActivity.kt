@@ -158,15 +158,13 @@ class GameActivity : AppCompatActivity() {
         current_vp_page = binding.viewPager.currentItem
     }
     override fun onStop() {
-        Log.d("MyLog", "onStop")
         Game.save(this.applicationContext.filesDir)
         stopTick()
         super.onStop()
     }
     override fun onDestroy() {
-        Log.d("MyLog", "onDestroy")
-        Log.d("MyLog", File(this.applicationContext.filesDir, "GameData.txt").readLines().toString())
         Game.save(this.applicationContext.filesDir)
+        stopTick()
         super.onDestroy()
     }
     /**
