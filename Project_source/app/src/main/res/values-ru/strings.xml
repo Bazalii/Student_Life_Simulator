@@ -1,0 +1,477 @@
+<resources>
+    <string name="app_name">School_live_simulator</string>
+    <!--For debug-->
+    <string name="game_activity_1">10000</string>
+    <string name="game_activity_2">10 september 2021</string>
+    <string name="fun_scr_1">Neutral actions</string>
+    <string name="fun_scr_2">Good actions</string>
+    <string name="fun_scr_3">Bad Actions</string>
+    <string name="fun_scr_4">Art</string>
+
+    <!--Bottom navigation-->
+    <string name="bot_nav_work">Работа</string>
+    <string name="bot_nav_school">Учёба</string>
+    <string name="bot_nav_shop">Магазин</string>
+    <string name="bot_nav_fun">Веселье</string>
+    <string name="bot_nav_food">Еда</string>
+
+
+    <!--Progress bars-->
+    <string name="satietyProgressBar">Сытость</string>
+    <string name="happinessProgressBar">Счастье</string>
+    <string name="schoolPerformanceProgressBar">Успеваемость</string>
+
+
+    <!--School folder-->
+    <string name="school_go_to_school">Ходить в школу</string>
+    <string name="school_learn_yourself">Ботать самому</string>
+    <string name="school_buy_cheatbook">Купить решебник</string>
+    <string name="school_learn_from_a_student">Нанять репета-студента</string>
+    <string name="school_sign_up_in_an_online_school">Записаться в онлайн-школу</string>
+    <string name="school_hire_a_good_tutor">Нанять хорошего репета</string>
+    <string name="school_study_with_uni_teacher">Заниматься с преподом из универа</string>
+
+
+    <!--School stats-->
+    <string name="go_to_school_school_performance">+3</string>
+    <string name="go_to_school_money">0</string>
+    <string name="learn_yourself_school_performance">+50</string>
+    <string name="learn_yourself_money">-100</string>
+    <string name="buy_cheatbook_school_performance">+100</string>
+    <string name="buy_cheatbook_money">-300</string>
+    <string name="learn_from_student_school_performance">+250</string>
+    <string name="learn_from_student_money">-1000</string>
+    <string name="sign_up_in_an_online_school_school_performance">+15</string>
+    <string name="sign_up_in_an_online_school_money">-10000</string>
+    <string name="hire_a_good_tutor_school_performance">+600</string>
+    <string name="hire_a_good_tutor_money">-15000</string>
+    <string name="study_with_uni_teacher_school_performance">+1000</string>
+    <string name="study_with_uni_teacher_money">-25000</string>
+
+
+    <!--Food folder-->
+    <string name="food_eat_crackers">Погрызть сухариков</string>
+    <string name="food_eat_doshirack">Заварить Дошик</string>
+    <string name="food_eat_at_the_canteen">Сходить в столовку</string>
+    <string name="food_eat_at_Mcdonalds">Сходить в Мак</string>
+    <string name="food_order_delivery">Заказать еду домой</string>
+    <string name="food_go_to_the_restaurant">Сходить в ресторан</string>
+
+    <!--Food stats-->
+    <string name="crackers_satiety">+25</string>
+    <string name="crackers_happiness">+50</string>
+    <string name="crackers_money">-10</string>
+    <string name="doshirack_satiety">+50</string>
+    <string name="doshirack_happiness">-100</string>
+    <string name="doshirack_money">-50</string>
+    <string name="eatery_food_satiety">+120</string>
+    <string name="eatery_food_happiness">-150</string>
+    <string name="eatery_food_money">-300</string>
+    <string name="mcdonalds_satiety">+200</string>
+    <string name="mcdonalds_happiness">-200</string>
+    <string name="mcdonalds_money">-1000</string>
+    <string name="pizza_at_home_satiety">+450</string>
+    <string name="pizza_at_home_happiness">+50</string>
+    <string name="pizza_at_home_money">-4000</string>
+    <string name="restaurant_food_satiety">+800</string>
+    <string name="restaurant_food_happiness">+500</string>
+    <string name="restaurant_food_money">-10000</string>
+
+
+    <!--Work folder-->
+    <string name="work_collect_change">Собирать мелочь на улице</string>
+    <string name="work_watch_ads">Зарабатывать на просмотре рекламы</string>
+    <string name="work_distribute_flyers">Раздавать листовки</string>
+    <string name="work_as_a_greener">Озеленитель</string>
+    <string name="work_as_a_courier">Работать курьером</string>
+    <string name="work_as_a_courier_v0">Купите велосипед, чтобы работать курьером</string>
+    <string name="work_as_a_courier_v1">Работать курьером: медленная доставка</string>
+    <string name="work_as_a_courier_v2">Работать курьером: стандартная доставка</string>
+    <string name="work_as_a_courier_v3">Работать курьером: быстрая доставка</string>
+    <string name="work_as_an_operator">Работать оператором колл-центра</string>
+    <string name="work_play_guitar">Играть на гитаре</string>
+    <string name="work_play_guitar_v0">Пройдите курс, чтобы играть на гитаре</string>
+    <string name="work_play_guitar_v1">Играть на гитаре: на одном аккорде</string>
+    <string name="work_play_guitar_v2">Играть на гитаре: "Сектор газа" на трёх аккордах</string>
+    <string name="work_play_guitar_v3">Играть на гитаре: "Smells like teen spirit" по кругу</string>
+    <string name="work_play_guitar_v4">Играть на гитаре: джаз с другом-трубачом</string>
+    <string name="work_play_guitar_v5">Играть на гитаре: ХТК Баха наизусть</string>
+    <string name="work_on_the_net">Работать в интернете</string>
+    <string name="work_on_the_net_v0">Пройдите курс, чтобы работать в интернете</string>
+    <string name="work_on_the_net_v1">Бустить аккаунты в играх</string>
+    <string name="work_on_the_net_v2">Пиарить паблики ВК</string>
+    <string name="work_on_the_net_v3">Делать сайты в виксе</string>
+    <string name="work_on_the_net_v4">Работать видеомонтажёром</string>
+    <string name="work_on_the_net_v5">Работать в GameDev</string>
+
+    <!--Work stats-->
+    <string name="work_collect_change_income">+10</string>
+    <string name="work_collect_change_happiness">-10</string>
+    <string name="work_watch_ads_income">+100</string>
+    <string name="work_watch_ads_happiness">-20</string>
+    <string name="work_distribute_flyers_income">+200</string>
+    <string name="work_distribute_flyers_happiness">-40</string>
+    <string name="work_as_a_greener_income">+500</string>
+    <string name="work_as_a_greener_happiness">-50</string>
+    <string name="work_as_an_operator_income">+1000</string>
+    <string name="work_as_an_operator_happiness">-80</string>
+    <string name="work_as_a_courier_v1_income">+100</string>
+    <string name="work_as_a_courier_v1_happiness">-20</string>
+    <string name="work_as_a_courier_v2_income">+500</string>
+    <string name="work_as_a_courier_v2_happiness">-15</string>
+    <string name="work_as_a_courier_v3_income">+5000</string>
+    <string name="work_as_a_courier_v3_happiness">-10</string>
+    <string name="work_play_guitar_v1_income">+100</string>
+    <string name="work_play_guitar_v1_happiness">-10</string>
+    <string name="work_play_guitar_v2_income">+500</string>
+    <string name="work_play_guitar_v2_happiness">-10</string>
+    <string name="work_play_guitar_v3_income">+1000</string>
+    <string name="work_play_guitar_v3_happiness">-10</string>
+    <string name="work_play_guitar_v4_income">+2500</string>
+    <string name="work_play_guitar_v4_happiness">-10</string>
+    <string name="work_play_guitar_v5_income">+5000</string>
+    <string name="work_play_guitar_v5_happiness">-10</string>
+    <string name="work_on_the_net_v1_income">+100</string>
+    <string name="work_on_the_net_v1_happiness">-10</string>
+    <string name="work_on_the_net_v2_income">+500</string>
+    <string name="work_on_the_net_v2_happiness">-10</string>
+    <string name="work_on_the_net_v3_income">+2000</string>
+    <string name="work_on_the_net_v3_happiness">-10</string>
+    <string name="work_on_the_net_v4_income">+5000</string>
+    <string name="work_on_the_net_v4_happiness">-10</string>
+    <string name="work_on_the_net_v5_income">+15000</string>
+    <string name="work_on_the_net_v5_happiness">-10</string>
+
+
+    <!--Entertainment folder-->
+    <string name="fun_draw_on_desks">Рисовать на партах</string>
+    <string name="fun_draw_graffities">Рисовать граффити в туалетах</string>
+    <string name="fun_write_a_poem">Написать стихотворение</string>
+    <string name="fun_make_something_handmade">Сделать что-нибудь своими руками</string>
+    <string name="fun_cover_a_song">Сделать кавер любимой песни</string>
+    <string name="fun_write_a_song">Написать песню самому </string>
+    <string name="fun_stream">Провести стрим</string>
+    <string name="fun_make_a_youtube_video">Сделать видео на Ютуб</string>
+
+    <string name="fun_do_nothing">Бездельничать</string>
+    <string name="fun_go_cycling">Кататься на велосипеде</string>
+    <string name="fun_listen_to_the_music">Слушать музыку</string>
+    <string name="fun_donate_and_play_computer">Задонатить и играть в комп</string>
+    <string name="fun_go_to_the_shopping_mall">Шариться по ТЦ с друзьями</string>
+    <string name="fun_walk_with_your_girlfriend">Гулять с девушкой</string>
+
+    <string name="fun_read_a_book">Читать книгу</string>
+    <string name="fun_help_youngsters_with_homework">Помочь шкетам с домашкой</string>
+    <string name="fun_do_sport">Заняться спортом</string>
+    <string name="fun_play_guitar">Играть на гитаре</string>
+    <string name="fun_go_to_the_theatre">Сходить в театр</string>
+    <string name="fun_go_to_the_concert">Сходить на концерт в ВИПку</string>
+
+    <string name="fun_kick_a_trash_can">Пнуть мусорку</string>
+    <string name="fun_intimidate_youngsters">Пойти бить младшеклассников</string>
+    <string name="fun_upload_virus">Залить вирус на школьный комп</string>
+    <string name="fun_use_chat_roulette">Cam2Cam в вебкам-чате</string>
+    <string name="fun_have_a_party">Устроить у себя вписку</string>
+    <string name="fun_go_to_the_club">Пойти в стрипклуб</string>
+
+    <!--Entertainment stats-->
+    <string name="fun_draw_on_desks_price">0</string>
+    <string name="fun_draw_on_desks_happiness">+30</string>
+    <string name="fun_draw_graffities_price">+10</string>
+    <string name="fun_draw_graffities_happiness">+10</string>
+    <string name="fun_write_a_poem_price">0</string>
+    <string name="fun_write_a_poem_happiness">+70</string>
+    <string name="fun_make_something_handmade_price">-500</string>
+    <string name="fun_make_something_handmade_happiness">+150</string>
+    <string name="fun_cover_a_song_price">0</string>
+    <string name="fun_cover_a_song_happiness">+150</string>
+    <string name="fun_write_a_song_price">+3000</string>
+    <string name="fun_write_a_song_happiness">+100</string>
+    <string name="fun_stream_price">+5000</string>
+    <string name="fun_stream_happiness">-100</string>
+    <string name="fun_make_a_youtube_video_price">+10000</string>
+    <string name="fun_make_a_youtube_video_happiness">+10000</string>
+
+    <string name="fun_do_nothing_price">0</string>
+    <string name="fun_do_nothing_happiness">+50</string>
+    <string name="fun_go_cycling_price">0</string>
+    <string name="fun_go_cycling_happiness">+100</string>
+    <string name="fun_listen_to_the_music_price">-169</string>
+    <string name="fun_listen_to_the_music_happiness">+10</string>
+    <string name="fun_donate_and_play_computer_price">-1000</string>
+    <string name="fun_donate_and_play_computer_happiness">+300</string>
+    <string name="fun_go_to_the_shopping_mall_price">-10000</string>
+    <string name="fun_go_to_the_shopping_mall_happiness">+500</string>
+    <string name="fun_walk_with_your_girlfriend_price">-20000</string>
+    <string name="fun_walk_with_your_girlfriend_happiness">+800</string>
+
+    <string name="fun_read_a_book_price">0</string>
+    <string name="fun_read_a_book_happiness">+30</string>
+    <string name="fun_help_youngsters_with_homework_price">0</string>
+    <string name="fun_help_youngsters_with_homework_happiness">+50</string>
+    <string name="fun_do_sport_price">-1500</string>
+    <string name="fun_do_sport_happiness">+100</string>
+    <string name="fun_play_guitar_price">-5000</string>
+    <string name="fun_play_guitar_happiness">+150</string>
+    <string name="fun_go_to_the_theatre_price">-4000</string>
+    <string name="fun_go_to_the_theatre_happiness">+300</string>
+    <string name="fun_go_to_the_concert_price">-10000</string>
+    <string name="fun_go_to_the_concert_happiness">+700</string>
+
+    <string name="fun_kick_a_trash_can_price">0</string>
+    <string name="fun_kick_a_trash_can_happiness">+70</string>
+    <string name="fun_intimidate_youngsters_price">+150</string>
+    <string name="fun_intimidate_youngsters_happiness">+100</string>
+    <string name="fun_upload_virus_price">0</string>
+    <string name="fun_upload_virus_happiness">+250</string>
+    <string name="fun_use_chat_roulette_price">-5000</string>
+    <string name="fun_use_chat_roulette_happiness">+450</string>
+    <string name="fun_have_a_party_price">-10000</string>
+    <string name="fun_have_a_party_happiness">+600</string>
+    <string name="fun_go_to_the_club_price">-20000</string>
+    <string name="fun_go_to_the_club_happiness">+1000</string>
+
+
+    <!--Shop folder-->
+    <string name="shop_guitar_course">Гитарные курсы</string>
+    <string name="shop_guitar_course_v1">Учиться у бомжа во дворе</string>
+    <string name="shop_guitar_course_v2">«Первая песня за неделю»</string>
+    <string name="shop_guitar_course_v3">Учиться у соседа во дворе</string>
+    <string name="shop_guitar_course_v4">Записаться в музыкалку</string>
+    <string name="shop_guitar_course_v5">Курсы при консерватории</string>
+
+    <string name="shop_computer_course">Компьютерны курсы</string>
+    <string name="shop_computer_course_v1">Взять уроки у друга</string>
+    <string name="shop_computer_course_v2">Вебинары по онлайн-заработку</string>
+    <string name="shop_computer_course_v3">Вебинары по веб-дизайну</string>
+    <string name="shop_computer_course_v4">Курсы видеомонтажа</string>
+    <string name="shop_computer_course_v5">GameDev курсы</string>
+
+    <string name="shop_bicycle">Велосипеды</string>
+    <string name="shop_ussr_bicycle">Советский велик с рынка</string>
+    <string name="shop_usual_bicycle">Простой велик из "Спортмастера"</string>
+    <string name="shop_mountain_bicycle">Горный велосипед</string>
+
+    <string name="shop_guitar">Гитары</string>
+    <string name="shop_ussr_guitar">Советская классическая гитара с авито</string>
+    <string name="shop_ural_guitar">Гитара "Урал" и убитый комбик</string>
+    <string name="shop_yamaha_guitar">Акустика Yamaha</string>
+    <string name="shop_fender_guitar">Fender Stratocaster и комбик</string>
+    <string name="shop_double_neck_guitar">Гитара с двумя грифами</string>
+
+    <string name="shop_computer">Компьютеры</string>
+    <string name="shop_previously_used_computer">Ноутбук с авито</string>
+    <string name="shop_old_computer">Старый ноут друга-мажора</string>
+    <string name="shop_usual_computer">Собрать бюджетный ПК</string>
+    <string name="shop_xiaomi_computer">Xiaomi Mi Notebook</string>
+    <string name="shop_macbook_computer">Макбук</string>
+
+    <!--Shop stats-->
+    <string name="shop_ussr_bicycle_price">-2000</string>
+    <string name="shop_usual_bicycle_price">-10000</string>
+    <string name="shop_mountain_bicycle_price">-40000</string>
+
+    <string name="shop_ussr_guitar_price">-1000</string>
+    <string name="shop_ural_guitar_price">-5000</string>
+    <string name="shop_yamaha_guitar_price">-12000</string>
+    <string name="shop_fender_guitar_price">-40000</string>
+    <string name="shop_double_neck_guitar_price">-150000</string>
+
+    <string name="shop_previously_used_computer_price">-3000</string>
+    <string name="shop_old_computer_price">-10000</string>
+    <string name="shop_usual_computer_price">-30000</string>
+    <string name="shop_xiaomi_computer_price">-60000</string>
+    <string name="shop_macbook_computer_price">-200000</string>
+
+    <string name="shop_computer_course_v1_price">0</string>
+    <string name="shop_computer_course_v2_price">-100</string>
+    <string name="shop_computer_course_v3_price">-300</string>
+    <string name="shop_computer_course_v4_price">-900</string>
+    <string name="shop_computer_course_v5_price">-2700</string>
+
+    <string name="shop_guitar_course_v1_price">0</string>
+    <string name="shop_guitar_course_v2_price">-100</string>
+    <string name="shop_guitar_course_v3_price">-300</string>
+    <string name="shop_guitar_course_v4_price">-900</string>
+    <string name="shop_guitar_course_v5_price">-2700</string>
+
+    <!--Achievements info-->
+    <!--Random achievements-->
+    <string name="ach_wrong_chords_name">Гитарист-аутист</string>
+    <string name="ach_wrong_chords_text">Получить по лицу за перепутанные аккорды</string>
+    <string name="ach_wrong_chords_chance">5</string>
+    <string name="ach_company_around_name">Массовик-затейник</string>
+    <string name="ach_company_around_text">Вокруг тебя собралась компания</string>
+    <string name="ach_company_around_chance">5</string>
+
+    <string name="ach_drunk_student_name">Редкостный Kozel</string>
+    <string name="ach_drunk_student_text">Заниматься уроками с пьяным студентом</string>
+    <string name="ach_drunk_student_chance">10</string>
+    <string name="ach_par_about_reproductive_name">Мама сказала, что я стану врачом</string>
+    <string name="ach_par_about_reproductive_text">Наткнуться на параграф про половые органы</string>
+    <string name="ach_par_about_reproductive_chance">8</string>
+    <string name="ach_old_answer_book_name">Одна ложка мелкого шрифта убивает лошадь</string>
+    <string name="ach_old_answer_book_text">Решебник оказался прошлогодним</string>
+    <string name="ach_old_answer_book_chance">15</string>
+    <string name="ach_fall_asleep_at_webinar_name">Онлайн-образование есть обман</string>
+    <string name="ach_fall_asleep_at_webinar_text">Уснуть на вебинаре</string>
+    <string name="ach_fall_asleep_at_webinar_chance">20</string>
+    <string name="ach_stories_about_ussr_name">Раньше было лучше</string>
+    <string name="ach_stories_about_ussr_text">Слушать истории препода про СССР</string>
+    <string name="ach_stories_about_ussr_chance">15</string>
+
+    <string name="ach_two_spices_name">S.P.E.C.I.A.L. : 0–0–0–0–0–0–99999</string>
+    <string name="ach_two_spices_text">Найти 2 приправки в Дошире</string>
+    <string name="ach_two_spices_chance">3</string>
+    <string name="ach_poisoning_of_eatery_food_name">Победитель по жизни (нет)</string>
+    <string name="ach_poisoning_of_eatery_food_text">Отравиться в столовке</string>
+    <string name="ach_poisoning_of_eatery_food_chance">5</string>
+
+    <string name="ach_cam2cam_trap_name">Виталий – любитель гениталий</string>
+    <string name="ach_cam2cam_trap_text">Попасть в cam2cam с трапом</string>
+    <string name="ach_cam2cam_trap_chance">1</string>
+    <string name="ach_get_ban_name">Нефильтрованный базар</string>
+    <string name="ach_get_ban_text">Словить бан чата</string>
+    <string name="ach_get_ban_chance">60</string>
+    <string name="ach_be_reported_by_children_name">Еще одна такая выходка, и эта палка …</string>
+    <string name="ach_be_reported_by_children_text">Малыши настучали на тебя</string>
+    <string name="ach_be_reported_by_children_chance">2</string>
+    <string name="ach_bottle_flip_name">Bottle flip challenge</string>
+    <string name="ach_bottle_flip_text">Мусорка делает флип</string>
+    <string name="ach_bottle_flip_chance">10</string>
+    <string name="ach_future_pimp_name">Будущий сутенер</string>
+    <string name="ach_future_pimp_text">Встретить красивую одноклассницу в стрипклубе</string>
+    <string name="ach_future_pimp_chance">5</string>
+    <string name="ach_future_gay_pimp_name">Будущий гей-сутенер</string>
+    <string name="ach_future_gay_pimp_text">Встретить некрасивую одноклассницу в стрипклубе</string>
+    <string name="ach_future_gay_pimp_chance">10</string>
+    <string name="ach_friend_in_theatre_name">Псевдоинтеллигенция</string>
+    <string name="ach_friend_in_theatre_text">Встретить друга-гопника в театре</string>
+    <string name="ach_friend_in_theatre_chance">5</string>
+    <string name="ach_moms_hacker_name">Мамкин хакер</string>
+    <string name="ach_moms_hacker_text">Найти фотки с учительской пьянки</string>
+    <string name="ach_moms_hacker_chance">8</string>
+    <string name="ach_evacuate_from_shop_centre_name">Троллейбус горит – да и …</string>
+    <string name="ach_evacuate_from_shop_centre_text">Эвакуироваться из ТЦ</string>
+    <string name="ach_evacuate_from_shop_centre_chance">3</string>
+    <string name="ach_sex_scene_in_book_name">Озабоченная домохозяйка</string>
+    <string name="ach_sex_scene_in_book_text">Найти секс-сцену в книге</string>
+    <string name="ach_sex_scene_in_book_chance">3</string>
+    <string name="ach_get_tip_from_youngs_name">Прожиточный минимум</string>
+    <string name="ach_get_tip_from_youngs_text">Шкеты накинули чаевых</string>
+    <string name="ach_get_tip_from_youngs_chance">5</string>
+    <string name="ach_destroyed_house_name">Как Замай прошел</string>
+    <string name="ach_destroyed_house_text">Во время вписки твою хату разнесли</string>
+    <string name="ach_destroyed_house_chance">2</string>
+    <string name="ach_photo_with_vocalist_name">Начинающий папарацци</string>
+    <string name="ach_photo_with_vocalist_text">Сфоткаться с вокалистом</string>
+    <string name="ach_photo_with_vocalist_chance">5</string>
+    <string name="ach_too_fast_running_name">Льюис Хэмилтон</string>
+    <string name="ach_too_fast_running_text">Обогнать жирную бабищу на пробежке</string>
+    <string name="ach_too_fast_running_chance">10</string>
+
+    <string name="ach_draw_on_top_of_other_art_name">Программа реновации</string>
+    <string name="ach_draw_on_top_of_other_art_text">Рисовать поверх чужих художеств</string>
+    <string name="ach_draw_on_top_of_other_art_chance">15</string>
+    <string name="ach_mister_proper_name">Лысый из «Мистера Пропера»</string>
+    <string name="ach_mister_proper_text">Заставили отмывать парту</string>
+    <string name="ach_mister_proper_chance">20</string>
+    <string name="ach_ivans_international_name">Рыжий из «Иванушек»</string>
+    <string name="ach_ivans_international_text">Случайно написать «Тополиный пух»</string>
+    <string name="ach_ivans_international_chance">3</string>
+    <string name="ach_poem_posted_by_teacher_name">Вы любите розы?</string>
+    <string name="ach_poem_posted_by_teacher_text">Стих запостила классуха</string>
+    <string name="ach_poem_posted_by_teacher_chance">10</string>
+    <string name="ach_girls_like_the_song_name">Куртка Бэйн</string>
+    <string name="ach_girls_like_the_song_text">Песня понравилась телочкам</string>
+    <string name="ach_girls_like_the_song_chance">7</string>
+
+    <!--Special achievements-->
+    <string name="ach_spartak_winner_name">Мясо</string>
+    <string name="ach_spartak_winner_text">Поддержать спартаковцев в драке</string>
+    <string name="ach_zenit_winner_name">Бомж</string>
+    <string name="ach_zenit_winner_text">Поддержать зенитовцев в драке</string>
+    <string name="ach_join_to_winners_name">Анатолий Вассерман</string>
+    <string name="ach_join_to_winners_text">Присоединиться к победителям</string>
+    <string name="ach_join_to_losers_name">Немец в 45-ом</string>
+    <string name="ach_join_to_losers_text">Присоединиться к проигрывающим</string>
+    <string name="ach_moms_businessman_name">Мамкин Брэнсон</string>
+    <string name="ach_moms_businessman_text">Сдать квартиру предков</string>
+    <string name="ach_moms_not_bussinessman_name">Славик, чё-то я очкую</string>
+    <string name="ach_moms_not_bussinessman_text">Не сдавать квартиру предков</string>
+
+    <!--Purchase achievements-->
+    <string name="ach_usual_bike_name">ВелосиПедик</string>
+    <string name="ach_usual_bike_text">Купить велик</string>
+    <string name="ach_mountain_bike_name">Горный козел</string>
+    <string name="ach_mountain_bike_text">Купить горный велик</string>
+
+    <string name="ach_previously_used_computer_name">Начинающий пекарь</string>
+    <string name="ach_previously_used_computer_text">Купить ноут на авито</string>
+    <string name="ach_xiaomi_mi_notebook_name">Топ за свои деньги</string>
+    <string name="ach_xiaomi_mi_notebook_text">Купить ноут Xiaomi</string>
+    <string name="ach_macbook_name">Калькулятор за $1300</string>
+    <string name="ach_macbook_text">Купить Макбук</string>
+
+    <string name="ach_ussr_guitar_name">Смерть соседям!</string>
+    <string name="ach_ussr_guitar_text">Купить советскую гитару</string>
+    <string name="ach_ural_guitar_name">Смерть вообще всем соседям!!!</string>
+    <string name="ach_ural_guitar_text">Купить гитару «Урал»</string>
+    <string name="ach_dual_neck_guitar_name">Мсье знает толк в извращениях …</string>
+    <string name="ach_dual_neck_guitar_text">Купить гитару с двумя грифами</string>
+
+
+    <!--Main menu-->
+    <string name="new_game">новая игра</string>
+    <string name="continue_game">продолжить игру</string>
+
+
+    <!--Achievement dialog-->
+    <string name="new_achievement">Открыто новое достижение!</string>
+    <string name="achievement_chance">Шанс:</string>
+    <string name="achievement_super_rare">очень редкое</string>
+    <string name="achievement_rare">редкое</string>
+    <string name="achievement_uncommon">необычное</string>
+    <string name="achievement_common">обычное</string>
+
+    <!--Toast messages-->
+    <string name="toast_not_passed">Не пройден курс</string>
+    <string name="toast_buy_previous">Купите предыдущий</string>
+    <string name="toast_buy_new_computer">Купите новый компьютер</string>
+    <string name="toast_double_neck_guitar_required">Нужна двухгрифовая гитара</string>
+    <string name="toast_fender_guitar_or_better_required">Нужна гитара Fender или лучше</string>
+    <string name="toast_yamaha_guitar_or_better_required">Нужна гитара Yamaha или лучше</string>
+    <string name="toast_ural_guitar_or_better_required">Нужна гитара Урал или лучше</string>
+    <string name="toast_ussr_guitar_or_better_required">Нужна советская гитара или лучше</string>
+    <string name="toast_buy_bike">Купите велосипед</string>
+
+    <!--Achievements activity-->
+    <string name="toolbar_achievements">Достижения</string>
+
+
+    <!--End game dialog-->
+    <string name="end_game_lose">Вы проиграли!</string>
+    <string name="end_game_played_time">Время игры:</string>
+    <string name="end_game_click_number">Количество кликов:</string>
+    <string name="end_game_favourite_action">Любимое действие:</string>
+    <string name="end_game_total_earnings">Всего заработано:</string>
+    <string name="end_game_earnings_in_doshirak">Заработано в дошираковом эквиваленте:</string>
+    <string name="end_game_total_achievements">Открыто достижений:</string>
+    <string name="end_game_go_to_main_menu">В главное меню</string>
+    <string name="end_game_times_number">раз</string>
+    <string name="end_game_seconds">сек</string>
+
+    <!--Months-->
+    <string name="months_january">Января</string>
+    <string name="months_february">Февраля</string>
+    <string name="months_march">Марта</string>
+    <string name="months_april">Апреля</string>
+    <string name="months_may">Мая</string>
+    <string name="months_june">Июня</string>
+    <string name="months_july">Июля</string>
+    <string name="months_august">Августа</string>
+    <string name="months_september">Сентября</string>
+    <string name="months_october">Октября</string>
+    <string name="months_november">Ноября</string>
+    <string name="months_december">Декабря</string>
+</resources>

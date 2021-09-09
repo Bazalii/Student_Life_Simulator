@@ -1,3 +1,479 @@
 <resources>
     <string name="app_name">School_live_simulator</string>
+   <!--For debug-->
+    <string name="game_activity_1">10000</string>
+    <string name="game_activity_2">10 september 2021</string>
+    <string name="fun_scr_1">Neutral actions</string>
+    <string name="fun_scr_2">Good actions</string>
+    <string name="fun_scr_3">Bad Actions</string>
+    <string name="fun_scr_4">Art</string>
+
+    <!--Bottom navigation-->
+    <string name="bot_nav_work">work</string>
+    <string name="bot_nav_school">school</string>
+    <string name="bot_nav_shop">shop</string>
+    <string name="bot_nav_fun">fun</string>
+    <string name="bot_nav_food">food</string>
+
+
+    <!--Progress bars-->
+    <string name="satietyProgressBar">Satiety</string>
+    <string name="happinessProgressBar">Happiness</string>
+    <string name="schoolPerformanceProgressBar">School performance</string>
+
+
+    <!--School folder-->
+    <string name="school_go_to_school">Go to school</string>
+    <string name="school_learn_yourself">Learn by yourself</string>
+    <string name="school_buy_cheatbook">Buy a cheatbook</string>
+    <string name="school_learn_from_a_student">Learn from a student</string>
+    <string name="school_sign_up_in_an_online_school">Sign up in an online school</string>
+    <string name="school_hire_a_good_tutor">Hire a good tutor</string>
+    <string name="school_study_with_uni_teacher">Study with a teacher from University</string>
+
+
+    <!--School stats-->
+    <string name="go_to_school_school_performance">+3</string>
+    <string name="go_to_school_money">0</string>
+    <string name="learn_yourself_school_performance">+50</string>
+    <string name="learn_yourself_money">-100</string>
+    <string name="buy_cheatbook_school_performance">+100</string>
+    <string name="buy_cheatbook_money">-300</string>
+    <string name="learn_from_student_school_performance">+250</string>
+    <string name="learn_from_student_money">-1000</string>
+    <string name="sign_up_in_an_online_school_school_performance">+15</string>
+    <string name="sign_up_in_an_online_school_money">-10000</string>
+    <string name="hire_a_good_tutor_school_performance">+600</string>
+    <string name="hire_a_good_tutor_money">-15000</string>
+    <string name="study_with_uni_teacher_school_performance">+1000</string>
+    <string name="study_with_uni_teacher_money">-25000</string>
+
+
+    <!--Food folder-->
+    <string name="food_eat_crackers">Eat some crackers</string>
+    <string name="food_eat_doshirack">Eat some noodles \"Doshirack\"</string>
+    <string name="food_eat_at_the_canteen">Eat at the school canteen</string>
+    <string name="food_eat_at_Mcdonalds">Eat at local McDonald\'s</string>
+    <string name="food_order_delivery">Order a food delivery</string>
+    <string name="food_go_to_the_restaurant">Go to the restaurant</string>
+
+    <!--Food stats-->
+    <string name="crackers_satiety">+25</string>
+    <string name="crackers_happiness">+50</string>
+    <string name="crackers_money">-10</string>
+    <string name="doshirack_satiety">+50</string>
+    <string name="doshirack_happiness">-100</string>
+    <string name="doshirack_money">-50</string>
+    <string name="eatery_food_satiety">+120</string>
+    <string name="eatery_food_happiness">-150</string>
+    <string name="eatery_food_money">-300</string>
+    <string name="mcdonalds_satiety">+200</string>
+    <string name="mcdonalds_happiness">-200</string>
+    <string name="mcdonalds_money">-1000</string>
+    <string name="pizza_at_home_satiety">+450</string>
+    <string name="pizza_at_home_happiness">+50</string>
+    <string name="pizza_at_home_money">-4000</string>
+    <string name="restaurant_food_satiety">+800</string>
+    <string name="restaurant_food_happiness">+500</string>
+    <string name="restaurant_food_money">-10000</string>
+
+
+    <!--Work folder-->
+    <string name="work_collect_change">Collect change on the street</string>
+    <string name="work_watch_ads">Watch online advertisement</string>
+    <string name="work_distribute_flyers">Distribute flyers</string>
+    <string name="work_as_a_greener">Work as a greener</string>
+    <string name="work_as_a_courier">Work as a courier</string>
+    <string name="work_as_a_courier_v0">Buy bicycle to work as a courier</string>
+    <string name="work_as_a_courier_v1">Work as a courier: Slow delivery</string>
+    <string name="work_as_a_courier_v2">Work as a courier: Normal Delivery</string>
+    <string name="work_as_a_courier_v3">Work as a courier: Fast Delivery</string>
+    <string name="work_as_an_operator">Work as a call center operator</string>
+    <string name="work_play_guitar">Play guitar</string>
+    <string name="work_play_guitar_v0">Pass course first to play guitar</string>
+    <string name="work_play_guitar_v1">Play guitar: on one chord</string>
+    <string name="work_play_guitar_v2">Play guitar: Sector Gaza with three chords</string>
+    <string name="work_play_guitar_v3">Play guitar: Smells like teen spirit</string>
+    <string name="work_play_guitar_v4">Play guitar: Jazz with a friend(trumpet musician)</string>
+    <string name="work_play_guitar_v5">Play guitar: Bach Das Wohltemperierte Klavier</string>
+    <string name="work_on_the_net">Work on the net</string>
+    <string name="work_on_the_net_v0">Pass course first to work on the net</string>
+    <string name="work_on_the_net_v1">Boost accounts in games</string>
+    <string name="work_on_the_net_v2">Promote instagram accounts</string>
+    <string name="work_on_the_net_v3">Make sites on wix</string>
+    <string name="work_on_the_net_v4">Work as a video editor</string>
+    <string name="work_on_the_net_v5">Work as a GameDev</string>
+
+    <!--Work stats-->
+    <string name="work_collect_change_income">+10</string>
+    <string name="work_collect_change_happiness">-10</string>
+    <string name="work_watch_ads_income">+100</string>
+    <string name="work_watch_ads_happiness">-20</string>
+    <string name="work_distribute_flyers_income">+200</string>
+    <string name="work_distribute_flyers_happiness">-40</string>
+    <string name="work_as_a_greener_income">+500</string>
+    <string name="work_as_a_greener_happiness">-50</string>
+    <string name="work_as_an_operator_income">+1000</string>
+    <string name="work_as_an_operator_happiness">-80</string>
+    <string name="work_as_a_courier_v1_income">+100</string>
+    <string name="work_as_a_courier_v1_happiness">-20</string>
+    <string name="work_as_a_courier_v2_income">+500</string>
+    <string name="work_as_a_courier_v2_happiness">-15</string>
+    <string name="work_as_a_courier_v3_income">+5000</string>
+    <string name="work_as_a_courier_v3_happiness">-10</string>
+    <string name="work_play_guitar_v1_income">+100</string>
+    <string name="work_play_guitar_v1_happiness">-10</string>
+    <string name="work_play_guitar_v2_income">+500</string>
+    <string name="work_play_guitar_v2_happiness">-10</string>
+    <string name="work_play_guitar_v3_income">+1000</string>
+    <string name="work_play_guitar_v3_happiness">-10</string>
+    <string name="work_play_guitar_v4_income">+2500</string>
+    <string name="work_play_guitar_v4_happiness">-10</string>
+    <string name="work_play_guitar_v5_income">+5000</string>
+    <string name="work_play_guitar_v5_happiness">-10</string>
+    <string name="work_on_the_net_v1_income">+100</string>
+    <string name="work_on_the_net_v1_happiness">-10</string>
+    <string name="work_on_the_net_v2_income">+500</string>
+    <string name="work_on_the_net_v2_happiness">-10</string>
+    <string name="work_on_the_net_v3_income">+2000</string>
+    <string name="work_on_the_net_v3_happiness">-10</string>
+    <string name="work_on_the_net_v4_income">+5000</string>
+    <string name="work_on_the_net_v4_happiness">-10</string>
+    <string name="work_on_the_net_v5_income">+15000</string>
+    <string name="work_on_the_net_v5_happiness">-10</string>
+
+
+    <!--Entertainment folder-->
+    <string name="fun_draw_on_desks">Draw on desks</string>
+    <string name="fun_draw_graffities">Draw graffities in school toilets</string>
+    <string name="fun_write_a_poem">Write a poem</string>
+    <string name="fun_make_something_handmade">Make something handmade</string>
+    <string name="fun_cover_a_song">Cover your favorite song</string>
+    <string name="fun_write_a_song">Write a song yourself</string>
+    <string name="fun_stream">Stream on twitch for 4 hours</string>
+    <string name="fun_make_a_youtube_video">Make a video for youtube</string>
+
+    <string name="fun_do_nothing">Do nothing</string>
+    <string name="fun_go_cycling">Go cycling</string>
+    <string name="fun_listen_to_the_music">Listen to the music</string>
+    <string name="fun_donate_and_play_computer">Donate and play computer</string>
+    <string name="fun_go_to_the_shopping_mall">Go with friends to the shopping mall</string>
+    <string name="fun_walk_with_your_girlfriend">Walk with your girlfriend</string>
+
+    <string name="fun_read_a_book">Read a book</string>
+    <string name="fun_help_youngsters_with_homework">Help youngsters with homework</string>
+    <string name="fun_do_sport">Do sport</string>
+    <string name="fun_play_guitar">Play guitar</string>
+    <string name="fun_go_to_the_theatre">Go to the theatre</string>
+    <string name="fun_go_to_the_concert">Go to the concert as a VIP</string>
+
+    <string name="fun_kick_a_trash_can">Kick a trash can</string>
+    <string name="fun_intimidate_youngsters">Intimidate elementary school students</string>
+    <string name="fun_upload_virus">Upload virus to school computer</string>
+    <string name="fun_use_chat_roulette">Cam2cam in chat roulette(???)</string>
+    <string name="fun_have_a_party">Have a party at home</string>
+    <string name="fun_go_to_the_club">Go to the club(???)</string>
+
+    <!--Entertainment stats-->
+    <string name="fun_draw_on_desks_price">0</string>
+    <string name="fun_draw_on_desks_happiness">+30</string>
+    <string name="fun_draw_graffities_price">+10</string>
+    <string name="fun_draw_graffities_happiness">+10</string>
+    <string name="fun_write_a_poem_price">0</string>
+    <string name="fun_write_a_poem_happiness">+70</string>
+    <string name="fun_make_something_handmade_price">-500</string>
+    <string name="fun_make_something_handmade_happiness">+150</string>
+    <string name="fun_cover_a_song_price">0</string>
+    <string name="fun_cover_a_song_happiness">+150</string>
+    <string name="fun_write_a_song_price">+3000</string>
+    <string name="fun_write_a_song_happiness">+100</string>
+    <string name="fun_stream_price">+5000</string>
+    <string name="fun_stream_happiness">-100</string>
+    <string name="fun_make_a_youtube_video_price">+10000</string>
+    <string name="fun_make_a_youtube_video_happiness">+10000</string>
+
+    <string name="fun_do_nothing_price">0</string>
+    <string name="fun_do_nothing_happiness">+50</string>
+    <string name="fun_go_cycling_price">0</string>
+    <string name="fun_go_cycling_happiness">+100</string>
+    <string name="fun_listen_to_the_music_price">-169</string>
+    <string name="fun_listen_to_the_music_happiness">+10</string>
+    <string name="fun_donate_and_play_computer_price">-1000</string>
+    <string name="fun_donate_and_play_computer_happiness">+300</string>
+    <string name="fun_go_to_the_shopping_mall_price">-10000</string>
+    <string name="fun_go_to_the_shopping_mall_happiness">+500</string>
+    <string name="fun_walk_with_your_girlfriend_price">-20000</string>
+    <string name="fun_walk_with_your_girlfriend_happiness">+800</string>
+
+    <string name="fun_read_a_book_price">0</string>
+    <string name="fun_read_a_book_happiness">+30</string>
+    <string name="fun_help_youngsters_with_homework_price">0</string>
+    <string name="fun_help_youngsters_with_homework_happiness">+50</string>
+    <string name="fun_do_sport_price">-1500</string>
+    <string name="fun_do_sport_happiness">+100</string>
+    <string name="fun_play_guitar_price">-5000</string>
+    <string name="fun_play_guitar_happiness">+150</string>
+    <string name="fun_go_to_the_theatre_price">-4000</string>
+    <string name="fun_go_to_the_theatre_happiness">+300</string>
+    <string name="fun_go_to_the_concert_price">-10000</string>
+    <string name="fun_go_to_the_concert_happiness">+700</string>
+
+    <string name="fun_kick_a_trash_can_price">0</string>
+    <string name="fun_kick_a_trash_can_happiness">+70</string>
+    <string name="fun_intimidate_youngsters_price">+150</string>
+    <string name="fun_intimidate_youngsters_happiness">+100</string>
+    <string name="fun_upload_virus_price">0</string>
+    <string name="fun_upload_virus_happiness">+250</string>
+    <string name="fun_use_chat_roulette_price">-5000</string>
+    <string name="fun_use_chat_roulette_happiness">+450</string>
+    <string name="fun_have_a_party_price">-10000</string>
+    <string name="fun_have_a_party_happiness">+600</string>
+    <string name="fun_go_to_the_club_price">-20000</string>
+    <string name="fun_go_to_the_club_happiness">+1000</string>
+
+
+    <!--Shop folder-->
+    <string name="shop_guitar_course">Guitar courses</string>
+    <string name="shop_guitar_course_v1">Learn from a bum at the yard</string>
+    <string name="shop_guitar_course_v2">First song course</string>
+    <string name="shop_guitar_course_v3">Learn from a neighbour at the yard</string>
+    <string name="shop_guitar_course_v4">Enroll in the music school</string>
+    <string name="shop_guitar_course_v5">Enroll in conservatory courses</string>
+
+    <string name="shop_computer_course">Computer courses</string>
+    <string name="shop_computer_course_v1">Friend\'s course</string>
+    <string name="shop_computer_course_v2">Online webinars</string>
+    <string name="shop_computer_course_v3">Online web design courses</string>
+    <string name="shop_computer_course_v4">Video editing courses</string>
+    <string name="shop_computer_course_v5">GameDev courses</string>
+
+    <string name="shop_bicycle">Bicycles</string>
+    <string name="shop_ussr_bicycle">USSR bicycle</string>
+    <string name="shop_usual_bicycle">Usual bicycle</string>
+    <string name="shop_mountain_bicycle">Mountain bicycle</string>
+
+    <string name="shop_guitar">Guitars</string>
+    <string name="shop_ussr_guitar">USSR guitar</string>
+    <string name="shop_ural_guitar">Ural guitar</string>
+    <string name="shop_yamaha_guitar">Yamaha guitar</string>
+    <string name="shop_fender_guitar">Fender guitar</string>
+    <string name="shop_double_neck_guitar">Double Neck guitar</string>
+
+    <string name="shop_computer">Computers</string>
+    <string name="shop_previously_used_computer">Previously used computer</string>
+    <string name="shop_old_computer">Old computer</string>
+    <string name="shop_usual_computer">Usual computer</string>
+    <string name="shop_xiaomi_computer">Xiaomi Mi Notebook</string>
+    <string name="shop_macbook_computer">Apple Macbook</string>
+
+    <!--Shop stats-->
+    <string name="shop_ussr_bicycle_price">-2000</string>
+    <string name="shop_usual_bicycle_price">-10000</string>
+    <string name="shop_mountain_bicycle_price">-40000</string>
+
+    <string name="shop_ussr_guitar_price">-1000</string>
+    <string name="shop_ural_guitar_price">-5000</string>
+    <string name="shop_yamaha_guitar_price">-12000</string>
+    <string name="shop_fender_guitar_price">-40000</string>
+    <string name="shop_double_neck_guitar_price">-150000</string>
+
+    <string name="shop_previously_used_computer_price">-3000</string>
+    <string name="shop_old_computer_price">-10000</string>
+    <string name="shop_usual_computer_price">-30000</string>
+    <string name="shop_xiaomi_computer_price">-60000</string>
+    <string name="shop_macbook_computer_price">-200000</string>
+
+    <string name="shop_computer_course_v1_price">0</string>
+    <string name="shop_computer_course_v2_price">-100</string>
+    <string name="shop_computer_course_v3_price">-300</string>
+    <string name="shop_computer_course_v4_price">-900</string>
+    <string name="shop_computer_course_v5_price">-2700</string>
+
+    <string name="shop_guitar_course_v1_price">0</string>
+    <string name="shop_guitar_course_v2_price">-100</string>
+    <string name="shop_guitar_course_v3_price">-300</string>
+    <string name="shop_guitar_course_v4_price">-900</string>
+    <string name="shop_guitar_course_v5_price">-2700</string>
+
+    <!--Achievements info-->
+    <!--Random achievements-->
+    <string name="ach_wrong_chords_name">Autistic Guitarist</string>
+    <string name="ach_wrong_chords_text">Get punched in the face for wrong chords</string>
+    <string name="ach_wrong_chords_chance">5</string>
+    <string name="ach_company_around_name">Convener</string>
+    <string name="ach_company_around_text">A company has gathered around you</string>
+    <string name="ach_company_around_chance">5</string>
+
+    <string name="ach_drunk_student_name">Rare Kozel</string>
+    <string name="ach_drunk_student_text">Do homework with a drunken student</string>
+    <string name="ach_drunk_student_chance">10</string>
+    <string name="ach_par_about_reproductive_name">Mama said I would become a doctor</string>
+    <string name="ach_par_about_reproductive_text">Stumble upon the paragraph on the genitals</string>
+    <string name="ach_par_about_reproductive_chance">8</string>
+    <string name="ach_old_answer_book_name">One spoon of fine print kills a horse</string>
+    <string name="ach_old_answer_book_text">The answer book turned out to be out of date</string>
+    <string name="ach_old_answer_book_chance">15</string>
+    <string name="ach_fall_asleep_at_webinar_name">Online education is a fraud</string>
+    <string name="ach_fall_asleep_at_webinar_text">Fall asleep at the webinar</string>
+    <string name="ach_fall_asleep_at_webinar_chance">20</string>
+    <string name="ach_stories_about_ussr_name">It used to be better</string>
+    <string name="ach_stories_about_ussr_text">Listen to the teacher\'s stories about the USSR</string>
+    <string name="ach_stories_about_ussr_chance">15</string>
+
+    <string name="ach_two_spices_name">S.P.E.C.I.A.L. : 0–0–0–0–0–0–99999</string>
+    <string name="ach_two_spices_text">Find 2 cheese sauce mixes in Kraft Mac N\' Cheese</string>
+    <string name="ach_two_spices_chance">3</string>
+    <string name="ach_poisoning_of_eatery_food_name">Life Winner (nah)</string>
+    <string name="ach_poisoning_of_eatery_food_text">Get poisoned in the school cafeteria</string>
+    <string name="ach_poisoning_of_eatery_food_chance">5</string>
+
+    <string name="ach_cam2cam_trap_name">Girl with surprise</string>
+    <string name="ach_cam2cam_trap_text">Get into cam2cam with shemale</string>
+    <string name="ach_cam2cam_trap_chance">1</string>
+    <string name="ach_get_ban_name">Trash Talker</string>
+    <string name="ach_get_ban_text">Get banned in chat</string>
+    <string name="ach_get_ban_chance">60</string>
+    <string name="ach_be_reported_by_children_name">Another such trick, and this stick …</string>
+    <string name="ach_be_reported_by_children_text">The kids snitched on you</string>
+    <string name="ach_be_reported_by_children_chance">2</string>
+    <string name="ach_bottle_flip_name">Bottle flip challenge</string>
+    <string name="ach_bottle_flip_text">Trash doing a flip</string>
+    <string name="ach_bottle_flip_chance">10</string>
+    <string name="ach_future_pimp_name">Future pimp</string>
+    <string name="ach_future_pimp_text">Meet a beautiful classmate in a strip club</string>
+    <string name="ach_future_pimp_chance">5</string>
+    <string name="ach_future_gay_pimp_name">Future gay pimp</string>
+    <string name="ach_future_gay_pimp_text">Meet an ugly classmate at a strip club</string>
+    <string name="ach_future_gay_pimp_chance">10</string>
+    <string name="ach_friend_in_theatre_name">Pseudo-intelligentsia</string>
+    <string name="ach_friend_in_theatre_text">Meet a Bully Friend at the Theater</string>
+    <string name="ach_friend_in_theatre_chance">5</string>
+    <string name="ach_moms_hacker_name">Mom\'s hacker</string>
+    <string name="ach_moms_hacker_text">Find photos from the teacher\'s bender</string>
+    <string name="ach_moms_hacker_chance">8</string>
+    <string name="ach_evacuate_from_shop_centre_name">The trolleybus is on fire - give a …</string>
+    <string name="ach_evacuate_from_shop_centre_text">Evacuate from the shopping center</string>
+    <string name="ach_evacuate_from_shop_centre_chance">3</string>
+    <string name="ach_sex_scene_in_book_name">Preoccupied housewife</string>
+    <string name="ach_sex_scene_in_book_text">Find a sex scene in a book</string>
+    <string name="ach_sex_scene_in_book_chance">3</string>
+    <string name="ach_get_tip_from_youngs_name">Living wage</string>
+    <string name="ach_get_tip_from_youngs_text">Youngsters threw you a tip</string>
+    <string name="ach_get_tip_from_youngs_chance">5</string>
+    <string name="ach_destroyed_house_name">The Hangover</string>
+    <string name="ach_destroyed_house_text">During the party, your house was demolished</string>
+    <string name="ach_destroyed_house_chance">2</string>
+    <string name="ach_photo_with_vocalist_name">Beginner paparazzi</string>
+    <string name="ach_photo_with_vocalist_text">Take a selfie with the vocalist</string>
+    <string name="ach_photo_with_vocalist_chance">5</string>
+    <string name="ach_too_fast_running_name">Lewis Hamilton</string>
+    <string name="ach_too_fast_running_text">Outrun a fat woman on a jog</string>
+    <string name="ach_too_fast_running_chance">10</string>
+
+    <string name="ach_draw_on_top_of_other_art_name">Renovation program</string>
+    <string name="ach_draw_on_top_of_other_art_text">Draw on top of the other art</string>
+    <string name="ach_draw_on_top_of_other_art_chance">15</string>
+    <string name="ach_mister_proper_name">Bald from "Mister Proper"</string>
+    <string name="ach_mister_proper_text">You were forced to wash your desk</string>
+    <string name="ach_mister_proper_chance">20</string>
+    <string name="ach_ivans_international_name">Paul McCartney</string>
+    <string name="ach_ivans_international_text">Accidentally write "Yesterday"</string>
+    <string name="ach_ivans_international_chance">3</string>
+    <string name="ach_poem_posted_by_teacher_name">Do you love roses?</string>
+    <string name="ach_poem_posted_by_teacher_text">The verse was posted by the class teacher</string>
+    <string name="ach_poem_posted_by_teacher_chance">10</string>
+    <string name="ach_girls_like_the_song_name">Kurt Cobain</string>
+    <string name="ach_girls_like_the_song_text">Girls liked the song</string>
+    <string name="ach_girls_like_the_song_chance">7</string>
+
+    <!--Special achievements-->
+    <string name="ach_spartak_winner_name">Meat</string>
+    <string name="ach_spartak_winner_text">Support Spartacus in a fight</string>
+    <string name="ach_zenit_winner_name">Stray</string>
+    <string name="ach_zenit_winner_text">Support Zenit in the fight</string>
+    <string name="ach_join_to_winners_name">200iq move</string>
+    <string name="ach_join_to_winners_text">Join the winners</string>
+    <string name="ach_join_to_losers_name">Bravery and stupidity</string>
+    <string name="ach_join_to_losers_text">Join the losers</string>
+    <string name="ach_moms_businessman_name">Mom\'s businessman</string>
+    <string name="ach_moms_businessman_text">Rent out the apartment of the parents</string>
+    <string name="ach_moms_not_bussinessman_name">Chickenshit</string>
+    <string name="ach_moms_not_bussinessman_text">Do not rent out the parents\' apartment</string>
+
+    <!--Purchase achievements-->
+    <string name="ach_usual_bike_name">Young cyclist</string>
+    <string name="ach_usual_bike_text">Buy a bicycle</string>
+    <string name="ach_mountain_bike_name">Mountain goat</string>
+    <string name="ach_mountain_bike_text">Buy a mountain bike</string>
+
+    <string name="ach_previously_used_computer_name">сlick lover</string>
+    <string name="ach_previously_used_computer_text">Buy a laptop on ebay</string>
+    <string name="ach_xiaomi_mi_notebook_name">The best for its price</string>
+    <string name="ach_xiaomi_mi_notebook_text">Buy Xiaomi laptop</string>
+    <string name="ach_macbook_name">Calculator for $1300</string>
+    <string name="ach_macbook_text">Buy MacBook</string>
+
+    <string name="ach_ussr_guitar_name">Death to the neighbors!</string>
+    <string name="ach_ussr_guitar_text">Buy a Soviet guitar</string>
+    <string name="ach_ural_guitar_name">Death to ALL neighbors</string>
+    <string name="ach_ural_guitar_text">Buy guitar "Ural"</string>
+    <string name="ach_dual_neck_guitar_name">Monsieur knows a lot about perversions …</string>
+    <string name="ach_dual_neck_guitar_text">Buy a guitar with 2 necks</string>
+
+
+    <!--Main menu-->
+    <string name="new_game">new game</string>
+    <string name="continue_game">continue game</string>
+
+
+    <!--Achievement dialog-->
+    <string name="new_achievement">You got a new achievement!</string>
+    <string name="achievement_chance">chance:</string>
+    <string name="achievement_super_rare">super rare</string>
+    <string name="achievement_rare">rare</string>
+    <string name="achievement_uncommon">uncommon</string>
+    <string name="achievement_common">common</string>
+
+
+    <!--Toast messages-->
+    <string name="toast_not_passed">Course is not passed yet</string>
+    <string name="toast_buy_previous">Buy previous</string>
+    <string name="toast_buy_new_computer">buy new computer</string>
+    <string name="toast_double_neck_guitar_required">Double neck guitar is required</string>
+    <string name="toast_fender_guitar_or_better_required">Fender guitar or better is required</string>
+    <string name="toast_yamaha_guitar_or_better_required">Yamaha guitar or better is required</string>
+    <string name="toast_ural_guitar_or_better_required">Ural guitar or better is required</string>
+    <string name="toast_ussr_guitar_or_better_required">USSR guitar or better is required</string>
+    <string name="toast_buy_bike">Buy bike</string>
+
+
+    <!--Achievements activity-->
+    <string name="toolbar_achievements">Achievements</string>
+
+
+    <!--End game dialog-->
+    <string name="end_game_lose">You lose!</string>
+    <string name="end_game_played_time">Played time:</string>
+    <string name="end_game_click_number">Click number:</string>
+    <string name="end_game_favourite_action">Favourite action:</string>
+    <string name="end_game_total_earnings">Total earnings:</string>
+    <string name="end_game_earnings_in_doshirak">Earnings in doshirak:</string>
+    <string name="end_game_total_achievements">Total achievements:</string>
+    <string name="end_game_go_to_main_menu">Go to main menu</string>
+    <string name="end_game_times_number">times</string>
+    <string name="end_game_seconds">sec</string>
+
+    <!--Months-->
+    <string name="months_january">January</string>
+    <string name="months_february">February</string>
+    <string name="months_march">March</string>
+    <string name="months_april">April</string>
+    <string name="months_may">May</string>
+    <string name="months_june">June</string>
+    <string name="months_july">July</string>
+    <string name="months_august">August</string>
+    <string name="months_september">September</string>
+    <string name="months_october">October</string>
+    <string name="months_november">November</string>
+    <string name="months_december">December</string>
 </resources>

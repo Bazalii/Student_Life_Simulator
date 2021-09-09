@@ -1,11 +1,18 @@
 package android.clicker.school_live_simulator
 
-open class UralGuitarState : UssrGuitarState() {
+import kotlinx.serialization.Serializable
+
+@Serializable
+open class UralGuitarState : GuitarState() {
+
+    @kotlinx.serialization.Transient
     override val price: Int = 5000
 
-    init {
-        available_courses.add(FirstSongCourseState::class)
-    }
+    @kotlinx.serialization.Transient
+    override val available_courses = arrayListOf(
+        YardGuitarCourseState(),
+        FirstSongCourseState()
+    )
 
     override fun changeState(bag: Player.Bag) {
         bag.guitar = YamahaGuitarState()

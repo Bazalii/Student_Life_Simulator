@@ -1,7 +1,7 @@
 package android.clicker.school_live_simulator
 
-enum class Delivery(val salary: Int) {
-    SLOW_DELIVERY(100),
-    USUAL_DELIVERY(500),
-    FAST_DELIVERY(5000)
+enum class Delivery(val money_diff: Int) {
+    SLOW_DELIVERY(Game.context_bundle.getNumber("work_as_a_courier_v1_income")),
+    USUAL_DELIVERY(Game.context_bundle.getNumber("work_as_a_courier_v2_income")),
+    FAST_DELIVERY(Game.context_bundle.getNumber("work_as_a_courier_v3_income"))
 }

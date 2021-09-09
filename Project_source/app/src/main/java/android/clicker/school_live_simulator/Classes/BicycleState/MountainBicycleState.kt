@@ -1,11 +1,14 @@
 package android.clicker.school_live_simulator
 
-class MountainBicycleState : UsualBicycleState() {
+import kotlinx.serialization.Serializable
+
+@Serializable
+class MountainBicycleState : BicycleState() {
+
+    @kotlinx.serialization.Transient
     override val price = 40000
 
-    init {
-        available_delivery.add(Delivery.FAST_DELIVERY)
-    }
+    override val best_delivery: Delivery? = Delivery.FAST_DELIVERY
 
     override fun changeState(bag: Player.Bag) {}
 }

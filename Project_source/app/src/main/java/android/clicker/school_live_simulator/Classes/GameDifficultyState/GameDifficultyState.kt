@@ -1,5 +1,8 @@
 package android.clicker.school_live_simulator
 
-abstract class GameDifficultyState {
-    abstract protected fun checkDefeat()
+import kotlinx.serialization.Serializable
+
+@Serializable
+sealed class GameDifficultyState {
+    protected abstract fun checkDefeat()
 }

@@ -1,10 +1,14 @@
 package android.clicker.school_live_simulator
 
+import android.clicker.school_live_simulator.Classes.IsNotAvailableException
+import kotlinx.serialization.Serializable
+
+@Serializable
 abstract class GuitarCourseState: StudyCourseState() {
     /**
      * List of all available songs to play
      */
-    protected val available_playlist: ArrayList<Song> = arrayListOf()
+    protected abstract var best_song: Song?
 
     /**
      * Function checks if the song is available to play
@@ -12,7 +16,8 @@ abstract class GuitarCourseState: StudyCourseState() {
      * @param   song    name of the song
      * @return          song availability (true/false)
      */
-    open fun isAvailable(song: Song): Boolean {
-        return available_playlist.contains(song)
+    fun BestSong(): Song {
+        return best_song ?: throw IsNotAvailableException("song is not available!")
     }
+
 }

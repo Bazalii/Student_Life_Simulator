@@ -1,9 +1,19 @@
 package android.clicker.school_live_simulator
 
-open class OnlineWorkCourseState : FriendsCourseState () {
+import kotlinx.serialization.Serializable
+
+@Serializable
+open class OnlineWorkCourseState : ComputerCourseState() {
+
+    @kotlinx.serialization.Transient
     override val price: Int = 100
 
-    override fun buyNexCourse(courses: Player.Courses) {
+    override var best_web_task: WebTask? = null
+
+    @kotlinx.serialization.Transient
+    override val course_length: Int = 30
+
+    override fun buyNextCourse(courses: Player.Courses) {
         courses.computer_course = WebDesignCourseState()
     }
 
@@ -11,6 +21,6 @@ open class OnlineWorkCourseState : FriendsCourseState () {
 
     }
     override fun timerEndHandler(){
-        available_web_task.add(WebTask.PUBLIC_PR)
+        this.best_web_task = WebTask.PUBLIC_PR
     }
 }

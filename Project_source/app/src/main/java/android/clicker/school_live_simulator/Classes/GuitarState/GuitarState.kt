@@ -1,10 +1,13 @@
 package android.clicker.school_live_simulator
 
+import kotlinx.serialization.Contextual
+import kotlinx.serialization.Serializable
 import kotlin.reflect.KClass
 
+@Serializable
 abstract class GuitarState {
     abstract val price: Int
-    protected val available_courses: ArrayList<KClass<*>> = arrayListOf()
+    protected abstract val available_courses: ArrayList<GuitarCourseState>
 
     /**
      * Updates the state of the purchased guitar.
@@ -19,7 +22,8 @@ abstract class GuitarState {
      * @param    courseName  name of the course
      * @return               course availability (true/false)
      */
-    open fun isAvailable(courseName: KClass<*>): Boolean {
-        return available_courses.contains(courseName)
+    open fun isAvailable(course_name: GuitarCourseState): Boolean {
+        for (i in available_courses) if (i::class == course_name::class) return true
+        return false
     }
 }

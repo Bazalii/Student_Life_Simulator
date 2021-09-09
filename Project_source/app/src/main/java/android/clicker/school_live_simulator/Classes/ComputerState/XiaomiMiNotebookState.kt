@@ -1,11 +1,20 @@
 package android.clicker.school_live_simulator
 
-open class XiaomiMiNotebookState : UsualComputerState() {
+import kotlinx.serialization.Serializable
+
+@Serializable
+open class XiaomiMiNotebookState : ComputerState() {
+
+    @kotlinx.serialization.Transient
     override val price: Int = 60000
 
-    init {
-        available_courses.add(VideoEditingCourseState::class)
-    }
+    @kotlinx.serialization.Transient
+    override val available_courses = arrayListOf(
+        FriendsCourseState(),
+        OnlineWorkCourseState(),
+        WebDesignCourseState(),
+        VideoEditingCourseState()
+    )
 
     override fun changeState(bag: Player.Bag) {
         bag.computer = MacbookState()

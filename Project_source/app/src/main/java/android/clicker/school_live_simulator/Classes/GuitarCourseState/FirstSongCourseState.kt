@@ -1,7 +1,17 @@
 package android.clicker.school_live_simulator
 
-open class FirstSongCourseState: YardGuitarCourseState() {
+import kotlinx.serialization.Serializable
+
+@Serializable
+open class FirstSongCourseState : GuitarCourseState() {
+
+    @kotlinx.serialization.Transient
     override val price: Int = 100
+
+    override var best_song: Song? = null
+
+    @kotlinx.serialization.Transient
+    override val course_length: Int = 30
 
     override fun buyNextCourse(courses: Player.Courses) {
         courses.guitar_course = YardSongCourseState()
@@ -12,6 +22,6 @@ open class FirstSongCourseState: YardGuitarCourseState() {
     }
 
     override fun timerEndHandler() {
-        available_playlist.add(Song.SMELLS_LIKE)
+        this.best_song = Song.GAZ_SECTOR
     }
 }

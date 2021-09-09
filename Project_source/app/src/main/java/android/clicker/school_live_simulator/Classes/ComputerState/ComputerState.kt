@@ -1,5 +1,11 @@
 package android.clicker.school_live_simulator
 
+import android.clicker.school_live_simulator.Classes.IsNotAvailableException
+import kotlinx.serialization.Contextual
+import kotlinx.serialization.Serializable
+import kotlin.reflect.KClass
+
+@Serializable
 abstract class ComputerState {
 
     /**
@@ -12,7 +18,7 @@ abstract class ComputerState {
      * This is a list of available courses for Player
      */
 
-    protected val available_courses: ArrayList<KClass<*>> = arrayListOf<KClass<*>>()
+    protected abstract val available_courses: ArrayList<ComputerCourseState>
 
     /**
      * This is a function to change computer
@@ -28,8 +34,8 @@ abstract class ComputerState {
      * @return True if the course is available
      */
 
-    fun isAvailable(course_name: KClass<*>): Boolean {
-        return course_name in available_courses
+    fun isAvailable(course_name: ComputerCourseState): Boolean {
+        for (i in available_courses) if (i::class == course_name::class) return true
+        return false
     }
-
 }
