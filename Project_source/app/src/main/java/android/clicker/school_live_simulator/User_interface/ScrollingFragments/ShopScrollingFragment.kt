@@ -23,6 +23,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.constraintlayout.widget.ConstraintLayout
+import androidx.core.content.ContextCompat.getColor
 import androidx.fragment.app.Fragment
 
 class ShopScrollingFragment : Fragment() {
@@ -727,7 +728,7 @@ class ShopScrollingFragment : Fragment() {
 
     }
     fun canBuy(button: Button, layout: ConstraintLayout, image_view: ImageView, text_view: TextView){
-        layout.setBackgroundColor(selectableItemBackground)
+        layout.setBackgroundColor(getColor(activity as GameActivity, R.color.main_can_buy))
         image_view.setImageResource(R.drawable.ic_money)
         text_view.visibility = VISIBLE
     }

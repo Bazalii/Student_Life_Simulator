@@ -76,7 +76,8 @@ class Player {
     /**
      * Player's class at school
      */
-    private var school_class: Int = 1
+     var school_class: Int = 1
+        private set
 
     /**
      * All the items that player has last bought: bicycle, guitar and computer
