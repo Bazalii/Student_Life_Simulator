@@ -173,12 +173,23 @@ class GameActivity : AppCompatActivity() {
     fun updateStats(){
         if (Game.player.dead()) death()
 
-        ObjectAnimator.ofInt(binding.satietyProgressBar, "progress", Game.player.satiety).setDuration(300).start();
-        ObjectAnimator.ofInt(binding.happinessProgressBar, "progress", Game.player.happiness).setDuration(300).start();
-        ObjectAnimator.ofInt(binding.schoolPerformanceProgressBar, "progress", Game.player.school_performance).setDuration(300).start();
+        binding.currentSchoolClass.text = "${Game.player.school_class} ${getString(R.string.current_school_class)}"
+        /**
+         * Animation for progressbars changes
+         */
+        ObjectAnimator.ofInt(binding.satietyProgressBar, "progress", Game.player.satiety).setDuration(200).start();
+        ObjectAnimator.ofInt(binding.happinessProgressBar, "progress", Game.player.happiness).setDuration(200).start();
+        ObjectAnimator.ofInt(binding.schoolPerformanceProgressBar, "progress", Game.player.school_performance).setDuration(200).start();
 
         /**
-         * these assignments don't influence on animation
+         * Set current stats values
+         */
+        binding.satietyStat.text = Game.player.satiety.toString()
+        binding.happinessStat.text = Game.player.happiness.toString()
+        binding.schoolPerformanceStat.text = Game.player.school_performance.toString()
+
+        /**
+         * Set progressbars values
          */
         binding.satietyProgressBar.progress = Game.player.satiety
         binding.happinessProgressBar.progress = Game.player.happiness
@@ -193,6 +204,7 @@ class GameActivity : AppCompatActivity() {
         binding.happinessProgressBar.progressTintList = ColorStateList.valueOf(HSLToColor(floatArrayOf(120-colorHappiness, 1f , 0.5f)))
         binding.satietyProgressBar.progressTintList = ColorStateList.valueOf(HSLToColor(floatArrayOf(120-colorSatiety, 1f , 0.5f)))
         binding.schoolPerformanceProgressBar.progressTintList = ColorStateList.valueOf(HSLToColor(floatArrayOf(120-colorSchoolPerformance, 1f , 0.5f)))
+
         changeMoneyAnimation(binding.moneyTextView.text.toString().toInt(), Game.player.money)
         binding.dateTextView.text = Game.game_date.toString()
     }
@@ -339,5 +351,8 @@ class GameActivity : AppCompatActivity() {
             }
             true
         }
+    }
+    fun onSettingsClick(view: View){
+        finish()
     }
 }

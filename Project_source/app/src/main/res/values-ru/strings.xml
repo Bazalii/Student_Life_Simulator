@@ -474,4 +474,7 @@
     <string name="months_october">Октября</string>
     <string name="months_november">Ноября</string>
     <string name="months_december">Декабря</string>
+
+
+    <string name="current_school_class">класс</string>
 </resources>

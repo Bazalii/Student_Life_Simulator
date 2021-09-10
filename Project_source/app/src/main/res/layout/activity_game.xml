@@ -87,8 +87,6 @@
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/satietyProgressBar"
-        app:layout_constraintEnd_toEndOf="@+id/satietyProgressBar"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/satietyProgressBar"
         app:layout_constraintTop_toTopOf="@+id/satietyProgressBar" />
 
@@ -101,7 +99,6 @@
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/happinessProgressBar"
-        app:layout_constraintEnd_toEndOf="@+id/happinessProgressBar"
         app:layout_constraintStart_toStartOf="@+id/happinessProgressBar"
         app:layout_constraintTop_toTopOf="@+id/happinessProgressBar" />
 
@@ -114,7 +111,6 @@
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/schoolPerformanceProgressBar"
-        app:layout_constraintEnd_toEndOf="@+id/schoolPerformanceProgressBar"
         app:layout_constraintStart_toStartOf="@+id/schoolPerformanceProgressBar"
         app:layout_constraintTop_toTopOf="@+id/schoolPerformanceProgressBar" />
 
@@ -144,7 +140,8 @@
             android:layout_weight="1"
             android:backgroundTint="@color/main_button_background"
             android:elevation="7dp"
-            app:srcCompat="@drawable/ic_settings" />
+            android:onClick="onSettingsClick"
+            app:srcCompat="@drawable/ic_home" />
     </LinearLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -217,5 +214,54 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/horizontalGuideline"
         app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/satietyStat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="TextView"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/satietyProgressBar"
+        app:layout_constraintEnd_toEndOf="@+id/satietyProgressBar"
+        app:layout_constraintTop_toTopOf="@+id/satietyProgressBar" />
+
+    <TextView
+        android:id="@+id/happinessStat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="TextView"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/happinessProgressBar"
+        app:layout_constraintEnd_toEndOf="@+id/happinessProgressBar"
+        app:layout_constraintTop_toTopOf="@+id/happinessProgressBar" />
+
+    <TextView
+        android:id="@+id/schoolPerformanceStat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="TextView"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/schoolPerformanceProgressBar"
+        app:layout_constraintEnd_toEndOf="@+id/schoolPerformanceProgressBar"
+        app:layout_constraintTop_toTopOf="@+id/schoolPerformanceProgressBar" />
+
+    <TextView
+        android:id="@+id/currentSchoolClass"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:gravity="center"
+        android:text="1 grade"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/horizontalGuideline"
+        app:layout_constraintEnd_toStartOf="@+id/verticalGuideline"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -476,4 +476,7 @@
     <string name="months_october">October</string>
     <string name="months_november">November</string>
     <string name="months_december">December</string>
+
+
+    <string name="current_school_class">grade</string>
 </resources>

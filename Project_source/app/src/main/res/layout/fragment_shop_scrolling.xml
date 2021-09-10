@@ -17,6 +17,7 @@
             android:id="@+id/shopGuitarCourses"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:backgroundTint="@color/main_category_buttons"
             android:drawableEnd="@drawable/ic_drop_down_up"
             android:text="@string/shop_guitar_course" />
 
@@ -415,6 +416,7 @@
             android:id="@+id/shopComputerCourses"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:backgroundTint="@color/main_category_buttons"
             android:drawableEnd="@drawable/ic_drop_down_up"
             android:text="@string/shop_computer_course" />
 
@@ -813,6 +815,7 @@
             android:id="@+id/shopBicycles"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:backgroundTint="@color/main_category_buttons"
             android:drawableEnd="@drawable/ic_drop_down_up"
             android:text="@string/shop_bicycle" />
 
@@ -875,7 +878,6 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="@+id/guideline18"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.0"
                 app:srcCompat="@drawable/ic_lock" />
 
             <TextView
@@ -1055,6 +1057,7 @@
             android:id="@+id/shopGuitars"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:backgroundTint="@color/main_category_buttons"
             android:drawableEnd="@drawable/ic_drop_down_up"
             android:text="@string/shop_guitar" />
 
@@ -1452,6 +1455,7 @@
             android:id="@+id/shopComputers"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:backgroundTint="@color/main_category_buttons"
             android:drawableEnd="@drawable/ic_drop_down_up"
             android:text="@string/shop_computer" />
 
