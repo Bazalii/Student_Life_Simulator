@@ -3,10 +3,10 @@
     <!--For debug-->
     <string name="game_activity_1">10000</string>
     <string name="game_activity_2">10 september 2021</string>
-    <string name="fun_scr_1">Neutral actions</string>
-    <string name="fun_scr_2">Good actions</string>
-    <string name="fun_scr_3">Bad Actions</string>
-    <string name="fun_scr_4">Art</string>
+    <string name="fun_scr_1">Обычные занятия</string>
+    <string name="fun_scr_2">Одобрительные занятия</string>
+    <string name="fun_scr_3">Хулиганить</string>
+    <string name="fun_scr_4">Творчество</string>
 
     <!--Bottom navigation-->
     <string name="bot_nav_work">Работа</string>

@@ -18,7 +18,9 @@
             android:id="@+id/funNeutralActions"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:drawableEnd="@drawable/ic_drop_down_up"
+            android:backgroundTint="@color/common"
+            android:drawableLeft="@drawable/ic_neutral_actions"
+            android:drawableRight="@drawable/ic_drop_down_up"
             android:elevation="10dp"
             android:text="@string/fun_scr_1" />
 
@@ -627,7 +629,9 @@
             android:id="@+id/funGoodActions"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:drawableEnd="@drawable/ic_drop_down_up"
+            android:backgroundTint="@color/common"
+            android:drawableLeft="@drawable/ic_good_actions"
+            android:drawableRight="@drawable/ic_drop_down_up"
             android:elevation="10dp"
             android:text="@string/fun_scr_2" />
 
@@ -1236,7 +1240,9 @@
             android:id="@+id/funBadActions"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:drawableEnd="@drawable/ic_drop_down_up"
+            android:backgroundTint="@color/common"
+            android:drawableLeft="@drawable/ic_bad_actions"
+            android:drawableRight="@drawable/ic_drop_down_up"
             android:elevation="10dp"
             android:text="@string/fun_scr_3" />
 
@@ -1845,7 +1851,9 @@
             android:id="@+id/funArt"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:drawableEnd="@drawable/ic_drop_down_up"
+            android:backgroundTint="@color/common"
+            android:drawableLeft="@drawable/ic_art"
+            android:drawableRight="@drawable/ic_drop_down_up"
             android:elevation="10dp"
             android:text="@string/fun_scr_4" />
 
