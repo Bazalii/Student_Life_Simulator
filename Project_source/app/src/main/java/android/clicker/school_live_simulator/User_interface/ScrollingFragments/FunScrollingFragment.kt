@@ -89,25 +89,25 @@ class FunScrollingFragment : Fragment() {
             }
         }
         binding.funArt.setOnClickListener {
-            if(binding.funWritePoem.visibility == GONE){
-                binding.funWritePoem.visibility = VISIBLE
-                binding.funDrawGraffities.visibility = VISIBLE
-                binding.funDrawOnDesks.visibility = VISIBLE
-                binding.funMakeSomethingHandmade.visibility = VISIBLE
-                binding.funCoverASong.visibility = VISIBLE
-                binding.funWriteASong.visibility = VISIBLE
-                binding.funStream.visibility = VISIBLE
-                binding.funMakeAYoutubeVideo.visibility = VISIBLE
+            if(binding.layoutFunWritePoem.visibility == GONE){
+                binding.layoutFunWritePoem.visibility = VISIBLE
+                binding.layoutFunDrawGraffities.visibility = VISIBLE
+                binding.layoutFunDrawOnDesks.visibility = VISIBLE
+                binding.layoutFunMakeSomethingHandmade.visibility = VISIBLE
+                binding.layoutFunCoverASong.visibility = VISIBLE
+                binding.layoutFunWriteASong.visibility = VISIBLE
+                binding.layoutFunStream.visibility = VISIBLE
+                binding.layoutFunMakeAYoutubeVideo.visibility = VISIBLE
             }
             else{
-                binding.funWritePoem.visibility = GONE
-                binding.funDrawGraffities.visibility = GONE
-                binding.funDrawOnDesks.visibility = GONE
-                binding.funMakeSomethingHandmade.visibility = GONE
-                binding.funCoverASong.visibility = GONE
-                binding.funWriteASong.visibility = GONE
-                binding.funStream.visibility = GONE
-                binding.funMakeAYoutubeVideo.visibility = GONE
+                binding.layoutFunWritePoem.visibility = GONE
+                binding.layoutFunDrawGraffities.visibility = GONE
+                binding.layoutFunDrawOnDesks.visibility = GONE
+                binding.layoutFunMakeSomethingHandmade.visibility = GONE
+                binding.layoutFunCoverASong.visibility = GONE
+                binding.layoutFunWriteASong.visibility = GONE
+                binding.layoutFunStream.visibility = GONE
+                binding.layoutFunMakeAYoutubeVideo.visibility = GONE
             }
         }
 
