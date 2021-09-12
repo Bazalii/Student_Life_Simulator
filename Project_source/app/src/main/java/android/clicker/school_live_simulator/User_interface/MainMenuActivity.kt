@@ -68,4 +68,11 @@ class MainMenuActivity : AppCompatActivity() {
         Game.isDefaultLanguage = false
         this.recreate()
     }
+    fun onClickAboutGame(view: View){
+        val intent = Intent(this, MyItemRecyclerViewAdapter::class.java)
+        startActivity(intent)
+    }
+    fun onClickRateGame(view: View){
+        TODO("There should be placed code for link")
+    }
 }

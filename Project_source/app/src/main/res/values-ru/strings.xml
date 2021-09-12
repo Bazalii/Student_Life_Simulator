@@ -424,6 +424,8 @@
     <!--Main menu-->
     <string name="new_game">новая игра</string>
     <string name="continue_game">продолжить игру</string>
+    <string name="about_game">об игре</string>
+    <string name="rate_game">оценить игру</string>
 
 
     <!--Achievement dialog-->

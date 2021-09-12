@@ -424,6 +424,8 @@
     <!--Main menu-->
     <string name="new_game">new game</string>
     <string name="continue_game">continue game</string>
+    <string name="about_game">about game</string>
+    <string name="rate_game">rate game</string>
 
 
     <!--Achievement dialog-->
