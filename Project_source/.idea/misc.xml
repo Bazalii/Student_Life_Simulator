@@ -21,16 +21,19 @@
         <entry key="..\:/Ivan/ITMO/Summer_project/Project_source/app/src/main/res/menu/bottom_navigation.xml" value="1.325" />
         <entry key="..\:/Users/krzhld/AndroidStudioProjects/Project_source/app/src/main/res/drawable/ic_achievement_done.xml" value="0.14635416666666667" />
         <entry key="..\:/Users/krzhld/AndroidStudioProjects/Project_source/app/src/main/res/drawable/ic_neutral_actions.xml" value="0.14635416666666667" />
-        <entry key="..\:/Users/krzhld/AndroidStudioProjects/Project_source/app/src/main/res/layout-sw600dp/fragment_food_scrolling.xml" value="0.72" />
+        <entry key="..\:/Users/krzhld/AndroidStudioProjects/Project_source/app/src/main/res/layout-sw600dp/activity_game.xml" value="0.4" />
+        <entry key="..\:/Users/krzhld/AndroidStudioProjects/Project_source/app/src/main/res/layout-sw600dp/fragment_food_scrolling.xml" value="0.2" />
         <entry key="..\:/Users/krzhld/AndroidStudioProjects/Project_source/app/src/main/res/layout-sw600dp/fragment_fun_scrolling.xml" value="0.4" />
         <entry key="..\:/Users/krzhld/AndroidStudioProjects/Project_source/app/src/main/res/layout-sw600dp/fragment_school_scrolling.xml" value="0.6" />
         <entry key="..\:/Users/krzhld/AndroidStudioProjects/Project_source/app/src/main/res/layout-sw600dp/fragment_shop_scrolling.xml" value="0.4" />
         <entry key="..\:/Users/krzhld/AndroidStudioProjects/Project_source/app/src/main/res/layout-sw600dp/fragment_work_scrolling.xml" value="0.6" />
+        <entry key="..\:/Users/krzhld/AndroidStudioProjects/Project_source/app/src/main/res/layout-xhdpi/activity_game.xml" value="0.8" />
         <entry key="..\:/Users/krzhld/AndroidStudioProjects/Project_source/app/src/main/res/layout-xhdpi/fragment_food_scrolling.xml" value="0.8800000000000001" />
         <entry key="..\:/Users/krzhld/AndroidStudioProjects/Project_source/app/src/main/res/layout-xhdpi/fragment_fun_scrolling.xml" value="0.72" />
         <entry key="..\:/Users/krzhld/AndroidStudioProjects/Project_source/app/src/main/res/layout-xhdpi/fragment_school_scrolling.xml" value="0.7973856209150327" />
         <entry key="..\:/Users/krzhld/AndroidStudioProjects/Project_source/app/src/main/res/layout-xhdpi/fragment_shop_scrolling.xml" value="0.536" />
         <entry key="..\:/Users/krzhld/AndroidStudioProjects/Project_source/app/src/main/res/layout-xhdpi/fragment_work_scrolling.xml" value="0.8" />
+        <entry key="..\:/Users/krzhld/AndroidStudioProjects/Project_source/app/src/main/res/layout-xxhdpi/activity_game.xml" value="0.264" />
         <entry key="..\:/Users/krzhld/AndroidStudioProjects/Project_source/app/src/main/res/layout-xxhdpi/fragment_food_scrolling.xml" value="0.536" />
         <entry key="..\:/Users/krzhld/AndroidStudioProjects/Project_source/app/src/main/res/layout-xxhdpi/fragment_fun_scrolling.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/krzhld/AndroidStudioProjects/Project_source/app/src/main/res/layout-xxhdpi/fragment_school_scrolling.xml" value="0.536" />
@@ -39,7 +42,7 @@
         <entry key="..\:/Users/krzhld/AndroidStudioProjects/Project_source/app/src/main/res/layout/achievement_dialog.xml" value="0.264" />
         <entry key="..\:/Users/krzhld/AndroidStudioProjects/Project_source/app/src/main/res/layout/achievement_item.xml" value="0.264" />
         <entry key="..\:/Users/krzhld/AndroidStudioProjects/Project_source/app/src/main/res/layout/activity_achievements.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/krzhld/AndroidStudioProjects/Project_source/app/src/main/res/layout/activity_game.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/krzhld/AndroidStudioProjects/Project_source/app/src/main/res/layout/activity_game.xml" value="0.8360655737704918" />
         <entry key="..\:/Users/krzhld/AndroidStudioProjects/Project_source/app/src/main/res/layout/activity_main_menu.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/krzhld/AndroidStudioProjects/Project_source/app/src/main/res/layout/end_game_dialog.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/krzhld/AndroidStudioProjects/Project_source/app/src/main/res/layout/fragment_food_scrolling.xml" value="2.4" />

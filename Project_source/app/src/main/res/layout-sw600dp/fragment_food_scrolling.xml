@@ -186,10 +186,10 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <TextView
+            TextView
                 android:id="@+id/textView_eat_doshirack"
-                android:layout_width="394dp"
-                android:layout_height="wrap_content"
+                android:layout_width="391dp"
+                android:layout_height="58dp"
                 android:layout_marginStart="8dp"
                 android:padding="20dp"
                 android:text="@string/food_eat_doshirack"
@@ -199,7 +199,22 @@
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="@+id/food_eat_doshirack"
                 app:layout_constraintEnd_toStartOf="@+id/guideline52"
-                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView_eat_doshirack2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="@string/food_eat_doshirack"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/guideline52"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
