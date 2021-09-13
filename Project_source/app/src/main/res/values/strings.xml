@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">School_live_simulator</string>
-   <!--For debug-->
+    <!--For debug-->
     <string name="game_activity_1">10000</string>
     <string name="game_activity_2">10 september 2021</string>
     <string name="fun_scr_1">Neutral actions</string>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_menu_background"
+    tools:context=".User_interface.MainMenuFragment">
+
+    <Button
+        android:id="@+id/ContinueGame"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/main_menu_buttons"
+        android:elevation="20dp"
+        android:text="@string/continue_game"
+        app:layout_constraintBottom_toTopOf="@+id/NewGame"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <Button
+        android:id="@+id/NewGame"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="@color/main_menu_buttons"
+        android:text="@string/new_game"
+        app:layout_constraintBottom_toTopOf="@+id/RateGame"
+        app:layout_constraintEnd_toEndOf="@+id/ContinueGame"
+        app:layout_constraintStart_toStartOf="@+id/ContinueGame"
+        app:layout_constraintTop_toBottomOf="@+id/ContinueGame" />
+
+    <Button
+        android:id="@+id/AboutGame"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="@color/main_menu_buttons"
+        android:text="@string/about_game"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="@+id/RateGame"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/RateGame"
+        app:layout_constraintTop_toBottomOf="@+id/RateGame" />
+
+    <Button
+        android:id="@+id/RateGame"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="@color/main_menu_buttons"
+        android:text="@string/rate_game"
+        app:layout_constraintBottom_toTopOf="@+id/AboutGame"
+        app:layout_constraintEnd_toEndOf="@+id/NewGame"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/NewGame"
+        app:layout_constraintTop_toBottomOf="@+id/NewGame" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/RussianButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginBottom="16dp"
+            android:backgroundTint="@android:color/holo_red_dark"
+            android:drawableTop="@drawable/ic_language_russian"
+            android:elevation="7dp"
+            android:paddingBottom="0dp"
+            android:text="русский"
+            android:textSize="10sp"
+            app:iconPadding="0dp" />
+
+        <Button
+            android:id="@+id/EnglishButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:backgroundTint="@android:color/holo_red_dark"
+            android:drawableTop="@drawable/ic_language_english"
+            android:elevation="7dp"
+            android:paddingBottom="0dp"
+            android:text="English"
+            android:textSize="10sp"
+            app:iconPadding="0dp" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
