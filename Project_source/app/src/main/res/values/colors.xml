@@ -19,6 +19,7 @@
     <color name="botnav_unchecked">#E7EAE8</color>
     <color name="main_category_buttons">#03A9F4</color>
     <color name="main_can_buy">#7ABDDC</color>
+    <color name="main_menu_buttons">#125473</color>
 
     <!--Rare type colors-->
     <color name="super_rare_glow">#F0D809</color>

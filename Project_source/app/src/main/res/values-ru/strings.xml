@@ -424,7 +424,16 @@
     <!--Main menu-->
     <string name="new_game">новая игра</string>
     <string name="continue_game">продолжить игру</string>
-
+    <string name="about_game">об игре</string>
+    <string name="rate_game">оценить игру</string>
+    <string name="about_game_icon_authors">Иконки сделаны этими авторами с сайта www.flaticon.com:</string>
+    <string name="about_game_developers">Разработчики</string>
+    <string name="about_game_andrey_novikov">Андрей Новиков</string>
+    <string name="about_game_ivan_bazaliy">Иван Базалий</string>
+    <string name="about_game_arseny_alekseev">Арсений Алексеев</string>
+    <string name="about_game_evgeny_sudakov">Евгений Судаков</string>
+    <string name="about_game_nikita_dimitruk">Никита Димитрюк</string>
+    <string name="about_game_kirill_zheludev">Кирилл Желудев</string>
 
     <!--Achievement dialog-->
     <string name="new_achievement">Открыто новое достижение!</string>
