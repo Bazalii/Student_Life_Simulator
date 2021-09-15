@@ -7,21 +7,6 @@
     android:background="@color/main_stats_background"
     tools:context=".User_interface.GameActivity">
 
-    <TextView
-        android:id="@+id/currentSchoolClass"
-        android:layout_width="506dp"
-        android:layout_height="18dp"
-        android:layout_marginEnd="8dp"
-        android:gravity="center"
-        android:text="1 grade"
-        android:textColor="@color/black"
-        app:layout_constraintBottom_toTopOf="@+id/horizontalGuideline"
-        app:layout_constraintEnd_toStartOf="@+id/verticalGuideline"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/constraintLayout"
-        app:layout_constraintVertical_bias="0.476" />
-
     <ProgressBar
         android:id="@+id/satietyProgressBar"
         style="?android:attr/progressBarStyleHorizontal"
@@ -84,7 +69,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.35" />
+        app:layout_constraintGuide_percent="0.23" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/verticalGuideline"
@@ -165,8 +150,10 @@
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toTopOf="@+id/horizontalGuideline"
         app:layout_constraintEnd_toStartOf="@+id/verticalGuideline"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/schoolPerformanceProgressBar">
+        app:layout_constraintTop_toBottomOf="@+id/schoolPerformanceProgressBar"
+        app:layout_constraintVertical_bias="0.616">
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideline93"
@@ -213,9 +200,10 @@
             android:textColor="@color/black"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="@+id/guideline93"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0" />
+            app:layout_constraintVertical_bias="1.0" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.viewpager2.widget.ViewPager2
@@ -265,5 +253,20 @@
         app:layout_constraintBottom_toBottomOf="@+id/schoolPerformanceProgressBar"
         app:layout_constraintEnd_toEndOf="@+id/schoolPerformanceProgressBar"
         app:layout_constraintTop_toTopOf="@+id/schoolPerformanceProgressBar" />
+
+    <TextView
+        android:id="@+id/currentSchoolClass"
+        android:layout_width="352dp"
+        android:layout_height="20dp"
+        android:layout_marginEnd="8dp"
+        android:gravity="center"
+        android:text="1 grade"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/horizontalGuideline"
+        app:layout_constraintEnd_toStartOf="@+id/verticalGuideline"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout"
+        app:layout_constraintVertical_bias="0.578" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

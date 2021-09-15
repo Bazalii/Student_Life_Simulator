@@ -17,18 +17,19 @@
         <Button
             android:id="@+id/funNeutralActions"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="45dp"
             android:backgroundTint="@color/common"
             android:drawableLeft="@drawable/ic_neutral_actions"
             android:drawableRight="@drawable/ic_drop_down_up"
             android:elevation="10dp"
-            android:text="@string/fun_scr_1" />
+            android:text="@string/fun_scr_1"
+            android:textSize="10sp" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/layoutFunDoNothing"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            
+
             android:layout_marginBottom="6dp"
             android:background="@color/main_fragment_background"
             android:elevation="5dp"
@@ -128,7 +129,7 @@
             android:id="@+id/layoutFunGoCycling"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            
+
             android:layout_marginBottom="6dp"
             android:background="@color/main_fragment_background"
             android:elevation="5dp"
@@ -229,7 +230,7 @@
             android:id="@+id/layoutFunListenToTheMusic"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            
+
             android:layout_marginBottom="6dp"
             android:background="@color/main_fragment_background"
             android:elevation="5dp"
@@ -329,7 +330,7 @@
             android:id="@+id/layoutFunDonateAndPlayComputer"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            
+
             android:layout_marginBottom="6dp"
             android:background="@color/main_fragment_background"
             android:elevation="5dp"
@@ -429,7 +430,7 @@
             android:id="@+id/layoutFunGoToTheShoppingMall"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            
+
             android:layout_marginBottom="6dp"
             android:background="@color/main_fragment_background"
             android:elevation="5dp"
@@ -529,7 +530,7 @@
             android:id="@+id/layoutFunWalkWithYourGirlfriend"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            
+
             android:layout_marginBottom="6dp"
             android:background="@color/main_fragment_background"
             android:elevation="5dp"
@@ -628,18 +629,19 @@
         <Button
             android:id="@+id/funGoodActions"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="45dp"
             android:backgroundTint="@color/common"
             android:drawableLeft="@drawable/ic_good_actions"
             android:drawableRight="@drawable/ic_drop_down_up"
             android:elevation="10dp"
-            android:text="@string/fun_scr_2" />
+            android:text="@string/fun_scr_2"
+            android:textSize="10sp" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/layoutFunReadABook"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            
+
             android:layout_marginBottom="6dp"
             android:background="@color/main_fragment_background"
             android:elevation="5dp"
@@ -739,7 +741,7 @@
             android:id="@+id/layoutFunHelpYoungstersWithHomework"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            
+
             android:layout_marginBottom="6dp"
             android:background="@color/main_fragment_background"
             android:elevation="5dp"
@@ -840,7 +842,7 @@
             android:id="@+id/layoutFunDoSport"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            
+
             android:layout_marginBottom="6dp"
             android:background="@color/main_fragment_background"
             android:elevation="5dp"
@@ -940,7 +942,7 @@
             android:id="@+id/layoutFunPlayGuitar"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            
+
             android:layout_marginBottom="6dp"
             android:background="@color/main_fragment_background"
             android:elevation="5dp"
@@ -1040,7 +1042,7 @@
             android:id="@+id/layoutFunGoToTheTheatre"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            
+
             android:layout_marginBottom="6dp"
             android:background="@color/main_fragment_background"
             android:elevation="5dp"
@@ -1140,7 +1142,7 @@
             android:id="@+id/layoutFunGoToTheConcert"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            
+
             android:layout_marginBottom="6dp"
             android:background="@color/main_fragment_background"
             android:elevation="5dp"
@@ -1239,18 +1241,19 @@
         <Button
             android:id="@+id/funBadActions"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="45dp"
             android:backgroundTint="@color/common"
             android:drawableLeft="@drawable/ic_bad_actions"
             android:drawableRight="@drawable/ic_drop_down_up"
             android:elevation="10dp"
-            android:text="@string/fun_scr_3" />
+            android:text="@string/fun_scr_3"
+            android:textSize="10sp" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/layoutFunKickATrashCan"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            
+
             android:layout_marginBottom="6dp"
             android:background="@color/main_fragment_background"
             android:elevation="5dp"
@@ -1350,7 +1353,7 @@
             android:id="@+id/layoutFunIntimidateYoungsters"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            
+
             android:layout_marginBottom="6dp"
             android:background="@color/main_fragment_background"
             android:elevation="5dp"
@@ -1450,7 +1453,7 @@
             android:id="@+id/layoutFunUploadVirus"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            
+
             android:layout_marginBottom="6dp"
             android:background="@color/main_fragment_background"
             android:elevation="5dp"
@@ -1550,7 +1553,7 @@
             android:id="@+id/layoutFunUseChatRoulette"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            
+
             android:layout_marginBottom="6dp"
             android:background="@color/main_fragment_background"
             android:elevation="5dp"
@@ -1651,7 +1654,7 @@
             android:id="@+id/layoutFunHaveAParty"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            
+
             android:layout_marginBottom="6dp"
             android:background="@color/main_fragment_background"
             android:elevation="5dp"
@@ -1751,7 +1754,7 @@
             android:id="@+id/layoutFunGoToTheClub"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            
+
             android:layout_marginBottom="6dp"
             android:background="@color/main_fragment_background"
             android:elevation="5dp"
@@ -1850,18 +1853,19 @@
         <Button
             android:id="@+id/funArt"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="45dp"
             android:backgroundTint="@color/common"
             android:drawableLeft="@drawable/ic_art"
             android:drawableRight="@drawable/ic_drop_down_up"
             android:elevation="10dp"
-            android:text="@string/fun_scr_4" />
+            android:text="@string/fun_scr_4"
+            android:textSize="10sp" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/layoutFunWritePoem"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            
+
             android:layout_marginBottom="6dp"
             android:background="@color/main_fragment_background"
             android:elevation="5dp"
@@ -1962,7 +1966,7 @@
             android:id="@+id/layoutFunDrawGraffities"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            
+
             android:layout_marginBottom="6dp"
             android:background="@color/main_fragment_background"
             android:elevation="5dp"
@@ -2062,7 +2066,7 @@
             android:id="@+id/layoutFunDrawOnDesks"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            
+
             android:layout_marginBottom="6dp"
             android:background="@color/main_fragment_background"
             android:elevation="5dp"
@@ -2162,7 +2166,7 @@
             android:id="@+id/layoutFunMakeSomethingHandmade"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            
+
             android:layout_marginBottom="6dp"
             android:background="@color/main_fragment_background"
             android:elevation="5dp"
@@ -2263,7 +2267,7 @@
             android:id="@+id/layoutFunCoverASong"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            
+
             android:layout_marginBottom="6dp"
             android:background="@color/main_fragment_background"
             android:elevation="5dp"
@@ -2364,7 +2368,7 @@
             android:id="@+id/layoutFunWriteASong"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            
+
             android:layout_marginBottom="6dp"
             android:background="@color/main_fragment_background"
             android:elevation="5dp"
@@ -2464,7 +2468,7 @@
             android:id="@+id/layoutFunStream"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            
+
             android:layout_marginBottom="6dp"
             android:background="@color/main_fragment_background"
             android:elevation="5dp"
@@ -2564,7 +2568,7 @@
             android:id="@+id/layoutFunMakeAYoutubeVideo"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            
+
             android:layout_marginBottom="6dp"
             android:background="@color/main_fragment_background"
             android:elevation="5dp"
