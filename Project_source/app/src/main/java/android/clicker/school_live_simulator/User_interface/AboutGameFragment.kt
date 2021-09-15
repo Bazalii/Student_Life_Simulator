@@ -49,9 +49,6 @@ class AboutGameAdapter : RecyclerView.Adapter<AboutGameAdapter.AboutGameHolder>(
     inner class AboutGameHolder(item: View) : RecyclerView.ViewHolder(item) {
         val binding = IconAuthorItemBinding.bind(item)
 
-        /**
-         * Fill template of achievement with certain values
-         */
         fun bind(author_name: String) = with(binding) {
             AuthorName.text = "- $author_name"
 

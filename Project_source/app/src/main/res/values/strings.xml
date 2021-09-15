@@ -426,6 +426,14 @@
     <string name="continue_game">continue game</string>
     <string name="about_game">about game</string>
     <string name="rate_game">rate game</string>
+    <string name="about_game_icon_authors">Icons are made by this authors from www.flaticon.com:</string>
+    <string name="about_game_developers">Developers</string>
+    <string name="about_game_andrey_novikov">Andrey Novikov</string>
+    <string name="about_game_ivan_bazaliy">Ivan Bazaliy</string>
+    <string name="about_game_arseny_alekseev">Arseny Alekseev</string>
+    <string name="about_game_evgeny_sudakov">Evgeny Sudakov</string>
+    <string name="about_game_nikita_dimitruk">Nikita Dimitruk</string>
+    <string name="about_game_kirill_zheludev">Kirill Zheludev</string>
 
 
     <!--Achievement dialog-->
