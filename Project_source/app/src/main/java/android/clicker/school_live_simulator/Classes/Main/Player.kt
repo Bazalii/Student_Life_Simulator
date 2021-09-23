@@ -12,6 +12,7 @@ import kotlinx.serialization.*
 
 @Serializable
 class Player {
+
     @Serializable
     class Bag {
         var bicycle: BicycleState = NullBicycleState()
@@ -30,6 +31,7 @@ class Player {
                 field = value
             }
     }
+
     @Serializable
     class Courses {
         var guitar_course: GuitarCourseState = NullGuitarCourseState()
@@ -69,7 +71,7 @@ class Player {
     /**
      * Amount of player's money
      */
-    var money: Int = 100000
+    var money: Int = 10000
         private set
     var earned_money: Int = 0
         private set
@@ -112,8 +114,16 @@ class Player {
      */
     fun tick() {
         changeSchoolPerformance(this.player_state.reduce_school_performance_value)
-        changeHappiness(this.player_state.reduce_happiness_value)
-        changeSatiety(this.player_state.reduce_satiety_value)
+        changeHappiness(
+            if (this.happiness >= 400) {
+                this.player_state.reduce_happiness_value
+            } else this.player_state.reduce_happiness_value + BadState.reduce_happiness_value
+        )
+        changeSatiety(
+            if (this.satiety >= 600) {
+                this.player_state.reduce_satiety_value
+            } else this.player_state.reduce_satiety_value + BadState.reduce_satiety_value
+        )
     }
 
 

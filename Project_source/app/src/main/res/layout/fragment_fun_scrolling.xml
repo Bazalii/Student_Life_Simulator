@@ -966,10 +966,12 @@
                 android:id="@+id/funPlayGuitar"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:background="?attr/selectableItemBackground"
-                android:insetTop="0dp"
+                android:layout_marginStart="8dp"
+                android:text="@string/fun_play_guitar_no_guitar"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -1012,26 +1014,26 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <ImageView
-                android:id="@+id/imageViewPlayGuitarMoney"
+                android:id="@+id/imageViewPlayGuitarSatiety"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="@+id/guideline46"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/ic_money" />
+                app:srcCompat="@drawable/ic_food" />
 
             <TextView
-                android:id="@+id/textViewPlayGuitarMoney"
+                android:id="@+id/textViewPlayGuitarSatiety"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="@string/fun_play_guitar_price"
+                android:text="@string/fun_play_guitar_satiety"
                 android:textColor="@color/black"
                 android:textSize="14sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="@+id/funPlayGuitar"
-                app:layout_constraintStart_toEndOf="@+id/imageViewPlayGuitarMoney"
+                app:layout_constraintStart_toEndOf="@+id/imageViewPlayGuitarSatiety"
                 app:layout_constraintTop_toTopOf="parent" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>

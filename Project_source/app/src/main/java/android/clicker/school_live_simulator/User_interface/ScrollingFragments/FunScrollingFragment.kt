@@ -5,8 +5,10 @@ import android.clicker.school_live_simulator.Classes.Achievements_classes.Random
 import android.clicker.school_live_simulator.Classes.Achievements_classes.Random_achievements.SongEventsRandomAchievements
 import android.clicker.school_live_simulator.Classes.Enum_classes.Entertainment
 import android.clicker.school_live_simulator.Classes.GameDate.Timer
+import android.clicker.school_live_simulator.Classes.IsNotAvailableException
 import android.clicker.school_live_simulator.Classes.NotEnoughMoneyException
 import android.clicker.school_live_simulator.Game
+import android.clicker.school_live_simulator.NullGuitarState
 import android.clicker.school_live_simulator.R
 import android.clicker.school_live_simulator.User_interface.GameActivity
 import android.clicker.school_live_simulator.databinding.FragmentFunScrollingBinding
@@ -17,6 +19,7 @@ import android.view.View.GONE
 import android.view.View.VISIBLE
 import android.view.ViewGroup
 import android.view.animation.AnimationUtils
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 
 class FunScrollingFragment : Fragment() {
@@ -337,6 +340,7 @@ class FunScrollingFragment : Fragment() {
 
         binding.funPlayGuitar.setOnClickListener{
             try {
+                if (Game.player.items.guitar is NullGuitarState) throw IsNotAvailableException("Buy a guitar")
                 Game.player.entertain(Entertainment.PLAY_GUITAR)
                 binding.layoutFunPlayGuitar.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.click))
                 Game.counters[Game.context_bundle.getTitle("fun_play_guitar")] =
@@ -346,6 +350,9 @@ class FunScrollingFragment : Fragment() {
             } catch (exception: NotEnoughMoneyException){
                 binding.layoutFunPlayGuitar.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
                 (activity as GameActivity).notEnoughMoneyAnim()
+            } catch (exception: IsNotAvailableException) {
+                binding.layoutFunPlayGuitar.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
+                Toast.makeText(activity, getString(R.string.fun_play_guitar_no_guitar), Toast.LENGTH_SHORT).show()
             }
         }
 
@@ -461,5 +468,12 @@ class FunScrollingFragment : Fragment() {
             }
         }
 
+    }
+
+    override fun onResume() {
+        super.onResume()
+        binding.textViewPlayGuitarName.text = if (Game.player.items.guitar !is NullGuitarState) {
+            getString(R.string.fun_play_guitar)
+        } else getString(R.string.fun_play_guitar_no_guitar)
     }
 }

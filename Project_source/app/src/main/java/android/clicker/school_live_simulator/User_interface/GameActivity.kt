@@ -41,6 +41,7 @@ import java.io.File
 class GameActivity : AppCompatActivity() {
     lateinit var binding: ActivityGameBinding
     private var current_vp_page = 0 //save current ViewPager position
+
     /**
      * Values for timer(function that is called every x seconds)
      * Need to write more documentation about them
@@ -54,23 +55,25 @@ class GameActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
         Game.setLocale(resources, this@GameActivity)
-
         binding = ActivityGameBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
         /**
          * Set initial player characteristics
          */
         updateStats()
+
         /**
          * Set adapter for viewPager
          */
         binding.viewPager.adapter = PagerAdapter(this)
+
         /**
          * Phone keeps in memory all pages for better swipe performance
          */
         binding.viewPager.offscreenPageLimit = 5
+
         /**
          * BottomNavigation listener
          */
@@ -84,6 +87,7 @@ class GameActivity : AppCompatActivity() {
             }
             true
         }
+
         /**
          * Matching BottomNavigation and ViewPager
          */
@@ -121,9 +125,8 @@ class GameActivity : AppCompatActivity() {
                 0 -> SchoolScrollingFragment()
                 1 -> FoodScrollingFragment()
                 2 -> WorkScrollingFragment()
-                3 ->  FunScrollingFragment()
-                else ->  ShopScrollingFragment()
-
+                3 -> FunScrollingFragment()
+                else -> ShopScrollingFragment()
             }
         }
     }
@@ -138,7 +141,11 @@ class GameActivity : AppCompatActivity() {
         tick_thread.start()
         tick_handler = Handler(tick_thread.looper)
             runnable = Runnable {
-                tick_handler.postDelayed(runnable, delay) // calls itself with delay
+
+                /**
+                 * Calls itself with the delay
+                 */
+                tick_handler.postDelayed(runnable, delay)
                 game_time += delay
                 Game.tick()
                 handler.post{updateStats()}
@@ -174,6 +181,7 @@ class GameActivity : AppCompatActivity() {
         if (Game.player.dead()) death()
 
         binding.currentSchoolClass.text = "${Game.player.school_class} ${getString(R.string.current_school_class)}"
+
         /**
          * Animation for progressbars changes
          */
@@ -198,9 +206,9 @@ class GameActivity : AppCompatActivity() {
         /**
          * Change color of progressbars
          */
-        var colorHappiness  = ((1000 - binding.happinessProgressBar.progress) * 0.12).toFloat()
-        var colorSatiety  = ((1000 - binding.satietyProgressBar.progress) * 0.12).toFloat()
-        var colorSchoolPerformance  = ((1000 - binding.schoolPerformanceProgressBar.progress) * 0.12).toFloat()
+        var colorHappiness = ((1000 - binding.happinessProgressBar.progress) * 0.12).toFloat()
+        var colorSatiety = ((1000 - binding.satietyProgressBar.progress) * 0.12).toFloat()
+        var colorSchoolPerformance = ((1000 - binding.schoolPerformanceProgressBar.progress) * 0.12).toFloat()
         binding.happinessProgressBar.progressTintList = ColorStateList.valueOf(HSLToColor(floatArrayOf(120-colorHappiness, 1f , 0.5f)))
         binding.satietyProgressBar.progressTintList = ColorStateList.valueOf(HSLToColor(floatArrayOf(120-colorSatiety, 1f , 0.5f)))
         binding.schoolPerformanceProgressBar.progressTintList = ColorStateList.valueOf(HSLToColor(floatArrayOf(120-colorSchoolPerformance, 1f , 0.5f)))
@@ -208,6 +216,10 @@ class GameActivity : AppCompatActivity() {
         changeMoneyAnimation(binding.moneyTextView.text.toString().toInt(), Game.player.money)
         binding.dateTextView.text = Game.game_date.toString()
     }
+
+    /**
+     * Animation for Money field on the screen
+     */
     private fun changeMoneyAnimation(from: Int, to: Int){
         val animator = ValueAnimator.ofInt(from, to)
         when(to - from){
@@ -352,6 +364,7 @@ class GameActivity : AppCompatActivity() {
             true
         }
     }
+
     fun onSettingsClick(view: View){
         finish()
     }

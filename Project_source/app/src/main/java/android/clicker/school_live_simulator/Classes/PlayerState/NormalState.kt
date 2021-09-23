@@ -12,8 +12,8 @@ object NormalState : PlayerState() {
     override val reduce_school_performance_value: Int = -1
 
     @kotlinx.serialization.Transient
-    override val reduce_happiness_value: Int = -1
+    override val reduce_happiness_value: Int = -3
 
     @kotlinx.serialization.Transient
-    override val reduce_satiety_value: Int = -1
+    override val reduce_satiety_value: Int = -5
 }

@@ -164,6 +164,7 @@
     <string name="fun_help_youngsters_with_homework">Помочь шкетам с домашкой</string>
     <string name="fun_do_sport">Заняться спортом</string>
     <string name="fun_play_guitar">Играть на гитаре</string>
+    <string name="fun_play_guitar_no_guitar">Купите гитару</string>
     <string name="fun_go_to_the_theatre">Сходить в театр</string>
     <string name="fun_go_to_the_concert">Сходить на концерт в ВИПку</string>
 
@@ -177,8 +178,8 @@
     <!--Entertainment stats-->
     <string name="fun_draw_on_desks_price">0</string>
     <string name="fun_draw_on_desks_happiness">+30</string>
-    <string name="fun_draw_graffities_price">+10</string>
-    <string name="fun_draw_graffities_happiness">+10</string>
+    <string name="fun_draw_graffities_price">-100</string>
+    <string name="fun_draw_graffities_happiness">+5</string>
     <string name="fun_write_a_poem_price">0</string>
     <string name="fun_write_a_poem_happiness">+70</string>
     <string name="fun_make_something_handmade_price">-500</string>
@@ -209,10 +210,12 @@
     <string name="fun_read_a_book_happiness">+30</string>
     <string name="fun_help_youngsters_with_homework_price">0</string>
     <string name="fun_help_youngsters_with_homework_happiness">+50</string>
+    <!--  Think about sport realisation  -->
     <string name="fun_do_sport_price">-1500</string>
     <string name="fun_do_sport_happiness">+100</string>
-    <string name="fun_play_guitar_price">-5000</string>
-    <string name="fun_play_guitar_happiness">+150</string>
+    <string name="fun_do_sport_satiety">-25</string>
+    <string name="fun_play_guitar_happiness">+15</string>
+    <string name="fun_play_guitar_satiety">-5</string>
     <string name="fun_go_to_the_theatre_price">-4000</string>
     <string name="fun_go_to_the_theatre_happiness">+300</string>
     <string name="fun_go_to_the_concert_price">-10000</string>

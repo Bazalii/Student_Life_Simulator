@@ -164,6 +164,7 @@
     <string name="fun_help_youngsters_with_homework">Help youngsters with homework</string>
     <string name="fun_do_sport">Do sport</string>
     <string name="fun_play_guitar">Play guitar</string>
+    <string name="fun_play_guitar_no_guitar">Buy guitar first</string>
     <string name="fun_go_to_the_theatre">Go to the theatre</string>
     <string name="fun_go_to_the_concert">Go to the concert as a VIP</string>
 
@@ -177,8 +178,8 @@
     <!--Entertainment stats-->
     <string name="fun_draw_on_desks_price">0</string>
     <string name="fun_draw_on_desks_happiness">+30</string>
-    <string name="fun_draw_graffities_price">+10</string>
-    <string name="fun_draw_graffities_happiness">+10</string>
+    <string name="fun_draw_graffities_price">-100</string>
+    <string name="fun_draw_graffities_happiness">+5</string>
     <string name="fun_write_a_poem_price">0</string>
     <string name="fun_write_a_poem_happiness">+70</string>
     <string name="fun_make_something_handmade_price">-500</string>
@@ -210,9 +211,10 @@
     <string name="fun_help_youngsters_with_homework_price">0</string>
     <string name="fun_help_youngsters_with_homework_happiness">+50</string>
     <string name="fun_do_sport_price">-1500</string>
-    <string name="fun_do_sport_happiness">+100</string>
-    <string name="fun_play_guitar_price">-5000</string>
-    <string name="fun_play_guitar_happiness">+150</string>
+    <string name="fun_do_sport_happiness">+25</string>
+    <string name="fun_do_sport_satiety">+25</string>
+    <string name="fun_play_guitar_happiness">+15</string>
+    <string name="fun_play_guitar_satiety">-5</string>
     <string name="fun_go_to_the_theatre_price">-4000</string>
     <string name="fun_go_to_the_theatre_happiness">+300</string>
     <string name="fun_go_to_the_concert_price">-10000</string>
@@ -429,9 +431,9 @@
     <string name="about_game_icon_authors">Icons are made by this authors from www.flaticon.com:</string>
     <string name="about_game_developers">Developers</string>
     <string name="about_game_andrey_novikov">Andrey Novikov</string>
-    <string name="about_game_ivan_bazaliy">Ivan Bazaliy</string>
-    <string name="about_game_arseny_alekseev">Arseny Alekseev</string>
-    <string name="about_game_evgeny_sudakov">Evgeny Sudakov</string>
+    <string name="about_game_ivan_bazaliy">Ivan Bazalii</string>
+    <string name="about_game_arseny_alekseev">Arseniy Alekseev</string>
+    <string name="about_game_evgeny_sudakov">Evgeniy Sudakov</string>
     <string name="about_game_nikita_dimitruk">Nikita Dimitruk</string>
     <string name="about_game_kirill_zheludev">Kirill Zheludev</string>
 
