@@ -41,11 +41,17 @@ class WorkScrollingFragment : Fragment() {
         }
 
         binding.workWatchAds.setOnClickListener{
-            Game.player.work(OtherWork.WATCH_ADS)
-            binding.layoutWorkWatchAds.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.click))
-            Game.counters[Game.context_bundle.getTitle("work_watch_ads")] =
-                (Game.counters[Game.context_bundle.getTitle("work_watch_ads")] ?: 0) + 1
-            (activity as GameActivity).updateStats()
+            try {
+                if (Game.player.items.computer is NullComputerState) throw IsNotAvailableException("Buy comuter first!")
+                Game.player.work(OtherWork.WATCH_ADS)
+                binding.layoutWorkWatchAds.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.click))
+                Game.counters[Game.context_bundle.getTitle("work_watch_ads")] =
+                    (Game.counters[Game.context_bundle.getTitle("work_watch_ads")] ?: 0) + 1
+                (activity as GameActivity).updateStats()
+            } catch(exception: IsNotAvailableException) {
+                Toast.makeText(activity, getString(R.string.toast_buy_computer), Toast.LENGTH_SHORT).show()
+                binding.layoutWorkAsACourier.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
+            }
         }
 
         binding.workDistributeFlyers.setOnClickListener{
@@ -75,7 +81,6 @@ class WorkScrollingFragment : Fragment() {
                 Toast.makeText(activity, getString(R.string.toast_buy_bike), Toast.LENGTH_SHORT).show()
                 binding.layoutWorkAsACourier.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
             }
-            (activity as GameActivity).updateStats()
         }
 
         binding.workAsAnOperator.setOnClickListener{

@@ -107,8 +107,9 @@
     <!--Work stats-->
     <string name="work_collect_change_income">+10</string>
     <string name="work_collect_change_happiness">-10</string>
-    <string name="work_watch_ads_income">+100</string>
-    <string name="work_watch_ads_happiness">-20</string>
+    <string name="work_watch_ads_income">+300</string>
+    <string name="work_watch_ads_happiness">-15</string>
+    <string name="work_watch_ads_satiety">-5</string>
     <string name="work_distribute_flyers_income">+200</string>
     <string name="work_distribute_flyers_happiness">-40</string>
     <string name="work_as_a_greener_income">+500</string>
@@ -456,6 +457,7 @@
     <string name="toast_ural_guitar_or_better_required">Нужна гитара Урал или лучше</string>
     <string name="toast_ussr_guitar_or_better_required">Нужна советская гитара или лучше</string>
     <string name="toast_buy_bike">Купите велосипед</string>
+    <string name="toast_buy_computer">Сперва купите компьютер!</string>
 
     <!--Achievements activity-->
     <string name="toolbar_achievements">Достижения</string>
