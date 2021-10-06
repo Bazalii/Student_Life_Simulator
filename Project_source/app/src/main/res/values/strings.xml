@@ -132,8 +132,9 @@
     <string name="work_play_guitar_v4_happiness">-10</string>
     <string name="work_play_guitar_v5_income">+5000</string>
     <string name="work_play_guitar_v5_happiness">-10</string>
-    <string name="work_on_the_net_v1_income">+100</string>
+    <string name="work_on_the_net_v1_income">+200</string>
     <string name="work_on_the_net_v1_happiness">-10</string>
+    <string name="work_on_the_net_v1_satiety">-10</string>
     <string name="work_on_the_net_v2_income">+500</string>
     <string name="work_on_the_net_v2_happiness">-10</string>
     <string name="work_on_the_net_v3_income">+2000</string>

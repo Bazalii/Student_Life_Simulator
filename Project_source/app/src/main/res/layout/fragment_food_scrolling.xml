@@ -72,17 +72,16 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/textView_crackers_money"
+                android:id="@+id/textView_crackers_happiness"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="4dp"
                 android:gravity="center"
-                android:text="@string/crackers_money"
+                android:text="@string/crackers_happiness"
                 android:textColor="@color/black"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/imageView_crackers_money"
+                app:layout_constraintEnd_toStartOf="@+id/guideline2"
+                app:layout_constraintStart_toEndOf="@+id/imageView_crackers_happiness"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
@@ -99,16 +98,17 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/textView_crackers_happinnes"
+                android:id="@+id/textView_crackers_money"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_marginEnd="4dp"
                 android:gravity="center"
-                android:text="@string/crackers_happiness"
+                android:text="@string/crackers_money"
                 android:textColor="@color/black"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/guideline2"
-                app:layout_constraintStart_toEndOf="@+id/imageView_crackers_happiness"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imageView_crackers_money"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <ImageView

@@ -710,7 +710,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                app:layout_constraintGuide_percent="0.50"
+                app:layout_constraintGuide_percent="0.42"
                 app:layout_constraintStart_toStartOf="parent" />
 
             <androidx.constraintlayout.widget.Guideline
@@ -718,7 +718,15 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                app:layout_constraintGuide_percent="0.75"
+                app:layout_constraintGuide_percent="0.6"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline145"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.7800926"
                 app:layout_constraintStart_toStartOf="parent" />
 
             <Button
@@ -763,6 +771,21 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
+                android:id="@+id/textViewWorkOnTheNetSatiety"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="0"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/guideline145"
+                app:layout_constraintStart_toEndOf="@+id/imageViewWorkOnTheNetSatiety"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
                 android:id="@+id/textViewWorkOnTheNetMoney"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -779,15 +802,6 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <ImageView
-                android:id="@+id/imageViewWorkOnTheNetMoney"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="@+id/guideline97"
-                app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/ic_money" />
-
-            <ImageView
                 android:id="@+id/imageViewWorkOnTheNetHappiness"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -796,6 +810,24 @@
                 app:layout_constraintStart_toStartOf="@+id/guideline96"
                 app:layout_constraintTop_toTopOf="parent"
                 app:srcCompat="@drawable/ic_fun" />
+
+            <ImageView
+                android:id="@+id/imageViewWorkOnTheNetSatiety"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/guideline97"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_food" />
+
+            <ImageView
+                android:id="@+id/imageViewWorkOnTheNetMoney"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/guideline145"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_money" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
 

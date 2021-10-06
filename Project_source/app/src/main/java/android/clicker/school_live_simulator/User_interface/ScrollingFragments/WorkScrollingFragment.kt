@@ -197,8 +197,9 @@ class WorkScrollingFragment : Fragment() {
             }
             is FriendsCourseState -> {
                 binding.textViewWorkOnTheNet.text = getString(R.string.work_on_the_net_v1)
-                binding.textViewWorkOnTheNetMoney.text = getString(R.string.work_on_the_net_v1_income)
                 binding.textViewWorkOnTheNetHappiness.text = getString(R.string.work_on_the_net_v1_happiness)
+                binding.textViewWorkOnTheNetSatiety.text = getString(R.string.work_on_the_net_v1_satiety)
+                binding.textViewWorkOnTheNetMoney.text = getString(R.string.work_on_the_net_v1_income)
             }
             else ->
                 binding.textViewWorkOnTheNet.text = getString(R.string.work_on_the_net_v0)
