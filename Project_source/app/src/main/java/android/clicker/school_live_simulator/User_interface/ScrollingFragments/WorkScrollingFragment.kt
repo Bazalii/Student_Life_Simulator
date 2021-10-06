@@ -177,23 +177,27 @@ class WorkScrollingFragment : Fragment() {
         when(Game.player.current_courses.computer_course){
             is GameDevelopmentCourseState -> {
                 binding.textViewWorkOnTheNet.text = getString(R.string.work_on_the_net_v5)
-                binding.textViewWorkOnTheNetMoney.text = getString(R.string.work_on_the_net_v5_income)
                 binding.textViewWorkOnTheNetHappiness.text = getString(R.string.work_on_the_net_v5_happiness)
+                binding.textViewWorkOnTheNetSatiety.text = getString(R.string.work_on_the_net_v5_satiety)
+                binding.textViewWorkOnTheNetMoney.text = getString(R.string.work_on_the_net_v5_income)
             }
             is VideoEditingCourseState -> {
                 binding.textViewWorkOnTheNet.text = getString(R.string.work_on_the_net_v4)
-                binding.textViewWorkOnTheNetMoney.text = getString(R.string.work_on_the_net_v4_income)
                 binding.textViewWorkOnTheNetHappiness.text = getString(R.string.work_on_the_net_v4_happiness)
+                binding.textViewWorkOnTheNetSatiety.text = getString(R.string.work_on_the_net_v4_satiety)
+                binding.textViewWorkOnTheNetMoney.text = getString(R.string.work_on_the_net_v4_income)
             }
             is WebDesignCourseState -> {
                 binding.textViewWorkOnTheNet.text = getString(R.string.work_on_the_net_v3)
-                binding.textViewWorkOnTheNetMoney.text = getString(R.string.work_on_the_net_v3_income)
                 binding.textViewWorkOnTheNetHappiness.text = getString(R.string.work_on_the_net_v3_happiness)
+                binding.textViewWorkOnTheNetSatiety.text = getString(R.string.work_on_the_net_v3_satiety)
+                binding.textViewWorkOnTheNetMoney.text = getString(R.string.work_on_the_net_v3_income)
             }
             is OnlineWorkCourseState -> {
                 binding.textViewWorkOnTheNet.text = getString(R.string.work_on_the_net_v2)
-                binding.textViewWorkOnTheNetMoney.text = getString(R.string.work_on_the_net_v2_income)
                 binding.textViewWorkOnTheNetHappiness.text = getString(R.string.work_on_the_net_v2_happiness)
+                binding.textViewWorkOnTheNetSatiety.text = getString(R.string.work_on_the_net_v2_satiety)
+                binding.textViewWorkOnTheNetMoney.text = getString(R.string.work_on_the_net_v2_income)
             }
             is FriendsCourseState -> {
                 binding.textViewWorkOnTheNet.text = getString(R.string.work_on_the_net_v1)
