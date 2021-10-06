@@ -50,7 +50,7 @@ class WorkScrollingFragment : Fragment() {
                 (activity as GameActivity).updateStats()
             } catch(exception: IsNotAvailableException) {
                 Toast.makeText(activity, getString(R.string.toast_buy_computer), Toast.LENGTH_SHORT).show()
-                binding.layoutWorkAsACourier.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
+                binding.layoutWorkWatchAds.startAnimation(AnimationUtils.loadAnimation(activity, R.anim.shake))
             }
         }
 
