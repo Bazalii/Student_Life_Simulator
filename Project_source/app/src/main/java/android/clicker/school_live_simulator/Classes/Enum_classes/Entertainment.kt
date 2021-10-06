@@ -78,7 +78,7 @@ enum class Entertainment(val happiness: Int, val money_diff: Int) {
     ),
     PLAY_GUITAR(
         Game.context_bundle.getNumber("fun_play_guitar_happiness"),
-        Game.context_bundle.getNumber("fun_play_guitar_price")
+        Game.context_bundle.getNumber("fun_play_guitar_satiety")
     ),
     GO_TO_THE_THEATRE(
         Game.context_bundle.getNumber("fun_go_to_the_theatre_happiness"),

@@ -107,8 +107,9 @@
     <!--Work stats-->
     <string name="work_collect_change_income">+10</string>
     <string name="work_collect_change_happiness">-10</string>
-    <string name="work_watch_ads_income">+100</string>
-    <string name="work_watch_ads_happiness">-20</string>
+    <string name="work_watch_ads_income">+300</string>
+    <string name="work_watch_ads_happiness">-15</string>
+    <string name="work_watch_ads_satiety">-5</string>
     <string name="work_distribute_flyers_income">+200</string>
     <string name="work_distribute_flyers_happiness">-40</string>
     <string name="work_as_a_greener_income">+500</string>
@@ -131,16 +132,21 @@
     <string name="work_play_guitar_v4_happiness">-10</string>
     <string name="work_play_guitar_v5_income">+5000</string>
     <string name="work_play_guitar_v5_happiness">-10</string>
-    <string name="work_on_the_net_v1_income">+100</string>
+    <string name="work_on_the_net_v1_income">+200</string>
     <string name="work_on_the_net_v1_happiness">-10</string>
+    <string name="work_on_the_net_v1_satiety">-10</string>
+    <string name="work_on_the_net_v2_happiness">-15</string>
+    <string name="work_on_the_net_v2_satiety">-15</string>
     <string name="work_on_the_net_v2_income">+500</string>
-    <string name="work_on_the_net_v2_happiness">-10</string>
-    <string name="work_on_the_net_v3_income">+2000</string>
-    <string name="work_on_the_net_v3_happiness">-10</string>
-    <string name="work_on_the_net_v4_income">+5000</string>
-    <string name="work_on_the_net_v4_happiness">-10</string>
-    <string name="work_on_the_net_v5_income">+15000</string>
-    <string name="work_on_the_net_v5_happiness">-10</string>
+    <string name="work_on_the_net_v3_happiness">0</string>
+    <string name="work_on_the_net_v3_satiety">-10</string>
+    <string name="work_on_the_net_v3_income">+700</string>
+    <string name="work_on_the_net_v4_happiness">0</string>
+    <string name="work_on_the_net_v4_satiety">-15</string>
+    <string name="work_on_the_net_v4_income">+2000</string>
+    <string name="work_on_the_net_v5_happiness">0</string>
+    <string name="work_on_the_net_v5_satiety">-15</string>
+    <string name="work_on_the_net_v5_income">+3000</string>
 
 
     <!--Entertainment folder-->
@@ -456,6 +462,7 @@
     <string name="toast_ural_guitar_or_better_required">Нужна гитара Урал или лучше</string>
     <string name="toast_ussr_guitar_or_better_required">Нужна советская гитара или лучше</string>
     <string name="toast_buy_bike">Купите велосипед</string>
+    <string name="toast_buy_computer">Сперва купите компьютер!</string>
 
     <!--Achievements activity-->
     <string name="toolbar_achievements">Достижения</string>
