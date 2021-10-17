@@ -5,6 +5,7 @@ import android.clicker.school_live_simulator.Classes.Achievements_classes.Interf
 import android.clicker.school_live_simulator.Classes.Achievements_classes.Interfaces.RandomAchievements
 import android.clicker.school_live_simulator.Classes.Enum_classes.Entertainment
 import android.clicker.school_live_simulator.Classes.Enum_classes.OtherWork
+import android.clicker.school_live_simulator.Classes.Enum_classes.Shop
 import android.clicker.school_live_simulator.Classes.Enum_classes.Studies
 import android.clicker.school_live_simulator.Classes.NotEnoughMoneyException
 import android.clicker.school_live_simulator.Classes.IsNotAvailableException
@@ -209,21 +210,6 @@ class Player {
     private fun changePlayerState(state: PlayerState) {
         this.player_state = state
     }
-
-
-    /**
-     * Commented because that should be realised later
-     */
-//    fun registerObserver(Observer o) {
-//        TODO("Not yet implemented")
-//    }
-//    fun removeObserver(Observer o) {
-//        TODO("Not yet implemented")
-//    }
-//    fun notifyObservers() {
-//        TODO("Not yet implemented")
-//    }
-
 
     /**
      * Block of functions for buying new items and courses
