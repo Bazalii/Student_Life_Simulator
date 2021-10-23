@@ -18,17 +18,20 @@ class Player {
     class Bag {
         var bicycle: BicycleState = NullBicycleState()
             set(value) {
-                Game.player.changeMoney(-value.price)
+                Game.player.changeMoney(value.price)
+                Game.player.changeHappiness(value.happiness)
                 field = value
             }
         var guitar: GuitarState = NullGuitarState()
             set(value) {
-                Game.player.changeMoney(-value.price)
+                Game.player.changeMoney(value.price)
+                Game.player.changeHappiness(value.happiness)
                 field = value
             }
         var computer: ComputerState = NullComputerState()
             set(value) {
-                Game.player.changeMoney(-value.price)
+                Game.player.changeMoney(value.price)
+                Game.player.changeHappiness(value.happiness)
                 field = value
             }
     }

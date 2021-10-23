@@ -22,6 +22,11 @@ abstract class BicycleState {
     abstract val price: Int
 
     /**
+     * Happiness that player receives when he buys a bike
+     */
+    abstract val happiness: Int
+
+    /**
      * A list of available types of delivery.
      * These types are described in enumeration class Delivery.
      */
