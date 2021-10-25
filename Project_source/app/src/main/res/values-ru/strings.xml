@@ -277,20 +277,33 @@
 
     <!--Shop stats-->
     <string name="shop_ussr_bicycle_price">-2000</string>
+    <string name="shop_ussr_bicycle_happiness">+15</string>
     <string name="shop_usual_bicycle_price">-10000</string>
+    <string name="shop_usual_bicycle_happiness">+50</string>
     <string name="shop_mountain_bicycle_price">-40000</string>
+    <string name="shop_mountain_bicycle_happiness">+200</string>
 
     <string name="shop_ussr_guitar_price">-1000</string>
+    <string name="shop_ussr_guitar_happiness">+10</string>
     <string name="shop_ural_guitar_price">-5000</string>
+    <string name="shop_ural_guitar_happiness">+20</string>
     <string name="shop_yamaha_guitar_price">-12000</string>
+    <string name="shop_yamaha_guitar_happiness">+100</string>
     <string name="shop_fender_guitar_price">-40000</string>
+    <string name="shop_fender_guitar_happiness">+300</string>
     <string name="shop_double_neck_guitar_price">-150000</string>
+    <string name="shop_double_neck_guitar_happiness">+500</string>
 
     <string name="shop_previously_used_computer_price">-3000</string>
+    <string name="shop_previously_used_computer_happiness">+10</string>
     <string name="shop_old_computer_price">-10000</string>
+    <string name="shop_old_computer_happiness">+90</string>
     <string name="shop_usual_computer_price">-30000</string>
+    <string name="shop_usual_computer_happiness">+150</string>
     <string name="shop_xiaomi_computer_price">-60000</string>
+    <string name="shop_xiaomi_computer_happiness">+300</string>
     <string name="shop_macbook_computer_price">-200000</string>
+    <string name="shop_macbook_computer_happiness">+500</string>
 
     <string name="shop_computer_course_v1_price">0</string>
     <string name="shop_computer_course_v2_price">-100</string>

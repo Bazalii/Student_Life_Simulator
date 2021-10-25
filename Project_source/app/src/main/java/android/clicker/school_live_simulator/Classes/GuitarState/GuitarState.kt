@@ -6,7 +6,16 @@ import kotlin.reflect.KClass
 
 @Serializable
 abstract class GuitarState {
+    /**
+     * Guitar price
+     */
     abstract val price: Int
+
+    /**
+     * Happiness that player receives when he buys a guitar
+     */
+    abstract val happiness: Int
+
     protected abstract val available_courses: ArrayList<GuitarCourseState>
 
     /**

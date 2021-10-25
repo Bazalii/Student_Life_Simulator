@@ -9,6 +9,9 @@ open class NullBicycleState : BicycleState() {
     @kotlinx.serialization.Transient
     override val price: Int = 0
 
+    @kotlinx.serialization.Transient
+    override val happiness: Int = 0
+
     override val best_delivery: Delivery? = null
 
     override fun changeState(bag: Player.Bag) {
