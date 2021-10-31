@@ -6,12 +6,18 @@ import kotlinx.serialization.*
 open class NullGuitarCourseState : GuitarCourseState() {
 
     @kotlinx.serialization.Transient
-    override val price: Int = 0
+    override val happiness: Int = 0
 
-    override var best_song: Song? = null
+    @kotlinx.serialization.Transient
+    override val satiety: Int = 0
 
     @kotlinx.serialization.Transient
     override val course_length: Int = 0
+
+    @kotlinx.serialization.Transient
+    override val price: Int = 0
+
+    override var best_song: Song? = null
 
     override fun buyNextCourse(courses: Player.Courses) {
         courses.guitar_course = YardGuitarCourseState()

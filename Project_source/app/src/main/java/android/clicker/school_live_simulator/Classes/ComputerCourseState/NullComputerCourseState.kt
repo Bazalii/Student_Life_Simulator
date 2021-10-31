@@ -6,12 +6,18 @@ import kotlinx.serialization.Serializable
 open class NullComputerCourseState : ComputerCourseState() {
 
     @kotlinx.serialization.Transient
-    override val price: Int = 0
+    override val happiness: Int = 0
 
-    override var best_web_task: WebTask? = null
+    @kotlinx.serialization.Transient
+    override val satiety: Int = 0
 
     @kotlinx.serialization.Transient
     override val course_length: Int = 0
+
+    @kotlinx.serialization.Transient
+    override val price: Int = 0
+
+    override var best_web_task: WebTask? = null
 
     override fun buyNextCourse(courses: Player.Courses) {
         courses.computer_course = FriendsCourseState()
