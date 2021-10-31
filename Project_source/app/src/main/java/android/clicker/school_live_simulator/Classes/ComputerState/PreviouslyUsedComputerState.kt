@@ -1,16 +1,16 @@
 package android.clicker.school_live_simulator
 
-import android.clicker.school_live_simulator.Classes.Enum_classes.Shop
+import android.clicker.school_live_simulator.Classes.Enum_classes.ShopItems
 import kotlinx.serialization.Serializable
 
 @Serializable
 open class PreviouslyUsedComputerState : ComputerState() {
 
     @kotlinx.serialization.Transient
-    override val price: Int = Shop.PREVIOUSLY_USED_COMPUTER.money_diff
+    override val price: Int = ShopItems.PREVIOUSLY_USED_COMPUTER.money_diff
 
     @kotlinx.serialization.Transient
-    override val happiness: Int = Shop.PREVIOUSLY_USED_COMPUTER.happiness
+    override val happiness: Int = ShopItems.PREVIOUSLY_USED_COMPUTER.happiness
 
     @kotlinx.serialization.Transient
     override val available_courses = arrayListOf<ComputerCourseState>(

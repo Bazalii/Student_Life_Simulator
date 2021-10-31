@@ -1,5 +1,4 @@
 package android.clicker.school_live_simulator
-import android.clicker.school_live_simulator.Classes.Enum_classes.Shop
 import kotlinx.serialization.*
 
 @Serializable
