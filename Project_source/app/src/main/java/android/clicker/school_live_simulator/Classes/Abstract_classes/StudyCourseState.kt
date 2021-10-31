@@ -4,9 +4,14 @@ abstract class StudyCourseState: TimerObserver {
     /**
 	 * Price of course
 	 */
-	abstract val price: Int
+
+    abstract val happiness: Int
+
+    abstract val satiety: Int
 
 	abstract val course_length: Int
+
+    abstract val price: Int
 
 	/**
 	 * Function change current course for player
