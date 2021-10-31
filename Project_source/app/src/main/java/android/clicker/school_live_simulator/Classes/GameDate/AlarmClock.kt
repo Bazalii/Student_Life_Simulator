@@ -1,11 +1,7 @@
 package android.clicker.school_live_simulator.Classes.GameDate
 
-import android.clicker.school_live_simulator.Classes.Enum_classes.Entertainment
-import android.clicker.school_live_simulator.Classes.Enum_classes.Months
-import android.clicker.school_live_simulator.Classes.Enum_classes.Studies
+import android.clicker.school_live_simulator.Classes.EnumClasses.Months
 import android.clicker.school_live_simulator.Game
-import android.text.TextUtils.indexOf
-import kotlinx.serialization.Contextual
 import kotlinx.serialization.Serializable
 import kotlin.reflect.KFunction
 

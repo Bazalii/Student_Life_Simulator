@@ -1,7 +1,7 @@
 package android.clicker.school_live_simulator.User_interface.ScrollingFragments
 
-import android.clicker.school_live_simulator.Classes.Achievements_classes.Random_achievements.StudyEventsRandomAchievements
-import android.clicker.school_live_simulator.Classes.Enum_classes.Studies
+import android.clicker.school_live_simulator.Classes.AchievementsClasses.RandomAchievements.StudyEventsRandomAchievements
+import android.clicker.school_live_simulator.Classes.EnumClasses.Studies
 import android.clicker.school_live_simulator.Classes.GameDate.Timer
 import android.clicker.school_live_simulator.Classes.NotEnoughMoneyException
 import android.clicker.school_live_simulator.Game

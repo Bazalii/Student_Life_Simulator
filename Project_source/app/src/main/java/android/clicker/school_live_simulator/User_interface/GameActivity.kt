@@ -12,18 +12,15 @@ import android.os.Looper
 
 
 import android.animation.ObjectAnimator
-import android.clicker.school_live_simulator.Classes.Achievements_classes.Interfaces.Achievements
-import android.clicker.school_live_simulator.Classes.Achievements_classes.Interfaces.RandomAchievements
+import android.clicker.school_live_simulator.Classes.AchievementsClasses.Interfaces.Achievements
+import android.clicker.school_live_simulator.Classes.AchievementsClasses.Interfaces.RandomAchievements
 import android.clicker.school_live_simulator.databinding.AchievementDialogBinding
 import android.content.Intent
 import android.content.res.ColorStateList
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
-import android.util.Log
 import android.view.View
 import androidx.appcompat.app.AlertDialog
-import androidx.constraintlayout.widget.ConstraintLayout
-import androidx.core.content.ContextCompat.getColor
 import androidx.core.graphics.ColorUtils.HSLToColor
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
@@ -31,11 +28,9 @@ import androidx.viewpager2.adapter.FragmentStateAdapter
 import androidx.viewpager2.widget.ViewPager2
 import java.util.*
 import android.animation.ValueAnimator
-import android.animation.ValueAnimator.AnimatorUpdateListener
 import android.clicker.school_live_simulator.databinding.EndGameDialogBinding
 import android.os.HandlerThread
 import android.view.KeyEvent
-import java.io.File
 
 
 class GameActivity : AppCompatActivity() {

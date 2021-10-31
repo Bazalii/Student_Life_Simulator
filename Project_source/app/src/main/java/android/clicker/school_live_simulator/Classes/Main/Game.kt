@@ -1,8 +1,8 @@
 package android.clicker.school_live_simulator
 
 
-import android.clicker.school_live_simulator.Classes.Enum_classes.Entertainment
-import android.clicker.school_live_simulator.Classes.Enum_classes.Studies
+import android.clicker.school_live_simulator.Classes.EnumClasses.Entertainment
+import android.clicker.school_live_simulator.Classes.EnumClasses.Studies
 import android.clicker.school_live_simulator.Classes.GameDate.GameDate
 import android.clicker.school_live_simulator.Classes.Main.ContextBundle
 import android.clicker.school_live_simulator.Classes.Main.GameData

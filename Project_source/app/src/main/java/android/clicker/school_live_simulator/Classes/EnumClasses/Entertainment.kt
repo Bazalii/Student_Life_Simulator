@@ -1,4 +1,4 @@
-package android.clicker.school_live_simulator.Classes.Enum_classes
+package android.clicker.school_live_simulator.Classes.EnumClasses
 
 import android.clicker.school_live_simulator.Classes.GameDate.Timer
 import android.clicker.school_live_simulator.Classes.NotEnoughMoneyException

@@ -1,7 +1,5 @@
 package android.clicker.school_live_simulator.User_interface
 
-import android.clicker.school_live_simulator.Classes.Achievements_classes.Interfaces.Achievements
-import android.clicker.school_live_simulator.Classes.Achievements_classes.Interfaces.RandomAchievements
 import android.clicker.school_live_simulator.Game
 import android.clicker.school_live_simulator.R
 import android.clicker.school_live_simulator.databinding.AchievementItemBinding
@@ -12,7 +10,6 @@ import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.provider.Settings.Global.getString
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup

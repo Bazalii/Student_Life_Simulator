@@ -1,22 +1,17 @@
 package android.clicker.school_live_simulator.User_interface.ScrollingFragments
 
 import android.clicker.school_live_simulator.*
-import android.clicker.school_live_simulator.Classes.Achievements_classes.Random_achievements.FoodEventsRandomAchievements
-import android.clicker.school_live_simulator.Classes.Achievements_classes.Random_achievements.SongEventsRandomAchievements
-import android.clicker.school_live_simulator.Classes.Enum_classes.OtherWork
+import android.clicker.school_live_simulator.Classes.AchievementsClasses.RandomAchievements.SongEventsRandomAchievements
+import android.clicker.school_live_simulator.Classes.EnumClasses.OtherWork
 import android.clicker.school_live_simulator.Classes.IsNotAvailableException
 import android.clicker.school_live_simulator.User_interface.GameActivity
 import android.clicker.school_live_simulator.databinding.FragmentWorkScrollingBinding
 import android.os.Bundle
-import android.os.Handler
-import android.os.Looper
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.view.animation.AnimationUtils
 import android.widget.Toast
-import androidx.core.content.ContextCompat.getColor
-import androidx.core.content.ContextCompat.getDrawable
 import androidx.fragment.app.Fragment
 
 class WorkScrollingFragment : Fragment() {
