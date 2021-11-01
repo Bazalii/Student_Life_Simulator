@@ -1,6 +1,6 @@
 package android.clicker.school_live_simulator.User_interface
 
-import android.clicker.school_live_simulator.Classes.Enum_classes.Months
+import android.clicker.school_live_simulator.Classes.EnumClasses.Months
 import android.clicker.school_live_simulator.Classes.GameDate.GameDate
 import android.clicker.school_live_simulator.Game
 import android.clicker.school_live_simulator.NormalMode

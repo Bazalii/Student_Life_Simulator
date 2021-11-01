@@ -1,11 +1,11 @@
 package android.clicker.school_live_simulator
 
 
-import android.clicker.school_live_simulator.Classes.Achievements_classes.Interfaces.Achievements
-import android.clicker.school_live_simulator.Classes.Achievements_classes.Interfaces.RandomAchievements
-import android.clicker.school_live_simulator.Classes.Enum_classes.Entertainment
-import android.clicker.school_live_simulator.Classes.Enum_classes.OtherWork
-import android.clicker.school_live_simulator.Classes.Enum_classes.Studies
+import android.clicker.school_live_simulator.Classes.AchievementsClasses.Interfaces.Achievements
+import android.clicker.school_live_simulator.Classes.AchievementsClasses.Interfaces.RandomAchievements
+import android.clicker.school_live_simulator.Classes.EnumClasses.Entertainment
+import android.clicker.school_live_simulator.Classes.EnumClasses.OtherWork
+import android.clicker.school_live_simulator.Classes.EnumClasses.Studies
 import android.clicker.school_live_simulator.Classes.NotEnoughMoneyException
 import android.clicker.school_live_simulator.Classes.IsNotAvailableException
 import kotlinx.serialization.*

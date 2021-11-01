@@ -1,6 +1,6 @@
-package android.clicker.school_live_simulator.Classes.Achievements_classes.Purchase_achievements
+package android.clicker.school_live_simulator.Classes.AchievementsClasses.PurchaseAchievements
 
-import android.clicker.school_live_simulator.Classes.Achievements_classes.Interfaces.PurchaseAchievements
+import android.clicker.school_live_simulator.Classes.AchievementsClasses.Interfaces.PurchaseAchievements
 import android.clicker.school_live_simulator.Game
 
 /**

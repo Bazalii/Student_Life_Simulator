@@ -1,6 +1,6 @@
-package android.clicker.school_live_simulator.Classes.Achievements_classes.Random_achievements
+package android.clicker.school_live_simulator.Classes.AchievementsClasses.RandomAchievements
 
-import android.clicker.school_live_simulator.Classes.Achievements_classes.Interfaces.RandomAchievements
+import android.clicker.school_live_simulator.Classes.AchievementsClasses.Interfaces.RandomAchievements
 import android.clicker.school_live_simulator.Game
 
 /**
