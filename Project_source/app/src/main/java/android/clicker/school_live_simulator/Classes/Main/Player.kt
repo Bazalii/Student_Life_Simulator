@@ -129,15 +129,6 @@ class Player {
         )
     }
 
-
-    /**
-     * Maybe that should be deprecated
-     */
-    fun getClass(): Int {
-        TODO("Not yet implemented")
-    }
-
-
     /**
      * Block of functions that reproduce Player's actions
      * @param song Field of corresponding Enum class that is used to change stats
