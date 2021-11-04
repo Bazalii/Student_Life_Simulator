@@ -5,6 +5,7 @@ import android.clicker.school_live_simulator.Classes.AchievementsClasses.Interfa
 import android.clicker.school_live_simulator.Classes.AchievementsClasses.Interfaces.RandomAchievements
 import android.clicker.school_live_simulator.Classes.EnumClasses.Entertainment
 import android.clicker.school_live_simulator.Classes.EnumClasses.OtherWork
+import android.clicker.school_live_simulator.Classes.EnumClasses.ShopCourses
 import android.clicker.school_live_simulator.Classes.EnumClasses.Studies
 import android.clicker.school_live_simulator.Classes.NotEnoughMoneyException
 import android.clicker.school_live_simulator.Classes.IsNotAvailableException
@@ -163,6 +164,11 @@ class Player {
     fun study(studies: Studies) {
         changeMoney(studies.money_diff)
         changeSchoolPerformance(studies.school_performance)
+    }
+    fun goToCourse(course: ShopCourses){
+        changeMoney(course.money_diff)
+        changeHappiness(course.happiness)
+        changeSatiety(course.satiety)
     }
 
 
