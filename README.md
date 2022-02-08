@@ -1,4 +1,4 @@
-# School_Live_Simulator
+# Student Live Simulator
 An android clicker game
 
 **Description:** It simulates life of a typical high school student and you can 
